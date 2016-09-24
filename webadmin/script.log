@@ -1,0 +1,28 @@
+Array
+(
+    [time] => Mon, 06 Apr 2015 18:03:28 +0200
+    [addr] => ******sarrollo.com
+    [agent] => Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36
+    [get] => Array
+        (
+            [option] => com_fotos_insertar
+            [id] => 12172806141221221332IKTP
+        )
+
+)
+
+---
+Array
+(
+    [time] => Mon, 06 Apr 2015 18:06:34 +0200
+    [addr] => ******sarrollo.com
+    [agent] => Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36
+    [get] => Array
+        (
+            [option] => com_fotos_insertar
+            [id] => 12172806141221221332IKTP
+        )
+
+)
+
+---

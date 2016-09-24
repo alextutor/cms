@@ -1,0 +1,11 @@
+[31-Jan-2015 23:21:38 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[31-Jan-2015 23:21:43 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[31-Jan-2015 23:21:51 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[31-Jan-2015 23:21:51 Etc/GMT] PHP Notice:  Undefined variable: mensaje_cli in /home/alextutor/public_html/modulos/enviar-recordatorio-contrasena.php on line 117
+[31-Jan-2015 23:21:51 Etc/GMT] PHP Notice:  Undefined variable: pie in /home/alextutor/public_html/modulos/enviar-recordatorio-contrasena.php on line 119
+[11-Mar-2015 06:19:13 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-Mar-2015 06:19:13 Etc/GMT] PHP Notice:  Undefined variable: mensaje_cli in /home/alextutor/public_html/modulos/enviar-recordatorio-contrasena.php on line 117
+[11-Mar-2015 06:19:13 Etc/GMT] PHP Notice:  Undefined variable: pie in /home/alextutor/public_html/modulos/enviar-recordatorio-contrasena.php on line 119
+[09-May-2015 23:02:21 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[09-May-2015 23:02:21 Etc/GMT] PHP Notice:  Undefined variable: mensaje_cli in /home/alextutor/public_html/modulos/enviar-recordatorio-contrasena.php on line 117
+[09-May-2015 23:02:21 Etc/GMT] PHP Notice:  Undefined variable: pie in /home/alextutor/public_html/modulos/enviar-recordatorio-contrasena.php on line 119

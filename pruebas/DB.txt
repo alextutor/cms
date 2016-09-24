@@ -1,0 +1,48 @@
+-- 
+-- Database: `aminul`
+-- 
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `image_gallery`
+-- 
+
+CREATE TABLE `image_gallery` (
+  `BannerId` int(8) unsigned NOT NULL auto_increment,
+  `BannerAdTitle` varchar(200)  default NULL,
+  `BannerAdImage` varchar(200) default NULL,
+  PRIMARY KEY  (`BannerId`),
+);
+
+-- 
+-- Dumping data for table `image_gallery`
+-- 
+
+INSERT INTO `image_gallery` VALUES (1, 'This is a banner1', 'pic_l2.jpg');
+INSERT INTO `image_gallery` VALUES (2, 'This is a banner2', 'a_little_pic_2.jpg');
+INSERT INTO `image_gallery` VALUES (3, 'Nokia Banner Title', 'drink_picture.jpg');
+INSERT INTO `image_gallery` VALUES (4, 'This is a banner1', 'pic_l2.jpg');
+INSERT INTO `image_gallery` VALUES (5, 'This is a banner2', 'a_little_pic_2.jpg');
+INSERT INTO `image_gallery` VALUES (6, 'Nokia Banner Title', 'drink_picture.jpg');
+INSERT INTO `image_gallery` VALUES (7, 'This is a banner1', 'pic_l2.jpg');
+INSERT INTO `image_gallery` VALUES (8, 'This is a banner2', 'a_little_pic_2.jpg');
+INSERT INTO `image_gallery` VALUES (9, 'Nokia Banner Title', 'drink_picture.jpg');
+INSERT INTO `image_gallery` VALUES (10, 'This is a banner1', 'pic_l2.jpg');
+INSERT INTO `image_gallery` VALUES (11, 'This is a banner2', 'a_little_pic_2.jpg');
+INSERT INTO `image_gallery` VALUES (12, 'Nokia Banner Title', 'drink_picture.jpg');
+INSERT INTO `image_gallery` VALUES (13, 'This is a banner1', 'pic_l2.jpg');
+INSERT INTO `image_gallery` VALUES (14, 'This is a banner2', 'a_little_pic_2.jpg');
+INSERT INTO `image_gallery` VALUES (15, 'Nokia Banner Title', 'drink_picture.jpg');
+INSERT INTO `image_gallery` VALUES (16, 'This is a banner1', 'pic_l2.jpg');
+INSERT INTO `image_gallery` VALUES (17, 'This is a banner2', 'a_little_pic_2.jpg');
+INSERT INTO `image_gallery` VALUES (18, 'Nokia Banner Title', 'drink_picture.jpg');
+INSERT INTO `image_gallery` VALUES (19, 'This is a banner1', 'pic_l2.jpg');
+INSERT INTO `image_gallery` VALUES (20, 'This is a banner2', 'a_little_pic_2.jpg');
+INSERT INTO `image_gallery` VALUES (21, 'Nokia Banner Title', 'drink_picture.jpg');
+INSERT INTO `image_gallery` VALUES (22, 'This is a banner1', 'pic_l2.jpg');
+INSERT INTO `image_gallery` VALUES (23, 'This is a banner2', 'a_little_pic_2.jpg');
+INSERT INTO `image_gallery` VALUES (24, 'Nokia Banner Title', 'drink_picture.jpg');
+INSERT INTO `image_gallery` VALUES (25, 'This is a banner1', 'pic_l2.jpg');
+INSERT INTO `image_gallery` VALUES (26, 'This is a banner2', 'a_little_pic_2.jpg');
+INSERT INTO `image_gallery` VALUES (27, 'Nokia Banner Title', 'drink_picture.jpg');

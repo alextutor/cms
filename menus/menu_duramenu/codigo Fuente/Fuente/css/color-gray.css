@@ -1,0 +1,128 @@
+/* DURAMENU GRAY COLOR */
+
+a,
+a:link,
+a:visited,
+a:focus {
+	color: #657e9a;
+}
+
+a:hover {
+	color: #556a82;
+}
+
+.header-top-row a,
+.header-top-row a:link,
+.header-top-row a:visited {
+	color: #666;
+}
+
+.header-top-row a:hover,
+.header-top-row > div > ul > li:hover > a {
+	color: #657e9a;
+}
+
+.header-top-row > div > ul > li > ul {
+	border-top: 1px solid #c0cbd6;
+}
+
+.header-central-row > div > ul > li > a .fa {
+	color: #657e9a;
+}
+
+div.nav-container .navbar.navbar-inverse ul.nav > li.active-shopping > a {
+	/* active menu item - shopping categories */
+	background: #657e9a;
+	color: #efefef;
+}
+
+div.nav-container .navbar.navbar-inverse ul.nav > li:hover > a,
+div.nav-container .navbar.navbar-inverse ul.nav > li.active-shopping > a:hover,
+div.nav-container .navbar.navbar-inverse ul.nav > li.active-shopping > a:focus,
+div.nav-container .navbar.navbar-inverse ul.nav > li.active-shopping.open > a:hover,
+div.nav-container .navbar.navbar-inverse ul.nav > li.active-shopping.open > a:focus {
+	/* active menu item - shopping categories :hover and :focus states */
+	color: #fff;
+	background-color: #556a82;
+}
+
+div.nav-container .navbar ul.nav > li > ul.dropdown-menu > li > a:hover {
+	background: none;
+	color: #556a82;
+}
+
+span.slogan-light-price {
+	background: #657e9a;
+	color: #fff;
+}
+
+.dropdown-menu-shopping-item-price {
+	color: #657e9a;
+}
+
+.carousel .dropdown-menu-shopping-item-price {
+	color: #657e9a;
+}
+
+div.nav-container .navbar ul.nav > li:hover > a { /* enables parent hover effect still active hovering on submenu */
+    background: #556a82;
+	color: #fff;
+}
+
+div.nav-container .navbar ul.nav > li > div > ul > li > div.tabbed-menu-content a:hover {
+	color: #657e9a;
+}
+
+.tabbed-menu-content ul li a, .dropdown-mega-content ul li a:hover {
+	color: #657e9a;
+}
+
+/* DURA BUTTONS */
+.btn-dura {
+	color: #f6f6f6;
+	background-color: #657e9a;
+	border-color: #556a82;
+}
+
+.btn-dura:hover {
+	color: #fff;
+	background-color: #556a82;
+	border-color: #556a82;
+}
+
+.btn-dura:focus,
+.btn-dura.focus {
+	color: #fff;
+	background-color: #455669;
+	border-color: #556a82;
+}
+
+.btn-dura:active,
+.btn-dura.active,
+.open > .dropdown-toggle.btn-dura,
+.btn-dura:active:hover,
+.btn-dura.active:hover,
+.open > .dropdown-toggle.btn-dura:hover,
+.btn-dura:active:focus,
+.btn-dura.active:focus,
+.open > .dropdown-toggle.btn-dura:focus,
+.btn-dura:active.focus,
+.btn-dura.active.focus,
+.open > .dropdown-toggle.btn-dura.focus {
+	color: #fff;
+	background-color: #455669;
+	border-color: #455669;
+}
+
+.carousel-control:hover,
+.carousel-control:focus {
+	color: #c0cbd6;
+}
+
+.text-bold-c {
+	color: #657e9a;
+}
+
+.demo-content h2 {
+	color: #657e9a;
+}

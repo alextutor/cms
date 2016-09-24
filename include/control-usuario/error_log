@@ -1,0 +1,317 @@
+[15-Jan-2015 22:01:11 Etc/GMT] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php:24) in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 30
+[15-Jan-2015 22:01:23 Etc/GMT] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php:24) in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 30
+[15-Jan-2015 22:02:51 Etc/GMT] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php:24) in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 30
+[15-Jan-2015 22:02:54 Etc/GMT] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php:24) in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 30
+[15-Jan-2015 22:04:34 Etc/GMT] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php:24) in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 30
+[15-Jan-2015 22:04:36 Etc/GMT] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php:24) in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 30
+[15-Jan-2015 22:05:09 Etc/GMT] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php:24) in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 28
+[15-Jan-2015 22:06:25 Etc/GMT] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php:24) in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 28
+[15-Jan-2015 22:07:33 Etc/GMT] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php:24) in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 28
+[15-Jan-2015 22:08:10 Etc/GMT] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php:24) in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 28
+[15-Jan-2015 22:08:34 Etc/GMT] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php:24) in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 28
+[31-Jan-2015 23:24:32 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[01-Feb-2015 05:56:49 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[01-Feb-2015 21:57:41 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[17-Feb-2015 14:23:08 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[04-Mar-2015 12:54:45 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[05-Mar-2015 03:18:57 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[05-Mar-2015 17:49:49 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[07-Mar-2015 00:46:39 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[08-Mar-2015 12:25:04 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[09-Mar-2015 18:33:55 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[10-Mar-2015 16:24:37 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[10-Mar-2015 23:09:50 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-Mar-2015 19:02:08 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[12-Mar-2015 22:47:46 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[14-Mar-2015 04:23:11 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[12-Apr-2015 14:48:20 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[15-Apr-2015 02:44:04 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[17-Apr-2015 03:27:44 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[20-Apr-2015 15:48:26 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[27-Apr-2015 22:48:25 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[28-Apr-2015 16:30:33 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[29-Apr-2015 03:57:13 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[04-May-2015 16:25:16 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 16:21:03 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 16:21:03 Etc/GMT] PHP Notice:  Array to string conversion in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 12
+[11-May-2015 16:26:34 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 16:26:34 Etc/GMT] PHP Notice:  Undefined index: files in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 12
+[11-May-2015 16:26:38 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 16:26:38 Etc/GMT] PHP Notice:  Undefined index: files in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 12
+[11-May-2015 16:28:23 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 16:28:23 Etc/GMT] PHP Notice:  Undefined index: foto in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 12
+[11-May-2015 16:28:57 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 16:28:57 Etc/GMT] PHP Notice:  Undefined index: foto in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 12
+[11-May-2015 16:31:00 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 16:31:00 Etc/GMT] PHP Notice:  Undefined index: foto in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 12
+[11-May-2015 16:32:47 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 16:32:47 Etc/GMT] PHP Notice:  Undefined variable: _FILE in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 12
+[11-May-2015 16:53:49 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 16:53:49 Etc/GMT] PHP Notice:  Undefined variable: _FILE in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 12
+[11-May-2015 16:54:06 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 16:54:06 Etc/GMT] PHP Notice:  Undefined variable: _FILE in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 12
+[11-May-2015 16:54:46 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 16:54:46 Etc/GMT] PHP Notice:  Undefined variable: _FILE in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 12
+[11-May-2015 16:55:18 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 16:55:18 Etc/GMT] PHP Notice:  Undefined variable: _FILE in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 12
+[11-May-2015 16:55:18 Etc/GMT] PHP Notice:  Use of undefined constant name - assumed 'name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 12
+[11-May-2015 16:56:06 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 16:56:06 Etc/GMT] PHP Notice:  Undefined variable: _FILE in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 12
+[11-May-2015 16:57:15 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 16:57:15 Etc/GMT] PHP Notice:  Undefined variable: _FILE in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 12
+[11-May-2015 16:57:24 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 16:57:24 Etc/GMT] PHP Notice:  Undefined variable: _FILE in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 12
+[11-May-2015 16:58:45 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 16:58:45 Etc/GMT] PHP Notice:  Undefined variable: _FILE in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 12
+[11-May-2015 17:00:01 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 17:00:01 Etc/GMT] PHP Notice:  Array to string conversion in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 14
+[11-May-2015 17:02:34 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 17:02:34 Etc/GMT] PHP Notice:  Undefined index: nombre_archivo in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 12
+[11-May-2015 17:03:38 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 17:04:42 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 17:10:10 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 17:10:30 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 20:14:12 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 20:14:12 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 20
+[11-May-2015 20:14:12 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 22
+[11-May-2015 20:14:12 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 26
+[11-May-2015 20:14:12 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 26
+[11-May-2015 20:14:12 Etc/GMT] PHP Notice:  Undefined variable: msg in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 27
+[11-May-2015 20:14:12 Etc/GMT] PHP Notice:  Use of undefined constant name - assumed 'name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 30
+[11-May-2015 20:14:45 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 20:14:45 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 20
+[11-May-2015 20:14:45 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 22
+[11-May-2015 20:14:45 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 26
+[11-May-2015 20:14:45 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 26
+[11-May-2015 20:14:45 Etc/GMT] PHP Notice:  Undefined variable: msg in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 27
+[11-May-2015 20:14:45 Etc/GMT] PHP Notice:  Use of undefined constant name - assumed 'name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 30
+[11-May-2015 20:15:09 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 20:15:09 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 20
+[11-May-2015 20:15:09 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 22
+[11-May-2015 20:15:09 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 23
+[11-May-2015 20:15:09 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 27
+[11-May-2015 20:15:09 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 27
+[11-May-2015 20:15:09 Etc/GMT] PHP Notice:  Undefined variable: msg in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 28
+[11-May-2015 20:15:09 Etc/GMT] PHP Notice:  Use of undefined constant name - assumed 'name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 31
+[11-May-2015 20:15:31 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 20:15:31 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 20
+[11-May-2015 20:15:31 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 22
+[11-May-2015 20:15:31 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 23
+[11-May-2015 20:15:31 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 27
+[11-May-2015 20:15:31 Etc/GMT] PHP Notice:  Use of undefined constant name - assumed 'name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 31
+[11-May-2015 20:15:31 Etc/GMT] PHP Notice:  Use of undefined constant tmp_name - assumed 'tmp_name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 35
+[11-May-2015 20:15:31 Etc/GMT] PHP Warning:  move_uploaded_file(imagen/foto-usuarios/banderin-3.jpg): failed to open stream: No such file or directory in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 35
+[11-May-2015 20:15:31 Etc/GMT] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpcIrVwn' to 'imagen/foto-usuarios/banderin-3.jpg' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 35
+[11-May-2015 20:16:09 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 20:16:09 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 20
+[11-May-2015 20:16:09 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 22
+[11-May-2015 20:16:09 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 23
+[11-May-2015 20:16:09 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 27
+[11-May-2015 20:16:09 Etc/GMT] PHP Notice:  Use of undefined constant name - assumed 'name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 31
+[11-May-2015 20:16:09 Etc/GMT] PHP Notice:  Use of undefined constant tmp_name - assumed 'tmp_name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 35
+[11-May-2015 20:16:09 Etc/GMT] PHP Warning:  move_uploaded_file(/imagen/foto-usuarios/banderin-3.jpg): failed to open stream: No such file or directory in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 35
+[11-May-2015 20:16:09 Etc/GMT] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpHJrUL1' to '/imagen/foto-usuarios/banderin-3.jpg' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 35
+[11-May-2015 20:16:14 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 20:16:14 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 20
+[11-May-2015 20:16:14 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 22
+[11-May-2015 20:16:14 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 23
+[11-May-2015 20:16:14 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 27
+[11-May-2015 20:16:14 Etc/GMT] PHP Notice:  Use of undefined constant name - assumed 'name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 31
+[11-May-2015 20:16:14 Etc/GMT] PHP Notice:  Use of undefined constant tmp_name - assumed 'tmp_name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 35
+[11-May-2015 20:16:14 Etc/GMT] PHP Warning:  move_uploaded_file(/imagen/foto-usuarios/banderin-3.jpg): failed to open stream: No such file or directory in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 35
+[11-May-2015 20:16:14 Etc/GMT] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpa0kGvT' to '/imagen/foto-usuarios/banderin-3.jpg' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 35
+[11-May-2015 20:17:03 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 20:17:03 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 20
+[11-May-2015 20:17:03 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 22
+[11-May-2015 20:17:03 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 23
+[11-May-2015 20:17:03 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 27
+[11-May-2015 20:17:03 Etc/GMT] PHP Notice:  Use of undefined constant name - assumed 'name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 31
+[11-May-2015 20:17:03 Etc/GMT] PHP Notice:  Use of undefined constant tmp_name - assumed 'tmp_name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 35
+[11-May-2015 20:17:03 Etc/GMT] PHP Warning:  move_uploaded_file(/imagen/foto_usuarios/banderin-3.jpg): failed to open stream: No such file or directory in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 35
+[11-May-2015 20:17:03 Etc/GMT] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phppJE9AO' to '/imagen/foto_usuarios/banderin-3.jpg' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 35
+[11-May-2015 20:17:43 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 20:17:43 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 20
+[11-May-2015 20:17:43 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 22
+[11-May-2015 20:17:43 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 23
+[11-May-2015 20:17:43 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 27
+[11-May-2015 20:17:43 Etc/GMT] PHP Notice:  Use of undefined constant name - assumed 'name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 31
+[11-May-2015 20:17:43 Etc/GMT] PHP Notice:  Use of undefined constant tmp_name - assumed 'tmp_name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 33
+[11-May-2015 20:19:40 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 20:19:40 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 20
+[11-May-2015 20:19:40 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 23
+[11-May-2015 20:19:40 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 27
+[11-May-2015 20:19:40 Etc/GMT] PHP Notice:  Use of undefined constant name - assumed 'name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 31
+[11-May-2015 20:19:40 Etc/GMT] PHP Notice:  Use of undefined constant name - assumed 'name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 36
+[11-May-2015 20:20:29 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 20:20:29 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 20
+[11-May-2015 20:20:29 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 23
+[11-May-2015 20:20:29 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 27
+[11-May-2015 20:20:29 Etc/GMT] PHP Notice:  Use of undefined constant name - assumed 'name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 31
+[11-May-2015 20:20:58 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 20:20:58 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 20
+[11-May-2015 20:20:58 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 23
+[11-May-2015 20:20:58 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 27
+[11-May-2015 20:20:58 Etc/GMT] PHP Notice:  Use of undefined constant name - assumed 'name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 31
+[11-May-2015 20:20:58 Etc/GMT] PHP Notice:  Use of undefined constant tmp_name - assumed 'tmp_name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 34
+[11-May-2015 20:24:35 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 20:24:35 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 20
+[11-May-2015 20:24:35 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 23
+[11-May-2015 20:24:35 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 27
+[11-May-2015 20:24:35 Etc/GMT] PHP Notice:  Use of undefined constant name - assumed 'name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 31
+[11-May-2015 20:24:35 Etc/GMT] PHP Notice:  Use of undefined constant tmp_name - assumed 'tmp_name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 41
+[11-May-2015 20:24:35 Etc/GMT] PHP Warning:  move_uploaded_file(imagen/banderin-3.jpg): failed to open stream: No such file or directory in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 41
+[11-May-2015 20:24:35 Etc/GMT] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpFRkICO' to 'imagen/banderin-3.jpg' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 41
+[11-May-2015 20:27:14 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 20:27:14 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 20
+[11-May-2015 20:27:14 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 23
+[11-May-2015 20:27:14 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 27
+[11-May-2015 20:27:14 Etc/GMT] PHP Notice:  Use of undefined constant name - assumed 'name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 31
+[11-May-2015 20:27:14 Etc/GMT] PHP Notice:  Use of undefined constant tmp_name - assumed 'tmp_name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 41
+[11-May-2015 20:27:14 Etc/GMT] PHP Warning:  move_uploaded_file(imagen/banderin-3.jpg): failed to open stream: No such file or directory in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 41
+[11-May-2015 20:27:14 Etc/GMT] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpTRV1Wu' to 'imagen/banderin-3.jpg' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 41
+[11-May-2015 20:44:10 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 20:44:10 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 20
+[11-May-2015 20:44:10 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 23
+[11-May-2015 20:44:10 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 27
+[11-May-2015 20:44:10 Etc/GMT] PHP Notice:  Use of undefined constant name - assumed 'name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 31
+[11-May-2015 20:44:10 Etc/GMT] PHP Notice:  Use of undefined constant tmp_name - assumed 'tmp_name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 41
+[11-May-2015 20:44:10 Etc/GMT] PHP Warning:  move_uploaded_file(/home/alextutor/imagen/foto-usuariosbanderin-3.jpg): failed to open stream: No such file or directory in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 41
+[11-May-2015 20:44:10 Etc/GMT] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpf3xVNF' to '/home/alextutor/imagen/foto-usuariosbanderin-3.jpg' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 41
+[11-May-2015 20:44:14 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 20:44:14 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 20
+[11-May-2015 20:44:14 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 23
+[11-May-2015 20:44:14 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 27
+[11-May-2015 20:44:14 Etc/GMT] PHP Notice:  Use of undefined constant name - assumed 'name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 31
+[11-May-2015 20:44:14 Etc/GMT] PHP Notice:  Use of undefined constant tmp_name - assumed 'tmp_name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 41
+[11-May-2015 20:44:14 Etc/GMT] PHP Warning:  move_uploaded_file(/home/alextutor/imagen/foto-usuariosbanderin-3.jpg): failed to open stream: No such file or directory in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 41
+[11-May-2015 20:44:14 Etc/GMT] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpaGm8Ow' to '/home/alextutor/imagen/foto-usuariosbanderin-3.jpg' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 41
+[11-May-2015 20:46:18 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 20:46:18 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 20
+[11-May-2015 20:46:18 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 23
+[11-May-2015 20:46:18 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 27
+[11-May-2015 20:46:18 Etc/GMT] PHP Notice:  Use of undefined constant name - assumed 'name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 31
+[11-May-2015 20:46:18 Etc/GMT] PHP Notice:  Use of undefined constant tmp_name - assumed 'tmp_name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 41
+[11-May-2015 20:46:18 Etc/GMT] PHP Warning:  move_uploaded_file(/home/alextutor/imagen/foto-usuariosbanderin-3.jpg): failed to open stream: No such file or directory in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 41
+[11-May-2015 20:46:18 Etc/GMT] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpIzFHsg' to '/home/alextutor/imagen/foto-usuariosbanderin-3.jpg' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 41
+[11-May-2015 20:47:14 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 20:47:14 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 20
+[11-May-2015 20:47:14 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 23
+[11-May-2015 20:47:14 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 27
+[11-May-2015 20:47:14 Etc/GMT] PHP Notice:  Use of undefined constant name - assumed 'name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 31
+[11-May-2015 20:47:14 Etc/GMT] PHP Notice:  Use of undefined constant tmp_name - assumed 'tmp_name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 41
+[11-May-2015 20:47:14 Etc/GMT] PHP Warning:  move_uploaded_file(/home/alextutor/imagen/foto-usuarios/banderin-3.jpg): failed to open stream: No such file or directory in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 41
+[11-May-2015 20:47:14 Etc/GMT] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpyn9VyH' to '/home/alextutor/imagen/foto-usuarios/banderin-3.jpg' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 41
+[11-May-2015 20:47:18 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 20:47:18 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 20
+[11-May-2015 20:47:18 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 23
+[11-May-2015 20:47:18 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 27
+[11-May-2015 20:47:18 Etc/GMT] PHP Notice:  Use of undefined constant name - assumed 'name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 31
+[11-May-2015 20:47:18 Etc/GMT] PHP Notice:  Use of undefined constant tmp_name - assumed 'tmp_name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 41
+[11-May-2015 20:47:18 Etc/GMT] PHP Warning:  move_uploaded_file(/home/alextutor/imagen/foto-usuarios/banderin-3.jpg): failed to open stream: No such file or directory in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 41
+[11-May-2015 20:47:18 Etc/GMT] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpocKBKj' to '/home/alextutor/imagen/foto-usuarios/banderin-3.jpg' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 41
+[11-May-2015 20:47:39 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 20:47:39 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 20
+[11-May-2015 20:47:39 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 23
+[11-May-2015 20:47:39 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 27
+[11-May-2015 20:47:39 Etc/GMT] PHP Notice:  Use of undefined constant name - assumed 'name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 31
+[11-May-2015 20:48:26 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 20:48:26 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 20
+[11-May-2015 20:48:26 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 23
+[11-May-2015 20:48:26 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 27
+[11-May-2015 20:48:26 Etc/GMT] PHP Notice:  Use of undefined constant name - assumed 'name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 31
+[11-May-2015 20:48:56 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 20:48:56 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 20
+[11-May-2015 20:48:56 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 23
+[11-May-2015 20:48:56 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 27
+[11-May-2015 20:48:56 Etc/GMT] PHP Notice:  Use of undefined constant name - assumed 'name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 31
+[11-May-2015 20:48:56 Etc/GMT] PHP Notice:  Use of undefined constant tmp_name - assumed 'tmp_name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 41
+[11-May-2015 20:48:56 Etc/GMT] PHP Warning:  move_uploaded_file(/home/alextutor/imagen/banderin-3.jpg): failed to open stream: No such file or directory in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 41
+[11-May-2015 20:48:56 Etc/GMT] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpSKSG70' to '/home/alextutor/imagen/banderin-3.jpg' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 41
+[11-May-2015 20:50:48 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 20:50:48 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 20
+[11-May-2015 20:50:48 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 23
+[11-May-2015 20:50:48 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 27
+[11-May-2015 20:50:48 Etc/GMT] PHP Notice:  Use of undefined constant name - assumed 'name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 31
+[11-May-2015 20:51:25 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 20:51:25 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 20
+[11-May-2015 20:51:25 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 23
+[11-May-2015 20:51:25 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 27
+[11-May-2015 20:51:25 Etc/GMT] PHP Notice:  Use of undefined constant name - assumed 'name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 31
+[11-May-2015 20:51:58 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 20:51:58 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 20
+[11-May-2015 20:51:58 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 23
+[11-May-2015 20:51:58 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 27
+[11-May-2015 20:51:58 Etc/GMT] PHP Notice:  Use of undefined constant name - assumed 'name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 31
+[11-May-2015 20:51:58 Etc/GMT] PHP Warning:  move_uploaded_file(/home/alextutor/imagen/banderin-cuarto-contingente-93.jpg): failed to open stream: No such file or directory in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 42
+[11-May-2015 20:51:58 Etc/GMT] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php2fOwCN' to '/home/alextutor/imagen/banderin-cuarto-contingente-93.jpg' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 42
+[11-May-2015 20:56:35 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 20:56:35 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 20
+[11-May-2015 20:56:35 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 23
+[11-May-2015 20:56:35 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 27
+[11-May-2015 20:56:35 Etc/GMT] PHP Notice:  Use of undefined constant name - assumed 'name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 31
+[11-May-2015 20:58:04 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 20:58:04 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 20
+[11-May-2015 20:58:04 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 23
+[11-May-2015 20:58:04 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 27
+[11-May-2015 20:58:04 Etc/GMT] PHP Notice:  Use of undefined constant name - assumed 'name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 31
+[11-May-2015 20:58:18 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 20:58:18 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 20
+[11-May-2015 20:58:18 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 23
+[11-May-2015 20:58:18 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 27
+[11-May-2015 20:58:18 Etc/GMT] PHP Notice:  Use of undefined constant name - assumed 'name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 31
+[11-May-2015 20:58:18 Etc/GMT] PHP Warning:  move_uploaded_file(/home/alextutor/imagen/banderin-cuarto-contingente-93.jpg): failed to open stream: No such file or directory in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 42
+[11-May-2015 20:58:18 Etc/GMT] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpuaxYBb' to '/home/alextutor/imagen/banderin-cuarto-contingente-93.jpg' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 42
+[11-May-2015 21:00:59 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 21:00:59 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 20
+[11-May-2015 21:00:59 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 23
+[11-May-2015 21:00:59 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 27
+[11-May-2015 21:00:59 Etc/GMT] PHP Notice:  Use of undefined constant name - assumed 'name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 31
+[11-May-2015 21:00:59 Etc/GMT] PHP Notice:  Undefined index: temp_name in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 43
+[11-May-2015 21:01:41 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 21:01:41 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 20
+[11-May-2015 21:01:41 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 23
+[11-May-2015 21:01:41 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 27
+[11-May-2015 21:01:41 Etc/GMT] PHP Notice:  Use of undefined constant name - assumed 'name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 31
+[11-May-2015 21:01:41 Etc/GMT] PHP Warning:  move_uploaded_file(/home/alextutor/imagen/banderin-cuarto-contingente-93.jpg): failed to open stream: No such file or directory in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 44
+[11-May-2015 21:01:41 Etc/GMT] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php1DxX6d' to '/home/alextutor/imagen/banderin-cuarto-contingente-93.jpg' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 44
+[11-May-2015 21:04:01 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 21:04:01 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 20
+[11-May-2015 21:04:01 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 23
+[11-May-2015 21:04:01 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 27
+[11-May-2015 21:04:01 Etc/GMT] PHP Notice:  Use of undefined constant name - assumed 'name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 31
+[11-May-2015 21:04:01 Etc/GMT] PHP Notice:  Undefined variable: target_path in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 36
+[11-May-2015 21:04:01 Etc/GMT] PHP Warning:  move_uploaded_file(/home/alextutor/imagen/banderin-cuarto-contingente-93.jpg): failed to open stream: No such file or directory in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 44
+[11-May-2015 21:04:01 Etc/GMT] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpDpAz0N' to '/home/alextutor/imagen/banderin-cuarto-contingente-93.jpg' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 44
+[11-May-2015 21:04:07 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 21:04:07 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 20
+[11-May-2015 21:04:07 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 23
+[11-May-2015 21:04:07 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 27
+[11-May-2015 21:04:07 Etc/GMT] PHP Notice:  Use of undefined constant name - assumed 'name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 31
+[11-May-2015 21:04:07 Etc/GMT] PHP Notice:  Undefined variable: target_path in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 36
+[11-May-2015 21:04:07 Etc/GMT] PHP Warning:  move_uploaded_file(/home/alextutor/imagen/banderin-cuarto-contingente-93.jpg): failed to open stream: No such file or directory in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 44
+[11-May-2015 21:04:07 Etc/GMT] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpwm5um4' to '/home/alextutor/imagen/banderin-cuarto-contingente-93.jpg' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 44
+[11-May-2015 21:05:08 Etc/GMT] PHP Notice:  A session had already been started - ignoring session_start() in /home/alextutor/public_html/include/funciones_web.php on line 1
+[11-May-2015 21:05:08 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 20
+[11-May-2015 21:05:08 Etc/GMT] PHP Notice:  Use of undefined constant size - assumed 'size' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 23
+[11-May-2015 21:05:08 Etc/GMT] PHP Notice:  Use of undefined constant type - assumed 'type' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 27
+[11-May-2015 21:05:08 Etc/GMT] PHP Notice:  Use of undefined constant name - assumed 'name' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 31
+[11-May-2015 21:05:08 Etc/GMT] PHP Notice:  Undefined variable: target_path in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 36
+[11-May-2015 21:05:08 Etc/GMT] PHP Warning:  move_uploaded_file(/home/alextutor/imagen/banderin-cuarto-contingente-93.jpg): failed to open stream: No such file or directory in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 44
+[11-May-2015 21:05:08 Etc/GMT] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phph4tP0S' to '/home/alextutor/imagen/banderin-cuarto-contingente-93.jpg' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 44
+[11-May-2015 21:05:55 Etc/GMT] PHP Warning:  move_uploaded_file(/home/alextutor/imagen/banderin-cuarto-contingente-93.jpg): failed to open stream: No such file or directory in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 44
+[11-May-2015 21:05:55 Etc/GMT] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpm0whUG' to '/home/alextutor/imagen/banderin-cuarto-contingente-93.jpg' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 44
+[11-May-2015 21:07:19 Etc/GMT] PHP Warning:  move_uploaded_file(/imagen/banderin-cuarto-contingente-93.jpg): failed to open stream: No such file or directory in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 37
+[11-May-2015 21:07:19 Etc/GMT] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpoa4Txw' to '/imagen/banderin-cuarto-contingente-93.jpg' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 37
+[11-May-2015 21:07:45 Etc/GMT] PHP Warning:  move_uploaded_file(imagen/banderin-cuarto-contingente-93.jpg): failed to open stream: No such file or directory in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 37
+[11-May-2015 21:07:45 Etc/GMT] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpvl9bOZ' to 'imagen/banderin-cuarto-contingente-93.jpg' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 37
+[11-May-2015 21:08:29 Etc/GMT] PHP Warning:  move_uploaded_file(//banderin-cuarto-contingente-93.jpg): failed to open stream: Permission denied in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 37
+[11-May-2015 21:08:29 Etc/GMT] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpYLn6Zj' to '//banderin-cuarto-contingente-93.jpg' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 37
+[11-May-2015 21:08:44 Etc/GMT] PHP Warning:  move_uploaded_file(/banderin-cuarto-contingente-93.jpg): failed to open stream: Permission denied in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 37
+[11-May-2015 21:08:44 Etc/GMT] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpp3EcZh' to '/banderin-cuarto-contingente-93.jpg' in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 37
+[12-May-2015 00:31:03 Etc/GMT] PHP Warning:  strlen() expects parameter 1 to be string, array given in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 19
+[12-May-2015 00:31:41 Etc/GMT] PHP Warning:  strlen() expects parameter 1 to be string, array given in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 19
+[12-May-2015 00:32:53 Etc/GMT] PHP Warning:  strlen() expects parameter 1 to be string, array given in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 19
+[12-May-2015 01:59:15 Etc/GMT] PHP Fatal error:  Call to undefined function enviar_correo() in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 7
+[12-May-2015 02:00:03 Etc/GMT] PHP Fatal error:  Call to undefined function enviar_correo() in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 7
+[12-May-2015 02:00:37 Etc/GMT] PHP Fatal error:  Call to undefined function enviar_correo() in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 7
+[12-May-2015 02:01:26 Etc/GMT] PHP Fatal error:  Call to undefined function enviar_correo() in /home/alextutor/public_html/include/control-usuario/insertar-registro-contingente.php on line 7

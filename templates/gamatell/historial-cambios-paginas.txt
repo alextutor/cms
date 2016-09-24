@@ -1,0 +1,20 @@
+cclase sustituito por cdesclase para que trabajara estiloclases
+---------------------------------------------------------------
+1) funciones_web-22082014.php    
+2) inccontenido.php              
+3) inccabeceracontenido-220814.php
+4) incizquierda-220814.php
+5) Actualiza-presentacion-220814.php   --//cclase cambiado por ccodclase porque deberia haber ccodclase
+6) Insertar-presentacion-220814.php   --//cclase cambiado por ccodclase porque deberia haber ccodclase
+7) articulopagina-250814.php       --   esta tiene otro codigo que el original de juvame
+8) Form-Insertar-articulo-260814.php   --// utilizo jfilebrowser para subir archivos
+9) articuloizquierda-260814.php      ---/// aqui se utiliza  ereg_replace('fotos','thumbs',$row['cimgcontenido'])?>
+
+
+
+cambios
+opcion 3 slider
+----------------
+<p><img class="dott" src="/imagen/msg-success.png" alt="Trabajamos con todas las marcas y modelos de celulares">Trabajamos con todas las marcas y modelos de celulares.</p>
+<p><img class="dott" src="/imagen/msg-success.png" alt="Cambio de todo tipo de repuestos, reparaciones de hardware, reprogramacion de chips">Cambio de todo tipo de repuestos, reparaciones de hardware, reprogramacion de chips.</p>
+<p><img class="dott" src="/imagen/msg-success.png" alt="Servicio de JTAG para reparacion de boot para telefonos muertos">Servicio de JTAG para reparacion de boot para telefonos muertos.</p>

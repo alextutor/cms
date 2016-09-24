@@ -1,0 +1,13 @@
+crear carpeta con nombre estilos
+cambiar homestyle.css  como style0001.css
+cambiar de la tabla estilopagina del campo cnomplantilla la plantilla a usar
+
+
+a)config_style.php
+inccabecera.php
+incpiemenu.php
+inccabeceracontenido.php
+pie-abajo.php
+inccabeceramenu.php
+inccontenido.php
+footer.php

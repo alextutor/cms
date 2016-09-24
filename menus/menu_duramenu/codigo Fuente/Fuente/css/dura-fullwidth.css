@@ -1,0 +1,26 @@
+.dura-wrapper > div.container, .dura-wrapper > div.container > .container { /* to change site-width (or) menu-width, use this class */
+	width: 100%;
+	max-width: 100%;
+	
+}
+
+.dura-wrapper > div.container > .container > .row {
+	max-width: 980px;
+	margin: auto;
+}
+
+.nav-container {
+	padding: 0;
+}
+
+.navbar .container {
+	padding: 0 15px;
+}
+
+
+
+/* MEDIA QUERY --> SMALL DEVICES */
+@media(min-width:768px) and (max-width:991px){
+	
+}
+

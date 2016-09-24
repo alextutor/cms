@@ -1,0 +1,57 @@
+RewriteEngine On
+Options +FollowSymLinks
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+
+# Recuerda servicios y productos le puse para poner url cortas para obiar idsec
+#RewriteRule ^servicios/(.+)$ /$1  [R=301,L]
+#RewriteRule ^productos/(.+)$ /$1  [R=301,L]
+
+RewriteRule ^([a-zA-Z0-9-]*)$ index.php?idsec=$1 [L]
+RewriteRule ^([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)$ index.php?idsec=$1&idsec2=$2 [L]
+RewriteRule ^([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)$   index.php?idsec=$1&idsec2=$2&idsec3=$3 [L]
+RewriteRule ^([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)$   index.php?idsec=$1&idsec2=$2&idsec3=$3&idsec4=$4 [L]
+
+<ifmodule mod_expires.c>
+ ExpiresActive On
+ ExpiresDefault A3600
+
+ <FilesMatch ".(gif|jpg|jpeg|png|swf)$">
+ # 2 weeks
+ ExpiresDefault A604800
+ Header append Cache-Control "public"
+ </FilesMatch>
+
+ <FilesMatch ".(xml|txt|html)$">
+ # 2 hours
+ ExpiresDefault A604800
+ Header append Cache-Control "public"
+ </FilesMatch>
+
+ <FilesMatch ".(js|css)$">
+ # 3 days
+ ExpiresDefault A604800
+ Header append Cache-Control "public"
+ </FilesMatch>
+</ifmodule>
+
+# solicitar a Apache que envíe comprimidos los archivos de extensiones js
+<Files *.js>
+SetOutputFilter DEFLATE
+</Files>
+
+# solicitar a Apache que envíe comprimidos los archivos de extensiones css
+<Files *.css>
+SetOutputFilter DEFLATE
+</Files>
+
+
+
+ErrorDocument 404 /404.php
+
+
+#evita que salga error de inicializacion de variables mas que todo en el index  Undefined variable or Undefined index
+#php_flag display_errors 1
+#php_value error_reporting 7
+

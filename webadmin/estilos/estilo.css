@@ -1,0 +1,47 @@
+/* alex para pintar color de las secciones*/
+.color_seccion_1er_nivel{color:#000000;font-weight:bold;}
+.color_seccion_2do_nivel{color:#449902;font-weight:bold;margin-left: 5px;}
+.color_seccion_3er_nivel{color:#1389D1;font-weight:bold;padding-left: 10px;}
+
+input {font:8pt tahoma,arial,sans-serif; float:none}
+select {font:8pt tahoma,arial,sans-serif}
+textarea {font:8pt tahoma,arial,sans-serif}
+#form-validate{
+
+}
+
+fieldset input, fieldset textarea, fieldset select, fieldset img, fieldset button {
+float: none;
+width: auto;
+margin: 5px 5px 5px 0;
+
+}
+.adminform{
+	
+}
+#menuseccion {
+	margin:0px;
+	padding:0px;
+	
+}
+
+#menuseccion ul {
+	padding-left:25px;
+}
+#menuseccion li {
+	list-style:none;
+}
+#menuseccion ul.hide {
+	display:none;
+}
+#menuseccion span {
+	/*
+	color:#999;
+	font-family:"Courier New", Courier, monospace;
+	cursor:default;
+	*/
+}
+#menuseccion span.expanded, #menuseccion span.collapsed {
+	cursor:pointer;
+}
+

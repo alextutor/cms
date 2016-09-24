@@ -1,0 +1,488 @@
+<?php	//http://www.cssblog.es/como-usar-variables-php-en-css/
+   include_once($_SERVER['DOCUMENT_ROOT'].'/webadmin/include/configuration.php'); 
+?>
+<style type="text/css">
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+/*
+Item Name : CSS3 Mega Drop Down Menu
+Author URI : http://themeforest.net/user/Keliah
+Item URI : http://codecanyon.net/item/css3-mega-drop-down-menu/126387
+Version : 3.0
+*/
+/*
+TABLE OF CONTENTS
+
+01 MENU BAR
+02 DROP DOWN MENU
+03 CONTENT STYLING
+04 CONTACT FORM
+05 COLORS
+huacho alex
+fondo menu ir a  .menu_red
+*/
+/*  _______________________________________
+
+	01 MENU BAR
+    _______________________________________  */
+
+.menu {
+	position:relative;
+	z-index:20;
+	list-style:none;
+	/*width:965px;*/
+	/* margin:30px auto 0px auto;*/
+	margin:0 auto;
+	height:43px;
+	/*padding:0px 20px 0px 20px;*/
+	/*-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+     behavior: url(../PIE.htc);	*/
+}
+.menu li {
+	float:left;
+	text-align:center;
+	position:relative;
+	margin-right:10px;
+	margin-top:6px;
+	border:none;
+	margin-left:30px;
+}
+.menu li.fullwidth {
+	position: static !important;
+}
+.menu li:hover {  /*al pasar el mouse se activa*/
+	background: <?php echo $colo_fdo_peshover_web_g1 ?> ;							/*color fondo pestanas al pasar mouse*/
+	border: 1px solid #777777;
+	border-bottom:none;
+	margin-right:19px;	
+	background: -moz-linear-gradient(top, <?php echo $colo_fdo_peshover_web_g1 ?>,<?php echo $colo_fdo_peshover_web_g2 ?>);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(<?php echo $colo_fdo_peshover_web_g1 ?>), to(<?php echo $colo_fdo_peshover_web_g2 ?>));
+	
+	-moz-border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    -khtml-border-radius: 5px 5px 0px 0px;
+    border-radius: 5px 5px 0px 0px;
+	behavior: url(../PIE.htc);	
+	
+}
+.menu li.nodrop:hover {
+	background:#ff0000;
+	border:1px solid #000000;
+	padding: 4px 10px 4px 9px;
+	background: -moz-linear-gradient(top, #212121, #161616);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#212121), to(#161616));
+	background: -o-linear-gradient(top, #212121, #161616);
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+}
+.menu li.nodrop:hover a {
+	padding: 0px;
+}
+.menu li a {         /*tamani y aspecto texto pestanas al pasar mouse */
+	color: #ffffff;
+	outline:0;
+	padding: 5px 10px 3px 10px;
+	text-decoration:none;
+	display:block;
+	text-shadow: 1px 1px 1px #000;
+}
+.menu li:hover a {
+	color:<?php echo $colo_tex_peshover_web ?>; 					/*color texto pestanas al pasar mouse */
+	text-shadow: none;
+	position:relative;
+	z-index:11;
+	border-bottom:1px solid #161616;
+	padding: 4px 9px 4px 9px;
+}
+.menu li:hover div a {
+	display:inline;
+}
+.menu li .drop {
+	padding-right:27px;
+	background:url("../imagenes/drop_dark.gif") no-repeat right 13px;  /*imagen del menu normal alex*/  
+}
+.menu li:hover .drop {
+	padding-right:27px;
+	background:url("../imagenes/drop.gif") no-repeat right 12px; /*imagen del menu al pasar mouse  alex*/  
+}
+
+/* Right aligned menu item */
+
+.menu .right {
+	float:right;
+	right:0;
+	margin-right:0px;
+}
+.menu li.right:hover {
+	margin-right:-1px;
+}
+
+
+
+/*  _______________________________________
+
+	02 DROP DOWN MENU
+    _______________________________________  */
+
+
+
+/* Left & right aligned common styles */
+
+.menu .dropdown_1column, 
+.menu .dropdown_2columns, 
+.menu .dropdown_3columns, 
+.menu .dropdown_4columns,
+.menu .dropdown_5columns,
+.menu .dropdown_fullwidth {
+	margin:4px auto;
+	left:-999em;
+	position:absolute;
+	background:<?php echo $colo_fdo_1Nivel_web_g1?>;    /*color fondo 1 nivel alex*/  
+	
+	border:1px solid #777777;
+	border-top:none;	
+	
+	padding:10px;
+	text-align:left;
+	-moz-border-radius: 0px 5px 5px 5px;
+    -webkit-border-radius: 0px 5px 5px 5px;
+    -khtml-border-radius: 0px 5px 5px 5px;
+    border-radius: 0px 5px 5px 5px;
+	
+	background:#F4F4F4;
+	background: -moz-linear-gradient(top, <?php echo $colo_fdo_1Nivel_web_g1?>, <?php echo $colo_fdo_1Nivel_web_g2?>);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(<?php echo $colo_fdo_1Nivel_web_g1?>), to(<?php echo $colo_fdo_1Nivel_web_g2?>));	
+}
+
+/* Drop Downs Sizes */
+
+.menu .dropdown_1column {width: 260px;}  /* 145px aumenta fondo 1 nivel no texto*/
+.menu .dropdown_2columns {width: 300px;}
+.menu .dropdown_3columns {width: 455px;}
+.menu .dropdown_4columns {width: 610px;}
+.menu .dropdown_5columns {width: 765px;}
+.menu .dropdown_fullwidth {
+	width: 920px;
+	-moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    -khtml-border-radius:5px;
+    border-radius:5px;
+}
+.menu li .first_fullwidth {
+	-moz-border-radius: 0px 5px 5px 5px;
+    -webkit-border-radius: 0px 5px 5px 5px;
+    border-radius: 0px 5px 5px 5px;
+}
+
+/* Showing Drop Down on Mouse Hover - Left aligned */
+
+.menu li:hover .dropdown_1column, 
+.menu li:hover .dropdown_2columns, 
+.menu li:hover .dropdown_3columns,
+.menu li:hover .dropdown_4columns,
+.menu li:hover .dropdown_5columns {
+	left:-1px;
+	top:25px;
+}
+.menu li:hover .dropdown_fullwidth {
+	left:21px;
+	top:33px;
+	display: block;
+}
+
+/* Showing Drop Down on Mouse Hover - Right aligned */
+
+.menu li .align_right {
+	/* Rounded Corners */
+	-moz-border-radius: 5px 0px 5px 5px;
+    -webkit-border-radius: 5px 0px 5px 5px;
+    border-radius: 5px 0px 5px 5px;
+}
+.menu li:hover .align_right {
+	left:auto;
+	right:-1px;
+	top:25px;
+}
+.menu li.right:hover .dropdown_fullwidth {
+	right:18px;
+	top:33px;
+}
+
+/* Columns Sizes */
+
+.menu .col_1,
+.menu .col_2,
+.menu .col_3,
+.menu .col_4,
+.menu .col_5,
+.menu .col_6 {
+	display:inline;
+	float: left;
+	position: relative;
+	margin-left: 10px;
+}
+.menu .col_1 {width:145px;}
+.menu .col_2 {width:300px;}
+.menu .col_3 {width:455px;}
+.menu .col_4 {width:610px;}
+.menu .col_5 {width:765px;}
+.menu .col_6 {width:920px;}
+
+/* IMPORTANT */
+
+/* Use the firstcolumn class for the items that stick to the left edge of the dropdown */
+.menu .firstcolumn {
+	margin-left: 0; /* Clearing margin & left */
+	clear: left;
+}
+/*  _______________________________________
+
+	03 CONTENT STYLING
+    _______________________________________  */
+.menu p,
+.menu ul,
+.menu li,
+.menu h2,
+.menu h3 {
+	color:#1F0404;									/* color texto dentro del menu alex */
+	font-size:14px; 
+	font-family:Arial, Helvetica, sans-serif;
+	line-height:21px;
+	text-align:left;
+}
+.menu p {					
+	font-size:12px;					 
+	line-height:18px;
+	margin:0;
+	margin-bottom:10px;
+	text-shadow:1px 1px #FFFFFF;	/* color shadow-texto dentro del menu alex */
+}
+.menu .strong {
+	font-weight:bold;
+}
+.menu .italic {
+	font-style:italic;
+}
+.menu h2, 
+.menu h3 {
+	text-shadow:1px 1px #FFFFFF;
+	border-bottom:1px solid #333333;
+	margin-top:7px;
+}
+.menu h2 {
+	font-weight:300;
+	font-size:18px;
+	margin-bottom:18px;
+	padding-bottom:11px;
+}
+.menu h3 {
+	font-weight:600;
+	font-size:14px;
+	margin-bottom:14px;
+	padding-bottom:7px;
+}
+.menu li:hover div a {
+	text-decoration:none;
+	
+	border:none;
+	padding:0;
+}
+.menu .pusher { /* Utilice este Pucher si usted quiere dar más espacio vertical entre las filas de contenido */
+	margin-top:18px;
+}
+
+
+/* Box styles */
+
+.menu li .black_box,
+.menu li .dark_grey_box {
+	color: #eeeeee;
+	text-shadow: 1px 1px 1px #000;
+	padding:4px 6px 4px 6px;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+	background-color:#0A0A0A;
+	-webkit-box-shadow:inset 0 0 3px #000000;
+	-moz-box-shadow:inset 0 0 3px #000000;
+	box-shadow:inset 0 0 3px #000000;
+}
+
+/* Standard lists styles */
+
+.menu li ul {
+	list-style:none;
+	padding:0;
+	margin:0 0 12px 0;
+}
+.menu li ul li {							/* propiedades categorias del menu alex */
+	font-size:14px;
+	line-height:30px;						/* espacio entre las categorias del menu alex */
+	position:relative;
+	text-shadow: 1px 1px 1px #ffffff;
+	padding:0;
+	margin:0;
+	float:left;
+	text-align:left;
+	width:145px;
+	text-shadow: 1px 1px #FFFFFF;
+}
+.menu li ul li a {
+	padding:0;
+}
+.menu li ul li:hover {
+	background:none;
+	border:none;
+	padding:0;
+	margin:0;
+}
+
+/* Greybox lists styles */
+
+.menu li .greybox li {
+	background:#0A0A0A;
+	border:1px solid #000000;
+	margin:0px 0px 4px 0px;
+	padding:4px 6px 4px 6px;
+	width:131px;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+}
+.menu li .greybox li:hover {
+	background:#141414;
+	border:1px solid #111111;
+	padding:4px 6px 4px 6px;
+	margin:0px 0px 4px 0px;
+}
+
+/* Other lists styles */
+
+.menu li .plus li {
+	background: url("../imagenes/plus_dark.gif") left 6px no-repeat;
+	margin:0px 0px 4px 0px;
+	padding:0px 0px 0px 21px;
+	width:109px;
+}
+.menu li .plus li:hover {
+	background: url("../imagenes/plus_dark.gif") left 6px no-repeat;
+	padding:0px 0px 0px 21px;
+	margin:0px 0px 4px 0px;
+}
+
+/* Social Icons */
+
+.menu li ul.social {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.menu li ul.social li {
+	padding-top:5px;
+	margin:0 12px 12px 0;
+	float:left;
+	position:relative;
+	display:inline;
+	width:32px;
+}
+.menu li ul.social li img {
+	border:none;
+}
+.menu li ul.social li:hover {
+	padding-top:5px;
+	margin:-1px 12px 12px 0;
+}
+.menu li ul.social li span {
+	display:none;
+}
+
+/* 2-Levels Drop Down */
+
+.menu .levels, .menu .levels ul { /* all lists */
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.menu li:hover .levels a {
+	display:block;
+}
+.menu .levels a {
+	display: block;
+	width: 320px;         /* separación de la  flechita que indica el tercer nivel alex */
+}
+.menu .levels a.parent, .menu .levels a.parent:hover {
+	/*background: url("../imagenes/drop2_dark.gif") right center no-repeat; desabilite tengo problemas con el ancho de la flechita alex*/
+	
+}
+.menu .levels li {
+	float: left;
+	width: 320px; /* fondo segundo nivel*/
+}
+ /* ---------------  2 nivel level lists ---------------------------- */
+.menu .levels li ul { /* 2 nivel level lists */
+	position: absolute;
+	z-index:10; 
+	background:<?php echo $colo_fdo_2Nivel_web_g1?>;  /* #313131 color fondo 2 nivel */
+	border:1px solid #000000;
+	top:-23px;
+	margin:15px 0px 0px 10px;/* 15px 0px 0px 4px */
+	padding:6px;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+	background: -moz-linear-gradient(top, <?php echo $colo_fdo_2Nivel_web_g1?>, <?php echo $colo_fdo_2Nivel_web_g2?>);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(<?php echo $colo_fdo_2Nivel_web_g1?>), to(<?php echo $colo_fdo_2Nivel_web_g2?>));
+	background: -o-linear-gradient(top, <?php echo $colo_fdo_2Nivel_web_g1?>, <?php echo $colo_fdo_2Nivel_web_g2?>);
+	left: -999em;
+	width: 320px;  /* mas ancho 2 nivel se forma mas columnas se tiene que dividir con .menu .levels li su ancho*/	
+}
+.menu .levels li ul ul {
+	top:-23px;
+	z-index:10000; 
+}
+.menu .levels li:hover ul ul, .menu .levels li:hover ul ul ul {
+	left: -999em;
+}
+.menu .levels li:hover ul, .menu .levels li li:hover ul, .menu .levels li li li:hover ul {
+	left: 260px; 					 /* separacion de primer y segundo nivel alex */	
+	z-index:10000; 
+}
+
+
+/*  _______________________________________
+
+	05 COLORS
+    _______________________________________  */
+
+/* Red */
+
+.menu_red {
+	background: <?php echo $colo_fdo_menu_web_g1?>;/* */
+	border: 1px solid #8b152d;
+	border-top: 1px solid #9D4646;
+	background: -moz-linear-gradient(top, <?php echo $colo_fdo_menu_web_g1?>, <?php echo $colo_fdo_menu_web_g2?>);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(<?php echo $colo_fdo_menu_web_g1?>), to(<?php echo $colo_fdo_menu_web_g2?>));
+	background: -o-linear-gradient(top, <?php echo $colo_fdo_menu_web_g1?>, <?php echo $colo_fdo_menu_web_g2?>);
+}
+.menu_red li:hover div a {
+	color:#313131; 						/* color texto con enlace alex para primer y segundo nivel */ 
+  
+}
+.menu_red li:hover div a:hover {
+	color:#f31a1a;  		/* color texto con enlace al pasar mouse alex */ 
+	/*background:#ffffff; */
+}
+.menu_red li ul li a:hover {
+	color:#7dcd00; /* #d60a03 */
+	/*background:#1e1e1e;*/
+}
+</style> 

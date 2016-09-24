@@ -1,0 +1,64 @@
+
+WWWAcct 12.5.0 (c) 2013 cPanel, Inc....
+
+Dns Zone check is enabled.
++===================================+
+| New Account Info                  |
++===================================+
+| Domain: gamatell.com
+| Ip: 208.91.198.102 (n)
+| HasCgi: y
+| UserName: gamatell
+| PassWord: 0403221757
+| CpanelMod: x3
+| HomeRoot: /home
+| Quota: 300 Meg
+| NameServer1: ns1.bh-4.webhostbox.net
+| NameServer2: ns2.bh-4.webhostbox.net
+| NameServer3: 
+| NameServer4: 
+| Contact Email: sisdatahost@hotmail.com
+| Package: sisdacdy_300MB
+| Feature List: default
+| Language: es
++===================================+
+...Done
+
+ftp.gamatell.com
+
+database: gamatell_general
+
+
+
+
+Dns Zone check is enabled.
++===================================+
+| New Account Info                  |
++===================================+
+| Domain: gamatell.com
+| Ip: 69.162.127.133 (n)
+| HasCgi: y
+| UserName: gamatell
+| PassWord: 0403221757
+| CpanelMod: x3
+| HomeRoot: /home
+| Quota: 200 Meg
+| NameServer1: ns39.nshostsite.com
+| NameServer2: ns40.nshostsite.com
+| NameServer3: 
+| NameServer4: 
+| Contact Email: sisdatahost@hotmail.com
+| Package: sisdataw_basico200
+| Feature List: default
+| Language: es
++===================================+
+...Done 
+
+/public_html
+
+
+administrador
+------------------
+http://www.gamatell.com/seguridad/index.php?errorusuario=si
+user    marcos
+pasww  pesquero

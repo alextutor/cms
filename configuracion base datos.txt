@@ -1,0 +1,82 @@
+cuartocontingente93.com
+--------------------------------------
+
+$_SESSION['selectpage']="12172806";
+
+geoenterprice.com
+--------------------------------------
+define('SERVER_MYSQL', 'localhost');
+define('DATABASE',   'geoenter_productos');
+define('BD_USUARIO', 'geoenter_cesar');
+define('BD_CLAVE',   '0403221757');
+$_SESSION['selectpage']="12172807";
+
+alhuaycenteno.com
+--------------------------------------
+define('SERVER_MYSQL', 'localhost');
+define('DATABASE',   'alhuayce_nteno');
+define('BD_USUARIO', 'alhuaycenteno');
+define('BD_CLAVE',   '0403221757');
+$_SESSION['selectpage']="12172809";
+
+
+
+puertasycreaciones.com
+--------------------------------------
+define('SERVER_MYSQL', 'localhost');
+define('DATABASE',   'pedro_productos');
+define('BD_USUARIO', 'pedro_creaciones');
+define('BD_CLAVE',   'huizaquispe01');
+$_SESSION['selectpage']="12172810";
+
+
+clean-glasses
+--------------------------------------
+define('SERVER_MYSQL', 'localhost');
+define('DATABASE',   'clean-glasses');
+define('BD_USUARIO', 'pedro_creaciones');
+define('BD_CLAVE',   'huizaquispe01');
+$_SESSION['selectpage']="12172811";
+
+
+fpdieselperu.com
+--------------------------------------
+define('SERVER_MYSQL', 'localhost');
+define('DATABASE',   'bdfpdies_elperu');
+define('BD_USUARIO', 'bdfpdies_elperu');
+define('BD_CLAVE',   'huahuala333');
+
+define('SERVER_MYSQL', 'localhost');
+define('DATABASE',   'bdfpdies_elperu');
+define('BD_USUARIO', 'bdfpdies_elperu');
+define('BD_CLAVE',   'huahuala05');
+$_SESSION['selectpage']="12172812";
+
+
+cisantiago.com
+--------------------------------------
+define('SERVER_MYSQL', 'localhost');
+define('DATABASE',   'cisantia_productos');
+define('BD_USUARIO', 'cisantia');
+define('BD_CLAVE',   'huizaquispe01');
+$_SESSION['selectpage']="12172813";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

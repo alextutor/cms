@@ -1,0 +1,1 @@
+UPDATE contenido SET cestcomenface='1',  cestcompartirredes='1' WHERE idexcel <>''

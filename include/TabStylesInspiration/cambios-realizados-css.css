@@ -1,0 +1,14 @@
+/* archivo tabs.css */
+.tabs nav ul { flex-flow: row;}  /*le quite  wrap */ 
+.tabs nav ul {justify-content: center} /*le cambie por  justify-content: space-between*/
+
+/* archivo tabstyles.css */
+
+.tabs-style-linebox nav a {
+padding: 0 5px; /* alex cambie estaba 1.5em*/
+}
+
+
+
+
+

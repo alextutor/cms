@@ -1,0 +1,492 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://gmpg.org/xfn/11">
+	<title>FancyUpload - Swiff meets Ajax » digitarald:Harald Kirschner</title>
+	<!--
+		digitarald.de, 2.2
+		Look and learn, but don't steal. Gracias!
+	-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="freelancer, developer, ajax, javascript, MooTools, FancyUpload, Fileinput, Uploader, Swiff, FileReference, ExternalInterface" />
+	<meta name="description" content="digitarald:Harald K - Consultant &amp; Contractor - FancyUpload - Swiff meets Ajax - Swiff meets Ajax for powerful and elegant uploads.FancyUpload is a file-input replacement which features an unobtrusive, multiple-file selectionmenu and queued upload with an animated progress bar. It is easy to setup, is server independent,completely styleable via CSS and XHTML and uses MooTools to work in all modern browsers." />
+
+	<meta name="geo.placename" content="Chemin Du Ruisselet, 13, 1009, Pully, Switzerland" />
+	<meta name="geo.position" content="46.51408;6.6654" />
+	<meta name="geo.region" content="CH-VD" />
+	<meta name="ICBM" content="46.51408, 6.6654" />
+
+	<link rel="shortcut icon" type="image/ico" href="http://digitarald.de/favicon.ico" />
+
+	<link rel="alternate" type="application/rss+xml" title="Combined feed" href="http://feeds.feedburner.com/digitarald" />
+	<link rel="alternate" type="application/rss+xml" title="Journal feed" href="http://feeds.feedburner.com/digitarald-journal" />
+	<link rel="alternate" type="application/rss+xml" title="Project changelog feed" href="http://feeds.feedburner.com/digitarald-projects" />
+	<link rel="alternate" type="application/rss+xml" title="Comments feed" href="http://feeds.feedburner.com/digitarald-comments" />
+
+	<link rel="openid.server" href="http://www.myopenid.com/server" />
+	<link rel="openid.delegate" href="http://digitarald.myopenid.com" />
+
+	<link rel="stylesheet" type="text/css" href="/css/blueprint/screen.css" media="screen, projection" />
+	<link rel="stylesheet" type="text/css" href="/css/blueprint/print.css" media="print" />
+	<!--[if IE]><link rel="stylesheet" href="/css/blueprint/ie.css" type="text/css" media="screen, projection" /><![endif]-->
+	<link rel="stylesheet" type="text/css" href="/css/site.css" media="screen, projection" />
+
+	<!-- dynamic assets -->
+
+	<!-- ABQIAAAAnuPSMaTAklUe9B-jBGXYWBTi8lmesW6ApLcCnWMzILnAotPD6xRrTryWGQkZDlam0S31xhlE2iwDjw -->
+	<script src="http://www.google.com/jsapi?key=ABQIAAAAnuPSMaTAklUe9B-jBGXYWBR8ZYMDux4-CA5m5k_HEVubjOhQcBTApua1FqCgr4ngDNEnsspgUtyI5Q" type="text/javascript"></script>
+	<script type="text/javascript" src="/js/site.js"></script>
+
+</head>
+<body>
+	<div class="clear" id="nav">
+		<div class="container">
+			<h1>
+				<span>digitarald - Web Craftsman</span>
+				<a href="/" title="digitarald : Web Craftsman" rel="bookmark">
+					Harald Kirschner - Internet Consultant &amp; Contractor
+				</a>
+			</h1>
+			<h2><a href="/" rel="bookmark">FancyUpload - Swiff meets Ajax</a></h2>
+			<ul>
+				<li><a href="/journal/" title="News &amp; Articles"><strong>Journal</strong></a></li>
+				<li><a href="/projects/" class="selected" title="Released Scripts"><strong>Projects</strong></a></li>
+				<li><a href="/playground/" title="Widget Birthplace"><strong>Playground</strong></a></li>
+				<li><a href="/forums/" title="Community Forum for Discussions and Support"><strong>Forums</strong></a></li>
+				<li><a href="/about/" title="Author &amp; Site"><strong>About</strong></a></li>
+				<li><a href="/contact/" class="last" title="Business Card"><strong>Contact</strong></a></li>
+			</ul>
+			<div class="sub">
+				<a href="http://twitter.com/digitarald" rel="me">Follow me on Twitter</a> /
+				<a href="http://feeds.feedburner.com/digitarald">RSS Feed</a>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="container" id="container">
+		<div class="span-16 first colborder" id="content">
+			<div class="project">
+	<div class="right quiet" title="Other versions">
+		<strong>Other versions:</strong>
+		<ul class="inline">
+			<li><a href="/project/fancyupload/1-0/">v1.0</a></li>
+			<li><a href="/project/fancyupload/">v3.0</a></li>
+		</ul>
+	</div>
+	<h2><a href="/project/fancyupload/2-0/" rel="bookmark">FancyUpload - Swiff meets Ajax <small>(v2.0)</small></a></h2>
+	<p>
+		<a href="/project/fancyupload/2-0/">
+			<img src="/project/fancyupload/2-0/thumb.png" alt="Project FancyUpload - Swiff meets Ajax Showcase" />
+		</a>
+		<strong>Swiff</strong> meets <strong>Ajax</strong> for powerful and elegant uploads.
+FancyUpload is a file-input replacement which features an unobtrusive, multiple-file selection
+menu and queued upload with an animated progress bar. It is easy to setup, is server independent,
+completely styleable via CSS and <abbr title="Extensible Hypertext Markup Language">XHTML</abbr> and uses <a href="http://mootools.net/" title="MooTools JavaScript Framework">MooTools</a> to work in all modern browsers.	</p>
+
+
+	<br />
+	<div class="clear" style="text-align: center;">
+		<script type="text/javascript">
+			/* <![CDATA[ */
+				window.google_ad_client = "pub-0765703537118513";
+				window.google_ad_slot = "3521989714";
+				window.google_ad_width = 468;
+				window.google_ad_height = 60;
+			/* ]]> */
+		</script>
+		<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+	</div>
+
+
+	<h3 id="showcases">Showcases</h3>
+
+	<ul class="demos">
+		<li>
+			<a href="/project/fancyupload/2-0/showcase/photoqueue/">Queued Photo Uploader</a>
+			Creating a nice looking upload queue, including animated progress bars.		</li>
+	</ul>
+
+<div><h3 id="new-version">Outdated Version</h3><div class="error"><strong><a href="/project/fancyupload/">Get the new FancyUpload 3.0</a></strong>! <strong>3.0</strong> is the current release (more stable, more showcases, more documentation) and it is compatible with 2.0 and 2.1 (<em>Old versions are not maintained anymore!</em>).
+</div><h3 id="big-important-note">Previous Version</h3><p>If you missed the link above, the previous FancyUpload for <a href="http://mootools.net">MooTools 1.11</a> is still <a href="/project/fancyupload/1-0/">available</a> including example code and minor updates.</p><h3 id="features">Features</h3><ul><li>Select and upload multiple files</li><li>Filter files by type in the select dialog</li><li>Optional Events to add your own behaviour</li><li>Show and filter useful file information before the upload starts</li><li>Limit uploads by file count and/or file size</li><li>Platform and <em>server independent</em>, just needs Flash 9+ (&gt; 95% penetration)</li><li>Unobtrusive, since the element is replaced after the swf loaded successfully</li><li>Cancel running uploads, add files during upload</li><li>Everything is optional, documented and easy editable</li><li>New in 2.0
+
+<ul><li>Get the server response after upload for showing additional informations or previewing the image, etc.</li><li>Shows the current upload speed and the time left</li><li>Send additional request data via GET or POST variables</li><li>Set the filename for the upload request</li></ul></li></ul><h3 id="compatibility">Compatibility</h3><p>Fully compatible with all <a href="http://developer.yahoo.com/yui/articles/gbs/" title="Graded Browser Support provides an inclusive definition of support and a framework for taming the ever-expanding world of browsers and frontend technologies.">A-Grade Browsers</a> (<a href="http://www.microsoft.com/windows/products/winfamily/ie/default.mspx">Internet Explorer 6+</a>,
+<a href="http://www.opera.com/">Opera 9</a>, <a href="http://www.mozilla.com/en-US/firefox/">Firefox 1.5+</a> and <a href="http://www.apple.com/safari/">Safari 2+</a>)
+with <a href="http://www.adobe.com/products/flashplayer/">Adobe Flash 9</a> player.</p><h3 id="how-to">How to use</h3><p>Will be written for the final release, at this time the showcases are the best documentation.</p><h3 id="faq">Tips, Tricks and Quirks</h3><dl><dt>How do I access the uploaded files?</dt><dd><p>Every upload, even with multiple files, results in one request. Access the uploaded file via</p><ul><li>PHP: $_FILES[&#x2018;Filedata&#x2019;]</li><li>Perl: $main::cgi-&gt;param(&#x2018;Filedata&#x2019;); &#x2026; <a href="http://forum.mootools.net/viewtopic.php?id=2726#post-14326">example</a></li><li>Rails: params[:Filedata] &#x2026; <a href="http://forum.mootools.net/viewtopic.php?id=2726&amp;p=6#post-22330">example</a></li><li>ASP: <a href="http://bennewton.us/2007/07/22/fancy-upload-and-classic-asp/">Fancy Upload and Classic ASP</a></li></ul><p><em>Filedata</em> is the default value for the option fieldName, so you can change it. The submitted content-type is always &#x201C;application/octet-stream&#x201D;, so don&#x2019;t trust it when you validate the file.</p></dd><dt>Flash-request forgets cookies and session ID</dt><dd><p>Flash FileReference is not an intelligent upload class, the request will not have the browser cookies, Flash saves his own cookies. When you have sessions, append them as get-data to the the URL (e.g. &#x201C;upload.php?SESSID=123456789abcdef&#x201D;). Of course your session-name can be different.</p></dd><dt>Are cross-domain uploads possible?</dt><dd><p><a href="http://forum.mootools.net/viewtopic.php?id=8312">Forum solution</a>, and FileReference docs:</p><blockquote><p>For uploading and downloading operations, a SWF file can access files only within its own domain, including any domains that are specified by a cross-domain policy file. If the SWF that is initiating the upload or download doesn&#x2019;t come from the same domain as the file server, you must put a policy file on the file server.
+  <a href="http://livedocs.adobe.com/flash/8/main/wwhelp/wwhimpl/common/html/wwhelp.htm?context=LiveDocs_Parts&amp;file=00001590.html">More on security and link to cross-domain policies</a></p></blockquote></dd><dt>FancyUpload does not load, the input element gets not replaced</dt><dd><p>Check in <a href="http://www.getfirebug.com/">Firebug</a> in <em>Net/Flash</em> that the SWF file loads correctly. If not double check your given options.</p></dd><dt>Uploads fail with 404 error code</dt><dd><p>Check your URL and better <em>use an absolute upload URL</em>.</p><p><abbr title="(Microsoft) Internet Explorer Browser">IE</abbr> takes the upload url <em>relative</em> to the swf, all other browsers relative to the html/current file. So the best solution is an absolute path for the option url or rather the form action. <em>If you have problems with failed upload and 404 error codes, try an absolute url</em>, in your form-action or url option when creating your FancyUpload instance.</p></dd><dt>Uploads fail with 406/403 error</dt><dd><p>From the swfupload documentation:</p><blockquote><p>If you are using Apache with mod_security this will not work, you need to put the following in your .htaccess file to disable mod_security:</p><p>SecFilterEngine Off
+    SecFilterScanPOST Off</p><p>Disabling mod_security isn&#x2019;t allowed on some shared hosts, and only do this if you know what you are doing.
+  This is due to a bug in the way that flash sends the headers back to the server according to the Flash 8 documentation</p></blockquote></dd><dt>Uploads fail with 403/500 error</dt><dd><p>Check your server config, there must be something wrong. Also see 404, double check the upload URL.</p></dd><dt>Uploads and Basic Authentication</dt><dd><p>Flash does not care about authenticated Browsers. Firefix/Win/Flash 9 can handle it, <abbr title="(Microsoft) Internet Explorer Browser">IE</abbr> too, Mac can&#x2019;t handle it.
+Anyways, Flash will ask for its own access username and password.</p></dd></dl><h3 id="requirements">Requirements</h3><p><em>It does not depend on any server-side architecture or language.</em></p><h4>MooTools JavaScript Framework 1.2</h4><p><a href="http://mootools.net/core"><strong>Download MooTools 1.2</strong></a>.</p><ul><li>Element.Events</li><li>Fx.Tween</li><li>Fx.Transitions </li><li>Selectors</li><li>Json</li><li>Swiff</li><li><em>DomReady (facultative)</em></li></ul><p><strong>Don&#x2019;t use compressed code during development to simplify debugging.</strong></p><h3 id="download">Download</h3><div class="downloads"><strong><a href="/project/fancyupload/">Get the new FancyUpload 3.0</a></strong>! <strong>3.0</strong> is the current release (more stable, more showcases, more documentation) and it is compatible with 2.0 and 2.1 (<em>Old versions are not maintained anymore!</em>).
+</div><ul><li><a href="source/FancyUpload2.js">FancyUpload2.js</a></li><li><a href="source/Swiff.Uploader.js">Swiff.Uploader.js</a></li><li><a href="source/Fx.ProgressBar.js" title="Will get his own project page later">Fx.ProgressBar.js</a></li><li><a href="source/Swiff.Uploader.swf" title="It is a hidden, 1px movie and only contains ActionScript!">Swiff.Uploader.swf</a> (<em>Use right-click/save-as!</em>)</li><li>For interested developers (<em>requires <a href="http://www.adobe.com/products/flash/">Adobe Flash CS3</a></em>) : <a href="source/Swiff.Uploader.fla">Swiff.Uploader.fla</a></li></ul><h3 id="references">References</h3><ul><li><a href="http://forum.mootools.net">MooTools Forum</a>: <a href="http://forum.mootools.net/viewtopic.php?id=2726">&#x201C;Fancy Upload by digitarald&#x201D;</a> with 15 pages</li><li><a href="http://edseek.com/archives/2007/07/15/flash-upload-progress-for-rails-with-fancyupload-for-mootools/">Jason: Flash Upload Progress for Rails with FancyUpload for mootools</a></li><li><a href="http://livedocs.adobe.com/flash/9.0/ActionScriptLangRefV3/flash/net/FileReference.html">FileReference (flash.net.FileReference) - Version 9</a></li><li><a href="http://bennewton.us/2007/07/22/fancy-upload-and-classic-asp/">Ben Newton: Fancy Upload and Classic ASP</a></li></ul><h3 id="changelog">Changelog</h3><dl><dt id="changelog-3-0">3.0 (2009-05-25)</dt><dd><ul><li>Added: Option timeLimit (default 30s, 0 for linux). Prevents frozen upload when server fails, after timeout the upload is cancelled and the complete event fired (with &#x201C;timeout&#x201D; error).</li><li>Added: Option policyFile, custom location for the cross-domain policy.</li><li>Added: Events beforeStart/Stop/Remove for more control over the upload process (e.g. setting data from inputs).</li><li>Changed: 1s delay for onFail, prevents failing on slow connections.</li><li>Fixed: data is not correctly merged between uploader options and file-specific options. </li><li>Fixed: Removed debugging behaviour on progress bars.</li></ul></dd><dt id="changelog-3-0-rc1">3.0 rc1 (2009-05-05)</dt><dd><ul><li>Added: New showcase attach-a-file including first iteration of the class Attach.</li><li>Added: New event <code>reposition</code>, fired when the box is moved.</li><li>Changed: More converted placeholder-units for validation errors.</li><li>Fixed: remove event did not fire correctly, broke option <code>fileListMax</code></li><li>Fixed: Example script.php did not clear log file correctly.</li><li>Fixed: I really missed a console.log in FancyUpload2.js, sorry!</li></ul></dd><dt id="changelog-3-0-rc0">3.0 rc0 (2009-04-30)</dt><dd><ul><li>Added: Total rewrite of <code>Swiff.Uploader</code> JavaScript and Actionscript</li><li>Added: Event based interactions from Flash to JS</li><li>Added: File-based list handling for easy implementation</li><li>Added: IFrame fallback class <code>Uploader.js</code>, mirroring the <code>Swiff.Uploader</code> <abbr title="Application Programming Interface">API</abbr></li><li>Added: Several new options like <code>appendCookieData</code>, <code>buttonImage</code> and various validations</li><li>Fixed: All known bugs (case-sensitive typeFilter, sending data, Mac problems, load events, &#x2026;)</li></ul></dd><dt id="changelog-2-0">2.0 (2008-12-05)</dt><dd><ul><li>Added: Flash 10 support</li><li>Added: removeFile now returns the new global progress status, to refresh numbers</li><li>Fixed: Clickable overlay for Flash 10, define your target element with option &#x201C;target&#x201D;</li><li>Fixed: Encoding problems fixed, JS calls failed due to ExternalInterface bugs (Kudos to SwfUpload for their short and efficient fix)</li><li>Fixed: Cancelling a running file starts the next file</li><li>Fixed: Enabled cross domain upload</li></ul></dd><dt id="changelog-2-0-beta-4">2.0 beta 4 (2008-05-09)</dt><dd><ul><li>Fixed: Fixed <code>fileUpload</code> to return changed options, fixes overriding options.</li></ul></dd><dt id="changelog-2-0-beta-3">2.0 beta 3 (2008-05-06)</dt><dd><ul><li>Added: Optional events for every callback (e.g. onSelect, onComplete, etc.) are added automatically for more control</li><li>Added: Option <code>limitSize</code> (default false) to limit file size (in bytes) of a single selected file</li><li>Added: Option <code>limitFiles</code> (default true) to limit queue length, ignores finished files</li><li>Added: Option <code>allowDuplicates</code> (default false) to disable duplicate files in queue (checking name and size)</li><li>Added: Option <code>validateFile</code> as custom callback validator (default returns always true). Should return true or false.</li><li>Added: Optional callbacks for handling the file updates, allowing to control the behaviour and layout of the file elements:
+
+<ul><li><code>fileInvalid</code>: called for invalid files with error stack as 2nd argument</li><li><code>fileCreate</code>: creates file element after select (see <code>FancyUpload2::fileCreate</code> for default method)</li><li><code>fileUpload</code>: called when file is opened for upload, allows to modify the upload options (data, url, method, fieldName) for every upload.</li><li><code>fileComplete</code>: updates the file element to completed state and gets the response (2nd argument) (see <code>FancyUpload2::fileComplete</code> for default method)</li><li><code>fileRemove</code>: removes the element (see <code>FancyUpload2::fileRemove</code> for default method)</li></ul></li><li>Fixed: callback options are added as events , so they don&#x2019;t break FancyUpload callbacks</li></ul></dd><dt id="changelog-2-0-preview-2">2.0 preview 2 (2008-04-24)</dt><dd><ul><li>Fixed: Removed overflow auto from the lists to fix scrollbars.</li><li>Fixed: Fixed overall progress file size for removed files.</li><li>Fixed: New time left calculation, still needs some tweaks for the internal AS3 calculation.</li></ul></dd><dt id="changelog-2-0-preview">2.0 preview (2008-04-21)</dt><dd><p><strong>Refactored JS and ActionScript, it is not compatible with previous FancyUpload but a lot better!</strong></p><ul><li>Added: New Interface using all the new features (will change in the future for easier customization)</li><li>Added: Get the server response for uploaded files in onComplete, no longer error-catching with header status codes</li><li>Added: Get the current states of uploads like time left, bytes upload, for the current file and per queue &#x2026; for supreme progress bars</li><li>Added: Set POST and GET data for the upload request</li><li>Added: Set the file-name for the upload request, default Filedata, like before.</li><li>Added: Set request options for every file, modify upload options with onBeforeOpen</li><li>Added: New events: onAllSelect, onBeforeOpen and onAllComplete</li><li>Changed: Update to MooTools 1.2 trunk and the modified Swiff Class</li><li>Changed: Updated to Flash 9 + ActionScript 3 for a stable <abbr title="Application Programming Interface">API</abbr> with more features</li><li>Fixed: Cache bug for <abbr title="(Microsoft) Internet Explorer Browser">IE</abbr>, thanks to Flash 9</li><li>Fixed: Scroll into view bug for Firefox, fixed wmode</li><li>Fixed: Flash 9 works fine on Linux/Firefox</li></ul></dd><dt id="changelog-1-0-2">1.0.2 (2008-04-20)</dt><dd><ul><li>Fixed: Fixed <abbr title="(Microsoft) Internet Explorer Browser">IE</abbr> errors when unloading the page by removing the element in Swiff.Base.js</li><li>Fixed: Scroll into view bug for Firefox, fixed wmode</li></ul></dd><dt id="changelog-1-0-1">1.0.1 (2007-07-04)</dt><dd><ul><li>Added: Events onError and onCancel for files</li><li>Change: Added better behaviour for onComplete and onAllComplete, now you can trust them</li><li>Change: Removed internal empty onCancel, since Flash makes it useless and some other clean-ups</li><li>Fixed: limitFiles works now and allowDuplicates is default true</li><li>Fixed: Swiff.Uploader.js: Added anti-cache fix for <abbr title="(Microsoft) Internet Explorer Browser">IE</abbr> and small improvements for parameters</li><li>Fixed: FancyUpload.js: Fixed options in FancyUpload to work with MooTools 1.2dev</li></ul></dd><dt id="changelog-1-0">1.0 (2007-05-31)</dt><dd><ul><li>Changed: Added more checks to make SWF-JS communication more stable</li><li>Changed: Swiff.Uploader options, <em>swf</em> is now the url to the swf and <em>url</em> the upload url</li><li>Fixed: Fixed a bug with multiple uploaders on one page, they all work with one injected swf</li></ul></dd><dt id="changelog-1-0-pre">1.0 pre (2007-05-23)</dt><dd><ul><li>Initial official Release</li></ul></dd></dl><h3 id="license">License</h3><p>All files are &#xA9; 2008-2009 by Harald Kirschner and available under the <a href="http://www.opensource.org/licenses/mit-license.php">MIT License</a>.</p><h3 id="contact">Contact &amp; Discussion</h3><p>For asking questions, requesting features, filing bugs or contributing other thoughts on this project use
+the <a href="/forums/"><strong>support forum</strong></a> below. Before posting a new question, read through the documentation and
+the contributed notes for an answer. For problem reports make sure to add enough details like browser,
+version and a link or the relevant code.</p><p>You can <a href="/contact/">contact</a> me for non-support related notes.</p><h3 id="support">Professional Support</h3><p>I am <a href="/contact/">available for hire</a> if you look for professional and swift help. I can come to your rescue
+for installation, customization or extending the existing source for your needs.</p></div>
+</div>
+						<div id="tagged">
+	<strong>Keywords:</strong>
+	<ul class="tags">
+		<li><a href="http://technorati.com/tag/MooTools" rel="tag">MooTools</a></li>
+		<li><a href="http://technorati.com/tag/FancyUpload" rel="tag">FancyUpload</a></li>
+		<li><a href="http://technorati.com/tag/Fileinput" rel="tag">Fileinput</a></li>
+		<li><a href="http://technorati.com/tag/Uploader" rel="tag">Uploader</a></li>
+		<li><a href="http://technorati.com/tag/Swiff" rel="tag">Swiff</a></li>
+		<li><a href="http://technorati.com/tag/FileReference" rel="tag">FileReference</a></li>
+		<li><a href="http://technorati.com/tag/ExternalInterface" rel="tag">ExternalInterface</a></li>
+	</ul>
+</div>
+<div id="share">
+	<strong>Share it:</strong>
+	<a href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Fdigitarald.de%2Fproject%2Ffancyupload%2F&amp;title=FancyUpload+-+Swiff+meets+Ajax" title="Save to stumbleupon.com">Stumble it!</a> •
+	<a href="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fdigitarald.de%2Fproject%2Ffancyupload%2F&amp;title=FancyUpload+-+Swiff+meets+Ajax" title="Save to digg.com">Digg This!</a> •
+	<a href="http://del.icio.us/post?url=http%3A%2F%2Fdigitarald.de%2Fproject%2Ffancyupload%2F&amp;title=FancyUpload+-+Swiff+meets+Ajax" title="Save to del.icio.us">del.icio.us</a> (No Posts)
+</div>
+
+
+
+<!-- This page took 0.0016570091247559 seconds to process -->			
+						
+
+<!-- This page took 0.41792988777161 seconds to process -->			
+						<h3 id="comments">
+	<a href="http://disqus.com/" rel="external" class="right">
+		<img src="/images/disqus-button.png" alt="discussion by DISQUS" />
+	</a>
+	No Comments</h3>
+
+<p class="notice">
+	<strong>Please use the <a href="/forums/">support forums</a></strong> for discussing the project, asking questions or posting bug-fixes!
+</p>
+
+<div id="dsq-content">
+
+	<div id="sort" class="left">
+		<strong>Sort:</strong>
+		<ul class="inline">
+			<li>
+				<a href="/project/fancyupload/2-0/?sort=1#comments">Old</a>
+			</li>
+			<li>
+				New			</li>
+			<li>
+				<a href="/project/fancyupload/2-0/?sort=3#comments">Best</a>
+			</li>
+			<li>
+				<a href="/project/fancyupload/2-0/?sort=4#comments">Hot</a>
+			</li>
+		</ul>
+	</div>
+
+
+	<div class="right">
+		<strong>
+			No Comments
+		</strong>
+		<ul class="inline pagination">
+			<li>First</li>
+			<li>&#8249; Prev</li>
+			<li>Next &#8250;</li>
+			<li class="last">Last</li>
+		</ul>
+	</div>
+
+<!-- ugly-ads
+	<div class="clear" style="text-align: center;">
+		<script type="text/javascript">
+			/* <![CDATA[ */
+				window.google_ad_client = "pub-0765703537118513";
+				window.google_ad_slot = "5961354568";
+				window.google_ad_width = 468;
+				window.google_ad_height = 60;
+			/* ]]> */
+		</script>
+		<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+	</div>
+-->
+	<ul id="dsq-comments">
+		<li class="comment">
+			<em>... want to be the first? <a href="#respond">Post your comment!</a></em>
+		</li>
+	</ul>
+
+	
+	<div class="right">
+		<strong>
+			No Comments
+		</strong>
+		<ul class="inline pagination">
+			<li>First</li>
+			<li>&#8249; Prev</li>
+			<li>Next &#8250;</li>
+			<li class="last">Last</li>
+		</ul>
+	</div>
+
+
+	<div id="dsq-message" style="display:none"></div>
+
+	<h4 id="respond" class="clear">Post your comment</h4>
+
+	<p class="notice">
+		<strong>Please use the <a href="/forums/">support forums</a></strong> for discussing the project, asking questions or posting bug-fixes!
+	</p>
+
+	<div id="dsq-auth-as"></div>
+
+	<div id="dsq-reply"></div>
+
+</div>
+<script type="text/javascript" src="http://disqus.com/api/reply.js?forum_shortname=digitarald-de"></script>
+
+
+<!-- This page took 0.0038590431213379 seconds to process -->			
+		</div>
+		<div class="span-7 quiet last" id="deck">
+			<script type="text/javascript">
+				/* <![CDATA[ */
+					window.Vertical1520 = false;
+					window.ShowAdHereBanner1520 = true;
+					window.RepeatAll1520 = false;
+					window.NoFollowAll1520 = false;
+					window.BannerStyles1520 = [
+						"a{float: left;font-size:11px;color:#888;font-family:verdana,sans-serif;margin:0 10px 10px 0;text-align:center;text-decoration:none;overflow:hidden;}",
+						"img{border:0;clear:right;}",
+						"a.adhere{color:#666;font-weight:bold;font-size:12px;border:1px solid #ccc;background:#e7e7e7;text-align:center;}",
+						"a.adhere:hover{border:1px solid #999;background:#ddd;color:#333;}"
+					];
+				/* ]]> */
+			</script>
+			<script src="http://s3.buysellads.com/1520/1520.js" type="text/javascript"></script>
+			<br class="clear" />
+			<div id="toc">
+				<h4>Project Contents</h4>
+
+							<ul class="level-0">
+				<li><a href="/project/fancyupload/2-0/#content">Abstract</a>
+				</li>
+				<li><a href="/project/fancyupload/2-0/#showcases">Showcases</a>
+			<ul class="level-1">
+				<li><a href="/project/fancyupload/2-0/showcase/photoqueue/">Queued Photo Uploader</a>
+				</li>
+			</ul>
+				</li>
+				<li><a href="/project/fancyupload/2-0/#new-version">Outdated Version</a>
+				</li>
+				<li><a href="/project/fancyupload/2-0/#big-important-note">Previous Version</a>
+				</li>
+				<li><a href="/project/fancyupload/2-0/#features">Features</a>
+				</li>
+				<li><a href="/project/fancyupload/2-0/#compatibility">Compatibility</a>
+				</li>
+				<li><a href="/project/fancyupload/2-0/#how-to">How to use</a>
+				</li>
+				<li><a href="/project/fancyupload/2-0/#faq">Tips, Tricks and Quirks</a>
+				</li>
+				<li><a href="/project/fancyupload/2-0/#requirements">Requirements</a>
+				</li>
+				<li><a href="/project/fancyupload/2-0/#download">Download</a>
+				</li>
+				<li><a href="/project/fancyupload/2-0/#references">References</a>
+				</li>
+				<li><a href="/project/fancyupload/2-0/#changelog">Changelog</a>
+				</li>
+				<li><a href="/project/fancyupload/2-0/#license">License</a>
+				</li>
+				<li><a href="/project/fancyupload/2-0/#contact">Contact &amp; Discussion</a>
+				</li>
+				<li><a href="/project/fancyupload/2-0/#support">Professional Support</a>
+				</li>
+				<li><a href="/project/fancyupload/2-0/#comments">Comments (0)</a>
+				</li>
+			</ul>
+			</div>
+
+			
+			<form method="get" action="http://www.google.com/custom" id="search">
+				<div>
+					<input type="text" name="q" id="search-q" size="18" maxlength="255" value="" class="text" /><a href="#" class="submit" title="Search">&#160;</a>
+
+					<input type="hidden" name="domains" value="digitarald.de" />
+					<input type="hidden" name="sitesearch" value="digitarald.de" />
+					<input type="hidden" name="client" value="partner-pub-0765703537118513:h6zrqn-t46k" />
+					<input type="hidden" name="forid" value="1" />
+					<input type="hidden" name="ie" value="UTF-8" />
+					<input type="hidden" name="oe" value="UTF-8" />
+					<input type="hidden" name="safe" value="active" />
+					<input type="hidden" name="flav" value="0000" />
+					<input type="hidden" name="sig" value="M68Iqs2S48xDsp6t" />
+					<input type="hidden" name="cof" value="GALT:#008000;GL:1;DIV:#FFFFFF;VLC:663399;AH:center;BGC:FFFFFF;LBGC:443831;ALC:0000FF;LC:0000FF;T:000000;GFNT:0000FF;GIMP:0000FF;FORID:1" />
+					<input type="hidden" name="hl" value="en" />
+				</div>
+			</form>
+
+			<h4>
+				<a href="/contact/">Internet Consultant <span class="alt">&amp;</span> Contractor</a>
+			</h4>
+
+			<p>
+				I'm available to combine forces with you and your team to find the most <em>simple</em>,
+				<em>elegant</em> and <em>convenient</em> web solutions
+				<a href="/about/" class="small" title="More about project quotes and rates">…</a>.
+				<a href="/contact/" title="Hire me as Internet Consultant &amp; Contractor">I await your call</a>.
+			</p>
+			<p>
+				If you just like my work and want to say <em>Thank You</em>,
+				donate via <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=5518028">PayPal</a> or <a href="http://www.amazon.com/gp/registry/wishlist/1VBVJMZ4AO6P8/">Amazon Wish List</a>.
+			</p>
+
+			
+			
+						<h4 class="clear"><a href="/projects/">Developer Resources <span class="alt">&amp;</span> Tools</a></h4>
+
+			<ul class="links">
+				<li><a href="http://developer.mozilla.org/en/JavaScript" title="JavaScript Documentation - Mozilla Developer Center">JavaScript Documentation (MDC)</a></li>
+				<li><a href="https://developer.mozilla.org/en/HTML" title="HTML Documentation - Mozilla Developer Center">HTML Documentation (MDC)</a></li>
+				<li><a href="http://developer.mozilla.org/en/CSS" title="CSS Documentation - Mozilla Developer Center">CSS Documentation (MDC)</a></li>
+				<li><a href="http://yuiblog.com/blog/2007/01/24/video-crockford-tjpl/" title="YUI Theater: Douglas Crockford, The JavaScript Programming Language">Videos: Learning JavaScript</a></li>
+				<li><a href="http://www.webstandards.org/learn/" title="Learn - The Web Standards Project">Web Standards Project</a></li>
+				<li><a href="http://mootools.net/docs/core" title="MooTools Documentation">MooTools Documentation</a></li>
+				<li><a href="http://www.clientcide.com/" title="Clientcide">Clientcide</a></li>
+				<li><a href="http://www.alistapart.com/" title="A List Apart - For People Who Make Websites - Web standards and best practices">A List Apart</a></li>
+				<li><a href="http://ajaxian.com/" title="Ajaxian - Unfiltered Ajax News">Ajaxian</a></li>
+				<li><a href="http://mootools.net/blog/" title="Official MooTools Blog">MooTools Blog</a></li>
+				<li><a href="http://www.getfirebug.com/" title="Firefox Add-on: Firebug - JavaScript debugging and profiling for Firefox">FireBug (Firefox)</a></li>
+				<li><a href="http://addons.mozilla.org/en-US/firefox/addon/60" title="Firefox Add-on: Web Developer Toolbar">Firefox: Web Developer Toolbar (Firefox)</a></li>
+			</ul>
+			
+		</div>
+	</div>
+	<div id="footer">
+		<div class="container">
+			<div class="span-4 first">&#160;</div>
+			<div class="span-6">
+				<a href="http://feeds.feedburner.com/digitarald-projects" class="external right" title="digitarald.de Project Changelog Feed">
+					<img src="/images/feed.png" alt="Feed" />
+				</a>
+				<h4><a href="/projects/">Recent Project Changes</a></h4>
+					<ul class="recent-logs">
+		<li><a href="http://digitarald.de/project/fancyupload/#changelog-3-0" title="May 25th, 2009">FancyUpload - Swiff meets Ajax 3-0</a></li>
+		<li><a href="http://digitarald.de/project/fancyupload/#changelog-3-0-rc1" title="May 5th, 2009">FancyUpload - Swiff meets Ajax 3-0-rc1</a></li>
+		<li><a href="http://digitarald.de/project/fancyupload/#changelog-3-0-rc0" title="April 30th, 2009">FancyUpload - Swiff meets Ajax 3-0-rc0</a></li>
+		<li><a href="http://digitarald.de/project/squeezebox/#changelog-1-1-rc4" title="April 23rd, 2009">SqueezeBox - Expandable Lightbox 1-1-rc4</a></li>
+		<li><a href="http://digitarald.de/project/squeezebox/#changelog-1-1-rc3" title="March 12th, 2009">SqueezeBox - Expandable Lightbox 1-1-rc3</a></li>
+		<li><a href="http://digitarald.de/project/fancyupload/#changelog-2-0" title="December 5th, 2008">FancyUpload - Swiff meets Ajax 2-0</a></li>
+		<li><a href="http://digitarald.de/project/autocompleter/#changelog-1-1-2" title="August 19th, 2008">AutoCompleter 1-1-2</a></li>
+		<li><a href="http://digitarald.de/project/fancyupload/#changelog-2-0-beta-4" title="May 9th, 2008">FancyUpload - Swiff meets Ajax 2-0-beta-4</a></li>
+		<li><a href="http://digitarald.de/project/simple-tabs/#changelog-1-1" title="May 7th, 2008">SimpleTabs - Unobtrusive Tabs + Ajax 1-1</a></li>
+		<li><a href="http://digitarald.de/project/fancyupload/#changelog-2-0-beta-3" title="May 6th, 2008">FancyUpload - Swiff meets Ajax 2-0-beta-3</a></li>
+	</ul>
+
+
+<!-- This page took 0.0011940002441406 seconds to process -->			</div>
+			<div class="span-6 colborder">
+				<a href="http://feeds.feedburner.com/digitarald-journal" class="external right" title="digitarald.de Journal Feed">
+					<img src="/images/feed.png" alt="Feed" />
+				</a>
+				<h4><a href="/journal/">Recent Journal Posts</a></h4>
+					<ul class="recent-posts">
+		<li>
+			<a href="http://digitarald.de/journal/3563060869/mootools-1-3-1-is-out/">MooTools 1.3.1 is out</a>
+		</li>
+		<li>
+			<a href="http://digitarald.de/journal/112671905/stable-fancyupload-3-0/">Stable FancyUpload 3.0</a>
+		</li>
+		<li>
+			<a href="http://digitarald.de/journal/103458930/fresh-fancyupload-3-showcase-attach-a-file/">Fresh FancyUpload 3 Showcase: Attach-a-File</a>
+		</li>
+		<li>
+			<a href="http://digitarald.de/journal/101811980/fancyupload-3-0-unleashed/">FancyUpload 3.0 Unleashed</a>
+		</li>
+		<li>
+			<a href="http://digitarald.de/journal/99601381/mootools-1-2-2-core-and-more/">MooTools 1.2.2 Core and More</a>
+		</li>
+		<li>
+			<a href="http://digitarald.de/journal/98974179/let-me-introduce-your-forum/">Let Me Introduce Your Forum</a>
+		</li>
+		<li>
+			<a href="http://digitarald.de/journal/91834262/luxuriousuploader-sneak-preview/">LuxuriousUploader - Sneak Preview</a>
+		</li>
+		<li>
+			<a href="http://digitarald.de/journal/89737433/rolling-out-sly-the-javascript-selector-engine/">Rolling out Sly - The JavaScript Selector Engine</a>
+		</li>
+		<li>
+			<a href="http://digitarald.de/journal/86142762/friday-chess-playtime/">Friday: Chess Playtime</a>
+		</li>
+		<li>
+			<a href="http://digitarald.de/journal/85857891/squeezebox-patch-day/">SqueezeBox Patch Day</a>
+		</li>
+		<li>
+			<a href="http://digitarald.de/journal/85820678/spring-cleaning-consulting/">Spring Cleaning &amp; Consulting</a>
+		</li>
+		<li>
+			<a href="http://digitarald.de/journal/54969186/mootools-1-2-1-released/">MooTools 1.2.1 Released</a>
+		</li>
+		<li>
+			<a href="http://digitarald.de/journal/54706744/fancyupload-for-flash-10/">FancyUpload for Flash 10</a>
+		</li>
+		<li>
+			<a href="http://digitarald.de/journal/52564364/30-days-of-mootools-tutorials/">30 Days of MooTools Tutorials</a>
+		</li>
+		<li>
+			<a href="http://digitarald.de/journal/41706321/how-jan-explains-the-mootools-world/">How Jan explains the MooTools World</a>
+		</li>
+		<li>
+			<a href="http://digitarald.de/journal/39129522/10-resources-for-learning-mootools-1-2/">10 Resources For Learning MooTools 1.2</a>
+		</li>
+		<li>
+			<a href="http://digitarald.de/journal/38150523/mootools-1-1-to-1-2-compatibility-layer/">MooTools 1.1 To 1.2 - Compatibility Layer</a>
+		</li>
+		<li>
+			<a href="http://digitarald.de/journal/38114620/fuel-your-anticipation-firefox-3-on-june-17th/">Fuel Your Anticipation - Firefox 3 On June 17th</a>
+		</li>
+		<li>
+			<a href="http://digitarald.de/journal/38100297/api-cheat-sheet-for-mootools-1-2/">API Cheat Sheet for MooTools 1.2</a>
+		</li>
+		<li>
+			<a href="http://digitarald.de/journal/37868408/mootools-1-1-to-1-2-classes/">MooTools 1.1 To 1.2 - Classes</a>
+		</li>
+	</ul>
+
+
+<!-- This page took 0.0012040138244629 seconds to process -->			</div>
+			<div class="span-7 last">
+				<h4>
+					<a href="http://www.amazon.com/gp/registry/wishlist/1VBVJMZ4AO6P8/" class="right" style="padding-left: 5px"><img src="/images/wishlist-button.png" width="80" height="15" alt="Haralds Amazon.com Wish List" /></a>
+					<a href="/about/">About the Author</a>
+				</h4>
+				<p>
+					<a href="/about/" class="right">
+						<img src="/images/harald-k-100.jpg" alt="Harald Kirschner" width="100" height="100" style="margin: 0 0 0.5em 0.5em;"  />
+					</a>
+					I am <a href="/contact/">Harald Kirschner</a>, a university trained <strong>internet consultant and contractor</strong> currently located in Switzerland.
+					I offer advanced solutions for websites and applications focusing on <em>usability</em> and <em>accessibility</em>.
+					My expertise is in <em>user interface</em> design and development.
+				</p>
+				<p>
+					<strong><a href="/about/">digitarald.de</a></strong> is my web<sup>2.0</sup> developer journal and open-source project repository.<br />
+				</p>
+				<p class="small">
+					<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+						<img src="/images/cc.png" width="80" height="15" alt="Creative Commons License" />
+					</a>
+					<br />
+					Except where otherwise noted, content and material created by <a href="/contact/">Harald Kirschner</a>
+					on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" title="Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported Licence">Creative Commons Licence</a>.
+				</p>
+			</div>
+
+		</div>
+	</div>
+	<script src="/js/cache/ga.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		/* <![CDATA[ */
+			var pageTracker = _gat._getTracker("UA-601848-2");
+			pageTracker._initData();
+			pageTracker._trackPageview();
+		/* ]]> */
+	</script>
+</body>
+</html>
+
+<!-- This page took 0.54022479057312 seconds to process -->

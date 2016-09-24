@@ -1,0 +1,10 @@
+webadmin/editor/assetmanager/settings.php
+
+Aqui esta la ruta de las imagenes
+
+
+//activar cuando se trabaja modo localhost
+$sBase0="E:/Alex/Web/xampp/htdocs/gamatell.com/www.gamatell.com/web/12172806/fotos"; 
+
+sustituye
+$sBase0=$_SESSION['RUTASERVIDOR'].$_SESSION['rutaimages']; //The real path

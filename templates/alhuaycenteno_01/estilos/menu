@@ -1,0 +1,130 @@
+/* ---------------- Inicio Menu ----------------*/
+.menu_bar{
+  display: none;
+}
+
+.menu{
+  width: 80%;
+  margin: 0 auto;
+  clear:both;
+  display: flex;  
+  Justify-content:Space-around;
+}
+
+ul#cabmenu {  
+  width:100%;   
+  padding-left: 0px; 
+  margin-top: 0px;
+  margin-bottom: 0px;
+  list-style: none;   
+  background-color:#eda619; /*no es el fondo del 1nivel*/
+}
+ul#cabmenu ul {
+ width: 160px; /* Sub Menu Width */
+ margin: 0;
+ list-style: none;
+ display: none;
+ position: absolute;
+ top: 100%;
+ left: 0;  
+}
+ul#cabmenu ul ul,ul#cabmenu ul ul ul { top: 0; left: 100%; }
+ul#cabmenu li { float: left;display: inline;position: relative;flex:auto;
+   border-right: 1px solid #FFFF99;}
+ ul#cabmenu li:last-child {border-right:none;}
+ul#cabmenu ul li { width: 100%; display: block; }
+
+/* Root Menu */
+ul#cabmenu a {
+  display: block;
+  padding-top: 10px;
+  float: left;  
+  font-family: 'Lucida Sans', sans-serif, verdana, arial, helvetica;
+  font-weight:bold;
+  font-size: 1em;
+  font-variant: small-caps;
+  text-align:center;
+  height:34px; /*alto del 1er nivel */
+  width: 100%;
+  background-color: #26661e;   /*color del fondo del menu 1*/
+  color:#ffffff;  /*color de la letra del menu 1*/
+  /*background-color:#ffffff;* alex/
+  /*background-image:url('planjuvame/menusup.jpg');alex*/   
+  /*color:#ffffff;*/
+}
+
+/* Root Menu Hover Persistence */
+ul#cabmenu a:hover,ul#cabmenu li:hover a,ul#cabmenu li.iehover a {
+  background-color:#bdd287;      /*---------Color fondo del menu al psar mouse 1nivel*/
+  /*background-image:url('images/menusupactive.jpg');*/  /*imagen de fondo al psar mouse 1nivel y fondo del 2do nivel */
+  color: #333;
+  font-size:13px;
+  font-weight:bold; 
+  height:34px; /*alto del 2do nivel tiene que ser = que el alto del 1er nivel */
+}
+/* 2nd Menu */
+ul#cabmenu li:hover li a,ul#cabmenu li.iehover li a {
+  float: none;
+  text-align:left;
+  padding-left:10px;
+  background-color:#749629; /*plomo*/
+  /*background-image:url('images/menusupdos.jpg'); */ /*bagorund del 2nd nivel*/
+  color: #FFF; /*color de la letra del menu 2*/
+  border-left:#71a73d solid 1px; /*verde*/
+  border-right:#71a73d solid 1px; /*verde*/
+  width:220px; 
+}
+
+/* 2nd Menu Hover Persistence */
+ul#cabmenu li:hover li a:hover,ul#cabmenu li:hover li:hover a,ul#cabmenu li.iehover li a:hover,ul#cabmenu li.iehover li.iehover a {
+  background-color:#bdd287;
+  /*background-image:url('images/menusupdosactive.jpg');*/  /* fondo de 2nivel psar mouse*/
+  color: #000  ; 
+  border-left:#117fc7 solid 1px;
+  font-weight:bold;
+}
+
+/* 3rd Menu */
+ul#cabmenu li:hover li:hover li a,ul#cabmenu li.iehover li.iehover li a {
+  background-color:#d0d0d0;
+  /*background-image:url('images/menusupdos.jpg');*/
+  color:#323232;
+  border-left:#117fc7 solid 1px;
+  margin-left:70px; /*Separacion del 2do Nivel juega con width del 2do nivel*/
+}
+
+/* 3rd Menu Hover Persistence Al pasar el mouse 3 nivel*/ 
+ul#cabmenu li:hover li:hover li a:hover,ul#cabmenu li:hover li:hover li:hover a,ul#cabmenu li.iehover li.iehover li a:hover,ul#cabmenu li.iehover li.iehover li.iehover a {
+  background-color:#0066ac;
+  /*background-image:url('images/menusupdosactive.jpg');*/
+  color:#ffffff;
+  border-left:#117fc7 solid 1px;
+}
+
+/* 4th Menu */
+ul#cabmenu li:hover li:hover li:hover li a,ul#cabmenu li.iehover li.iehover li.iehover li a {
+  background-color:#ffffff;
+  background-image:url('images/menusupdos.jpg');
+  color:#ffffff;
+}
+
+/* 4th Menu Hover */
+ul#cabmenu li:hover li:hover li:hover li a:hover,ul#cabmenu li.iehover li.iehover li.iehover li a:hover {
+  background-color:#ffffff;
+  background-image:url('images/menusupdosactive.jpg');
+  color:#ffffff; 
+}
+
+/* Hover Function - Do Not Move */
+ul#cabmenu li:hover ul ul,ul#cabmenu li:hover ul ul ul,ul#cabmenu li.iehover ul ul,ul#cabmenu li.iehover ul ul ul { display: none; }
+ul#cabmenu li:hover ul,ul#cabmenu ul li:hover ul,ul#cabmenu ul ul li:hover ul,ul#cabmenu li.iehover ul,ul#cabmenu ul li.iehover ul,ul#cabmenu ul ul li.iehover ul { display: block; }
+
+@media screen and (max-width:800px){
+   .menu_bar  {
+      display: block;
+      width: 100%;
+      margin: 10px 0px;
+      clear: both;  
+   }
+}
+/* ---------------- Fin Menu ----------------*/

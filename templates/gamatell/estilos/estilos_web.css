@@ -1,0 +1,548 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+/*poner margin sino menu no aparece alineado*/
+* { margin: 0; padding: 0; }
+
+body
+{  
+   font-family: 'Roboto', sans-serif;
+    font-size: 14px;  
+	line-height: 18px;
+    text-align: justify;
+	margin:0 auto;	
+	margin:0px;
+}
+
+#warp	{	
+	margin: 0;
+	padding: 0;
+	 margin-top: -22px;
+} 
+
+header, footer, aside, nav, article, section, form {
+    display: block;    
+}
+
+header#cabecera
+{
+	border-bottom: 1px solid #177286;
+	background: #105c6d;    
+	box-shadow: 0 0 4px rgba(0,0,0,0.3);
+}
+header#cabecera .top
+{
+	clear:both;
+	background: #00323f;    
+	border-bottom: solid 1px #1a6a7c;
+	margin: 0 auto;
+}
+header#cabecera .logo
+{
+	clear:both;
+	max-width: 940px;
+	background: #00596d;    
+	margin: 0 auto;    
+	margin-top: 10px;
+}
+
+header#cabecera .titulologo
+{
+	float:left;
+	width:300px;
+}
+header#cabecera .centrologo
+{
+	float:left;
+	width:400px;
+}
+header#cabecera .redeslogo
+{
+	float:right;
+	width:200px;
+	margin: 14px 10px 18px 0;
+	
+}
+
+header#cabecera .slider
+{
+	width:980px;
+	clear:both; 		
+	margin: 0 auto;
+	margin-top: 10px;
+	color:#FFF;
+   
+}
+header#cabecera .cabeceramenu
+{
+	overflow: visible;	
+    margin: 0px auto 0px auto;
+	padding:0px;
+	width:980px;
+	height:40px;
+	/*background:#ffffff url('planjuvame/menucabecera.jpg');*/
+	background:#ffffff ;
+	z-index:200;
+	clear:both;
+}
+.linea_separadora{
+	margin-top:2px;
+		border-bottom: solid 1px #1a6a7c;  
+	}
+footer#PiePrincipal
+{
+	width: 100%;
+	height: 120px;		
+	clear:both;
+	margin:0 auto;    
+   	background-color:#005264;    	      
+}
+/* ---------------- para Internet Explorer----------------*/
+
+#cabecera
+{
+    border-bottom: 1px solid #177286;
+	background: #105c6d;    
+	box-shadow: 0 0 4px rgba(0,0,0,0.3);	
+}
+#cabecera .top
+{
+	clear:both;
+	background: #00323f;    
+	border-bottom: solid 1px #1a6a7c;
+	margin: 0 auto;    
+}
+#cabecera .logo
+{
+	  text-align: center;	
+	clear:both;
+	max-width: 940px;
+	margin: 0 auto;
+}
+#cabecera .titulologo
+{
+	float:left;
+	width:400px;
+}
+#cabecera .redeslogo
+{
+	float:right;
+	width:200px;
+	margin: 14px 10px 18px 0;	
+}
+
+
+#cabecera .slider
+{
+	width:940px;
+	clear:both; 		
+	margin: 0 auto;
+	margin-top: 10px;	
+	color:#FFF;
+}
+
+#PiePrincipal
+{
+	width: 100%;
+	height: 120px;		
+	clear:both;
+	margin:0 auto;    
+   	background-color:#005264;   	      
+}
+#PiePrincipal .cont_PiePrincipal
+{
+	width: 940px;
+	height: 120px;		
+	clear:both;
+	margin:0 auto;    
+   	background-color:#005264;   	      
+}
+
+#cuerpo {
+    overflow: hidden;
+    margin: 0px auto 0px auto;
+	padding:0px;
+	height: auto !important;
+	min-height:450px;
+	height:450px;
+	width:960px;
+	background-color: #FFF;	
+	padding-top:5px;
+}
+#columnaizquierda{
+	width:240px;
+	float: left;
+	padding:0px;
+    text-align: left;
+	margin-left:10px;
+	margin-bottom:10px;
+}
+#columnacentro {
+	width:690px;
+	padding-right: 0px;
+	padding-left: 15px;
+	float: left;
+	margin-bottom:10px;	
+}
+
+#ctn_gral_columnacentro {
+	width:950px;
+	padding-right: 0px;
+	padding-left: 15px;
+	float: left;
+	margin-bottom:10px;	
+}
+
+#columnaderecha {
+	width:250px;
+	float: left;
+	padding:0px;
+    text-align: left;
+	margin-right:10px;
+	margin-bottom:10px;
+}
+
+#pagetitulo {
+	height:45px;
+    margin: 0px auto 0px auto;		
+	margin-right:20px;
+	margin-left:20px;
+}
+#pagetitulo .miga {
+	padding-top:10px;
+	border-bottom:#000000 dashed 1px;
+}
+
+/* inicio breadcrumbs */
+a.breadCrumb {
+color: #6ca336;
+font-weight: bold;
+font-size: 14px;
+}
+a.breadCrumb:visited {
+text-decoration: none;
+color: #6ca336;
+}
+
+img.breadCrumbArrow {
+margin-left: 5px;
+margin-right: 5px;
+width: 11px;
+height: 9px;
+}
+/* fin breadcrumbs */
+
+
+#pagecontenido {
+	margin-left:20px;
+	margin-right:20px;
+	margin-top:0px;	
+}
+
+
+
+
+/* ---------------- Inicio enlaces ----------------*/
+ 
+ /* --- LINKS--- */
+a:visited {
+	text-decoration: none;
+	color: #000a00;
+}
+a{
+	text-decoration:none;
+	color: #000a00;
+} 
+a:hover {
+	color: #f31a1a;
+}
+/* --- LINKS--- */
+
+/* ---------------- Fin enlaces ----------------*/
+
+
+.side {
+	width: 250px;
+	border: 2px solid #cc3300;
+	background-color: #F6FAFA;
+	margin-top: 10px;
+	padding-bottom: 5px;
+	font-size: 12px;
+	color: #777777;
+	text-align: center;
+	box-shadow: #aaa 0 0 10px;
+	border-radius: 10px;
+	-moz-border-radius: 11px;
+	-webkit-border-radius: 11px;
+	-O-border-radius: 11px;
+}
+.side h3 {
+	border-bottom: 1px solid #DEEBEB;
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: -1px;
+	color: #e73f3f;
+}
+
+/* ---------------------------- Inicio Contenido Paginas ----------------*/
+
+.Texto_Verde_Negri_13 {
+	font-size: 13px;
+	color: #658307;
+	font-weight: bold;
+	font-family: Verdana, Helvetica, sans-serif;
+}
+.texto_violeta_normal_12 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #7183bc;
+	font-weight: bold;
+}
+
+/*************************** BEGIN content **/
+#content {
+	width: 640px;
+	background-color: #ffffff;
+	border: 1px solid #D5D5D5;
+	padding: 15px;
+	margin: 0 auto;     
+}
+#content .post {
+	clear: both;		
+	margin: 0 5px;
+}
+
+#content .post p {
+	line-height: 1.6em;
+	margin-bottom: 10px;
+	text-align: justify;
+	font-family: Arial;
+}
+
+#content .post .thumb img {
+	float: left;
+	background-color: #F2F2F1;
+	border: 1px solid #e9e9e9;
+	padding: 6px;
+	margin: 4px 0 10px;
+	width: 300px; height: 300px;
+}
+
+#content .post .r {
+	width: 300px;
+	float: right;
+}
+#content .post h2 {
+	font-size: 1em;
+	font-weight: normal;
+	margin-bottom: 10px;
+	text-align: center;
+	color: #ff6600;
+	font-family: Verdana, Helvetica, sans-serif;
+	font-weight: bold;
+}
+/** END content **/
+
+/* ---------------- Fin Contenido Paginas ----------------*/
+
+
+/* ---------------- Inicio Menu ----------------*/
+ul#cabmenu { 
+	margin: 0; 
+	padding: 0; 
+	list-style: none; 
+	position: relative; 
+	z-index:199;
+	padding-left:10px;
+	padding-right:10px;
+	float:right;
+	background-color:#cc3535;
+}
+
+ul#cabmenu ul {
+ width: 160px; /* Sub Menu Width */
+ margin: 0;
+ list-style: none;
+ display: none;
+ position: absolute;
+ top: 100%;
+ left: 0;
+}
+
+ul#cabmenu ul ul,ul#cabmenu ul ul ul { top: 0; left: 100%; }
+
+ul#cabmenu li { 
+	float: left; 
+	display: inline; 
+	position: relative;
+	}
+ul#cabmenu ul li { width: 100%; display: block; }
+
+/* Root Menu */
+ul#cabmenu a {
+	padding-top: 10px;
+	float: left;
+	display: block;
+	font-family: 'Lucida Sans', sans-serif, verdana, arial, helvetica;
+	font-weight:bold;
+	font-size: 1em;
+	font-variant: small-caps;
+	text-align:center;
+	height:30px;
+	width:120px;
+	background-color: #CC3535;
+	color:#ffffff;	
+	/*background-color:#ffffff;* alex/
+	/*background-image:url('planjuvame/menusup.jpg');alex*/ 
+	
+	/*color:#ffffff;*/
+
+}
+
+/* Root Menu Hover Persistence */
+ul#cabmenu a:hover,ul#cabmenu li:hover a,ul#cabmenu li.iehover a {
+	background-color:#ffffff;
+	background-image:url('images/menusupactive.jpg');
+	color:#000000; 
+}
+
+
+/* 2nd Menu */
+ul#cabmenu li:hover li a,ul#cabmenu li.iehover li a {
+	float: none;
+	text-align:left;
+	padding-left:10px;
+	background-color:#ffffff;
+	background-image:url('images/menusupdos.jpg');
+	color:#ffffff;
+	border-left:#117fc7 solid 1px;
+	border-right:#117fc7 solid 1px;
+	width:150px;
+ 
+}
+
+/* 2nd Menu Hover Persistence */
+ul#cabmenu li:hover li a:hover,ul#cabmenu li:hover li:hover a,ul#cabmenu li.iehover li a:hover,ul#cabmenu li.iehover li.iehover a {
+	background-color:#ffffff;
+	background-image:url('images/menusupdosactive.jpg');
+	color:#ffffff; 
+	border-left:#117fc7 solid 1px;
+}
+
+/* 3rd Menu */
+ul#cabmenu li:hover li:hover li a,ul#cabmenu li.iehover li.iehover li a {
+	background-color:#ffffff;
+	background-image:url('images/menusupdos.jpg');
+	color:#ffffff;
+	border-left:#117fc7 solid 1px;
+}
+
+/* 3rd Menu Hover Persistence */
+ul#cabmenu li:hover li:hover li a:hover,ul#cabmenu li:hover li:hover li:hover a,ul#cabmenu li.iehover li.iehover li a:hover,ul#cabmenu li.iehover li.iehover li.iehover a {
+	background-color:#ffffff;
+	background-image:url('images/menusupdosactive.jpg');
+	color:#ffffff;
+	border-left:#117fc7 solid 1px;
+}
+
+/* 4th Menu */
+ul#cabmenu li:hover li:hover li:hover li a,ul#cabmenu li.iehover li.iehover li.iehover li a {
+	background-color:#ffffff;
+	background-image:url('images/menusupdos.jpg');
+	color:#ffffff;
+}
+
+/* 4th Menu Hover */
+ul#cabmenu li:hover li:hover li:hover li a:hover,ul#cabmenu li.iehover li.iehover li.iehover li a:hover {
+	background-color:#ffffff;
+	background-image:url('images/menusupdosactive.jpg');
+	color:#ffffff; 
+}
+
+/* Hover Function - Do Not Move */
+ul#cabmenu li:hover ul ul,ul#cabmenu li:hover ul ul ul,ul#cabmenu li.iehover ul ul,ul#cabmenu li.iehover ul ul ul { display: none; }
+ul#cabmenu li:hover ul,ul#cabmenu ul li:hover ul,ul#cabmenu ul ul li:hover ul,ul#cabmenu li.iehover ul,ul#cabmenu ul li.iehover ul,ul#cabmenu ul ul li.iehover ul { display: block; }
+
+/* ---------------- Fin Menu ----------------*/
+
+/* ---------------- Inico Slider Nivo ---------------- */
+#slider1 {
+	position:relative;
+	background:url(images/loading.gif) no-repeat 50% 50%;
+}
+#slider1 img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:none;
+}
+#slider1 a {
+	border:0;
+	display:block;
+}
+
+#slider2 {
+	position:relative;
+	background:url(images/loading.gif) no-repeat 50% 50%;
+}
+#slider2 img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:none;
+}
+#slider2 a {
+	border:0;
+	display:block;
+}
+
+.nivo-controlNav {
+	position:absolute;
+	left:10px;
+}
+.nivo-controlNav a {
+	display:block;
+	width:22px;
+	height:22px;
+	background:url(images/bullets.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+	margin-right:3px;
+	float:left;
+}
+.nivo-controlNav a.active {
+	background-position:0 -22px;
+}
+
+.nivo-directionNav a {
+	display:block;
+	width:30px;
+	height:30px;
+	background:url(images/arrows.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+}
+a.nivo-nextNav {
+	background-position:-30px 0;
+	right:15px;
+}
+a.nivo-prevNav {
+	left:15px;
+}
+
+.nivo-caption {
+    text-shadow:none;
+    font-family: Helvetica, Arial, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	color:#000;
+}
+.nivo-caption a { 
+    color:#efe9d1;
+    text-decoration:underline;
+}
+
+.clear {
+	clear:both;
+}
+/* ---------------- Fin Slider Nivo ---------------- */

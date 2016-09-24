@@ -1,0 +1,4 @@
+http://tympanus.net/codrops/2014/03/21/responsive-full-width-tabs/
+
+demo
+http://tympanus.net/Blueprints/FullWidthTabs/

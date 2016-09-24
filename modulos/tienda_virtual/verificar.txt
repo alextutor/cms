@@ -1,0 +1,8 @@
+paypal
+http://www.colordeu.es/BLOG/carrito-de-compra-en-php-mysql-y-forma-de-pago-paypal-parte-7-envio-de-e-mail-al-comprador
+
+
+http://www.sisdatahost.com/tienda-virtual/regdominio.php?domname=sdad.com&plan=plan-basico&preciohos=30 
+
+
+SELECT producto,nomproducto,IP,id FROM catalogo WHERE nomproducto='sdad.com' or nomproducto='plan-basico' and IP='190.222.173.42'

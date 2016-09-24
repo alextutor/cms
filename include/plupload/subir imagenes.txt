@@ -1,0 +1,70 @@
+fancyupload
+---------------
+http://digitarald.de/project/fancyupload/3-0/showcase/photoqueue/
+https://alejandroarco.es/desarrollo-de-aplicaciones/ajax/fancy-upload-upload-multiple-de-ficheros-pesados-con-ajax-y-mootools/
+http://digitarald.de/project/fancyupload/
+
+
+usado por juvame
+************************
+http://www.uploadify.com/demos/
+
+html5
+-------------
+
+http://jquery-manual.blogspot.com/2014/06/subida-multiple-de-imagenes-con.html
+https://www.youtube.com/watch?v=VEzcgLk-04s
+
+
+
+https://huguidugui.wordpress.com/2014/06/25/subir-y-guardar-imagenes-en-la-bd/
+
+http://casamadrugada.net/tutoriales/php/como-subir-archivos-imagenes-utilizando-php-y-mysql/
+http://www.adylevy.com/index.php/2011/07/09/html5-multiple-file-uploading/   ---------  utiliza flash player
+http://embat.es/post-tecnico/labs-html5-uploader.html
+
+http://www.sanwebe.com/2012/06/ajax-file-upload-with-php-and-jquery
+http://www.formget.com/tutorial/Live_demo_ajax_upload_image/ajax_upload_image_main.php
+
+youtube
+-------------
+https://www.youtube.com/watch?v=-lMfdlrCJ-k
+
+http://www.kabytes.com/programacion/subir-archivos-jquery-html5-javascript-flash/
+http://foro.elhacker.net/php/ayuda_multiuploader_de_imagenes_con_mysql_hosting_de_imagenes_con_mysql-t381295.0.html 
+
+
+
+
+https://www.facebook.com/notes/zoneartcss/como-subir-multiples-archivos-desde-mi-web-con-php-y-jquery/226312074403
+http://www.fyneworks.com/jquery/multiple-file-upload/#tab-Download
+
+
+http://designmodo.com/create-upload-form/
+http://blog.tednologia.com/upload-de-varios-archivos-con-php-y-plupload/
+
+
+
+esto puede funcionar
+-------------------------------------
+
+http://jsfiddle.net/rLn7x59n/
+http://blog.jqueryui.com/2012/11/jquery-ui-1-9-2/
+http://www.plupload.com/docs/
+
+
+
+Tienes que poner /show una después de la URL que está trabajando: 
+http://jsfiddle.net/<your_fiddle_id>/show/ 
+Es el sitio que muestra los resultados.
+
+Y luego cuando se guarda como un archivo. Es todo en un archivo HTML.
+
+Por ejemplo: 
+http://jsfiddle.net/Ua8Cv/show/ 
+
+
+
+tutorial  jquery-ui
+--------------------
+http://www.desarrolloweb.com/articulos/primeros-paso-jquery-ui.html

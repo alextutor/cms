@@ -1,0 +1,48 @@
+RewriteEngine On
+RewriteBase / 
+Options +FollowSymLinks
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+
+#Activar compresión
+#php_value zlib.output_compression 16386
+
+#Estas dos líneas son muy importantes, lo que hacen es decirle a Apache que sólo puede crear direcciones amigables si el directorio
+#especificado no existe. Esto evita por ejemplo las reglas que coincidan con “http://miweb.com/imagenes/logo.png“.
+#La primera línea evita los directorios (!-d) y la segunda línea los archivos (!-f).
+
+#RewriteRule ^([a-zA-Z0-9-]*)$ index.php?idsec1=$1 [L]
+#RewriteRule ^([^/]+)/([^/]+)-([0-9]+)$ index.php?idsec1=$1&idsec2=$2&idsec3=$3 [L]
+
+RewriteRule ^([a-zA-Z0-9-]*)$ index.php?idsec=$1 [L]
+RewriteRule ^([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)$ index.php?idsec=$1&idsec2=$2 [L]
+
+#evita que salga error de inicializacion de variables mas que todo en el index  Undefined variable or Undefined index
+php_flag display_errors 1
+php_value error_reporting 7
+
+ErrorDocument 404 /404.php
+
+#Evitar listar el contenido de un directorio sin index
+Options -Indexes
+
+# redirect 301 /index.php http://google.com  --- dirige a google
+
+# EXPIRAR CACHE
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresDefault "access plus 10 days"
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType text/plain "access plus 1 month"
+ExpiresByType image/gif "access plus 1 month"
+ExpiresByType image/png "access plus 1 month"
+ExpiresByType image/jpeg "access plus 1 month"
+ExpiresByType image/x-icon "access plus 3 months"
+ExpiresByType application/x-javascript "access plus 1 month"
+ExpiresByType application/javascript "access plus 3 month"
+ExpiresByType text/javascript "access plus 1 month"
+ExpiresByType application/x-icon "access plus 3 months"
+</IfModule>
+# FIN EXPIRAR CACHE
+#day=dias,week=semanas,month=mes,year=anos

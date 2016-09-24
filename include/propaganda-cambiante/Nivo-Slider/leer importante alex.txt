@@ -1,0 +1,6 @@
+/* Inicio Alex lo puse para desabiliar caption en las imagenes */
+ .nivo-caption { display: none !important; }
+/* Fin Alex lo puse para desabiliar caption en las imagenes */
+ 
+
+archivo nivo-slider.css

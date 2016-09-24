@@ -1,0 +1,556 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pos",
+				"position"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"lis",
+				"list-style"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"padd",
+				"padding-right"
+			],
+			[
+				"pso",
+				"position"
+			],
+			[
+				"le",
+				"left"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"cur",
+				"cursor"
+			],
+			[
+				"c",
+				"cursor"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"b",
+				"background"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"pa",
+				"padding-left"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"bor",
+				"border-right"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"a",
+				"auto"
+			],
+			[
+				"bo",
+				"border-right"
+			],
+			[
+				"ma",
+				"margin-top"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/D/Alex/Web/wamp/www/desarrollo.com/index.php",
+			"settings":
+			{
+				"buffer_size": 36909,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "config_style.php",
+			"settings":
+			{
+				"buffer_size": 6162,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "inccabeceramenu.php",
+			"settings":
+			{
+				"buffer_size": 4214,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "estilos/style0001.css",
+			"settings":
+			{
+				"buffer_size": 19036,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "estilos/ejemplo.sass",
+			"settings":
+			{
+				"buffer_size": 20,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Package Control Messages\n========================\n\nSeti_UI\n-------\n\n  v10.1 (27-12-2015)\n  -------------------\n  \n  1. more fixes.\n  2. all schemes are removed, if u still want them back u can find em on `Mod` branch.\n  3. removed hover color from \"all panels / sidebar folder\".\n  4. changed minimap tint back to default.\n  5. \"Seti_no_bar_undertabs\" options removed & so the 4px tab it self.\n  6. Sass & SCSS lang files removed to avoid trouble with the main packages, depends on which package u install the icons will reflect that.\n  7. add new option \"Seti_panel_nrml\" incase u dont like the new quick panel design.\n  8. readme updated.\n\n  v10 (24-12-2015)\n  -------------------\n  \n  1. fixed php icon not showin on 3095.\n  2. \"Seti_in_4_a_treat\" / \"Seti_rainbow\" / \"Seti_sb_wild\" options removed.\n  3. many new options added, plz check readme.\n  4. you can now remove the tab scrolling arrows & drop down while maintaining the scrolling capability through \"Seti_no_scroll_icons\".\n  5. lots of fixes for both themes + some changes.\n  6. changed the \"GoTo anything\" & \"Code Compilation DropDown\" panel color to match the quick panel, i overlooked those the first time.\n  7. removed the (light/medium/dark) options, so now you will have the same theme color regardless of which tone your scheme have.\n  8. tab orange button option now works on Retina.\n  9. the Seti Scheme atm is a big mess , so all are removed except \"Seti_monokai\"\n  10. fixed blade icon not showing after the latest updates.\n  11. '.env' is now supported (install Generic Config package)\n  12. the sidebar group icons are now hidden by default, use \"Seti_show_group_arrows\" to bring them back.\n  13. restructured the theme folders for easier maintainability.\n  13. Readme updated.\n  \n  \n  ## if your flow got effected 'not in a good way' by the new update, plz let me know.\n  \n   ████     ████                                      ██████  ██             ██           ██\n  ░██░██   ██░██                          ██   ██    ██░░░░██░██            ░░           ░██\n  ░██░░██ ██ ░██  ██████   ██████ ██████ ░░██ ██    ██    ░░ ░██      ██████ ██  ██████ ██████ ██████████   ██████    ██████\n  ░██ ░░███  ░██ ░░░░░░██ ░░██░░█░░██░░█  ░░███    ░██       ░██████ ░░██░░█░██ ██░░░░ ░░░██░ ░░██░░██░░██ ░░░░░░██  ██░░░░\n  ░██  ░░█   ░██  ███████  ░██ ░  ░██ ░    ░██     ░██       ░██░░░██ ░██ ░ ░██░░█████   ░██   ░██ ░██ ░██  ███████ ░░█████\n  ░██   ░    ░██ ██░░░░██  ░██    ░██      ██      ░░██    ██░██  ░██ ░██   ░██ ░░░░░██  ░██   ░██ ░██ ░██ ██░░░░██  ░░░░░██\n  ░██        ░██░░████████░███   ░███     ██        ░░██████ ░██  ░██░███   ░██ ██████   ░░██  ███ ░██ ░██░░████████ ██████\n  ░░         ░░  ░░░░░░░░ ░░░    ░░░     ░░          ░░░░░░  ░░   ░░ ░░░    ░░ ░░░░░░     ░░  ░░░  ░░  ░░  ░░░░░░░░ ░░░░░░\n\n  v9.1 (08-07-2015)\n  -------------------\n  \n  1. changed the yellow/redish tabset colors to the default dark-blue to avoid the confusing.\n  2. changed the quick-panel colors check (https://github.com/ctf0/Seti_ST3/issues/152)\n  3. updated readme with the 2 theme versions ,plz stop issuing tickets for that.\n  4. Fix comment gulp and grunt snippet (thanx to rodriguezmanu).\n  5. changed active-guide color to be more visible.\n\n  v9 (13-06-2015)\n  -------------------\n  \n  1. add a new version of the theme with the original tabs + some other additional visual mods.\n     \"now the original theme is named as (Seti_orig) and the new version is just (Seti)\",\n     dont forget to restart ST after u apply any of the themes.\n  \n  2. changed code folding image color.\n  3. readme updated.\n\n  v8.4 (31-5-2015)\n  -------------------\n  \n  1. add 2 more options (Seti_sb_no_icons, Seti_sb_blank).\n  2. read me updated.\n\n  v8.3 (23-5-2015)\n  -------------------\n  \n  1. add 2 more options (Seti_orange_label,Seti_orange_button).\n  2. read me updated.\n\n  v8.2 (8-5-2015)\n  -------------------\n  \n  1. add 2 more options (Seti_no_blue_bar,Seti_blue_tab_label).\n  2. read me updated.\n\n  v8.1 (3-5-2015)\n  -------------------\n  \n  1. lighten the sidebar label colors thanx to  akloeber.\n  2. fixed the license lang file thanx to zot24.\n\n  v8 (22-3-2015)\n  -------------------\n  \n  1. add support to Linden Scripting Language by Builder's Brewery.\n  2. add support to Typescript by Lucas Matías Ciruzzi.\n  3. fixed update dialog text color by Chris54721.\n  4. fixed npm icon ,now its sharper.\n  5. Add style to tab_label transient by Fernando Daciuk.\n\n  v7.7 (22-2-2015)\n  -------------------\n  \n  1. add support to twig by soniagb89.\n  2. more clean-up.\n  3. better support for markdown in Seti_orig & Seti_monokai.\n\n  v7.6 (5-2-2015)\n  -------------------\n  \n  1. add applescript icon.\n  2. changed css & html icons. (if u prefer the old one ,plz do tell me).\n  3. the slim files now have the old html icon to distinguish them from the normal html.\n  4. add support for \".bowerrc\" / \"dockefile\" / \".git\".\n  5. removed the \"Julia.tmLanguage\" that was cuzing some issues with some users. (but the pref + icons are still there if u use this language)\n  6. for \"Gruntfile/Gulpfile\" ,if u use a formatter of any kind with this 2 files u may get an error because of the modification made to the language files ,simply use `view > open all with current extension as...` \"JS/Coffee\" and it should work.\n\n  v7.5 (3-2-2015)\n  -------------------\n  \n  1. added a new option \"Seti_in_4_a_treat\".\n\n  v7.2 (3-2-2015)\n  -------------------\n  \n  1. add support for \".git\" ,the HL is handeld by (ShellScript) if u have a better option plz msg me.\n  \n  ** if u use (https://packagecontrol.io/packages/Dotfiles%20Syntax%20Highlighting) ,remove the '.git & dockerfile' extensions from the (Shell-Unix-Generic.sublime-settings) so the new icon can show-up.\n\n  v7.1 (2-2-2015)\n  -------------------\n  \n  1. \"Seti_mouse_wheel_tabswitch\" is now \"mouse_wheel_tabswitch\" as its a global setting comes with every theme.\n  \n  2. removed file_types folder as there is no need for it now.\n  \n  3. added a couple of syntax to (sass,scss,less,rail-slim) ext files to make sure they display the right icon ,so plz install them again.\n\n  v7 (1-2-2015)\n  -------------------\n  \n  1. BIG FAT thanx to lefoy (https://github.com/lefoy/cyanide-theme) & Centril (https://github.com/Centril),\n    pretty much all the icons now works, so make sure to show'em some love.\n  \n  ** some of the new icons are borrowed from their work + making/changing some other. \"some icons may get changed later\"\n  \n  2. no more need for the packages i made for \"Less/Sass/SCSS\" as now the included lang files fix that and does exactly what i was trying to do in the first place,\n    so u can install any of those packages from their original authors just like normal and everything will be working just fine.\n  \n  3. the new update doesn't require any special configuration, but u will notice that there is an extra panel of \"Seti_UI\"\n    with some languages in the language selector panel, you don't need to worry about it, rather simply ignore it..\n  \n  4. more file-types added to test with.\n  \n  5. some icons has gained/lost some weight.\n\n  v6.1 (31-1-2015)\n  -------------------\n  \n  1. added support for Angular.js template (*.ng.html).\n\n  v6 (31-1-2015)\n  -------------------\n  \n  1. added support for SublimeLinter.\n  2. indent guide are a bit brighter now.\n\n  v5.1 (11-1-2015)\n  -------------------\n  \n  1. changed search panel arrow.\n  2. added groovy support.\n  3. fixed search panel icons for retina.\n  4. updated msgs.\n\n  v5 (11-1-2015)\n  -------------------\n  \n  1. add options for different \"line_padding\" so u r free to use the default '0' and still get the same experience.\n  * if u use \"0\" don't add any of the new \"Seti_pad_?\" to ur settings.\n  * the new options affect (quick_panel, search_panel, gutter_fold_icons, auto_complete_panel.\n  * search_panel after setting new options needs to be dragged_up & down to fix its size. (its related to ST not the theme it self)\n   \n  2. for Retina Macs with fold icons wasn't showing ,now its fixed.\n  3. readme / install updated.\n  4. finally found how to make the search panel slimmer (ITS A NEW DAWN).\n  \n  \n  \n  *** try this\n  {\n    \"line_padding_bottom\": 0,\n    \"line_padding_top\": 0,\n    \"caret_extra_bottom\": 7,\n    \"caret_extra_top\": 7,\n  }\n\n  v4 (07-1-2015)\n  -------------------\n  \n  1. changed search buttons & icons colors.\n  2. made the quickpanel & auto-complete rows padding are a bit smaller.\n  3. add \"Seti_rainbow\" , and changed the quickpanel top bar color\n  4. the text on the right on the status bar are pushed a bit to the right.\n  5. fixed the \"wholeword icon\" postition.\n  6. readme & install updated\n  \n  .. if u want the old colors use the theme file from the \"Mods\" branch.\n  .. ((d[^_x]b)) Mizar B & Heever - Lost World (Original Mix)\n\n  v3.3.2 (06-1-2015)\n  -------------------\n  \n  1. add Seti_sb_tree_tiny & Seti_sb_tree_miny.\n  2. readme updated.\n\n  v3.3 (05-1-2015)\n  -------------------\n  \n  1. add more options to the sidebar tree.\n\n  v3.2 (03-1-2015)\n  -------------------\n  \n  - first things first >>\n  \n    ██      ██     ██     ███████  ███████  ██    ██   ████     ██ ████████ ██       ██   ██    ██ ████████     ██     ███████\n   ░██     ░██    ████   ░██░░░░██░██░░░░██░░██  ██   ░██░██   ░██░██░░░░░ ░██      ░██  ░░██  ██ ░██░░░░░     ████   ░██░░░░██\n   ░██     ░██   ██░░██  ░██   ░██░██   ░██ ░░████    ░██░░██  ░██░██      ░██   █  ░██   ░░████  ░██         ██░░██  ░██   ░██\n   ░██████████  ██  ░░██ ░███████ ░███████   ░░██     ░██ ░░██ ░██░███████ ░██  ███ ░██    ░░██   ░███████   ██  ░░██ ░███████\n   ░██░░░░░░██ ██████████░██░░░░  ░██░░░░     ░██     ░██  ░░██░██░██░░░░  ░██ ██░██░██     ░██   ░██░░░░   ██████████░██░░░██\n   ░██     ░██░██░░░░░░██░██      ░██         ░██     ░██   ░░████░██      ░████ ░░████     ░██   ░██      ░██░░░░░░██░██  ░░██\n   ░██     ░██░██     ░██░██      ░██         ░██     ░██    ░░███░████████░██░   ░░░██     ░██   ░████████░██     ░██░██   ░░██\n   ░░      ░░ ░░      ░░ ░░       ░░          ░░      ░░      ░░░ ░░░░░░░░ ░░       ░░      ░░    ░░░░░░░░ ░░      ░░ ░░     ░░\n  \n  \n  1. changed gutter number color ,if u want the old one tell me.\n  2. better support for json multi-level (5 levels down) for monakai by varemenos, other schemes should be done soon.\n\n  v3.0 (11-12-2014)\n  -------------------\n  \n  1. changed search panel colors ,if u prefer the old one please let me know.\n  2. install updated.\n  3. if u started to hate the gutter color , open ur fav scheme file and make gutter color = background color.\n\n  v2.3 (11-12-2014)\n  -------------------\n  \n  1. re-fixed the fold icons align.\n  2. install updated.\n  3. readme updated.\n\n  v2.2 (5-12-2014)\n  -------------------\n  \n  1. added option for sidebar entries padding.\n  2. theme file cleaned.\n  3. readme updated.\n\n  v2.1 (4-12-2014)\n  -------------------\n  \n  1. fold icons now have a better placement.\n  2. readme and install updated.\n\n  v2.0 (30-11-2014)\n  -------------------\n  \n  1. a better syntax HL has been released ,u can find it on PC under \"Seti_UX\".\n  2. readme updated.\n\n  v1.12.3 (27-11-2014)\n  -------------------\n  \n  1. fold.png is now moved to +res folder.\n  2. MD icon re-pos.\n  3. Readme updated.\n\n  v1.12.2 (25-11-2014)\n  -------------------\n  \n  1. markdown icon is fixed.\n  2. golang icon is changed ,if u want the old one ,msg me.\n  3. not-working folder is removed.\n  4. install updated.\n  5. if u know a tmlang for git files ,msg me.\n\n  v1.12.1 (25-11-2014)\n  -------------------\n  \n  1. cfm icon changed.\n  2. markdown icon changed.\n  3. readme updated.\n\n  v1.12 (23-11-2014)\n  -------------------\n  \n  1. fixed the typo in (Seti_mouse_wheel_tabswitche).\n  2. readme & install updated.\n  3. tabset button is now a bit wider. (those 3 bars on the top right).\n  4. new option for scrollbars with brighter color for those who didn't like the default one.\n  5. scrollbars option for thickening are more straight forward now.\n\n  v1.11.4 (19-11-2014)\n  -------------------\n  \n  1. readme updated.\n  2. scrollbars options are added for those who prefer a wider/bigger SB.\n\n  v1.11.3 (18-11-2014)\n  -------------------\n  \n  1. readme updated.\n  2. scrollbars are now thinner ,sorry as i just noticed how big & ugly they are on windows.\n  3. handlebars are now fully supported.\n\n  v1.11.2 (17-11-2014)\n  -------------------\n  \n  1. sorry for the last problem with images ,now saved.\n\n  v1.11.1 (15-11-2014)\n  -------------------\n  \n  1. php & md icons are not a bit bigger.\n  2. cfm & cfc icons are changed to the standards.\n  3. cleaned the install file & the settings options are now included.\n\n  v1.11 (13-11-2014)\n  -------------------\n  \n  1. more options added for easier customizing.\n\n  v1.10.1 (11-11-2014)\n  -------------------\n  \n  1.\n  ColdFusion support added.\n  \n  2.\n  i added another icon for the Opened_folder in-case the default one was too distractive for you ,\n  you can use either the default or the new ones ,just go to\n  (Seti_UI/+res/Open_Folder/dots) , copy the new files and overwrite the old ones @ (Seti_UI/icons)\n  \n  2.1.\n  if you want to remove the Opened_folder icon all together ,\n  there is a modified \"Seti.sublime-theme\" at the same folder (+res/Open_Folder/)\n  just overwrite the installed file on the root with this one. (it have everything except the Opened_folder icons)\n\n  v1.10 (10-11-2014)\n  -------------------\n  \n  1. a better folder structure for easier maintainability.\n  2. readme and instal updated.\n  3. ScreenShots updated.\n\n  v1.9.2 (6-11-2014)\n  -------------------\n  \n  1. git-gutter is added for those who needs it by Jonathan (https://github.com/jonathanhirz) ,like b4 you know what to do :).\n  2. diff 'to & from' now have a different color.\n\n  v1.9.1 (6-11-2014)\n  -------------------\n  \n  1. better syntax HL for diff (v1.9 re-fix).\n\n  v1.9 (6-11-2014)\n  -------------------\n  \n  1. fixed the diff highlight ,sorry i didnt notice that all scopes had the same color (white).\n  2. for those who still uses Monokai ,skechboy (https://github.com/skechboy) have made a port for you so show em some love.\n\n  v1.8.2 (5-11-2014)\n  -------------------\n  \n  1. re-fixed HTML scope.\n\n  v1.8.1 (5-11-2014)\n  -------------------\n  \n  1. fixed wrong icons for Html / Haml.\n  2. json still doesnt show its icon \"at least on my pc\" ,if any found a solution plz advice.\n\n  v1.8 (3-11-2014)\n  -------------------\n  \n  1. apacheconfig & blade support added ,don't forget to install the respective syntax.\n\n  v1.7.3 (3-11-2014)\n  -------------------\n  \n  1. A new branch created for those who wants to make changes to the main theme ,\n  it will contain only the different files to avoid confusion.\n  \n  2. added diff syntax.\n\n  v1.7.2 (1-11-2014)\n  -------------------\n  \n  1. updated readme.\n\n  v1.7.1 (19-10-2014)\n  -------------------\n  \n  1. fixed fold arrows orientation.\n\n  v1.7 (16-10-2014)\n  -------------------\n  \n  1. fixed right & left tabset arrows ,now it should look sharp on Retina's.\n\n  v1.6.3 (08-10-2014)\n  -------------------\n  \n  1. some couldn't get the (Golang & Jade) to work without the setting files so now they are included.\n\n  v1.6.1 (08-10-2014)\n  -------------------\n  \n  1. fixed theme showing corrupted graphics.\n\n  v1.6 (08-10-2014)\n  -------------------\n  \n  1. Golang & Jade icons added\n  \n  2. Changed the Seti folder name to Main for easier maintenance.\n  \n  3. Cleaned up more of the un-working file-types & related icons ,which can be found in \"not-working\" folder.\n\n  v1.5 (18-09-2014)\n  -------------------\n  \n  1. Added Seti_orig for those who wants the original scheme ,keep in mind that some scope still have different colors (St is not Atom)\n  \n  - you can install it by\n  ```\n  \"color_scheme\": \"Packages/Seti_UI/Seti_orig.tmTheme\",\n  ```\n  \n  2.if you don't like any of the included schemes ,i feel you & am already working on a much richer/better one so stay tuned.\n\n  v1.4.1 (16-09-2014)\n  -------------------\n  \n  1. fixed Rust scope.\n  2. changed quick panel row padding to work better with other plugins that use menus.\n\n  v1.4 (15-09-2014)\n  -------------------\n  \n  1. Added Rust File Icons\n  2. fixed theme folder name in readme.\n\n  v1.3 (12-09-2014)\n  -------------------\n  \n  1. Updated HTML definition to include more file types.\n\n  v1.2 (11-09-2014)\n  -------------------\n  1-manual install is back.\n  \n  2-scss icons are added.\n  \n  3-fixed global tag scope color\n  \n  4-added slim to html icon settings file.\n  \n  5-the html file will look different than the original Atom, I changed the scopes color intentionally for easier reading, please tell me if you want the old one.\n  \n  6-looking for a Jade icon, so if you have any ideas message me.\n\n  v1.1 (10-09-2014)\n  -------------------\n  1-No more manual install as its not recommended.\n  \n  2-Fixed package name + other files so it work as soon as u install it without probs.\n\n  v1.0 (9-09-2014)\n  -------------------\n  Hey there,\n  \n  \n  # Init Release\n  ==============\n  v1.0\n",
+			"settings":
+			{
+				"buffer_size": 16873,
+				"line_ending": "Windows",
+				"name": "Package Control Messages",
+				"read_only": true,
+				"scratch": true
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 463.0,
+		"last_filter": "instal",
+		"selected_items":
+		[
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"sideba",
+				"View: Toggle Side Bar"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 509.0
+	},
+	"console":
+	{
+		"height": 162.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/Alex/Web/wamp/www/desarrollo.com",
+		"/D/Alex/Web/wamp/www/desarrollo.com/cgi-bin",
+		"/D/Alex/Web/wamp/www/desarrollo.com/include",
+		"/D/Alex/Web/wamp/www/desarrollo.com/templates"
+	],
+	"file_history":
+	[
+		"/D/Alex/Web/Huizame CMS/codigo-menu-responsive.php",
+		"/D/Alex/Web/wamp/www/desarrollo.com/templates/alhuaycenteno_01/estilos/menu",
+		"/D/Alex/Web/wamp/www/desarrollo.com/include/funciones_web.php",
+		"/C/Users/pc01/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/pc01/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/D/Alex/Web/wamp/www/geoenterprice.com/MiAplicacion/index.html",
+		"/D/Alex/Web/wamp/www/desarrollo.com/templates/alhuaycenteno_01/inccabeceramenu.php",
+		"/D/Alex/Web/wamp/www/desarrollo.com/templates/alhuaycenteno_01/estilos/style0001.css",
+		"/D/Alex/Web/wamp/www/desarrollo.com/templates/alhuaycenteno_01/config_style.php",
+		"/C/Users/pc01/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/pc01/AppData/Roaming/Sublime Text 3/Packages/LiveReload/LiveReload.sublime-settings",
+		"/D/Alex/Web/wamp/www/desarrollo.com/templates/alhuaycenteno/estilos/style0001.css",
+		"/D/Alex/Web/Manuales web_DVD/Responsive Design/ED GRID/github.com/ED-GRID-master/scss/ed-grid/componentes/_desarrollo.scss",
+		"/D/Alex/Web/Manuales web_DVD/Responsive Design/ED GRID/github.com/ED-GRID-master/scss/ed-grid/componentes/_icon-fonts.scss",
+		"/D/Alex/Web/Manuales web_DVD/Responsive Design/ED GRID/github.com/ED-GRID-master/scss/ed-grid/componentes/_mixins.scss",
+		"/D/Alex/Web/Manuales web_DVD/Responsive Design/ED GRID/github.com/ED-GRID-master/scss/ed-grid/componentes/_modulos.scss",
+		"/D/Alex/Web/Manuales web_DVD/Responsive Design/ED GRID/github.com/ED-GRID-master/scss/ed-grid/componentes/_offset.scss",
+		"/D/Alex/Web/Manuales web_DVD/Responsive Design/ED GRID/github.com/ED-GRID-master/scss/ed-grid/componentes/_utilidades.scss",
+		"/D/Alex/Web/Manuales web_DVD/Responsive Design/ED GRID/github.com/ED-GRID-master/scss/ed-grid/componentes/_visibilidad.scss",
+		"/D/Alex/Web/Manuales web_DVD/Responsive Design/ED GRID/github.com/ED-GRID-master/scss/ed-grid/componentes/_video.scss",
+		"/D/Alex/Web/Manuales web_DVD/Responsive Design/ED GRID/github.com/ED-GRID-master/scss/ed-grid/componentes/_base.scss",
+		"/D/Alex/Web/Manuales web_DVD/Responsive Design/ED GRID/github.com/ED-GRID-master/scss/ed-grid/componentes/_core.scss",
+		"/D/Alex/Web/Manuales web_DVD/Responsive Design/ED GRID/github.com/ED-GRID-master/scss/ed-grid/componentes/_ed-menu.scss",
+		"/D/Alex/Web/wamp/www/desarrollo.com/templates/alhuaycenteno_01/config_style-2.php",
+		"/D/Alex/Web/wamp/www/desarrollo.com/templates/alhuaycenteno_01/inccabeceramenu-2.php",
+		"/D/Alex/Web/wamp/www/desarrollo.com/borrame.php",
+		"/D/Alex/Web/wamp/www/desarrollo.com/Actualiza-Empresa.php",
+		"/D/Alex/Web/wamp/www/desarrollo.com/index.php"
+	],
+	"find":
+	{
+		"height": 46.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"menu",
+			"inccabeceramenu.php*/",
+			"menu",
+			"#warp",
+			"ul#cabmenu ul",
+			"contenidosweb",
+			"menu",
+			"grupo",
+			"caja",
+			"cabmenu",
+			"mostrar",
+			"--------",
+			"cabecera"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "D:\\Alex\\Web\\wamp\\www\\desarrollo.com"
+		}
+	],
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/D/Alex/Web/wamp/www/desarrollo.com/index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 36909,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 6827.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "config_style.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6162,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1990.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "inccabeceramenu.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4214,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "estilos/style0001.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 19036,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3580.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "estilos/ejemplo.sass",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 20,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3,
+								3
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Seti_UI/Langs/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 16873,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								16873,
+								16873
+							]
+						],
+						"settings":
+						{
+							"auto_indent": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_width": 2,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 38.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "",
+	"replace":
+	{
+		"height": 72.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 271.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

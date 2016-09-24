@@ -1,0 +1,7 @@
+
+http://adritah.es/abrir-puertos-en-windows-server-2008-r2-ejemplo-con-el-servidor-de-node-js/
+http://klauxz.blogspot.pe/2012/12/abrir-puertos-windows-7-windows-8.html
+https://msdn.microsoft.com/es-es/library/ms175043(v=sql.120).aspx
+http://www.foro.lospillaos.es/tunelizar-servicios-por-ssh-en-windows-vt6655.html
+
+http://www.foro.lospillaos.es/conectarse-a-base-de-datos-remota-mysql-vt6645.html

@@ -1,0 +1,3 @@
+User-agent: * #todos los agentes
+Disallow: /? #Bloquea el rastreo de cualquier URL de nuestro dominio que contenga “?” 
+

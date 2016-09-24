@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>DURAMENU | Responsive Bootstrap Menu</title>
+
+    <!-- BOOTSTRAP 3.3.6 -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="styles.css" rel="stylesheet">
+    
+    <!-- FONT AWESOME -->
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="container content">
+        <div class="row">
+          
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-bottom: 100px">
+            <h1>Duramenu v1.0 - Documentation</h1>
+            <img src="img/menu.png" class="img-responsive">
+          
+            <h3 style="text-decoration: underline">Requirements:</h3>
+            <ul>
+              <li>Bootstrap 3.3.6</li>
+              <li>jQuery 2.2.0</li>
+            </ul>
+            <h3>1.General</h3>
+              <h4>1.1 Easy Usage</h4>
+              <p>The easiest way to use Duramenu is to use premade html files that comes with the package</p>
+              <p>Select an html file that fits to you. If you want to use a <u>boxed version</u>, then use html file named with <u>"demo-boxed-...html"</u>, for example</p>
+              <p>Here is a list of html files in the package with their descriptions</p>
+              <ul>
+                <li>demo-boxed.html</li>
+                <p>Duramenu with its all content as seen in the live preview you have seen before you purchased it</p>
+                <li>demo-boxed-without-demo-content.html</li>
+                <p>Menu contents exists like in the demo live preview. But advertorial content, demo settings bar, etc. removed</p>
+                <li>demo-boxed-without-demo-content-all-empty</li>
+                <p>All content, including the submenu contents are removed. With this file, you can easily understand the code structure (few lines of code), but itmight be difficult to fill the menu contents by your own. However, we placed notifications like <strong>"YOUR CONTENT#1 GOES"</strong> inside menus</p>
+                <li>demo-boxed-without-demo-content-color-aqua.html</li>
+                <p>Color option: Aqua --> Menu contents exists, like in the demo live preview</p>
+                <li>demo-boxed-without-demo-content-color-blue.html</li>
+                <p>Color option: Blue --> Menu contents exists, like in the demo live preview</p>
+                <li>demo-boxed-without-demo-content-color-gray.html</li>
+                <p>Color option: Gray --> Menu contents exists, like in the demo live preview</p>
+                <li>demo-boxed-without-demo-content-color-green.html</li>
+                <p>Color option: Green --> Menu contents exists, like in the demo live preview</p>
+                <li>demo-boxed-without-demo-content-color-green-light.html</li>
+                <p>Color option: Green Light --> Menu contents exists, like in the demo live preview</p>
+                <li>demo-boxed-without-demo-content-color-navy.html</li>
+                <p>Color option: Navy --> Menu contents exists, like in the demo live preview</p>
+                <li>demo-boxed-without-demo-content-color-orange.html</li>
+                <p>Color option: Orange --> Menu contents exists, like in the demo live preview</p>
+                <li>demo-boxed-without-demo-content-color-orange-dark.html</li>
+                <p>Color option: Orange Dark --> Menu contents exists, like in the demo live preview</p>
+                <li>demo-boxed-without-demo-content-color-purple.html</li>
+                <p>Color option: Purple --> Menu contents exists, like in the demo live preview</p>
+                <li>demo-boxed-without-demo-content-color-yellow.html</li>
+                <p>Color option: Yellow --> Menu contents exists, like in the demo live preview</p>
+                <p><u>Same logic applies for the fullwidth version</u></p>
+              </ul>
+              <h4>1.2 Files to Include</h4>
+              <p>Between <code>&lt;head&gt;&lt;/head&gt;</code>:</p>
+<code>&lt;link href="css/bootstrap.min.css" rel="stylesheet"&gt;
+&lt;link href="css/dura-main.css" rel="stylesheet"&gt;
+&lt;link href="css/dura-responsive.css" rel="stylesheet"&gt;
+&lt;link href="css/font-awesome.min.css" rel="stylesheet"&gt;
+&lt;link href="css/font-arimo.css" rel="stylesheet"&gt;
+&lt;link href="css/font-notosans.css" rel="stylesheet"&gt;
+&lt;link href='https://fonts.googleapis.com/css?family=Khula:400,300' rel='stylesheet' type='text/css'&gt;</code>
+<br><br>
+              <p>Just before <code>&lt;/body&gt;</code></p>
+<code>&lt;script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="js/bootstrap.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/dura-main.js"&gt;&lt;/script&gt;</code>
+              
+            <h3>2.Layout</h3>
+              <p>Duramenu, as you already know, a menu (navigation) based on Bootstrap 3.3.x. Therefore, both the navigation and its content are based on Bootstrap classes</p>
+              <p>Duramenu is placed inside a <span class="class">.container</span></p>
+              <p>And it consists of 3 basic navigation levels, which are placed inside <span class="class">.row</span>s, as can be seen below</p>
+              <img src="img/layout.png" class="img-responsive">
+              
+              <h4>2.1 .header-top-row menus</h4>
+              <p>If you want to use a dropdown inside <span class="class">.header-top-row</span>, the following structure has to be used</p>
+
+<code>&lt;li&gt;&lt;a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;
+  &lt;i class="fa fa-users font-size-16" aria-hidden="true"&gt;&lt;/i&gt;
+  &lt;span class="margin-left-5 hidden-xs"&gt;My Account&lt;/span&gt;&lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;My Wishlist&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;My Cart&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Logout&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/li&gt;</code><br><br>
+              <p>The same structure as Bootstrap. Nothing specific.</p>     
+              <h4>2.2 .header-central-row menus</h4>
+              <p>If you want to use a dropdown inside <span class="class">.header-central-row</span>, the following structure has to be used</p>
+<code>&lt;li&gt;
+  &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;
+    &lt;span class="dropdown-text hidden-xs"&gt;My Cart&lt;/span>
+    &lt;i class="fa fa-shopping-bag fa-fw font-size-28" aria-hidden="true"&gt;&lt;/i&gt;
+    &lt;span class="badge badge-item-count"&gt;0&lt;/span&gt;
+    &lt;span class="margin-left-5 text-bold-c hidden-xs"&gt;$0.00&lt;span class="caret"&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;/a&gt;
+  
+  &lt;div class="dropdown-menu dropdown-central"&gt;
+    &lt;div class="container"&gt;
+      &lt;div class="row"&gt;
+        &lt;div class="col-lg-12"&gt;
+          Your cart is empty
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/li&gt;</code><br><br>
+              <p>As it can be seen, it is almost the same as a Bootstrap dropdown. The difference is, you have to add <span class="class">.dropdown-central</span> class in addition to Bootstrap's <span class="class">.dropdown-menu</span>
+             
+
+              
+              <h4>2.3 .header-bottom-row menus (main navigation)</h4>
+              <p>Bootstrap navigation basics also appy here. Here is a main basic Bootstrap navigation structure that is used in Duramenu</p>
+              
+              <h5>2.3.1 Basic Navigation</h5>
+
+<code>&lt;nav class="navbar navbar-inverse navbar-static-top"&gt;
+  &lt;div class="container-fluid"&gt;
+  
+    &lt;!-- Brand and toggle get grouped for better mobile display --&gt;
+    &lt;div class="navbar-header"&gt;
+      &lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"&gt;
+        &lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div class="collapse navbar-collapse"&gt;
+      &lt;ul class="nav navbar-nav"&gt;
+      
+        &lt;!-- menu item with dropdown --&gt;
+        &lt;li class="dropdown active-shopping"&gt;
+          &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"&gt;
+            &lt;i class="fa fa-bars" aria-hidden="true"&gt;&lt;/i&gt;Dropdown &lt;span class="caret">&lt;/span&gt;
+          &lt;/a&gt;
+          &lt;ul class="dropdown-menu"&gt;
+            &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-female" aria-hidden="true"&gt;&lt;/i&gt;Menu Item 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-female" aria-hidden="true"&gt;&lt;/i&gt;Menu Item 2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-female" aria-hidden="true"&gt;&lt;/i&gt;Menu Item 3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-female" aria-hidden="true"&gt;&lt;/i&gt;Menu Item 4&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+        
+        &lt;!-- menu item without dropdown --&gt;
+        &lt;li&gt;
+          &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"&gt;
+            Dropdown &lt;span class="caret"&gt;&lt;/span&gt;
+          &lt;/a&gt;
+        &lt;/li&gt;
+        ...
+        ...
+        ...
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</code>
+              
+              <h5>2.3.2 Basic Navigation - Mega Menu Structure</h5>
+              
+<code>&lt;!-- MEGA MENU CLASSIC --&gt;
+&lt;li class="dropdown dropdown-mega"&gt;
+  &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"&gt;Mega &lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
+  &lt;div class="dropdown-menu dropdown-mega-content"&gt;
+    &lt;div class="row" style="padding: 20px;"&gt;
+      &lt;div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"&gt;
+        Your Dropdown Mega Content Goes
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/li&gt;
+&lt;!-- /MEGA MENU CLASSIC --&gt;</code>
+              
+              <h5>2.3.2 Basic Navigation - Tabbed Menu Structure</h5> 
+              
+<code>&lt;!-- TABBED MENU - CUSTOM WIDTH --&gt;
+&lt;li class="custom-mega"&gt;
+  &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"&gt;Tabbed &lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
+  &lt;div class="dropdown-menu tabbed-menu tabbed-height-365"&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#" class="active-tab"&gt;Tabbed 1&lt;/a&gt;
+        &lt;div class="tabbed-menu-content active-tab-content container"&gt;
+          &lt;div class="row"&gt;
+            &lt;div class="col-lg-12"&gt;
+              Your content#1 goes
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Tabbed 2&lt;/a&gt;
+        &lt;div class="tabbed-menu-content container"&gt;
+          &lt;div class="row"&gt;
+            &lt;div class="col-lg-12"&gt;
+              Your content#2 goes
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+      ...
+      ...
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/li&gt;
+&lt;!-- TABBED MENU - CUSTOM WIDTH --&gt;</code><br><br>
+              <p>Above is the main structure of the tabbed menu. You shouldn't omit any of the classes. Rest is simple</p>
+              <p>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+              <p>However, <strong style="color: red">there is one thing</strong> that has to be mentioned:</p>
+              <p>If you want to use, TABBED MENU or TABBED MEGA MENU, for each li item, you have to specify and assign a class for height value. For example, <u>in above example</u>, there is a class named <span class="class">.tabbed-height-365</span>. This class specifies the height of the tabbed menu content. For your examples you should create your own custom class. For example, if you want tabbed mega menu height of 600px, create this:</p>
+              
+<code class="css">.tabbed-height-600 {
+    height: 600px;
+}</code><br><br>
+
+<code>..
+&lt;div class="dropdown-menu tabbed-menu tabbed-height-600"&gt;
+..</code><br><br>
+               <p>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+              
+              
+              <h5>2.3.2 Basic Navigation - Tabbed Mega Menu Structure</h5>            
+              <p>It is almost the same as TABBED MENU structure</p>
+              <p><strong>The only difference</strong>:</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;Instead of <span class="class">.custom-mega</span> class, <span class="class">.tabbed-mega</span> is used</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;In addition to <span class="class">.tabbed-menu</span>, one more class has to be added <span class="class">.tabbed-mega-menu</span></p>
+
+            <h3>3. Others</h3>
+            <h4>3.1 Changing the Logo</h4>
+            <p>In <strong>img/</strong> folder, you can see logo under <strong>logo.png</strong></p>
+            <img src="../img/logo.png" class="img-responsive">
+            <p>Simply change this .png file with yours</p>
+            <h4>3.2 Responsive Features</h4>
+            <p>Basic responsive features already comes with Bootstrap</p>
+            <p>However, for custom changes, you can find media queries inside <strong>dura-responsive.css</strong> inside <strong>css/</strong> folder</p>
+            <h4>3.3 Icons - FontAwesome</h4>
+            <p>In duramenu we have used fontawesome icons. Basic usage:</p>
+<code>&lt;i class="fa fa-home" aria-hidden="true"&gt;&lt;/i&gt;</code>            
+            <br><br>
+            <p>Too see the full list of icons, please visit <a href="http://fontawesome.io/icons/" target="_blank">FontAwesome</a></p>
+            <h4>Need Support?</h4>
+            <p>For additional questions, do not hesitate to ask: <a href="mailto:ismailonur@gmail.com">Email Us</a></p>
+            
+            Or:<br><br>
+            <p>Codecanyon profile: <a href="#" target="_blank">Brienlabs</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+  </body>
+</html>

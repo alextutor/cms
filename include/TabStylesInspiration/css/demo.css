@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+.content-wrap section.content-current {display: flex;}
+.content-wrap section {justify-content: space-between;box-sizing: border-box;    flex-wrap: wrap;}
+
+.tabs-style-linebox nav a:hover::after, .tabs-style-linebox nav a:focus::after,
+ .tabs-style-linebox nav li.tab-current a::after{
+    background: #35353A;    /*color de la pestana*/
+}
+
+.tabs-style-linebox nav a:hover,
+.tabs-style-linebox nav a:focus {
+	color: #E74C3C;      /*color del texto al pasar mouse */
+}

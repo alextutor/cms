@@ -1,0 +1,16 @@
+RewriteEngine On
+Options +FollowSymLinks
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+
+RewriteRule ^([a-zA-Z0-9-]*)$ index.php?idsec=$1 [L]
+RewriteRule ^([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)$ index.php?idsec=$1&idsec2=$2 [L]
+RewriteRule ^([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)$   index.php?idsec=$1&idsec2=$2&idsec3=$3 [L]
+RewriteRule ^([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)$   index.php?idsec=$1&idsec2=$2&idsec3=$3&idsec4=$4 [L]
+
+ErrorDocument 404 /404.php
+
+#evita que salga error de inicializacion de variables mas que todo en el index  Undefined variable or Undefined index
+php_flag display_errors 1
+php_value error_reporting 7

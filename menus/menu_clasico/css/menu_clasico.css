@@ -1,0 +1,91 @@
+/* ---------------- 2) Inicio Menu ----------------*/
+
+/*http://codepen.io/philhoyt/pen/qbzhJ  flexbox con sub sub menus
+Menu Hamburgueza\JyGProyectosWeb/Menú desplegable responsive (HTML, CSS y Jquery)[1].mp4 
+https://www.youtube.com/watch?v=cWvLPy8OBzA */
+
+/* Nota  cambiar el color de fondo .menu ul  y para cambiar el fondo del Primer Nivel del Menu
+Primer Nivel del Menu    .menu > ul > li:hover {background: #efd5a4;} */
+
+/* Historial
+   1) color fondo 1er nivel
+   2) color fondo 1er nivel pasar mouse
+   3) color texto 1er nivel pasar mouse
+   4) color Fondo 2do nivel pasar mouse
+   5) color fondo 2do nivel 
+   6) color Texto 2do nivel 
+   7) color Texto 2do nivel pasar mouse 
+   8) Definir Ancho 3er nivel  alex lo agregue
+*/
+  /* -- ****** Estilos Generales del Menu ********* --- */ 
+	.ctn-menu{ width:100%; z-index:800; background-color:#5F8FDB;}
+	.ctn-menu label{font-size: 30px;cursor: pointer;display: none;}
+	.ctn-menu label:hover{cursor:pointer;background: rgba(0,0,0,0.3);}
+	
+	#btn-menu 	{ display: none;}
+	/* si ves que sobresale el menu bajrle el padding*/		
+	.menu ul a:hover { color: #CC0066;}  /* */
+	
+	/* Root Menu Hover Persistence */
+	.menu ul a:hover,.menu ul li:hover a,.menu ul li.iehover a {color:#FFFFFF; }	 /* 3) color texto 1er nivel pasar mouse */
+	.menu ul a{	color: #fff;} /* para todos los link a */	
+	.menu > ul > li a{ display: block;padding: 12px 15px; text-decoration: none;}	
+	
+	.menu ul {margin:0;list-style: none;padding:0;							/* 1) color fondo 1er nivel */
+    display: flex;background: #5F8FDB;color:#FFF; font-size:14px;}
+	
+	/*define la proporcion de crecimiento cuanto va  crecer cada elemento 
+	ahora cada elemento li se distibuye uniformemente dentro del contenedor ocupando todo el ancho-*/
+	.menu li {flex: 1 1 auto; border-right:1px solid #fff;}
+	
+	 /*Ocultar submenus*/
+	.menu ul ul {display: none;} /* nivel 2 oculto*/
+	.menu ul ul ul li {display: none;} /* nivel 3 oculto*/
+  	
+	.menu ul ul ul li  { width:300px }  /*   8) Alex para definir ancho Nivel 3  */ 
+
+  /* -- *******  Primer Nivel del Menu  **********--- */
+	.menu > ul > li:hover {background: #0066AC;}                 /* 2) color fondo 1er nivel pasar mouse */
+	
+  /* -- *******  Segundo Nivel del Menu *********--- */
+  
+     /* cuando pase el mouse en un Li que este dentro de un UL
+     Voi a seleccionar a un ul que este dentro de un li y se muestre porque estaba oculto 
+	 .menu ul ul {display: none;} 
+	 es decir cuando pase el mouse en el nivel 1 se desplegue el nivel2  */
+   .menu ul li:hover ul {display:block;position: absolute;
+   text-align:left;background: #19346B;color:#fff;}         /* 5) color fondo 2do nivel */
+  
+   .menu ul ul  a:hover {color:#fff;background: #0066AC;} /*           4) color Fondo 2do Nivel pasar mouse */
+   
+   /* para que se mantenga el fondo del 2nivel pintada  al pasar el mouse al 3nivel*/
+   .menu  ul ul li:hover {background: #FF0000;}/*background: #DDD9D8 =plomo */
+   
+   /* 2nd Menu */
+	.menu ul li:hover li a,.menu ul li.iehover li a {color:#ffffff;} /* 6) color Texto 2do nivel */
+	.menu ul li:hover li a:hover,.menu ul li:hover li:hover a,.menu ul li.iehover li a:hover,.menu ul li.iehover             li.iehover a {color:#ffffff; }  /* 7) color Texto 2do nivel pasar mouse  */
+
+	
+  /* -- *******  Tercer Nivel del Menu  *********--- */
+    
+	 /* cuando pase el mouse en un Li que este dentro de 2 UL 
+     Voi a seleccionar a un ul li  que este dentro de 1 li(y este li este dentrode 2 UL)2 UL y de 1 li y se muestre porque estaba oculto por la sentencia
+	 .menu ul ul ul li {display: none;}
+	 es decir cuando pase el mouse en el nivel 1 se desplegue el nivel2  */
+   .menu  ul ul li:hover ul li{display:block;position: relative;text-align:left;background: #19346B;}/*background: #DDD9D8 =Azul */
+       .menu ul ul ul { top: 0; left: 100%;display:flex;width:180px;}
+
+	/* 3rd Menu */
+	.menu ul li:hover li:hover li a,.menu ul li.iehover li.iehover li a {color:#ffffff;}
+	/* 3rd Menu Hover Persistence */
+	.menu ul li:hover li:hover li a:hover,.menu ul li:hover li:hover li:hover a,.menu ul li.iehover         li.iehover li a:hover,.menu ul li.iehover li.iehover li.iehover a {color:#ffffff;}
+@media all and (max-width: 768px){
+	.ctn-menu label{width: 97%;padding: 10px 10px;display: flex;justify-content: flex-start;}
+	.ctn-menu .titulomenu	{ margin-left:10px;line-height: 30px; color:#FFF; font-size:20px;}	
+	.menu {position: absolute;left: 0;width: 60%;transform: translateX(-100%);transition:all 0.3s;}
+	.menu ul {flex-direction: column;}
+	.menu li {border-top:1px solid #fff;text-align:left;}		
+	.menu ul li:hover ul{display:none;position: static;}
+	#btn-menu:checked ~ .menu	{transform: translateX(0%);}
+} 	
+/* ---------------- 2) Fin Menu ----------------*/

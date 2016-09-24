@@ -1,0 +1,820 @@
+/* --------------------------------- 1) Inicio General -----------------*/
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+/*poner margin sino menu no aparece alineado*/
+* { margin: 0; padding: 0; }
+p {line-height: 1.7;margin-bottom: 10px;  }
+a:link {text-decoration:none;} 
+
+/* -------- 8 Inicio inicializando Propiedades  ------------ */
+* { margin: 0; padding: 0;}
+h1 { font-size: 20px; color: #E74C3C; }
+h2 { font-size: 16px; }
+h3 { font-size: 14px; }
+
+hr { width: 100%;border: 1px solid #71a73e; margin-bottom: 10px;}
+/* -------- Fin inicializando Propiedades------------ */
+
+/* --------------------------------- 1) Fin General -----------------*/
+
+/* ---------------- 1.1) Inicio Extructura  ------------------------------- */
+
+body
+{  font-family: 'Roboto', sans-serif;
+    font-size: 14px;line-height: 18px;text-align: justify;margin:0 auto;
+	background: url('/imagen/12172807/gys-fondo.png') no-repeat, 
+	-webkit-linear-gradient(top, #3399CC 0, #3399CC 800px) no-repeat;	
+	background-color: #3399CC;  
+	/* IE 6 y 7 */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5686d5', endColorstr='#abcdf7 ', gradientType='1');
+	/* IE 8 y 9 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#5686d5', endColorstr='#abcdf7 ', gradientType='1')";
+
+
+	scrollbar-face-color:#FFFFFF;
+	scrollbar-arrow-color:#00a0df
+;
+	scrollbar-highlight-color:#fff6eb;
+	scrollbar-3dlight-color:#00a0df
+;
+	scrollbar-shadow-color:#00a0df
+;
+	scrollbar-darkshadow-color:#fff6eb;
+	scrollbar-track-color:#FFFFFF;
+	
+}		
+
+#warp{
+	width:98%;max-width:1024px;margin:0px auto;background-color:#fff;margin-bottom:10px;margin-top:20px;			
+	border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;	
+	-moz-box-shadow: 0 0 5px #888;-webkit-box-shadow: 0 0 5px#888;box-shadow: 0 0 5px #888;	
+	display:flex;flex-wrap:wrap;flex-direction:row;	border-radius: 10px;} 
+#cuerpo {overflow: hidden;margin: 0px auto 0px auto;padding:0px;background-color: #fff;padding-top:5px;
+	width:100%;max-width:100%;display:flex;flex-wrap:wrap;}	
+	
+#ladoizquierda{max-width:200px; /*200 cuando se muestran los 3 y 240 solo 2*/
+	width:200px;float: left;padding:0px;text-align: left;margin-left:5px;margin-bottom:10px;}
+
+#ladocentro_soloizqui { /* */
+	padding-right: 5px;margin-bottom:10px;display:flex;
+	flex:0 1 75%;	/*propiedad flex tiene tres parametros(flex grow,flex-shrink,flex-basic)*/
+	/*flex:1 ; /*cuando se quiere mantener eltamaño del otro lado como columna derecha ancho 200px*/
+	flex-direction:column;  /* si no se pone esto el contenido se pone como filas  y las migas se ven mal*/
+    margin-left: 5px; box-sizing:border-box;}
+
+#ladocentro_solodere { /* LADO CENTRO cuando se muestra solo el lado derecho y el centro*/
+	padding-right: 5px;margin-bottom:10px;display:flex;
+	flex:0 1 75%;	/*propiedad flex tiene tres parametros(flex grow,flex-shrink,flex-basic)*/
+	/*flex:1 ; /*cuando se quiere mantener eltamaño del otro lado como columna derecha ancho 200px*/
+	flex-direction:column;  /* si no se pone esto el contenido se pone como filas  y las migas se ven mal*/
+    margin-left: 5px;}
+
+/* columnaizquierda =flex: 1 ; columnaderecha = flex: 1 ; ladocentro= flex: 3 (3 veces más espacio) .*/
+#columnaizquierda{padding:0px;text-align: left; box-sizing:border-box ;margin-bottom:10px;	
+	 display:flex;flex: 1;order:1;flex-wrap:wrap;justify-content:flex-start;  flex-direction:column; }
+#columnaderecha { /* LADO DERECHA */
+	padding:0px;text-align: left;margin-bottom:10px; box-sizing:border-box ;  
+	display:flex;flex: 1;order:3; flex-wrap:wrap;justify-content:flex-start;  flex-direction:column;		
+}
+#ladocentro {padding-right: 5px; margin-bottom: 10px;box-sizing:border-box ; 
+			display: flex;flex: 2;order:2;flex-direction: column;}
+			
+#columnacentro {
+	max-width:550px; /*580 cuando se muestran los 3 y 690 solo 2*/
+	padding-right: 0px;padding-left: 15px;float: left;margin-bottom:10px;}
+#columnacentro_soloizqui { /*cuando se muestra solo el lado izquierdo y el centro*/
+	max-width:750px; /*580 cuando se muestran los 3 y 690 solo 2*/
+	padding-right: 0px;padding-left: 15px;float: left;margin-bottom:10px;}
+#columnacentro_solodere { /*cuando se muestra solo el lado derecho y el centro*/
+	max-width:750px; /*580 cuando se muestran los 3 y 690 solo 2*/
+	padding-right: 15px;float: left;margin-bottom:10px;}
+#ctn_gral_columnacentro {padding: 10px 10px;margin-bottom:10px;width:99%;display:flex;flex-direction:column;box-sizing:border-box  }
+#ladoderecha {max-width:200px; /*200 cuando se muestran los 3 y 240 solo 2*/
+	float: right;padding:0px;text-align: left;margin-right:10px;margin-bottom:10px;}
+
+/* ---------------- 1.1) Fin Extructura  ------------------------------- */
+
+
+/* ---------------- 2) Inicio Menu ----------------*/
+
+/*http://codepen.io/philhoyt/pen/qbzhJ  flexbox con sub sub menus
+Menu Hamburgueza\JyGProyectosWeb/Menú desplegable responsive (HTML, CSS y Jquery)[1].mp4 
+https://www.youtube.com/watch?v=cWvLPy8OBzA */
+
+/* Nota  cambiar el color de fondo .menu ul  y para cambiar el fondo del Primer Nivel del Menu
+Primer Nivel del Menu    .menu > ul > li:hover {background: #efd5a4;} */
+
+/* Historial
+   1) color fondo 1er nivel
+   2) color fondo 1er nivel pasar mouse
+   3) color texto 1er nivel pasar mouse
+   4) color Fondo 2do nivel pasar mouse
+   5) color fondo 2do nivel 
+   6) color Texto 2do nivel 
+   7) color Texto 2do nivel pasar mouse 
+
+*/
+  /* -- ****** Estilos Generales del Menu ********* --- */ 
+	.ctn-menu{ width:100%; z-index:800; background-color:#5F8FDB;}
+	.ctn-menu label{font-size: 30px;cursor: pointer;display: none;}
+	.ctn-menu label:hover{cursor:pointer;background: rgba(0,0,0,0.3);}
+	
+	#btn-menu 	{ display: none;}
+	/* si ves que sobresale el menu bajrle el padding*/		
+	.menu ul a:hover { color: #CC0066;}  /* */
+	
+	/* Root Menu Hover Persistence */
+	.menu ul a:hover,.menu ul li:hover a,.menu ul li.iehover a {color:#FFFFFF; }	 /* 3) color texto 1er nivel pasar mouse */
+	.menu ul a{	color: #fff;} /* para todos los link a */	
+	.menu > ul > li a{ display: block;padding: 12px 15px; text-decoration: none;}
+	
+	.menu ul {margin:0;list-style: none;padding:0;							/* 1) color fondo 1er nivel */
+    display: flex;background: #2980B9;color:#FFF; font-size:14px;}
+	
+	/*define la proporcion de crecimiento cuanto va  crecer cada elemento 
+	ahora cada elemento li se distibuye uniformemente dentro del contenedor ocupando todo el ancho-*/
+	.menu li {flex: 1 1 auto; border-right:1px solid #fff;}
+	
+	 /*Ocultar submenus*/
+	.menu ul ul {display: none;} /* nivel 2 oculto*/
+	.menu ul ul ul li {display: none;} /* nivel 3 oculto*/
+  	
+
+  /* -- *******  Primer Nivel del Menu  **********--- */
+	.menu > ul > li:hover {background: #0066AC;}                 /* 2) color fondo 1er nivel pasar mouse */
+	
+  /* -- *******  Segundo Nivel del Menu *********--- */
+  
+     /* cuando pase el mouse en un Li que este dentro de un UL
+     Voi a seleccionar a un ul que este dentro de un li y se muestre porque estaba oculto 
+	 .menu ul ul {display: none;} 
+	 es decir cuando pase el mouse en el nivel 1 se desplegue el nivel2  */
+   .menu ul li:hover ul {display:block;position: absolute;
+   text-align:left;background: #19346B;color:#fff;}         /* 5) color fondo 2do nivel */
+  
+   .menu ul ul  a:hover {color:#fff;background: #0066AC;} /*           4) color Fondo 2do Nivel pasar mouse */
+   
+   /* para que se mantenga el fondo del 2nivel pintada  al pasar el mouse al 3nivel*/
+   .menu  ul ul li:hover {background: #FF0000;}/*background: #DDD9D8 =plomo */
+   
+   /* 2nd Menu */
+	.menu ul li:hover li a,.menu ul li.iehover li a {color:#ffffff;} /* 6) color Texto 2do nivel */
+	.menu ul li:hover li a:hover,.menu ul li:hover li:hover a,.menu ul li.iehover li a:hover,.menu ul li.iehover             li.iehover a {color:#ffffff; }  /* 7) color Texto 2do nivel pasar mouse  */
+
+	
+  /* -- *******  Tercer Nivel del Menu  *********--- */
+    
+	 /* cuando pase el mouse en un Li que este dentro de 2 UL 
+     Voi a seleccionar a un ul li  que este dentro de 1 li(y este li este dentrode 2 UL)2 UL y de 1 li y se muestre porque estaba oculto por la sentencia
+	 .menu ul ul ul li {display: none;}
+	 es decir cuando pase el mouse en el nivel 1 se desplegue el nivel2  */
+   .menu  ul ul li:hover ul li{display:block;position: relative;text-align:left;background: #19346B;}/*background: #DDD9D8 =Azul */
+       .menu ul ul ul { top: 0; left: 100%;display:flex;width:180px;}
+
+	/* 3rd Menu */
+	.menu ul li:hover li:hover li a,.menu ul li.iehover li.iehover li a {color:#ffffff;}
+	/* 3rd Menu Hover Persistence */
+	.menu ul li:hover li:hover li a:hover,.menu ul li:hover li:hover li:hover a,.menu ul li.iehover         li.iehover li a:hover,.menu ul li.iehover li.iehover li.iehover a {color:#ffffff;}
+@media all and (max-width: 768px){
+	.ctn-menu label{width: 97%;height: 30px;padding: 10px 10px;display: flex;justify-content: flex-start;}
+	.ctn-menu .titulomenu	{ margin-left:10px;line-height: 30px; color:#FFF; font-size:20px;}	
+	.menu {position: absolute;left: 0;width: 60%;transform: translateX(-100%);transition:all 0.3s;}
+	.menu ul {flex-direction: column;}
+	.menu li {border-top:1px solid #fff;text-align:left;}		
+	.menu ul li:hover ul{display:none;position: static;}
+	#btn-menu:checked ~ .menu	{transform: translateX(0%);}
+} 	
+/* ---------------- 2) Fin Menu ----------------*/
+
+
+/* ---------------- 3) Inicio pie-abajo.php  ---------------- */
+
+	#piecontenido{overflow: hidden;margin: 0px auto 0px auto;padding:0px;width:980px;} 
+
+	/* Contenedor general */
+	footer#PiePrincipal{width: 98%;max-width:1024px;display:flex;flex-wrap:wrap;Justify-content:Space-between;   
+	box-sizing  : border-box;padding: 5px 0px;margin:0 auto;background-color:#2980B9;margin-bottom: 10px;border-radius: 10px;}
+	
+	/* Contenedor izquierda y derecha*/
+	.cont_pie_gest {width:100%;margin:0 auto;display: flex;flex-wrap:wrap;Justify-content: space-between;
+	max-width:1024px;}	
+	
+	.cont_pie_gest a:hover {color: rgba(3, 8, 10, 0.91);font-weight:bold;font-size:12px;}
+	.cont_pie_gest a:visited {text-decoration: none;color: #66290F;}	
+	.cont_pie_gest a {text-decoration: none;color: #66290F;}
+	/* Lado izquierda*/
+	.cont_pie_gest .conizq {display:flex;flex:0 0 30%;box-sizing:border-box;padding:5px;
+	text-align:center;color: #fff;align-items: center;font-size: 22px;}
+	.cont_pie_gest .conizq p {line-height:30px;}
+	.cont_pie_gest .conizq .titupie{font-style: italic; font-weight: bold;
+	 font-family: 'Times New Roman';  }
+
+	/* Lado Derecha*/	
+	.cont_pie_gest .condere {display:flex;flex:0 0 70%;box-sizing:border-box;padding:5px;color:#fff; flex-direction: column;}		
+	
+	.cont_pie_gest .menuabajo {width:100%;margin:0 auto;margin-top:5px;margin-bottom:10px;margin-left: 30px;}
+	.cont_pie_gest  .direccion {width:100%;margin:0 auto; margin:10px 0px;text-align:center;}
+	.cont_pie_gest  .contacto {width:100%;margin:0 auto; margin:10px 0px;text-align:center;letter-spacing:1px;}
+
+	.cont_contycopry{font-family: 'Lato', sans-serif;font-size:13px;width:100%;float: right;margin:0 auto;margin-bottom:10px;}	
+	
+	.Copyright{	/*float:left;*/	text-align:center;}
+	.contador{text-align:center;margin-left:10px;color: #66290F;text-align:center;margin-top: -3px;margin-bottom:5px;
+		font-size:13px;width:100%;}
+	.visihoyconta { float:left; width:40%;text-align: right;}
+	.VisiTotalconta { float:left; width:50%; margin-left:10px;text-align: left;}
+
+/* ---------------- 3) Fin Pie  ------------------------------- */
+
+/* ---------------- 4) Inicio cabecera-slider.php  ---------------- */
+
+header, footer, aside, nav, article, section, form { display: block; }
+header#cabecera{padding-top:0px;text-align: center;display:flex;flex-wrap:wrap;width: 100%;}
+header#cabecera .ctnlogo{width:100%;display: flex;justify-content: space-between; 
+flex-direction: row; padding:5px 5px; box-sizing:border-box  }
+header#cabecera .izqlogo{width:40%;display: flex;align-items: center; margin-left:10px;}
+header#cabecera .derelogo{width:60%;display: flex;align-items: center;}
+header#cabecera .derelogo .atencioncli{width: 50%;display: flex;justify-content: flex-end;align-items: center;
+    font-weight: bold;font-size: 18px;}
+header#cabecera .derelogo .atencioncli img{ margin-right:10px;}
+header#cabecera .derelogo .redes{ width: 50%;display: flex;justify-content: center;}
+header#cabecera .derelogo .redes img{ float:right;}
+header#cabecera .derelogo .redes .textoredes{ float: left;width: 80%;text-align: right;padding-top: 5px;}
+
+/*----------Inicio slider------*/
+#ctn_slider{ margin-top:5px; display:flex;width:100%; }
+.slider{width:100%;}
+/*----------Fin slider------*/
+
+/* ---------------- 4) Fin cabecera-slider.php  ---------------- */
+
+/* ---------------- 5) Inicio Miga  --------------------------- */
+#webencabezado {margin-right:20px;margin-left:20px;margin-top:10px;text-align:left;display:flex;margin-bottom:20px;}
+#webencabezado .miga {width: 100%;border-bottom: #000000 dashed 1px; }
+
+/* inicio breadcrumbs */
+a.breadCrumb {color: #048EC7;font-weight: bold;font-size: 14px;}
+a.breadCrumb:visited {text-decoration: none;color: #A33641;}
+img.breadCrumbIMG {margin-left: 5px;margin-right: 5px;width: 11px;height: 9px;}
+
+/* fin breadcrumbs */
+
+/* ---------------- Inicio Contenido Cuerpo ---------------- */
+#webcontenido {margin-left:5px;margin-right:5px;margin-top:15px;}
+#webcontenido h1 {text-align:center; line-height:20px; padding:20px 0px; color: red; font-weight:bold;}
+/* ---------------- Fin Contenido Cuerpo ------------------- */
+
+/* ---------------- Inicio Redes utilizado en columnacentro.php---------------- */
+.comentarios-facebook{ margin:0  auto 120px auto; width:90%}
+
+
+/* ---------------- 5) Fin  Miga  ----------------------------- */
+
+
+/* --- 6) Inicio Clase Presentacion y Categorias Utilizan la mismos estilos Tabla estiloclases---*/
+
+/*---------(1)---------*/
+#art_listado_01 {
+	width:calc((100% - 10px)/2);
+	flex:none;
+	box-shadow: 0 0 0 1px #fff,
+	            0 0 0 2px #ccc;
+	box-sizing  : border-box ; 			
+	margin-bottom:10px;
+	display:flex;
+	justify-content:center;
+	flex-wrap:wrap;
+	padding:1em 0;
+}
+		
+#art_listado_01 .titulo {	
+	/*background-color: #f5f5f5;*/
+	margin-bottom:10px;
+	width:100%;
+}
+#art_listado_01 h4 {
+  color: #333333;
+  font-size: 14px;
+  font-weight: bold; 
+  margin: 0;
+  text-align: center;
+  text-shadow: 0 1px 0 #FFFFFF;
+}
+/*---------(2)---------*/
+#contenido {width: 100%;	background-color: #ffffff;border: 1px solid #D5D5D5;padding: 5px 5px;
+	margin: 0 auto;margin-bottom:20px; box-sizing:border-box;}
+#contenido .contenido_titulo {clear: both;height: 20px;margin-top: -35px;margin-bottom: 10px;
+padding-bottom: 15px;text-align:center;color:#FFF;}
+#contenido .contenido_detalle {width:100%;padding:0px 5px;box-sizing:border-box;margin-top: 15px;}
+#contenido article {}
+#contenido article .r {max-width: 60%;float: right;}
+#contenido article img {}
+#contenido article:hover img {-webkit-transform:scale(1,1);	-moz-transform:scale(1,1);}
+#contenido article h2 {font-size: 2em;font-weight: normal;margin-bottom: 10px;text-align: center;}
+#contenido article h2 a {	color: #212121;text-decoration: none;}
+#contenido article p {line-height: 1.6em;margin-bottom: 10px;text-align: justify;font-family: Arial;}
+
+#contenido .postnav {clear: both;padding-top: 20px;font-weight: bold;}
+#contenido .postnav a {	text-decoration: none;}
+/*---------(3)---------*/
+#enlaces_pie{width:95%;background:#9eac91;margin:0 auto;clear:both;margin-bottom:10px; height:43px;}
+#enlaces_pie h2{ font-size:12px; color:#FFF; text-align:center;}
+#enlaces_pie .item{background-color:#DFDFDF;padding:5px;text-align: center;float: left;display: inline-block;
+margin-left: 5px;}
+#enlaces_pie .enlaces_pie_titulo {width:120px; float:left; background-color:#333;}
+#enlaces_pie .enlaces_pie_detalle { float:left; margin-left:10px;margin-top: 7px;}
+
+/*---------(4)---------*/
+
+/*modulo/stilo-lis-hori-img-01.php
+modulo/foto_lstado_hori_categoria_superiror.php*/
+
+/*si tienes 4 item y le quieres dar una separacion de 10px entre item(10x3=30)
+width: calc((100% - 30px))/4 
+si tienes 3 item y le quieres dar una separacion de 10px entre item(10x2=20)
+width: calc((100% - 20px))/3 
+Nota= la separacion siempre es una menos que la cantidad de item
+*/
+#fondocate {width: 100%;display: flex;justify-content: space-around;Flex-wrap: wrap;}
+
+#fondocate .detalle{	width: calc((100% - 10px)/2);
+             flex: none;  	box-shadow: 0 0 0 1px #fff, 0 0 0 2px #ccc;  box-sizing: border-box;
+    margin-bottom: 10px; display: flex;justify-content: center;  flex-wrap: wrap;
+	padding-bottom:10px;border-radius: 15px;background-color: #515754;}
+	
+#fondocate .titulo {width:100%; text-align:center; background-color: #F1F1F1;
+    border-radius: 15px 15px 0 0; height:30px; line-height:30px;}
+#fondocate  h4 {}
+#fondocate img {border: 2px solid #ffffff;} /*le da un borde a las imagenes*/
+#fondocate .imagen{width:100%; max-width:100%; margin:0 auto;margin-top:10px;text-align: center;}	
+
+#cabecera_posicion4{display: flex;width: 100%;padding: 5px 5px;box-sizing: border-box;
+justify-content: space-between;}
+/*---------(5)---------*/
+#inicio{loat: left;	margin: 0px;padding: 0px;width: 100%;margin-top: 7px;}
+#inicio .inicio_titulo{
+	background-color: #a7d34b;
+	color: #000;
+	margin-bottom: 5px;
+	padding: 5px;
+	height: 22px;
+	border: #a7d34b 1px solid;
+	text-align:center;
+	font-weight:bold;	
+	-webkit-border-radius: 11px;
+	/* border-radius: 11px; */
+}
+#inicio .inicio_detalle{}
+/*---------(6)---------*/
+ul.lista_hori_1 { display: inline-block;list-style: none outside none;margin: 0;padding: 0;}
+ul.lista_hori_1 li {float: left;text-align: center; /*width: 25%;*/ }/*le quite el padding padding: 20px; porque en 6 en la segunda fila se presentaba disparejo */
+ul.lista_hori_1 .info-image {padding: 10px;}
+/*---------(7)---------*/
+#lista_hori_1_titulo { display: flex; flex-wrap:wrap;Align-content:flex-start ;Justify-content:Space-between; width:99%;}
+#lista_hori_1_titulo h1{width:95%; text-align:center; background:#68A7CE; padding:5px; color:#FFF;}
+#lista_hori_1_titulo .info-image {padding: 10px;    text-align: center;}
+#lista_hori_1_titulo .titulo {padding: 10px;}
+
+/*---------(8)---------*/
+#portada {
+width: 99%;
+border-radius: 11px;
+-moz-border-radius: 11px;
+-webkit-border-radius: 11px;
+margin: 0 auto;
+padding:10px 5px;
+margin-bottom: 15px;
+margin-top: 7px;
+clear:both;
+}
+#portada .portada_titulo{
+background-color: #93b5bd;
+color: #000;
+margin-bottom: 5px;
+padding: 5px;
+height: 22px;
+border: #93b5bd 1px solid;
+text-align: center;
+font-weight: bold;
+-webkit-border-radius: 11px;
+border-radius: 11px;
+}
+/*---------(9)---------*/
+#portada-laterales {
+width: 96%;
+height:250px;
+border: 2px solid #E74C3C;
+background-color: #F6FAFA;
+box-shadow: #aaa 0 0 10px;
+
+border-radius: 11px;
+margin: 0 auto;
+padding:10px 2px;
+margin-bottom: 15px;
+border-top: 30px solid #E74C3C;
+border-bottom:1px solid #E74C3C;
+box-sizing  : border-box;
+ display:flex;Justify-content:Space-between;Align-items:center;    Flex-wrap: wrap; flex:0 1 auto;    
+   
+}
+#portada-laterales .portada-laterales_titulo{height: 20px;color:#FFF;width: 100%;text-align: center;}
+#portada-laterales .portada-laterales_detalle {width:100%;margin-top:-15px;text-align: center;}
+#portada-laterales h2{color:#FFF;margin-top: -33px;}
+
+/*---------(10)---------*/
+#saludos {
+width: 99%;
+margin: 0 auto;
+margin-bottom: 15px;
+}
+#saludos .saludos_titulo{
+clear: both;
+height: 20px;
+margin-bottom: 10px;
+padding-bottom: 15px;
+text-align:center;
+color:#5096c6;	
+}
+#saludos .saludos_detalle {width:100%; margin-top:30px;}
+/*---------(11)---------*/
+#stylo_col_4 {
+    display: inline-block;
+	float:left;	 /*importante para que se alinee horizontalmente*/
+	padding-top:5px;
+	font-weight:bold;
+	font-size:12px;
+    word-spacing: normal;
+	text-align:center;	
+   	width: 23%;	
+	margin-left: 10px;
+	height: 35px;
+	border: 1px solid #cddced;
+	background: #f7f7f7;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+#stylo_col_4:hover {border:2px solid #2caad0;color:#e32b2b;}
+/*---------(12 titulo_portada)---------*/
+
+/*---------(13 Vacio)---------*/
+#vacio{width: 99%;margin: 0 auto;margin-bottom: 5px;}
+#vacio .vacio_detalle{}
+#vacio p{margin: 0;padding: 0;}
+#vacio h1{ text-align:center; font-weight:bold; color:#0033FF;}
+#cong_lista {width:80%;margin:0 auto; text-align: center;display:flex;
+  justify-content:space-around;flex-wrap:wrap;}
+
+/*---------(14)---------*/
+/*modulo/stilo-lis-hori-img-01.php
+modulo/foto_lstado_hori_categoria_superiror.php*/
+
+/*si tienes 4 item y le quieres dar una separacion de 10px entre item(10x3=30)
+width: calc((100% - 30px))/4 
+si tienes 3 item y le quieres dar una separacion de 10px entre item(10x2=20)
+width: calc((100% - 20px))/3 
+Nota= la separacion siempre es una menos que la cantidad de item
+*/
+#cuadrado_titulo {width: 100%; display: flex;
+    justify-content: space-around;Flex-wrap: wrap;}
+
+#cuadrado_titulo .detalle{	width: calc((100% - 10px)/2);
+             flex: none;  	box-shadow: 0 0 0 1px #fff, 0 0 0 2px #ccc;  box-sizing: border-box;
+    margin-bottom: 10px; display: flex;justify-content: center;  flex-wrap: wrap;
+	padding-bottom:10px;}
+	
+#cuadrado_titulo .titulo {width:100%; text-align:center; background-color:#A14829; color:#FFF ;
+ height: 30px; line-height: 30px;}
+#cuadrado_titulo h4 {}
+#cuadrado_titulo img {border: 2px solid #ffffff;} /*le da un borde a las imagenes*/
+#cuadrado_titulo .imagen{width:100%; max-width:100%; margin:0 auto;margin-top:10px;text-align: center;}	
+
+/*---------(15 contenedor_derecha)---------*/
+#contenedor_derecha { display:flex;width: 100%; justify-content: flex-end; padding-right:10px; box-sizing:border-box;}
+
+/* --------------------------------- 6) Fin Clase Presentacion  -----------------*/
+
+
+
+/* -------- 7) Inicio Botones css------------ */
+
+#boton_css {
+	width: 100%;
+	height: 30px;
+	display: block;
+	border: 1px solid #395d9b;
+	border-radius: 5px;
+	box-shadow: 0 0 0 3px #FFFFFF;
+	text-align: center;
+	color: #FFF;
+	background: #d62020;
+	line-height: 30px;
+	font-weight: bold;
+	font-size: 14px;
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom:10px;
+}
+#boton_css:hover{background:#f35454;}
+#boton_css a:visited { text-decoration: none;color:#FFF;}
+#boton_css a:link {text-decoration: none;color:#FFF;}
+#boton_css a {text-decoration: none;color:#FFF;}
+
+#boton_verde_1 {
+	width: 98%;
+	height: 30px;
+	display: block;
+	border: 1px solid #395d9b;
+	border-radius: 5px;
+	box-shadow: 0 0 0 3px #FFFFFF;
+	text-align: center;
+	color: #FFF;
+	background: #737b42;
+	line-height: 30px;
+	font-weight: bold;
+	font-size: 14px;
+	margin: 0 auto;
+	margin-top: 10px;	
+}
+#boton_verde_1:hover{background:#757b54;}
+#boton_verde_1 a:visited { text-decoration: none;color:#FFF;}
+#boton_verde_1 a:link {text-decoration: none;color:#FFF;}
+#boton_verde_1 a {text-decoration: none;color:#FFF;}
+
+/* -------- 7) Fin Botones css------------ */
+
+
+/* --------------------------------- 9) Inicio Contactenos -----------------*/
+
+.ctn_contactos { width:100%; margin: 0 auto; color:#333;
+  display:flex; Justify-content:Space-between; flex-wrap:wrap; }
+.ctn_contactos .iz_contac_container {display:flex;flex:1 1 65%;}
+.ctn_contactos .der-container { flex:1 1 30%;border: 1px solid #DDD;background: #fff;}	
+.ctn_contactos .der-container h2{padding: 8px 10px;color: #ffffff;text-shadow: 1px 1px 1px black;
+	letter-spacing: 1px;border-bottom: 1px solid #DDD;background-color:#2980B9 ;text-transform: uppercase;
+	margin:0 auto;font-size:14px;text-align:center;}	
+.ctn_contactos .der-container .contenido{padding: 10px;}
+
+	form, button{border:0; margin:0; padding:0;}
+	.spacer{clear:both; padding-bottom:5px;}
+	/* ———– My Form ———– */
+	.myform{margin:0 auto;width:96%;padding:15px;box-sizing:border-box;}
+	/* --- ———– stylized ———– */
+	#stylized{ border:solid 2px #DDD;background: #F2EFEE;}
+	#stylized h1,h2,h3,h4 {	margin-bottom:8px;margin: 15px 0;line-height: 1.1em;padding-left: 5px;}
+	#stylized h1 {font-size:22px;}
+	#stylized h2 {color:#B3876A;font-size:14px;text-align:center;}	
+	#stylized h4 {font-size: 22px;}
+	#stylized p{font-size:11px;color:#666666;padding-bottom:10px;}
+	#stylized label{display:block;font-weight:bold;text-align:right;width:140px;
+		float:left;margin-right: 40px;margin-top: 5px;}
+	#stylized .imagen{float:left;margin:5px;width:20%;}
+	#stylized .texto{float:left; margin-left:15px;width:75%; text-align: justify; color:#FFF; font-weight:bold}
+	#stylized .small{color:#666666;display:block;font-size:11px;font-weight:normal;
+		text-align:right;max-width:140px;width:96%;}
+	#stylized input{float:left;font-size:12px;padding:4px 2px;
+		border:solid 1px #aacfe4;width:96%;max-width:360px;margin:2px 0 20px 10px;}
+	#stylized textarea{	float:left;font-size:12px;padding:4px 2px;
+		border:solid 1px #aacfe4;max-width:360px;width:96%;	margin:2px 0 20px 10px;}	
+	#stylized button{clear:both;width:125px;height:31px;background:#666666 url(img/button.gif) no-repeat;
+		text-align:center;line-height:31px;	color:#FFFFFF;font-size:11px;font-weight:bold;
+		float:right;margin-right:40px;}		
+  input:focus:required:invalid { /*background-color:yellow;*/}
+    input:focus:required:valid {}
+	ul li {padding: 0;margin: 0;}
+	ul.lists {padding: 5px 0;list-style: none;margin: 0;}
+	ul.lists a{	color: #2A7b99;	}	
+	ul.lists li {position: relative;padding-left: 25px;line-height: 25px;}		
+	ul.lists li .icon {width: 16px;height: 16px;display: block;position: absolute;
+		left: 4px;top: 5px;background-image: url(/modulos/contactenos/imagen/jf-list.gif) ;
+		background-repeat: no-repeat;background-position: 0 0;}
+	ul.lists li.mail .icon {background-position: -288px 0;}
+	ul.lists li.location .icon {background-position:-79px -32px	}	
+	ul.lists li.iphone .icon {background-position: -64px -32px;}
+	ul.lists li.chart .icon {background-position:-272px -32px;}	
+	
+/* --------------------------------- 9) Fin Contactenos -----------------*/
+
+
+/*------- 10) Inicio Gestor de Articulos  Estilo de Presentación del Contenido ---*/
+
+/*articulocentro.php(imagen centro)  , articuloderecha.php (imagen derecha) ,
+ articuloizquierda.php (imagen izquierda) , articulopagina.php (no muestra imagen ni derecha ni izquierda ni centro solo abajo) */
+#articulo {		
+	text-align: justify;
+	margin-bottom:20px;
+	display: flex;
+    justify-content: center;
+	flex-wrap:wrap;
+}
+#articulo ul {
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0.3em;
+	margin-left: 0em;
+	padding: 0px;
+}
+#articulo li {
+	list-style: none;
+	background-image: url(/imagen/flechita-2.gif);
+	background-repeat: no-repeat;
+	background-position: 0.4em 0.3em;
+	padding-right: 0;
+	padding-bottom: 0.3em;
+	padding-left: 1.6em;
+	padding-top: 0em;
+	margin: 0em;
+	}
+#articulo .cnt_img_sola{
+	margin: 15px auto;
+	text-align: center;
+	clear: both;
+}
+
+#articulo .cont_cabecera{ display:flex;justify-content: space-between;width:100%;margin:0 auto;padding:5px 0px;}
+/* articuloizquierda.php  la imagen a la izquierda y texto derecha*/
+#articulo .img_izq{flex:1 1 29%;order:1;margin-left:2px;border: 1px solid #e9e9e9; padding:5px;}
+#articulo .texto_dere{flex:1 1 68%;order:2;padding-right:3px; padding-left:10px}	
+/* articuloderecha.php  la imagen a la derecha y texto izquierda*/
+#articulo .img_dere{flex:1 1 29%;order:2; margin-left:2px;border: 1px solid #e9e9e9; padding:5px;}
+#articulo .texto_izq{flex:1 1 68%;order:1;  padding-right:10px;}	
+/*  sirve para articuloizquierda.php y articuloderecha.php  el texto ocupado todo cuando no hay imagen */
+#articulo .texto_total{width:99%;padding:5px 5px;;}	
+#articulo .img_centro{width:100%; text-align:center}	
+
+#articulo .imagen_arti_derecha{float:right; margin-left:10px;}
+#articulo .imagen_arti_izquierda {float:left; margin-right:10px;}
+#articulo .resumen_articulo{ width:100%; margin-top:10px;}	
+#articulo .contenido_articulo{ width:100%;margin-top:10px;}	
+
+#articulo .cont_cabecera .precio{ margin-bottom:10px; text-align:right; font-weight:bold;}
+#articulo .cont_cabecera .garantia{ margin-bottom:10px;text-align:right; font-weight:bold;}
+#articulo .cont_cabecera .lblprecio{ font-weight:bold; color:#6ca336; margin-right:10px;}
+#articulo .cont_cabecera .resumen{ text-align:justify; clear:both;}
+#articulo .cont_cabecera .ctn_boton_comprar{ float:right; clear:both;margin-bottom: 20px;}
+#articulo .cont_cabecera .boton_comprar{
+	font-size: 11px;
+	font-weight: bold;
+	color: #fff;
+	background-image: url(/modulos/imagen/carrito.png);
+	background-position: 0px 0px;
+	cursor: pointer;	
+	height: 18px;
+	padding-left: 15px;
+	width: 70px;
+	line-height: 15px;
+	text-align:center;
+	margin-left:250px;
+	margin-right:5px;
+}
+ /* articulo_estilo02.php  
+ 	cuando se escoge en gestor de articulos - Estilo Sección - opcion Resumen*/
+	.arti_resumen{display:flex;flex-direction: column;border-bottom: #999 dashed 1px; margin-bottom:15px; }
+	.arti_resumen_img{}
+	.arti_resumen a{ margin-top:5px;}
+	.arti_resumen p{ width:100%; margin:auto;}	
+
+/* -------------------Inicio MISIÓN - VISIÓN - FILOSOFÍA  ---------------------------------- */
+/* presenta 3 columnas ordenadas */
+.ctn_estilo_col_1 {flex: none;display: flex;flex-wrap: wrap;flex-direction: row;justify-content: space-between; width:100%;box-sizing: border-box;}
+.estilo_col_1 {
+	display:flex; width: calc((100% - 20px)/3);flex-direction: column;flex-wrap: wrap;
+	justify-content: space-between;border: 1px solid #DDD;padding: 5px 5px;box-sizing: border-box;
+}
+
+.estilo_col_1 .titulo {
+padding: 8px 10px;
+color: #fff;
+letter-spacing: 1px;
+border-bottom: 1px solid #DDD;
+background-color: #2C3E50;
+text-transform: uppercase;
+margin: 0;
+text-align: center;
+font-weight: bold;
+}
+.estilo_col_1  .detalle {
+font-size: 13px;
+color: #20211c;
+text-align: justify;
+margin-top: 15px;
+}
+/* -------------------Fin MISIÓN - VISIÓN - FILOSOFÍA  ---------------------------------- */
+/*------------Inicio Utilizado en articulo_estilo09.php--------------------------*/
+.listado_numeral{
+	width: 100%;
+	padding: 10px 2px;
+	font-weight:bold;
+    display: flex;
+}
+.listado_numeral .izq {
+	float: left;
+	width: 45%;
+	margin-left:5%;
+}
+.listado_numeral .dere {
+	float: right;
+	width: 45%;
+}
+
+.listado_numeral ol {
+	color: #ccc;
+	list-style-type: none;
+}
+.listado_numeral ol li {
+	position: relative;
+	font: bold italic 20px/14px Helvetica, Verdana, sans-serif;
+	margin-bottom: 20px;
+}
+.listado_numeral span {
+position: absolute;
+}
+
+.listado_numeral li p {
+	font: 14px Helvetica, sans-serif;
+	padding-left: 55px;
+	color: #555;
+}
+	/*------- 10) Fin Gestor de Articulos  Estilo de Presentación del Contenido ---*/
+	
+/*------------para mobiles ----------*/
+@media all and (max-width:480px){    
+	/* ---- 1.1) Inicio Extructura  ------ */
+	#ladocentro_solodere {flex:0 1 auto;}	
+	#ladocentro_soloizqui {flex:0 1 auto;}		
+	#columnaizquierda{ display:none;}
+	#columnaderecha {flex:0 1 auto;}
+	
+	#portada-laterales { display:none;}
+	#columnaizquierda{ display:none;}
+	/* ---- 1.1) Inicio Extructura  ------ */
+	
+	.cont_pie_gest {flex-direction:column;} 	
+	.cont_pie_gest .conizq{width:100%;} 	
+	.cont_pie_gest .condere{width:100%;} 
+	
+	.listado_numeral{flex-direction: column;}
+	.listado_numeral .izq { width:100%;margin-left:0 ; }
+	.listado_numeral .dere {width:100%}
+	
+	.estilo_col_1 { width: calc((100% - 10px)/2); margin-bottom: 20px;}	
+	/*--- 10) Inicio Gestor de Articulos  ---*/
+	#articulo .img_centro img{width:100%}		
+}
+
+/*------------para Tables ----------*/
+@media all and(min-width:481px) and (max-width:768px){
+	#warp{flex-direction:column;}
+	#portada-laterales { display:none;}
+	#columnaizquierda{ display:none;}
+	/* --- 6) Inicio Clase Presentacion ---*/
+	#art_listado_01 {width:calc((100% - 20px)/3);} /* si es mayor a 400px 3 columnas */
+} 
+
+@media all and (max-width: 768px){
+	/* ---------------- 3) Inicio pie-abajo.php  ---------------- */
+	.cont_pie_gest .conizq { width:100%; margin-bottom:10px;margin-left:0px;padding: 5px 5px;
+    box-sizing: border-box;justify-content: center;}
+	.cont_pie_gest .condere {width:100%;margin-left: 0px;}
+	.cont_pie_gest .condere .ctn_menuabajo{ display:none;}	
+	
+	/* -- 4) Inicio cabecera-slider.php  ---- */
+	header#cabecera .derelogo{ display:none}
+	header#cabecera .izqlogo { width:100%; text-align:left; margin:0px; background-color:#A1A9AE }
+	/* --- 5) Inicio Miga  ------------- */
+	#webencabezado {	margin-bottom:10px;}
+	#webencabezado .miga {line-height: 40px; }	
+	a.breadCrumb { font-size: 18px; line-height:25px;}
+	/* ----- 9) Inicio Contactenos -----------------*/
+	.ctn_contactos 	{flex-direction:column; } 
+	.ctn_contactos .iz_contac_container{ width:96%;margin-left:5px; margin-right:5px; margin:0 auto; } 
+	.ctn_contactos .der-container {  width:96%;margin-left:5px; margin-right:5px;margin:0 auto;margin-top:25px;}		
+}
+	
+@media all and (min-width: 600px){/* si es mayor a 600px 4 columnas */
+	#art_listado_01 {width:calc((100% - 30px)/4);}
+} 
+
+/* smartphones, iPhone, portrait 480x320 phones */
+@media (min-width:320px) {#fondocate .detalle{width: calc((100% - 10px)/2);}}
+/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+@media (min-width:481px) { }
+/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+@media (min-width:641px) {#fondocate .detalle{	width: calc((100% - 20px)/3);}}
+/* tablet, landscape iPad, lo-res laptops ands desktops */ 
+@media (min-width:961px) {#fondocate .detalle{	width: calc((100% - 30px)/4);}}
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { /* hi-res laptops and desktops */ }	
+
+
+/* smartphones, iPhone, portrait 480x320 phones */
+@media (min-width:320px) {#cuadrado_titulo .detalle{width: calc((100% - 10px)/2);}}
+/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+@media (min-width:481px) { }
+/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+@media (min-width:641px) {#cuadrado_titulo .detalle{	width: calc((100% - 20px)/3);}}
+/* tablet, landscape iPad, lo-res laptops ands desktops */ 
+@media (min-width:961px) {#cuadrado_titulo .detalle{	width: calc((100% - 30px)/4);}}
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { /* hi-res laptops and desktops */ }	
