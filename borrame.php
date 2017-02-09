@@ -15,6 +15,7 @@ Shadowbox.init({
 </head>
 
 <body>
+hola tio
 <div id="fb-root"></div>
 <script src="http://connect.facebook.net/es_LA/all.js"></script>
 <script>
