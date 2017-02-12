@@ -25,7 +25,7 @@
   <!--http://soporte.miarroba.es/17451/8257971-programar-buscador-para-php-mysql-tutorial/ -->  
 <div id="ctn_buscador">
     <form id="buscador" name="buscador"  method="POST" action="/buscador">
-        <input type="text"  id="buscar" name="buscar" placeholder="¿Deseas buscar algo?" value="" required>
+        <input type="text"  id="buscar" name="buscar" placeholder="Buscador de Repuestos" value="" required>
         <button type="submit">
         <img src="/modulos/imagen/buscador.png" width="18" height="18" alt="Buscar">
         </button>

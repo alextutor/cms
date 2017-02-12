@@ -360,10 +360,10 @@ $codniv3 =substr($articulocod,0,20).'0000';
 $codniv4 =substr($articulocod,0,24);
 $urlweb .="";
 //echo $codniv4;exit; antes  select
-$sqlurl="SELECT ccodseccion, camiseccion FROM seccion WHERE ccodseccion ='".$codniv1."' or ccodseccion ='".$codniv2."'or ccodseccion ='".$codniv3."'or ccodseccion ='".$codniv4."'";
+$sqlurl="SELECT ccodseccion, camiseccion FROM seccion WHERE ccodseccion ='".$codniv1."' or ccodseccion ='".$codniv2."'or ccodseccion ='".$codniv3."' or ccodseccion ='".$codniv4."'";
 //ahora select alex lo modifique para eliminar la url del padre se habilita en secccion eje antes http://www.desarrollo.com/servicios/puertas-portones-madera/  ahora
 // http://www.desarrollo.com/puertas-portones-madera/
-$sqlurl="SELECT ccodseccion, camiseccion FROM seccion WHERE (ccodseccion ='".$codniv1."' or ccodseccion ='".$codniv2."'or ccodseccion ='".$codniv3."'or ccodseccion ='".$codniv4."') ";
+$sqlurl="SELECT ccodseccion, camiseccion FROM seccion WHERE (ccodseccion ='".$codniv1."' or ccodseccion ='".$codniv2."'or ccodseccion ='".$codniv3."' or ccodseccion ='".$codniv4."') ";
 //AND mostrarurlcatebase='SI'  arreglar le quite esto porque funcionaba para antigua web de flaco peropara puertsycreaciones ya no es necesario 
 
 //echo $sqlurl;exit;
@@ -386,13 +386,24 @@ switch ($ntotalrssqlurl) {
 //4to $urlweb= galeria-fotos/visita-infanteria-2014
 while($row_url  = db_fetch_array($rssqlurl))
 {			
-	$urlweb .=$row_url['camiseccion'];
+	$urlweb .=$row_url['camiseccion'];	
 	if($nconta<$ntotalrssqlurl ){ $urlweb .='/';}
 	$nconta++;
 	//le quite el '/'
 	//$urlweb .=$row_url['camiseccion'];		
 }	
 //echo $urlweb;exit;
+//DESC LIMIT 1
+if ($_SESSION['mostrarurlcatebase']=='NO' ){ 		
+		$sqlurlsolopadre="SELECT ccodseccion, camiseccion FROM seccion WHERE ccodseccion ='".$articulocod."' ORDER BY camiseccion   ";
+		//echo $sqlurlsolopadre;exit;
+		$rssqlurlsolopadre = db_query($sqlurlsolopadre);
+		while($row_url_solopadre  = db_fetch_array($rssqlurlsolopadre))
+		{			
+			$urlweb =$row_url_solopadre['camiseccion'];
+		} // fin while
+
+	} //fin si
 return $urlweb;
 }
 
@@ -411,7 +422,6 @@ $adssql   = db_query($sqlconte);
 while ($rowads=db_fetch_array($adssql))
 {
 	//echo $rowads['ctiphome'];exit;
-
 if ($rowads['ctiphome']=='1') //----------  Imagen
 {		
 	if ($rowads['curlpubli']=="")
@@ -458,7 +468,7 @@ if ($rowads['ctiphome']=='2')
 <div id="<?=$rowads['cdesclase']?>flash" style="z-index:1">
    	<object type="application/x-shockwave-flash" 
        data="<?=$rowads['cimgpubli']?>"
-       width="<?=$rowads['nancho']?>" height="<?=$rowads['nalto']?>">
+       width="<?=$rowads['nancho'].$rowads['cuni_medi_nancho']?>" height="<?=$rowads['nalto']?>">
        <param name="wmode" value="transparent"/>
        <param name="movie" value="<?=$$rowads['cimgpubli']?>"/>
        <param name="FlashVars"
@@ -591,29 +601,37 @@ if ($rowads['ctiphome']=='7') //----------  Slider Imagenes (jflow)
 	include_once($_SERVER['DOCUMENT_ROOT'].'/include/propaganda-cambiante/jFlow/propaganda-cambiante.php'); 
 }
 
-	if ($rowads['ctiphome']=='10') //----------  Slider Imagenes (LayerSlider-5-3-0)
-	{	
-		$_SESSION['cSliderLayerSlider5']= "SI";  //se utiliza en index para cargar sus respetivas js   
-		//echo "ctiphome 10- LayerSlider-5-3-0";exit;
-		$propaganda_1_1  =$rowads['cimagen1'];
-		$propaganda_1_2  =$rowads['cimagen2'];
-		$propaganda_1_3  =$rowads['cimagen3'];	
-		$titulo_propaganda_1_1  =$rowads['titulo_imagen1'];
-		$titulo_propaganda_1_2  =$rowads['titulo_imagen2'];
-		$titulo_propaganda_1_3  =$rowads['titulo_imagen3'];	
-		$texto_propaganda_1_1  =$rowads['texto_imagen1'];
-		$texto_propaganda_1_2  =$rowads['texto_imagen2'];
-		$texto_propaganda_1_3  =$rowads['texto_imagen3'];
-		$nancho=$rowads['nancho'];
-		$nalto=$rowads['nalto'];
-		include_once($_SERVER['DOCUMENT_ROOT'].'/include/propaganda-cambiante/LayerSlider-5-3-0/propaganda-cambiante-LayerSlider5.php'); 
-	}
+if ($rowads['ctiphome']=='10') //----------  Slider Imagenes (LayerSlider-5-3-0)
+{	
+	$_SESSION['cSliderLayerSlider5']= "SI";  //se utiliza en index para cargar sus respetivas js   
+	//echo "ctiphome 10- LayerSlider-5-3-0";exit;
+	$propaganda_1_1  =$rowads['cimagen1'];
+	$propaganda_1_2  =$rowads['cimagen2'];
+	$propaganda_1_3  =$rowads['cimagen3'];	
+	$titulo_propaganda_1_1  =$rowads['titulo_imagen1'];
+	$titulo_propaganda_1_2  =$rowads['titulo_imagen2'];
+	$titulo_propaganda_1_3  =$rowads['titulo_imagen3'];	
+	$texto_propaganda_1_1  =$rowads['texto_imagen1'];
+	$texto_propaganda_1_2  =$rowads['texto_imagen2'];
+	$texto_propaganda_1_3  =$rowads['texto_imagen3'];
+	$nancho=$rowads['nancho'];
+	$nalto=$rowads['nalto'];
+	include_once($_SERVER['DOCUMENT_ROOT'].'/include/propaganda-cambiante/LayerSlider-5-3-0/propaganda-cambiante-LayerSlider5.php'); 
+}
 	
 	if ($rowads['ctiphome']=='11') //---------- Formulario Buscar
-		include_once($_SERVER['DOCUMENT_ROOT'].'/modulos/form_buscador.php'); 
-	{
-}
+		{include_once($_SERVER['DOCUMENT_ROOT'].'/modulos/form_buscador.php'); 
+	}
+	if ($rowads['ctiphome']=='12') //---------- Formulario Filtar por Marca de Motor
+		{include_once($_SERVER['DOCUMENT_ROOT'].'/modulos/marca_motor/form_marca_motor.php'); 
+	}
+	if ($rowads['ctiphome']=='13') //---------- Formulario Filtar por Marca de Vehiculo
+		{include_once($_SERVER['DOCUMENT_ROOT'].'/modulos/marca_vehiculo/form_marca_vehiculo.php'); 
+	}
+
+	
 } // fin bucle
+
 
 } // fin funcion
 

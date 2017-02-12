@@ -8,10 +8,11 @@ switch ($totalpantalla) {
 		$cCondicion="";
         break;    
 }
+//echo $cCondicion;exit;
 $sql_query ="SELECT * FROM  pagemenu  WHERE ccodpage='".$codpage."' and cubimenu='".$MenuLateralUbubica."' and cestmenu='1' ".$cCondicion." ORDER BY cmenuorden";
 $rsmizq = db_query($sql_query);
 $total = db_num_rows($rsmizq );
-//echo $totalpantalla;exit;
+///echo $totalpantalla;exit;
 //echo $total;exit;
 //echo $sql_query;exit;
 if ($total>0){ // si 1 , si estamos en portada y el menu se desea mostrar en portada devolvera mas de un registro sino devolvera  0
@@ -55,8 +56,11 @@ if ($total>0){ // si 1 , si estamos en portada y el menu se desea mostrar en por
 				  $subcat2   = substr($rows_submenu2['ccodseccion'],0,16);
 				  switch($tipo_seccion2)
 				  {
-					  case 1:
+					  case 1:					  
 						  $enlacemenu2 = "/".$rows_submenu['camiseccion']."/".$rows_submenu2['camiseccion'];
+						  if ($_SESSION['mostrarurlcatebase']	=="NO"){						
+								$enlacemenu2 = "/".$rows_submenu2['camiseccion'];							
+				        	}   										
 						  break;
 					  case 2:
 						  $enlacemenu2 = $rows_submenu2['curlseccion'];

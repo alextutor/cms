@@ -1,5 +1,5 @@
 /* ---------------- 2) Inicio Menu ----------------*/
-
+/* http://www.chuidiang.com/css/ejemplos/menu_desplegable_css.php  --- manual menu desplegable 2nivel al nivel del padre
 /*http://codepen.io/philhoyt/pen/qbzhJ  flexbox con sub sub menus
 Menu Hamburgueza\JyGProyectosWeb/Menú desplegable responsive (HTML, CSS y Jquery)[1].mp4 
 https://www.youtube.com/watch?v=cWvLPy8OBzA */
@@ -16,7 +16,12 @@ Primer Nivel del Menu    .menu > ul > li:hover {background: #efd5a4;} */
    6) color Texto 2do nivel 
    7) color Texto 2do nivel pasar mouse 
    8) Definir Ancho 3er nivel  alex lo agregue
+   9) ver este punto para que los submenus se despleguen al nivel del padre agregar position:relative;width:250px;
+   y sacarla cuando se presente en celular ver este manual
+   http://www.chuidiang.com/css/ejemplos/menu_desplegable_css.php
 */
+
+
   /* -- ****** Estilos Generales del Menu ********* --- */ 
 	.ctn-menu{ width:100%; z-index:800; background-color:#5F8FDB;}
 	.ctn-menu label{font-size: 30px;cursor: pointer;display: none;}
@@ -32,12 +37,14 @@ Primer Nivel del Menu    .menu > ul > li:hover {background: #efd5a4;} */
 	.menu > ul > li a{ display: block;padding: 12px 15px; text-decoration: none;}	
 	
 	.menu ul {margin:0;list-style: none;padding:0;							/* 1) color fondo 1er nivel */
-    display: flex;background: #5F8FDB;color:#FFF; font-size:14px;}
+    display: flex;background: var(--color-fondo-1er-nivel);color:#FFF; font-size:14px;}
 	
 	/*define la proporcion de crecimiento cuanto va  crecer cada elemento 
 	ahora cada elemento li se distibuye uniformemente dentro del contenedor ocupando todo el ancho-*/
-	.menu li {flex: 1 1 auto; border-right:1px solid #fff;}
 	
+	/* 9)  alex estudia esto para que los submenus se pongan al nivel del padre al desplegarse*/
+	/*.menu li {flex: 1 1 auto; border-right:1px solid #fff; }*/
+	.menu li {flex: 1 1 auto; border-right:1px solid #fff;position:relative;width:250px; }	
 	 /*Ocultar submenus*/
 	.menu ul ul {display: none;} /* nivel 2 oculto*/
 	.menu ul ul ul li {display: none;} /* nivel 3 oculto*/
@@ -45,7 +52,7 @@ Primer Nivel del Menu    .menu > ul > li:hover {background: #efd5a4;} */
 	.menu ul ul ul li  { width:300px }  /*   8) Alex para definir ancho Nivel 3  */ 
 
   /* -- *******  Primer Nivel del Menu  **********--- */
-	.menu > ul > li:hover {background: #0066AC;}                 /* 2) color fondo 1er nivel pasar mouse */
+	.menu > ul > li:hover {background: var(--color-fondo-1er-nivel-pasar-mouse);}                 /* 2) color fondo 1er nivel pasar mouse */
 	
   /* -- *******  Segundo Nivel del Menu *********--- */
   
@@ -62,7 +69,7 @@ Primer Nivel del Menu    .menu > ul > li:hover {background: #efd5a4;} */
    .menu  ul ul li:hover {background: #FF0000;}/*background: #DDD9D8 =plomo */
    
    /* 2nd Menu */
-	.menu ul li:hover li a,.menu ul li.iehover li a {color:#ffffff;} /* 6) color Texto 2do nivel */
+	.menu ul li:hover li a,.menu ul li.iehover li a {color:#ffffff;top:30px; } /* 6) color Texto 2do nivel */
 	.menu ul li:hover li a:hover,.menu ul li:hover li:hover a,.menu ul li.iehover li a:hover,.menu ul li.iehover             li.iehover a {color:#ffffff; }  /* 7) color Texto 2do nivel pasar mouse  */
 
 	
@@ -86,6 +93,7 @@ Primer Nivel del Menu    .menu > ul > li:hover {background: #efd5a4;} */
 	.menu ul {flex-direction: column;}
 	.menu li {border-top:1px solid #fff;text-align:left;}		
 	.menu ul li:hover ul{display:none;position: static;}
-	#btn-menu:checked ~ .menu	{transform: translateX(0%);}
+	#btn-menu:checked ~ .menu	{transform: translateX(4%);} /* al hacer click boton menu(tipo hamburgueza) la distancia que se mueve el contenedor del menu a la izquierda*/
+	.menu li {flex: 1 1 auto; border-right:1px solid #fff;width: auto !important; }	
 } 	
 /* ---------------- 2) Fin Menu ----------------*/

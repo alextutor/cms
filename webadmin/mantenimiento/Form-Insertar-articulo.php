@@ -234,11 +234,19 @@ ul.stylos li{float:left;margin-bottom:5px;margin-right:1px;display:inline;width:
                     </ul> 
                 </fieldset>       
              </div>
+           
+            <div class="fltrt" style="border:1px #666666 solid; padding:0px;background-color:#FFF; width:38%">
+             <label id="jform_published-lbl" for="jform_published" class="hasTip" title="" 
+              aria-invalid="false"><strong>Seleccione Seccion :</strong></label><br><br>                
+			<?php include_once $_SERVER['DOCUMENT_ROOT']. "/webadmin/mantenimiento/jq_selectseccion.php" ?>      
+           </div>
+           
            <div class="width-40 fltrt">
            		<div id="content-sliders-" class="pane-sliders">
                 <div style="display:none;"><div>		</div></div>
                 <!-------------------------------------------------->
 		<!--Inicio grupo1 --> 
+                       
         	<?php include_once $_SERVER['DOCUMENT_ROOT']. "/webadmin/mantenimiento/opciones-publi.php" ?>                          	
         <!--Fin grupo1 -->            
                 <!-------------------------------------------------->
@@ -371,7 +379,9 @@ ul.stylos li{float:left;margin-bottom:5px;margin-right:1px;display:inline;width:
 ?>
 
   <script type="text/javascript" src="js/jsweb.js"></script>
-	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script> <!-- usado tambien por #tituloel scrip de abajo-->
+  <!-- alex no sacar jquery-1.7.1.min.js sirve para el titulo amigable -->
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script> <!-- usado tambien por #tituloel scrip de abajo-->
+  
   <script type="text/javascript" src="/webadmin/js/core.js"></script>
 
 <script type="text/javascript">

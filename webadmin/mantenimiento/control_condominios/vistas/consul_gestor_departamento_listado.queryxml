@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<querybuilder version="8.3">
+<source>
+<database charset="latin1" collation="latin1_swedish_ci">alextuto_controlcondominios</database>
+</source>
+<canvas>
+<table tablename="condominio_departamentos" alias="" left="147" top="65" width="187" height="263" />
+<table tablename="condominio" alias="" left="368" top="87" width="150" height="113" />
+<table tablename="condominio_secciones" alias="" left="448" top="250" width="150" height="188" />
+<join type = "Inner Join">
+<from tablename = "condominio" alias = "">idcondominio</from>
+<to tablename = "condominio_departamentos" alias = "">idcondominio</to>
+</join>
+<join type = "Inner Join">
+<from tablename = "condominio_secciones" alias = "">idseccion</from>
+<to tablename = "condominio_departamentos" alias = "">idseccion</to>
+</join>
+</canvas>
+<grid>
+<column id="1">
+<table tablename="condominio_departamentos"></table>
+<field>nombredepartamento</field>
+<alias></alias>
+<show>true</show>
+<sortorder></sortorder>
+<sort></sort>
+<groupby>false</groupby>
+<aggfunct></aggfunct>
+<criteria></criteria>
+<or1></or1>
+<or2></or2>
+<or3></or3>
+<or4></or4>
+</column>
+<column id="2">
+<table tablename="condominio_departamentos"></table>
+<field>estado</field>
+<alias></alias>
+<show>true</show>
+<sortorder></sortorder>
+<sort></sort>
+<groupby>false</groupby>
+<aggfunct></aggfunct>
+<criteria></criteria>
+<or1></or1>
+<or2></or2>
+<or3></or3>
+<or4></or4>
+</column>
+<column id="3">
+<table tablename="condominio_departamentos"></table>
+<field>asignado</field>
+<alias></alias>
+<show>true</show>
+<sortorder></sortorder>
+<sort></sort>
+<groupby>false</groupby>
+<aggfunct></aggfunct>
+<criteria></criteria>
+<or1></or1>
+<or2></or2>
+<or3></or3>
+<or4></or4>
+</column>
+<column id="4">
+<table tablename="condominio"></table>
+<field>nombrecondominio</field>
+<alias></alias>
+<show>true</show>
+<sortorder></sortorder>
+<sort></sort>
+<groupby>false</groupby>
+<aggfunct></aggfunct>
+<criteria></criteria>
+<or1></or1>
+<or2></or2>
+<or3></or3>
+<or4></or4>
+</column>
+<column id="5">
+<table tablename="condominio_secciones"></table>
+<field>nombreseccion</field>
+<alias></alias>
+<show>true</show>
+<sortorder></sortorder>
+<sort></sort>
+<groupby>false</groupby>
+<aggfunct></aggfunct>
+<criteria></criteria>
+<or1></or1>
+<or2></or2>
+<or3></or3>
+<or4></or4>
+</column>
+<column id="6">
+<table tablename="condominio_secciones"></table>
+<field>nombreseccion</field>
+<alias></alias>
+<show>true</show>
+<sortorder></sortorder>
+<sort></sort>
+<groupby>false</groupby>
+<aggfunct></aggfunct>
+<criteria></criteria>
+<or1></or1>
+<or2></or2>
+<or3></or3>
+<or4></or4>
+</column>
+</grid>
+</querybuilder>

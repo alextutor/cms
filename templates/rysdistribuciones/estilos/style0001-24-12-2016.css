@@ -1,0 +1,989 @@
+/* -- 0.1) Inicio Variables rysdistribuciones */ 
+:root {
+/* Menu */
+ --color-fondo-1er-nivel: #3896B3;--color-fondo-1er-nivel-pasar-mouse: #39B4E1;
+/* 5) Inicio Miga */
+--webcontenido_h1:#F96A1B;
+/* 9) Inicio Contactenos */
+--der-container-h2:#39B4E1;
+/* 5) Inicio Miga */
+--breadcrumb:#FFFFFF;
+--a_breadCrumb :#F96A1B;
+--a_breadCrumb_visited:#F96A1B;
+/* 12) inicio Menu lateral */
+--menu-lateral-menuizqtitulo:#4EC1C6; 					/*Fondo Titulo */
+--menu-lateral-fondo-secciones-nivel2:#9BDCDF; 			/*Fondo Secciones 2Nivel*/
+--menu-lateral-borde-secciones-nivel2:#3896B3; 			/*Borde Secciones 2Nivel*/
+--menu-lateral-color-fondo-2nivel-pasar-mouse:#39B4E1;	/* Color de fondo 2Nivel al pasar el mouse */
+--menu-lateral-color-texto-2nivel:#020608;				/* Color del texto 2Nivel */
+--menu-lateral-color-texto-2Nivel-pasar-mouse:#FFFFFF;	/* Color del texto 2Nivel al pasar el mouse */
+/* Menu zetta_menu blue.css */
+--zetta-menu-1erNivel-fondo:#4EC1C6;						/* 1) Zetta Menu  1er Nivel fondo */
+--zetta-menu-1erNivel-color-texto:#fff;						/* 2) Zetta Menu  1er Nivel color texto */
+--zetta-menu-1erNivel-fondo-color-OnmouseOver:#9BDCDF;		/* 3) 1er Nivel fondo color OnmouseOver alex */
+--zetta-menu-fondo-2doNivel-zm-multi-column	:#4EC1C6;		/* 5) Zetta Menu   Fondo 2do Nivel clase zm-multi-column */
+--zetta-menu-fondo-2doNivel-OnmouseOver-zm-multi-column	:#F19909;	/* 6) Fondo 2do Nivel OnmouseOver clase zm-multi-column */
+/* Menu menu-duramenu (dura-main.css) */																
+--duramenu-categorias-color-fondo-3erNivel:#fff;  				 /* 5) Duramenu-Categorias color fondo 3erNivel */
+--duramenu-categorias-color-texto-3erNivel:#000000;  			 /* 6) Duramenu-Categorias color Texto 3erNivel */
+--duramenu-categorias-color-fondo-3erNivel-OnmouseOver:#fb244f;  /* 7) Duramenu-Categorias color Fondo 3erNivel pasar mouse */
+--duramenu-categorias-color-texto-3erNivel-OnmouseOver:#fff;     /* 8) Duramenu-Categorias color Texto 3erNivel pasar mouse */
+--duramenu-categorias-conte-ancho-3erNivel:500px;     			 /* 9) Duramenu-Categorias el contenedor del 3erNivel  */
+}  						
+/* --modo uso  .menu ul { background-color: var(--duramenu-categorias-color-fondo-3erNivel);}*/
+/* -- 0.1) Fin  Variables rysdistribuciones */ 
+
+
+/* --------------------------------- 1) Inicio General -----------------*/
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+/*poner margin sino menu no aparece alineado*/
+* { margin: 0; padding: 0;
+box-sizing: border-box; }
+a:link {text-decoration:none;} 
+p {line-height: 1.7;margin-bottom: 10px;  }
+
+/* -------- 8 Inicio inicializando Propiedades  ------------ */
+* { margin: 0; padding: 0;}
+h1 { font-size: 1.8em !important; color: #e64c0f; }
+h2 { font-size: 1.5em;!important; }
+h3 { font-size: 1.2em; !important;}
+hr { width: 100%;border: 1px solid #66B47B !important; margin-bottom: 10px;}
+/* -------- Fin inicializando Propiedades------------ */
+/* --------------------------------- 1) Fin General -----------------*/
+
+/* ---------------- 1.1) Inicio Extructura  ------------------------------- */
+
+body
+{  font-family: 'Roboto', sans-serif;
+    font-size: 13px;line-height: 18px;text-align: justify;margin:0 auto;
+	
+	background-color: #cdd3c5;
+    background-image: url("/imagen/12172812/bg-top.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    background-size: cover;	
+	
+	-webkit-linear-gradient(top, #3399CC 0, #3399CC 800px) no-repeat;	
+	background-color: #3399CC;  		
+	/* IE 6 y 7 */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#efeeeb', endColorstr='#a79b8d ', gradientType='1');
+	/* IE 8 y 9 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#5686d5', endColorstr='#abcdf7 ', gradientType='1')";
+	scrollbar-face-color:#FFFFFF;scrollbar-arrow-color:#00a0df;	scrollbar-highlight-color:#fff6eb;scrollbar-3dlight-color:#00a0df
+;scrollbar-shadow-color:#00a0df;scrollbar-darkshadow-color:#fff6eb;scrollbar-track-color:#FFFFFF;}
+
+
+/* inicio background sirve para poner imagen de fondo se deve implementar en config_style.php el div ver Huizame CMS/Configurar  background */
+#background {position: fixed;top: -50%;left: -50%;width: 200%;height: 200%;z-index:-10;}
+#background img {position: absolute;top: 0;left: 0;right: 0;bottom: 0;margin: auto;min-width: 50%;min-height: 50%;}
+/* Fin background */
+
+#warp{
+	width:90%;max-width:1024px;margin:0px auto;background-color:#fff;margin-bottom:10px;margin-top:-10px;			
+	border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;box-shadow: 0 0 24px rgba(0,0,0,.8); 	
+	display:flex;flex-wrap:wrap;flex-direction:row;	border-radius: 10px;} 
+#cuerpo {overflow: hidden;margin: 0px auto 0px auto;padding:0px;background-color: #fff;padding-top:5px;
+	width:100%;max-width:100%;display:flex;flex-wrap:wrap;border-radius: 10px;}	
+	
+#ladoizquierda{max-width:200px; /*200 cuando se muestran los 3 y 240 solo 2*/
+	width:200px;float: left;padding:0px;text-align: left;margin-left:5px;margin-bottom:10px;}
+
+#ladocentro_soloizqui { /*cuando se muestra solo el lado izquierdo y el centro*/
+	padding-right: 5px;margin-bottom:10px;display:flex;
+	flex:1;	/*propiedad flex tiene tres parametros(flex grow,flex-shrink,flex-basic)*/
+	/*flex:1 ; /*cuando se quiere mantener eltamaño del otro lado como columna derecha ancho 200px*/
+	flex-direction:column;  /* si no se pone esto el contenido se pone como filas  y las migas se ven mal*/
+    margin-left: 5px;order: 2;}
+
+#ladocentro_solodere { /* LADO CENTRO cuando se muestra solo el lado derecho y el centro*/
+	padding-right: 5px;margin-bottom:10px;display:flex;
+	flex:1;	/*propiedad flex tiene tres parametros(flex grow,flex-shrink,flex-basic)*/
+	/*flex:1 ; /*cuando se quiere mantener eltamaño del otro lado como columna derecha ancho 200px*/
+	flex-direction:column;  /* si no se pone esto el contenido se pone como filas  y las migas se ven mal*/
+    margin-left: 5px;}
+
+/* columnaizquierda =flex: 1 ; columnaderecha = flex: 1 ; ladocentro= flex: 3 (3 veces más espacio) .*/
+#columnaizquierda{padding:0px;text-align: left; box-sizing:border-box ;margin-bottom:10px;	
+	 display:flex;flex:0 0 200px;order:1;flex-wrap:wrap;justify-content:flex-start;  flex-direction:column;margin-left:5px }
+#columnaderecha { /* LADO DERECHA */
+	padding:0px;text-align: left;margin-bottom:10px; box-sizing:border-box ;  
+	display:flex;flex:0 0 200px;order:3; flex-wrap:wrap;justify-content:flex-start;  flex-direction:column;		
+}
+#ladocentro {padding-right: 5px; margin-bottom: 10px;box-sizing:border-box ; 
+			display: flex;flex: 2;order:2;flex-direction: column;}
+
+#columnacentro {
+	max-width:550px; /*580 cuando se muestran los 3 y 690 solo 2*/
+	padding-right: 0px;padding-left: 15px;float: left;margin-bottom:10px;}
+#columnacentro_soloizqui { /*cuando se muestra solo el lado izquierdo y el centro*/
+	max-width:750px; /*580 cuando se muestran los 3 y 690 solo 2*/
+	padding-right: 0px;padding-left: 15px;float: left;margin-bottom:10px;}
+#columnacentro_solodere { /*cuando se muestra solo el lado derecho y el centro*/
+	max-width:750px; /*580 cuando se muestran los 3 y 690 solo 2*/
+	padding-right: 15px;float: left;margin-bottom:10px;}
+#ctn_gral_columnacentro {padding: 10px 10px;margin-bottom:10px;width:99%;display:flex;flex-direction:column;box-sizing:border-box  }
+#ladoderecha {max-width:200px; /*200 cuando se muestran los 3 y 240 solo 2*/
+	float: right;padding:0px;text-align: left;margin-right:10px;margin-bottom:10px;}
+
+/* ---------------- 1.1) Fin Extructura  ------------------------------- */
+
+/* ---------------- 2) Inicio Menu Configuracion General ----------------*/
+  /* -- ****** Estilos Generales del Menu ********* --- */ 
+	.ctn-menu{ width:100%; z-index:800;}
+	.ctn-menu label{font-size: 30px;cursor: pointer;display: none;}
+	.ctn-menu label:hover{cursor:pointer;background: rgba(0,0,0,0.3);}
+	
+	#btn-menu 	{ display: none;}
+	
+	.menu{ width:100%;}
+@media all and (max-width: 768px){
+	.ctn-menu label{width: 97%;padding: 10px 10px;display: flex;justify-content: flex-start;}
+	.ctn-menu .titulomenu	{ margin-left:10px;line-height: 30px; color:#FFF; font-size:20px;}	
+	.menu {position: absolute;left: 0;width: 60%;transform: translateX(-100%);transition:all 0.3s;}	.
+	#btn-menu:checked ~ .menu	{transform: translateX(0%);}
+} 	
+/* ---------------- 2) Fin Menu Configuracion General ----------------*/
+
+/* ---------------- 2.1) Inicio Menu Pie ----------------*/
+.ctn_menuabajo{background: #000000 ; width: 100%;}
+#menuabajo{margin: 0;list-style: none;padding: 0;display: flex;
+    background: #042932;color: #FFF;font-size: 14px;}	
+#menuabajo li{flex: 1 1 auto;border-right: 1px solid #fff;}
+#menuabajo li a{display: block;padding: 8px 4px;text-decoration: none;		
+	font-weight:bold;font-size: 0.9em;color:#ffffff;text-align:center;}
+#menuabajo li#active a{color:#191919;background:#E2E0E1 ;}
+#menuabajo li a:hover, 	#menuabajo li#active a:hover{color:#191919;background:#E2E0E1 ;}
+
+/* ---------------- 2.1) Fin Menu Pie ----------------*/
+
+/* ---------------- 3) Inicio pie-abajo.php  ---------------- */
+
+	#piecontenido{ width: 90%; display: flex;justify-content: center;} 	
+	/* Contenedor general */
+	footer#PiePrincipal{width: 90%;max-width:1024px;display:flex;flex-wrap:wrap;Justify-content:Space-between;   
+	box-sizing  : border-box;padding: 5px 0px;margin:0 auto;background-color:#D8D6D7;margin-bottom: 10px;border-radius: 10px;}
+	
+	/* Contenedor izquierda y derecha*/
+	.cont_pie_gest {width:100%;margin:0 auto;display: flex;flex-wrap:wrap;Justify-content: space-between;}	
+	
+	.cont_pie_gest a:hover {color: rgba(3, 8, 10, 0.91);font-weight:bold;font-size:12px;}
+	.cont_pie_gest a:visited {text-decoration: none;color: #66290F;}	
+	.cont_pie_gest a {text-decoration: none;color: #66290F;}
+	/* Lado izquierda*/
+	
+	.cont_pie_gest .conizq {display:flex;flex:0 0 30%;box-sizing:border-box;padding:5px;
+	text-align:center;color: #fff;align-items: center;font-size: 22px;}
+	
+	.cont_pie_gest .conizq p {line-height:30px;}
+	.cont_pie_gest .conizq .titupie{font-style: italic; font-weight: bold;
+	 font-family: 'Times New Roman';text-shadow: 2px 4px 3px rgba(0,0,0,0.3);}
+
+	/* Lado Derecha*/	
+	.cont_pie_gest .condere {display:flex;flex:0 0 70%;box-sizing:border-box;padding:5px;color:#fff; flex-direction: column;}		
+	
+	.cont_pie_gest .menuabajo {width:100%;margin:0 auto;margin-top:5px;margin-bottom:10px;margin-left: 30px;}
+	.cont_pie_gest  .direccion {width:100%;margin:0 auto; margin:10px 0px;text-align:center;text-shadow: 2px 4px 3px rgba(0,0,0,0.3);}
+	.cont_pie_gest  .contacto {width:100%;margin:0 auto; margin:10px 0px;text-align:center;letter-spacing:1px;text-shadow: 2px 4px 3px rgba(0,0,0,0.3);}
+
+	.cont_contycopry{font-family: 'Lato', sans-serif;font-size:13px;width:100%;float: right;margin:0 auto;margin-bottom:10px;}	
+	
+	.Copyright{	/*float:left;*/	text-align:center;}
+	.contador{text-align:center;margin-left:10px;color: #66290F;text-align:center;margin-top: -3px;margin-bottom:5px;
+		font-size:13px;width:100%;}
+	.visihoyconta { float:left; width:40%;text-align: right;}
+	.VisiTotalconta { float:left; width:50%; margin-left:10px;text-align: left;}
+/* ---------------- 3) Fin Pie  ------------------------------- */
+
+/* ---------------- 4) Inicio cabecera-slider.php  ---------------- */
+header, footer, aside, nav, article, section, form { display: block; }
+header#cabecera{padding-top:0px;text-align: center;display:flex;flex-wrap:wrap;width: 90%;max-width: 1024px;margin: 0px auto 0px auto;}
+header#cabecera .ctnlogo{width:100%;display: flex;justify-content: space-between; 
+flex-direction: row; padding:5px 5px; box-sizing:border-box  }
+header#cabecera .izqlogo{width:40%;display: flex;align-items: center; margin-left:10px;}
+header#cabecera .derelogo_100{width:100%;display: flex;align-items: center;flex-wrap: wrap;}
+header#cabecera .derelogo{width: 60%;display: flex;align-items: center; justify-content: flex-end;}
+header#cabecera .derelogo .atencioncli{width: 60%;display: flex;font-weight: bold; font-size: 16px;
+text-shadow: 2px 4px 3px rgba(0,0,0,0.3);font-size: 18px;font-weight: bold;font-family: 'Arial Black';}
+header#cabecera .derelogo .atencioncli img{ margin-right:10px;}
+header#cabecera .derelogo .redes{ width: 30%;display: flex;}
+header#cabecera .derelogo .redes img{ float:right;}
+header#cabecera .derelogo .redes .textoredes{ float: left;width: 80%;text-align: right;padding-top: 5px;}
+
+/*----------Inicio cabecera posicion------*/
+header#cabecera #cabecera_posicion4{display: flex;width: 100%;padding: 5px 5px;box-sizing: border-box;
+justify-content: space-between;}
+
+/*----------Inicio slider------*/
+#ctn_slider{ margin-top:5px; display:flex;width:100%; }
+.slider{width:100%;}
+/*----------Fin slider------*/
+
+/* ---------------- 4) Fin cabecera-slider.php  ---------------- */
+
+/* ---------------- 5) Inicio Miga  --------------------------- */
+#webencabezado {margin-right:20px;margin-left:20px;margin-top:10px;text-align:left;display:flex;margin-bottom:20px;}
+#webencabezado .miga {width: 100%;border-bottom: #000000 dashed 1px;    padding-bottom: 15px; }
+
+/* inicio breadcrumbs */
+.breadcrumb {background-color: var(--breadcrumb) !important;}
+a.breadCrumb {color: var(--a_breadCrumb);font-weight: bold;font-size: 14px;}
+a.breadCrumb:visited {text-decoration: none;color: var(--a_breadCrumb_visited);}	
+img.breadCrumbIMG {margin-left: 5px;margin-right: 5px;width: 11px;height: 9px;}
+/* fin breadcrumbs */
+
+/* ---------------- Inicio Contenido Cuerpo ---------------- */
+#webcontenido {margin-left:5px;margin-right:5px;margin-top:5px;}
+#webcontenido h1 {text-align:center; line-height:30px; padding:10px 0px; color: color:var(--webcontenido_h1); font-weight:bold;margin-top:5px !important; }
+/* ---------------- Fin Contenido Cuerpo ------------------- */
+
+/* ---------------- Inicio Redes utilizado en columnacentro.php---------------- */
+.comentarios-facebook{ margin:0  auto 120px auto; width:90%}
+
+/* ---------------- 5) Fin  Miga  ----------------------------- */
+
+/* -------------------------- 6) Inicio Clase seccion -----------------------*/
+
+/*---------(1)---------*/
+#art_listado_01 {width:calc((100% - 10px)/2);flex:none;box-shadow: 0 0 0 1px #fff,0 0 0 2px #ccc;
+	box-sizing  : border-box ;margin-bottom:10px;display:flex;justify-content:center;flex-wrap:wrap;padding:1em 0;}		
+#art_listado_01 .titulo {/*background-color: #f5f5f5;*/	margin-bottom:10px;	width:100%;}
+#art_listado_01 h4 {color: #333333;font-size:14px;font-weight:bold;margin: 0;text-align: center;text-shadow: 0 1px 0 #FFFFFF;}
+/*---------(2)---------*/
+#contenido {width: 100%;	background-color: #ffffff;border: 1px solid #D5D5D5;padding: 5px 5px;
+	margin: 0 auto;margin-bottom:20px; box-sizing:border-box;}
+#contenido .contenido_titulo {clear: both;height: 20px;margin-top: -35px;margin-bottom: 10px;
+padding-bottom: 15px;text-align:center;color:#FFF;}
+#contenido .contenido_detalle {width:100%;padding:0px 5px;box-sizing:border-box;margin-top: 15px;}
+#contenido article {}
+#contenido article .r {max-width: 60%;float: right;}
+#contenido article img {}
+#contenido article:hover img {-webkit-transform:scale(1,1);	-moz-transform:scale(1,1);}
+#contenido article h2 {font-size: 2em;font-weight: normal;margin-bottom: 10px;text-align: center;}
+#contenido article h2 a {	color: #212121;text-decoration: none;}
+#contenido article p {line-height: 1.6em;margin-bottom: 10px;text-align: justify;font-family: Arial;}
+
+#contenido .postnav {clear: both;padding-top: 20px;font-weight: bold;}
+#contenido .postnav a {	text-decoration: none;}
+/*---------(3)---------*/
+#enlaces_pie{width:95%;background:#9eac91;margin:0 auto;clear:both;margin-bottom:10px; height:43px;}
+#enlaces_pie h2{ font-size:12px; color:#FFF; text-align:center;}
+#enlaces_pie .item{background-color:#DFDFDF;padding:5px;text-align: center;float: left;display: inline-block;
+margin-left: 5px;}
+#enlaces_pie .enlaces_pie_titulo {width:120px; float:left; background-color:#333;}
+#enlaces_pie .enlaces_pie_detalle { float:left; margin-left:10px;margin-top: 7px;}
+
+/*---------(5)---------*/
+#inicio{loat: left;	margin: 0px;padding: 0px;width: 100%;margin-top: 7px;}
+#inicio .inicio_titulo{background-color: #a7d34b;color: #000;margin-bottom: 5px;padding: 5px;height: 22px;
+	border: #a7d34b 1px solid;text-align:center;font-weight:bold;-webkit-border-radius: 11px;/* border-radius: 11px; */}
+#inicio .inicio_detalle{}
+/*---------(6)---------*/
+ul.lista_hori_1 { display: inline-block;list-style: none outside none;margin: 0;padding: 0;}
+ul.lista_hori_1 li {float: left;text-align: center; /*width: 25%;*/ }/*le quite el padding padding: 20px; porque en 6 en la segunda fila se presentaba disparejo */
+ul.lista_hori_1 .info-image {padding: 10px;}
+/*---------(7)---------*/
+#lista_hori_1_titulo { display: flex; flex-wrap:wrap;Align-content:flex-start ;Justify-content:Space-between; width:99%;}
+#lista_hori_1_titulo h1{width:95%; text-align:center; background:#68A7CE; padding:5px; color:#FFF;}
+#lista_hori_1_titulo .info-image {padding: 10px;    text-align: center;}
+#lista_hori_1_titulo .titulo {padding: 10px;}
+
+/*---------(8)---------*/
+#portada {width: 99%;border-radius: 11px;-moz-border-radius: 11px;-webkit-border-radius: 11px;margin: 0 auto;padding:10px 5px;
+margin-bottom: 15px;margin-top: 7px;clear:both;}
+#portada .portada_titulo{background-color: #93b5bd;color: #000;margin-bottom: 5px;padding: 5px;height: 22px;border: #93b5bd 1px solid;
+text-align: center;font-weight: bold;-webkit-border-radius: 11px;border-radius: 11px;}
+/*---------(13 Vacio)---------*/
+#vacio{width: 99%;margin: 0 auto;margin-bottom: 5px;}
+#vacio .vacio_detalle{}
+#vacio p{margin: 0;padding: 0;}
+#vacio h1{ text-align:center; font-weight:bold; color:#0033FF;}
+#cong_lista {width:80%;margin:0 auto; text-align: center;display:flex;justify-content:space-around;flex-wrap:wrap;}
+
+/*--------- 15) contenedor_derecha)---------*/
+#contenedor_derecha { display:flex;width: 100%; justify-content: flex-end; padding-right:10px; box-sizing:border-box;}
+
+/*------- Inicio  CONTACTENOS Portada --------------- */	
+#m_cont_late {width: 100%;margin-top: -40px;background: transparent url(/imagen/para-todos/rec_contacto.gif) no-repeat 100% 0%;}
+#m_cont_late p{padding-left: 17px; padding-top: 18px; color: #fff; text-align:left; font-weight:bold; }
+a.phone{ border:none;color:inherit;}
+a.phone:hover{ border:none; color:inherit;cursor:default;}
+a.phone {
+	padding: 5px 5px;
+	text-align:left;	
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAWBJREFUeNpiZMADfF2cEoCUAgN54MHmPfsW4JJkxGPpfCCVwEAZWAC0PJFoi4GWGgCp8wzUAYZAyy+gC7LgUCwAIpzd3BnEJCTIsu3VixcMe3fthJtFrMUMMIt19PXJsvjKxYswi7ECJoYBAqMWj1o8avGoxaMWj1o8+CzGWx/Pnj6VgYeHhyyDv3z5QromYNPHAYj/X75w4T8IVBUXotDLFi2Ey4HY2ORAGGQGyCxsdjBjE1RXUlSANfTu37vLcBnYmvj69SucvnLxAsOrly/BcjA2htzdu2AMBAtv3bv/gKQ4BjVdQG2ngtIyhhNHj8DpyNh4BkVlZbAciI1NDl+zZ0ATF67mLShe9sNamXt37mRwdneH06DgFBOXAMuB2Dr6BhhysBADAkdg8/YAWa1MkGGRsXFwejlQTldPHywHYmOTQ7KYJB/TvEGPNY6hChdQwdIF2CzF23eidacNIMAAxi/joc6jdacAAAAASUVORK5CYII=)no-repeat left center;	
+	width: 95%;
+	display:block;
+}
+a.phone .nrocelular{ margin-left:30px;}
+
+
+/* esto va en webadmin gestor presentacion codigo html titulo Contactenos
+<div id="m_cont_late">
+<p>CONTACTENOS</p>
+<div class="bold m_l_5 naranja t16  m_top_20"><a class="phone" title="ring ring ring" href="tel:990952231"><span class="nrocelular"> 990952231</span> </a></div>
+<div class="clear">&nbsp;</div>
+</div>
+/*------- Fin  CONTACTENOS Portada --------------- */	
+
+
+/*--------- 17) Inicio Fotos_circulos)---------*/
+	/*https://www.pyme.pe/dry_house*/
+.fotos_circulos {width: 100%;display: flex;justify-content: Space-between;Flex-wrap: wrap;}
+.fotos_circulos .fotos_circulos_detalle{
+	width: calc((100% - 10px)/2);flex: none;box-shadow: 0 0 0 1px #fff,
+ 0 0 0 2px #ccc;box-sizing: border-box;margin-bottom: 10px;display: flex;
+    justify-content: center;flex-wrap: wrap; padding: 1em 0;border: none;
+	background: #fff;padding: 5px;border-radius: 80px;	}
+.fotos_circulos .titulo {width:100%; text-align:center; background-color:#A14829; color:#FFF}
+.fotos_circulos .fotos_circulos_detalle h4 { margin: 5px 0;line-height: 1.1em; padding-left: 0px;}
+.fotos_circulos img {border: 2px solid #ffffff;} /*le da un borde a las imagenes*/
+.fotos_circulos .imagen{width:100%; max-width:100%; margin:0 auto;margin-top:10px;text-align: center;}	
+/*--------- 17) Fin Fotos_circulos)---------*/
+
+/*--------- 18) saludos_2 ---------*/
+#saludos_2 {width: 99%;margin: 0 auto;margin-bottom: 15px;}
+#saludos_2 .saludos_titulo{clear: both;height: 20px;margin-bottom: 10px;padding-bottom: 15px;text-align:center;color:#5096c6;}
+#saludos_2 .saludos_detalle {width: 100%; margin-top: 30px;}
+/*--------- 18) Fin saludos_2 ---------*/
+
+/* contenedor utilizado en inccontenido.php Si la presentación no es de contenido dinamico */
+#ctn_conte_dinamico_cuadrado_multicolor{display: flex;justify-content: space-between;text-align: center;}
+#cuadrado_multicolor{display:flex;align-items: center; box-sizing: border-box;padding: 30px;background-color: aqua;
+    margin-right: 10px; margin-bottom: 10px; color:#FFF;font-size: 18px;letter-spacing: 2px;    line-height: 30px;
+	font-weight: bold;}
+#cuadrado_multicolor a:link{color:#FFF;}
+#cuadrado_multicolor .titulo{ margin-bottom:20px;}
+#cuadrado_multicolor .imagen{ margin-top:20px;}
+
+.multicolor_1 { background-color:#F5834E !important;}
+.multicolor_2 { background-color:#33A8DE !important}
+.multicolor_3 { background-color:#FCBB6C !important}
+.multicolor_4 { background-color:#FCD86C !important}
+
+/* --------------------------------- 6) Fin Clase Seccion --------------------------*/
+
+/* --- 6.1) Inicio Gestor de Presentación Estilo Sección Para Gestor de Presentación (Tabla estiloseccion  ccodmodulo=1800) ---*/
+
+/*---------Tipo Contenido Codigo Html ---------*/
+/*- Clase Saludos-*/
+#saludos {width: 99%;margin: 0 auto;margin-bottom: 15px;}
+#saludos .saludos_titulo{clear: both;height: 20px;margin-bottom: 10px;padding-bottom: 15px;text-align:center;color:#5096c6;}
+#saludos .saludos_detalle {width:100%; margin-top:30px;}
+/*---------(9)---------*/
+#portada-laterales {width: 96%;border: 2px solid #e5794c;background-color: #F6FAFA;box-shadow: #aaa 0 0 10px;
+border-radius: 11px;margin: 0 auto;padding:10px 2px;margin-top: 15px;margin-bottom: 15px;border-top: 30px solid #e5794c;
+border-bottom:1px solid #e5794c;box-sizing  : border-box; display:flex;Justify-content:Space-between;Align-items:center;    Flex-wrap: wrap; flex:0 1 auto;}
+#portada-laterales .portada-laterales_titulo{height: 20px;color:#FFF;width: 100%;text-align: center;}
+#portada-laterales .portada-laterales_detalle {width:100%;margin-top:-15px;text-align: center;}
+#portada-laterales h2{color:#FFF;margin-top: -33px;font-size: 18px !important;}
+
+/*---------Tipo Contenido Codigo Html ---------*/
+
+
+/*---------Tipo Contenido Dinamico ---------*/
+
+/*---------Lstdo Hori Pro IMG(1805) stilo-lis-hori-img-01.php---------*/
+/*Usado x Lstdo Hori Pro IMG(1805)*/
+/*modulo/stilo-lis-hori-img-01.php
+modulo/foto_lstado_hori_categoria_superiror.php*/
+
+/*si tienes 4 item y le quieres dar una separacion de 10px entre item(10x3=30)
+width: calc((100% - 30px))/4 
+si tienes 3 item y le quieres dar una separacion de 10px entre item(10x2=20)
+width: calc((100% - 20px))/3 
+Nota= la separacion siempre es una menos que la cantidad de item
+*/
+#fondocate {width: 100%;display: flex;justify-content: space-around;Flex-wrap: wrap;}
+
+#fondocate .detalle{	width: calc((100% - 10px)/2);
+             flex: none;display: flex;justify-content: center;  flex-wrap: wrap;
+			 box-shadow: 0 0 0 1px #fff, 0 0 0 2px #ccc;  box-sizing: border-box;
+    margin-bottom: 10px; padding-bottom:10px;border-radius: 15px;background-color: #515754;}
+	
+#fondocate .titulo {width:100%; text-align:center; background-color: #F1F1F1;
+    border-radius: 15px 15px 0 0; height:30px; line-height:30px;}
+#fondocate  h4 {}
+#fondocate img {border: 2px solid #ffffff;} /*le da un borde a las imagenes*/
+#fondocate .imagen{width:100%; max-width:100%; margin:0 auto;margin-top:10px;text-align: center;}	
+
+
+/*---------Lstdo Hori Pro IMG(1805) stilo-lis-hori-img-01.php---------*/
+/*Usado x Lstdo Hori Pro IMG(1805)*/
+/*modulo/stilo-lis-hori-img-01.php
+modulo/foto_lstado_hori_categoria_superiror.php*/
+
+/*si tienes 4 item y le quieres dar una separacion de 10px entre item(10x3=30)
+width: calc((100% - 30px))/4 
+si tienes 3 item y le quieres dar una separacion de 10px entre item(10x2=20)
+width: calc((100% - 20px))/3 
+Nota= la separacion siempre es una menos que la cantidad de item
+*/
+#ctn_conte_dinamico_cuadrado_titulo {width: 100%; display: flex;justify-content: space-around;Flex-wrap: wrap;}
+#ctn_conte_dinamico_cuadrado_titulo .detalle{	width: calc((100% - 10px)/2); flex: none;box-shadow: 0 0 0 1px #fff, 0 0 0 2px #ccc;  
+box-sizing: border-box;margin-bottom: 10px; display: flex;justify-content: center;  flex-wrap: wrap;padding-bottom:10px;}
+#ctn_conte_dinamico_cuadrado_titulo .titulo {width:100%; text-align:center; background-color:#A14829; color:#FFF ;height: 30px; line-height: 30px;}
+#ctn_conte_dinamico_cuadrado_titulo h4 {}
+#ctn_conte_dinamico_cuadrado_titulo img {border: 2px solid #ffffff;} /*le da un borde a las imagenes*/
+#ctn_conte_dinamico_cuadrado_titulo .imagen{width:100%; max-width:100%; margin:0 auto;margin-top:10px;text-align: center;}	
+
+/*---------Lstdo Hori 2nivel (1804) stilo-lis-hori-01.php---------*/
+#ctn_conte_dinamico_stylo_col_4{ display:flex;}
+#stylo_col_4 {padding: 15px;font-weight: bold;font-size: 12px;word-spacing: normal;text-align: center;margin-left: 10px;
+	height: 35px; border: 1px solid #cddced;background: #f7f7f7;border-radius: 10px;display: flex;align-items: center;}
+#stylo_col_4:hover {border:2px solid #2caad0;color:#e32b2b;}
+
+
+/*--------- 16) portada_Resumen (1815) portada_resumen_01.php ---------*/
+#ctn_conte_dinamico_portada_Resumen {width: 100%;display: flex;justify-content: Space-between;Flex-wrap: wrap;}
+#ctn_conte_dinamico_portada_Resumen h2{width: 100%;display: flex;padding: 10px;border-radius: 5px;
+    background-color: #005fbf;color: #ffffff; margin-bottom: 5px;font-size: 16px;}
+.ctn_portada_item{}
+.portada_item{ width: 100%;border-bottom: #999 dashed 1px;padding-top: 5px;padding-bottom: 5px;
+				display: flex;flex-direction:row; border: #e6e6e6 1px solid;  margin-bottom: 10px;}	
+/*- .portada_item:last-child {border-bottom: none;}	-*/
+ .portada_item_imagen  {flex: 0 1 15%; margin-left:5px	}	
+  .portada_item_contenido {display:flex;flex: 0 1 85%;box-sizing:border-box ; flex-wrap:wrap;margin-left: 10px;padding-right: 5px; }	
+  .portada_item_contenido_titulo { width:100%; font-weight:bold;}	
+  portada_item_contenido_detalle { width:100%;}	
+/*--------- 16) Fin portada_Resumen ---------*/  
+
+/* --- 6.1) Fin Gestor de Presentación Estilo Sección Para Gestor de Presentación (Tabla estiloseccion  ccodmodulo=1800) ---*/
+
+/* -------- 7) Inicio Botones css------------ */
+
+#boton_css {
+	width: 100%;
+	height: 30px;
+	display: block;
+	border: 1px solid #395d9b;
+	border-radius: 5px;
+	box-shadow: 0 0 0 3px #FFFFFF;
+	text-align: center;
+	color: #FFF;
+	background: #d62020;
+	line-height: 30px;
+	font-weight: bold;
+	font-size: 14px;
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom:10px;
+}
+#boton_css:hover{background:#f35454;}
+#boton_css a:visited { text-decoration: none;color:#FFF;}
+#boton_css a:link {text-decoration: none;color:#FFF;}
+#boton_css a {text-decoration: none;color:#FFF;}
+
+#boton_verde_1 {
+	width: 98%;
+	height: 30px;
+	display: block;
+	border: 1px solid #395d9b;
+	border-radius: 5px;
+	box-shadow: 0 0 0 3px #FFFFFF;
+	text-align: center;
+	color: #FFF;
+	background: #737b42;
+	line-height: 30px;
+	font-weight: bold;
+	font-size: 14px;
+	margin: 0 auto;
+	margin-top: 10px;	
+}
+#boton_verde_1:hover{background:#757b54;}
+#boton_verde_1 a:visited { text-decoration: none;color:#FFF;}
+#boton_verde_1 a:link {text-decoration: none;color:#FFF;}
+#boton_verde_1 a {text-decoration: none;color:#FFF;}
+
+/* -------- 7) Fin Botones css------------ */
+
+/* --------------------------------- 9) Inicio Contactenos -----------------*/
+
+.ctn_contactos { width:100%; margin: 0 auto; color:#333;
+  display:flex; Justify-content:Space-between; flex-wrap:wrap; }
+.ctn_contactos .iz_contac_container {display:flex;flex:1 1 65%;}
+.ctn_contactos .der-container { flex:1 1 30%;border: 1px solid #DDD;background: #fff;}	
+.ctn_contactos .der-container h2{padding: 8px 10px;color: #ffffff;text-shadow: 1px 1px 1px black;
+	letter-spacing: 1px;border-bottom: 1px solid #DDD;background-color:var(--der-container-h2);text-transform: uppercase;
+	margin:0 auto;font-size:14px;text-align:center;}	
+.ctn_contactos .der-container .contenido{padding: 10px;}
+
+	form, button{border:0; margin:0; padding:0;}
+	.spacer{clear:both; padding-bottom:5px;}
+	/* ———– My Form ———– */
+	.myform{margin:0 auto;width:96%;padding:15px;box-sizing:border-box;}
+	/* --- ———– stylized ———– */
+	#stylized{ border:solid 2px #DDD;background: #F2EFEE;}
+	#stylized h1,h2,h3,h4 {	margin-bottom:8px;margin: 15px 0;line-height: 1.1em;padding-left: 5px;}
+	#stylized h1 {font-size:22px;}
+	#stylized h2 {color:#B3876A;font-size:14px;text-align:center;}	
+	#stylized h4 {font-size: 22px;}
+	#stylized p{font-size:11px;color:#666666;padding-bottom:10px;}
+	#stylized label{display:block;font-weight:bold;text-align:right;width:140px;
+		float:left;margin-right: 40px;margin-top: 5px;}
+	#stylized .imagen{float:left;margin:5px;width:20%;}
+	#stylized .texto{float:left; margin-left:15px;width:75%; text-align: justify; color:#FFF; font-weight:bold}
+	#stylized .small{color:#666666;display:block;font-size:11px;font-weight:normal;
+		text-align:right;max-width:140px;width:96%;}
+	#stylized input{float:left;font-size:12px;padding:4px 2px;
+		border:solid 1px #aacfe4;width:96%;max-width:360px;margin:2px 0 20px 10px;}
+	#stylized textarea{	float:left;font-size:12px;padding:4px 2px;
+		border:solid 1px #aacfe4;max-width:360px;width:96%;	margin:2px 0 20px 10px;}	
+	#stylized button{clear:both;width:125px;height:31px;background:#666666 url(img/button.gif) no-repeat;
+		text-align:center;line-height:31px;	color:#FFFFFF;font-size:11px;font-weight:bold;
+		float:right;margin-right:40px;}		
+  input:focus:required:invalid { /*background-color:yellow;*/}
+    input:focus:required:valid {}
+	ul li {padding: 0;margin: 0;}
+	ul.lists {padding: 5px 0;list-style: none;margin: 0;}
+	ul.lists a{	color: #2A7b99;	}	
+	ul.lists li {position: relative;padding-left: 25px;line-height: 25px;}		
+	ul.lists li .icon {width: 16px;height: 16px;display: block;position: absolute;
+		left: 4px;top: 5px;background-image: url(/modulos/contactenos/imagen/jf-list.gif) ;
+		background-repeat: no-repeat;background-position: 0 0;}
+	ul.lists li.mail .icon {background-position: -288px 0;}
+	ul.lists li.location .icon {background-position:-79px -32px	}	
+	ul.lists li.iphone .icon {background-position: -64px -32px;}
+	ul.lists li.chart .icon {background-position:-272px -32px;}	
+/* --------------------------------- 9) Fin Contactenos -----------------*/
+
+/*------- 10) Inicio Gestor de Articulos  Estilo de Presentación del Contenido ---*/
+
+/*articulocentro.php(imagen centro)  , articuloderecha.php (imagen derecha) ,
+ articuloizquierda.php (imagen izquierda) , articulopagina.php (no muestra imagen ni derecha ni izquierda ni centro solo abajo) */
+#articulo {text-align: justify;margin-bottom:20px;display: flex; justify-content: center;flex-wrap:wrap;}
+#articulo ul {margin-top: 0px;margin-right: 0px;margin-bottom: 0.3em;margin-left: 0em;padding: 0px;}
+#articulo li {	list-style: none;	background-image: url(/imagen/flechita-2.gif);	background-repeat: no-repeat;
+	background-position: 0.4em 0.3em;	padding-right: 0;	padding-bottom: 0.3em;	padding-left: 1.6em;	padding-top: 0em;margin: 0em;}
+#articulo .cnt_img_sola{margin: 15px auto;text-align: center;clear: both;}
+#articulo .cont_cabecera{ display:flex;justify-content: space-between;width:100%;margin:0 auto;padding:5px 0px;}
+/* articuloizquierda.php  la imagen a la izquierda y texto derecha*/
+#articulo .img_izq{flex:1 1 29%;order:1;margin-left:2px;border: 1px solid #e9e9e9; padding:5px;}
+#articulo .texto_dere{flex:1 1 68%;order:2;padding-right:3px; padding-left:10px}	
+/* articuloderecha.php  la imagen a la derecha y texto izquierda*/
+#articulo .img_dere{flex:1 1 29%;order:2; margin-left:2px;border: 1px solid #e9e9e9; padding:5px;}
+#articulo .texto_izq{flex:1 1 68%;order:1;  padding-right:10px;}	
+/*  sirve para articuloizquierda.php y articuloderecha.php  el texto ocupado todo cuando no hay imagen */
+#articulo .texto_total{width:99%;padding:5px 5px;;}	
+#articulo .img_centro{width:100%; text-align:center}	
+
+#articulo .imagen_arti_derecha{float:right; margin-left:10px;}
+#articulo .imagen_arti_izquierda {float:left; margin-right:10px;}
+
+#articulo .resumen_articulo{ width:100%; margin-top:10px;}	
+#articulo .contenido_articulo{ width:100%;margin-top:10px;}	
+
+#articulo .cont_cabecera .precio{ margin-bottom:10px; text-align:right; font-weight:bold;}
+#articulo .cont_cabecera .garantia{ margin-bottom:10px;text-align:right; font-weight:bold;}
+#articulo .cont_cabecera .lblprecio{ font-weight:bold; color:#6ca336; margin-right:10px;}
+#articulo .cont_cabecera .resumen{ text-align:justify; clear:both;}
+#articulo .cont_cabecera .ctn_boton_comprar{ float:right; clear:both;margin-bottom: 20px;}
+#articulo .cont_cabecera .boton_comprar{font-size: 11px;font-weight: bold;color: #fff;background-image: url(/modulos/imagen/carrito.png);
+	background-position: 0px 0px;cursor: pointer;height: 18px;padding-left: 15px;width: 70px;line-height: 15px;	text-align:center;
+	margin-left:250px;margin-right:5px;}
+ /* articulo_estilo02.php  
+ 	cuando se escoge en gestor de articulos - Estilo Sección - opcion Resumen*/
+	.arti_resumen{display:flex;flex-direction: column;border-bottom: #999 dashed 1px; margin-bottom:15px; }
+	.arti_resumen_img{}
+	.arti_resumen a{ margin-top:5px;}
+	.arti_resumen p{ width:100%; margin:auto;}	
+	
+/* -------------------Inicio MISIÓN - VISIÓN - FILOSOFÍA  ---------------------------------- */
+/* presenta 3 columnas ordenadas */
+.ctn_estilo_col_1 {width: 100%;display: flex; flex-direction: row;flex-wrap: wrap;justify-content: space-between;}
+.estilo_col_1 {font-size: 12px;width: 30%;padding: 5px 5px;margin-left: 10px;border: 1px solid #DDD;}
+.estilo_col_1 .titulo { padding: 8px 10px;color: #555;text-shadow: 1px 1px 1px white;letter-spacing: 1px;border-bottom: 1px solid #DDD;
+background-color: #fae3b6;text-transform: uppercase;margin: 0;text-align: center;font-weight: bold;}
+.estilo_col_1  .detalle {font-size: 13px;color: #20211c;text-align: justify;margin-top: 15px;}
+/* -------------------Fin MISIÓN - VISIÓN - FILOSOFÍA  ---------------------------------- */
+
+/*------------Inicio Utilizado en articulo_estilo09.php--------------------------*/
+.listado_numeral{width: 100%;padding: 10px 2px;font-weight:bold;}
+.listado_numeral .izq {	float: left;width: 45%;	margin-left:5%;}
+.listado_numeral .dere {float: right;width: 45%;}
+.listado_numeral ol {color: #ccc;list-style-type: none;}
+.listado_numeral ol li {position: relative;font: bold italic 20px/14px Helvetica, Verdana, sans-serif;margin-bottom: 20px;}
+.listado_numeral span {position: absolute;}
+.listado_numeral li p {font: 14px Helvetica, sans-serif;padding-left: 55px;color: #555;}
+
+/*------- 10) Fin Gestor de Articulos  Estilo de Presentación del Contenido ---*/
+
+/* ----------------  11) Inicio Abrevituras ---------------- */
+.clear_both {clear:both;}  
+ 
+.t10 {font-size: 10px;}  
+.t11 {font-size: 11px;}  
+.t12 {font-size: 12px;}  
+.t13 {font-size: 13px;}  
+.t14 {font-size: 14px;} 
+.t15 {font-size: 15px;} 
+.t16 {font-size: 16px;} 
+.t17 {font-size: 17px;} 
+.t18 {font-size: 18px;} 
+.t20 {font-size: 20px;} 
+.t22 {font-size: 22px;} 
+.t24 {font-size: 24px;} 
+.t26 {font-size: 26px;} 
+
+.Azul{color: #336699;}
+.Azul-1{color: #0073c8;}
+.black{color : #29292e;} /*negro */
+.celeste {color: #3486ae;}
+.naranja{color : #ff6600;} 
+.plomo{color : #4B5459;} 
+.white{color : #ffffff;} /*blanco*/
+.verde_mar{color : #4ba541;} 
+.verde_claro{color : #a7d34b;} 
+.red {color: red;}
+.indianred{color: #cc6666;}
+.violeta{color: #7183bc;}
+
+.bold{font-weight: bold;} 
+
+.center{text-align:center;}
+.justi{text-align: justify;}
+.left{text-align: left;}
+.right{text-align: right;}
+
+ .text_decora_line_through{
+    text-decoration: line-through;
+  }  
+  
+.w_10{width:10px;}
+.w_20{width:20px;}
+.w_30{width:30px;}
+.w_40{width:40px;}
+.w_50{width:50px;}
+.w_60{width:60px;}
+.w_70{width:70px;}
+.w_80{width:80px;}
+.w_90{width:90px;}
+.w_100{width:100px;}
+.w_110{width:110px;}
+.w_120{width:120px;}
+.w_130{width:130px;}
+.w_140{width:140px;}
+.w_150{width:150px;}
+.w_200{width:200px;}
+.w_210{width:210px;}
+.w_220{width:220px;}
+.w_230{width:230px;}
+.w_240{width:240px;}
+.w_250{width:250px;}
+.w_260{width:260px;}
+.w_270{width:270px;}
+.w_280{width:280px;}
+.w_290{width:290px;}
+.w_300{width:300px;}
+.w_310{width:310px;}
+.w_320{width:320px;}
+.w_330{width:330px;}
+.w_340{width:340px;}
+.w_350{width:350px;}
+.w_400{width:400px;}
+.w_410{width:410px;}
+.w_420{width:420px;}
+.w_430{width:430px;}
+.w_440{width:440px;}
+.w_450{width:450px;}
+.w_500{width:500px;}
+.w_600{width:600px;}
+.w_700{width:700px;}
+.w_800{width:800px;}
+.w_840{width:840px;}
+.w_860{width:860px;}
+.w_880{width:880px;}
+.w_900{width:900px;}
+.w_930{width:930px;}
+
+.h_10{	 height:10px;}
+.h_15{	 height:15px;}
+.h_20{	 height:20px;}
+.h_25{	 height:25px;}
+.h_30{	 height:30px;}
+.h_35{	 height:35px;}
+.h_40{	 height:40px;}
+.h_50{	 height:50px;}
+.h_60{	 height:60px;}
+.h_70{	 height:70px;}
+.h_80{	 height:80px;}
+.h_90{	 height:90px;}
+.h_100{ height:100px;}
+.h_110{ height:110px;}
+.h_120{ height:120px;}
+.h_150{ height:150px;}
+.h_200{ height:200px;}
+.h_210{ height:210px;}
+.h_220{ height:220px;}
+.h_230{ height:230px;}
+.h_240{ height:240px;}
+.h_250{ height:250px;}
+
+.m_centrar_hori{
+	margin:0 auto;
+}
+
+.m_l_5{margin-left:5px;}
+.m_l_10{margin-left:10px;}
+.m_l_15{margin-left:15px;}
+.m_l_20{margin-left:20px;}
+.m_l_25{margin-left:25px;}
+.m_l_30{margin-left:30px;}
+.m_l_35{margin-left:35px;}
+.m_l_40{margin-left:40px;}
+.m_l_45{margin-left:45px;}
+.m_l_50{margin-left:50px;}
+.m_l_55{margin-left:55px;}
+.m_l_65{margin-left:65px;}
+.m_l_75{margin-left:75px;}
+.m_l_85{margin-left:85px;}
+.m_l_95{margin-left:95px;}
+.m_l_120{margin-left:120px;}
+.m_l_130{margin-left:130px;}
+.m_l_150{margin-left:150px;}
+.m_l_160{margin-left:160px;}
+.m_l_170{margin-left:170px;}
+.m_l_180{margin-left:180px;}
+.m_l_190{margin-left:190px;}
+.m_l_200{margin-left:200px;}
+.m_l_355{margin-left:355px;}
+.m_l_705{margin-left:705px;}
+
+.m_r_5{margin-right:5px;}
+.m_r_15{margin-right:15px;}
+.m_r_25{margin-right:25px;}
+.m_r_35{margin-right:35px;}
+.m_r_45{margin-right:45px;}
+.m_r_55{margin-right:55px;}
+.m_r_65{margin-right:65px;}
+.m_r_75{margin-right:75px;}
+.m_r_100{margin-right:100px;}
+.m_r_120{margin-right:120px;}
+
+.m_top_2{margin-top:2px;}
+.m_top_3{margin-top:3px;}
+.m_top_4{margin-top:4px;}
+.m_top_5{margin-top:5px;}
+.m_top_6{margin-top:6px;}
+.m_top_7{margin-top:7px;}
+.m_top_8{margin-top:8px;}
+.m_top_9{margin-top:9px;}
+.m_top_10{margin-top:10px;}
+.m_top_15{margin-top:15px;}
+.m_top_20{margin-top:20px;}
+.m_top_30{margin-top:30px;}
+.m_top_40{margin-top:40px;}
+.m_top_50{margin-top:50px;}
+.m_top_60{margin-top:60px;}
+.m_top_60{margin-top:60px;}
+.m_top_70{margin-top:70px;}
+.m_top_100{margin-top:100px;}
+.m_top_120{margin-top:120px;}
+
+.m_b_2{margin-bottom:2px;}
+.m_b_3{margin-bottom:3px;}
+.m_b_4{margin-bottom:4px;}
+.m_b_5{margin-bottom:5px;}
+.m_b_10{margin-bottom:10px;}
+.m_b_15{margin-bottom:15px;}
+.m_b_20{margin-bottom:20px;}
+.m_b_25{margin-bottom:25px;}
+.m_b_30{margin-bottom:30px;}
+
+.lne_h_5{line-height: 5pt;}
+.lne_h_10{line-height: 10pt;}
+.lne_h_15{line-height: 15pt;}
+.lne_h_20{line-height: 20pt;}
+.lne_h_23{line-height: 23pt;}
+.lne_h_30{line-height: 30pt;}
+.lne_h_40{line-height: 40pt;}
+.lne_h_50{line-height: 50pt;}
+.lne_h_60{line-height: 60pt;}
+.lne_h_70{line-height: 70pt;}
+.lne_h_80{line-height: 80pt;}
+.lne_h_90{line-height: 90pt;}
+.lne_h_100{line-height: 100pt;}
+
+.letter_spa_1 {letter-spacing: 1pt;}
+
+.pding_r_5{ padding-right:5px;}
+.pding_r_10{ padding-right:10px;}
+.pding_r_15{ padding-right:15px;}
+.pding_r_20{ padding-right:20px;}
+.pding_r_25{ padding-right:25px;}
+
+.pding_l_5 {padding-left:5px;}
+.pding_l_10{padding-left:10px;}
+.pding_l_20{padding-left:20px;}
+.pding_l_30{padding-left:30px;}
+.pding_l_40{padding-left:40px;}
+
+.pding_top_5{padding-top:5px;}
+.pding_top_10{padding-top:10px;}
+.pding_top_15{padding-top:15px;}
+.pding_top_20{padding-top:20px;}
+.pding_top_25{padding-top:25px;}
+.pding_top_30{padding-top:30px;}
+.pding_top_35{padding-top:35px;}
+.pding_top_40{padding-top:40px;}
+
+.pding_b_5{ padding-bottom:5px;}
+.pding_b_10{ padding-bottom:10px;}
+.pding_b_15{ padding-bottom:15px;}
+.pding_b_20{ padding-bottom:20px;}
+.pding_b_25{ padding-bottom:25px;}
+.pding_b_30{ padding-bottom:30px;}
+.pding_b_35{ padding-bottom:35px;}
+
+.position-rela{ position:relative;}
+.position-abso{ position:absolute;}
+.position-sta  { position: static;}
+
+.float_l{float:left;}
+.float_r{float: right;}
+.float_centrar { margin:0 auto;}	
+
+.font_weight_200 {font-weight: 200;}
+
+/* ---------------- 11) Fin Abrevituras ---------------- */
+
+/* ---------------- 12) inicio Menu lateral ----------------*/
+#menuvertical {text-align: left;font-family : Verdana, Helvetica, sans-serif;font-size : 12px; 
+	width:100%;height: auto;margin:0 auto;margin-bottom:25px;}
+#menuvertical li#menuizqtitulo{height:40px;width:98%;background-color: var(--menu-lateral-menuizqtitulo);}
+#menuvertical li#menuizqtitulo p {color:#ffffff;margin-top:10px;font-family:Tahoma, Geneva, sans-serif;font-weight:bold;
+	font-size: 1.1em;text-align:center;	padding:10px 0px;text-shadow: 1px 1px 1px black;letter-spacing: 2px;}
+#menuvertical ul { list-style-type: none; padding:0;width: 98%; margin-right:10px; }
+#menuvertical ul li.nivel1 {width: 150px; /* Ancho de las pestañas */}
+#menuvertical ul li.primera {border-top: solid 1px #FFF; /* Borde superior de la primera pestaña */}
+#menuvertical ul li {padding:0;}
+#menuvertical ul li a {display: block;text-decoration: none;color:var(--menu-lateral-color-texto-2nivel); /* Color del texto 2Nivel*/
+background-color: var(--menu-lateral-fondo-secciones-nivel2); /* Color de fondo 2Nivel*/
+border: solid 1px var(--menu-lateral-borde-secciones-nivel2); /* Borde de las pestañas 2Nivel */
+border-top: none;padding: 8px;position: relative;}
+#menuvertical ul li:hover {position: relative;color: #000000; }
+#menuvertical ul li a:hover, #menuvertical ul li:hover a.nivel1 {
+background-color: var(--menu-lateral-color-fondo-2nivel-pasar-mouse); /* Color de fondo 2nivel al pasar el mouse */
+color: var(--menu-lateral-color-texto-2Nivel-pasar-mouse)					/* Color del texto 2Nivel al pasar el mouse */
+;position: relative;text-shadow: 2px 4px 3px rgba(0,0,0,0.3);}
+#menuvertical ul li a.nivel1 {display: block!important;display: none;position: relative;}
+#menuvertical ul li ul {display: none;}
+#menuvertical ul li a:hover ul, #menuvertical ul li:hover ul {display: block;position: absolute;
+right: 150px;	/* Aqui se define si se abre lado derecha =right  o izquierda= left*/top:-1px!important;top:-31px;}
+#menuvertical ul li ul li a {width: 120px;background-color: #ee2f2c; /* Color de fondo subpestañas */color: #fff; /* Color del texto subpestañas */}
+#menuvertical ul li ul li a:hover {position: relative;background-color: #c8c6c6; /* Color de fondo al pasar el mouse subpestañas */
+color: #000; /* Color del texto al pasar el mouse subpestañas *//*font-weight: bold;*/}
+.handcursor {cursor:hand;cursor:pointer;}
+.handcursor1 {cursor:hand;cursor:pointer;}
+/* ---------------- 12) Fin Menu lateral ----------------*/
+
+
+
+
+
+
+
+
+/* ---------------- 15) inicio Media Querys ----------------*/
+
+/*------------http://responsivetest.net ----------*/
+/*--
+	https://analytics.google.com
+	Sony D2004 Xperia E1   =  320x534
+	Huawei ALE-L23 P8 Lite =  640x360
+-*/
+/*------------para mobiles ----------*/
+@media all and (max-width:480px){    
+	/* ---- 1.1) Inicio Extructura  ------ */
+	#ladocentro_solodere {flex:0 1 auto;}	
+	#ladocentro_soloizqui {flex:0 1 auto;}		
+	#columnaizquierda{ display:none;}
+	#columnaderecha {flex:0 1 auto;}
+	
+	#portada-laterales { display:none;}
+	#columnaizquierda{ display:none;}
+	
+	/*Desabilita slider*/
+	#ctn_slider{display: none;}
+
+	#menuvertical{ display:none;}
+	/* ---- 1.1) Inicio Extructura  ------ */
+	
+	.cont_pie_gest {flex-direction: row;justify-content: center;} 
+	.cont_pie_gest .conizq{width:100%;} 	
+	.cont_pie_gest .condere{width:100%;} 
+	
+	.listado_numeral{flex-direction: column;}
+	.listado_numeral .izq { width:100%;margin-left:0 ; }
+	.listado_numeral .dere {width:100%}
+	
+	.estilo_col_1 { width: calc((100% - 10px)/2); margin-bottom: 20px;}	
+	/*--- 10) Inicio Gestor de Articulos  ---*/
+	#articulo .img_centro img{width:100%}	
+	
+}
+
+/*------------para Tables ----------*/
+@media all and(min-width:481px) and (max-width:768px){
+	#warp{flex-direction:column;}
+	#portada-laterales { display:none;}
+	#columnaizquierda{ display:none;}
+	
+	#menuvertical{ display:none;}
+		
+	/* --- 6) Inicio Clase Presentacion ---*/
+	#art_listado_01 {width:calc((100% - 20px)/3);} /* si es mayor a 400px 3 columnas */
+} 
+
+@media all and (max-width: 768px){
+	/* ---------------- 3) Inicio pie-abajo.php  ---------------- */
+	.cont_pie_gest .conizq { width:100%; margin-bottom:10px;margin-left:0px;padding: 5px 5px;
+    box-sizing: border-box;justify-content: center;}
+	.cont_pie_gest .condere {width:100%;margin-left: 0px;}
+	.cont_pie_gest .condere .ctn_menuabajo{ display:none;}	
+	
+	/* -- 4) Inicio cabecera-slider.php  ---- */
+	header#cabecera .derelogo{ display:none}
+	header#cabecera .izqlogo { width:100%; text-align:center;}
+	/* --- 5) Inicio Miga  ------------- */
+	#webencabezado {	margin-bottom:10px;}
+	#webencabezado .miga {line-height: 40px; }	
+	a.breadCrumb { font-size: 18px; line-height:25px;}
+	/* ----- 9) Inicio Contactenos -----------------*/
+	.ctn_contactos 	{flex-direction:column; } 
+	.ctn_contactos .iz_contac_container{ width:96%;margin-left:5px; margin-right:5px; margin:0 auto; } 
+	.ctn_contactos .der-container {  width:96%;margin-left:5px; margin-right:5px;margin:0 auto;margin-top:25px;}		
+}
+	
+@media all and (min-width: 600px){/* si es mayor a 600px 4 columnas */
+	#art_listado_01 {width:calc((100% - 30px)/4);}
+} 
+
+/* smartphones, iPhone, portrait 480x320 phones */
+@media (min-width:320px) {#fondocate .detalle{width: calc((100% - 10px)/2);}}
+/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+@media (min-width:481px) { }
+/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+@media (min-width:641px) {#fondocate .detalle{	width: calc((100% - 20px)/3);}}
+/* tablet, landscape iPad, lo-res laptops ands desktops */ 
+@media (min-width:961px) {#fondocate .detalle{	width: calc((100% - 30px)/4);}}
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { /* hi-res laptops and desktops */ }	
+
+
+/* smartphones, iPhone, portrait 480x320 phones */
+@media (min-width:320px) {#cuadrado_titulo .detalle{width: calc((100% - 10px)/2)};}
+/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+@media (min-width:481px) { }
+/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+@media (min-width:641px) {#cuadrado_titulo .detalle{	width: calc((100% - 20px)/3);}}
+/* tablet, landscape iPad, lo-res laptops ands desktops */ 
+@media (min-width:961px) {#cuadrado_titulo .detalle{	width: calc((100% - 30px)/3);}}
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { /* hi-res laptops and desktops */ }	
+
+/* ---------------- 15) Fin  Media Querys ----------------*/>
+
+/* --------------- Individual de rysdistribuciones --------------------- */

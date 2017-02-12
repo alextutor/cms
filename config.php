@@ -3,24 +3,44 @@ define("VAR_NROITEMS",30);
 define("fechahoy",date("d-m-Y"));
 $llavesita="revolucionario che guevara"; 
 
+// ---------- Inicio para  assetmanager
+//$_SESSION['RUTASERVIDOR']= '/home/geoenter/public_html/';
+//$_SESSION['RUTASERVIDOR']= 'D:/Alex/Web/xampp/htdocs/desarrollo.com/';
+$_SESSION['RUTASERVIDOR']= $_SERVER['DOCUMENT_ROOT']. "/";
+// ---------- Fin  para  assetmanager
+
+/*define('SERVER_MYSQL', 'localhost');
+define('DATABASE',   'gesterri_master');
+define('BD_USUARIO', 'gesterri_master');
+define('BD_CLAVE',   '0403221757');
+$_SESSION['selectpage']="12172815";*/
+
+/*define('SERVER_MYSQL', 'localhost');
+define('DATABASE',   'kanyosac');
+define('BD_USUARIO', 'gesterri_master');
+define('BD_CLAVE',   '0403221757');
+$_SESSION['selectpage']="12172816";*/
+
+/*define('SERVER_MYSQL', 'localhost');
+define('DATABASE',   'cisantia_productos');
+define('BD_USUARIO', 'cisantia');
+define('BD_CLAVE',   'huizaquispe01');
+$_SESSION['selectpage']="12172813";
+*/
 
 define('SERVER_MYSQL', 'localhost');
 define('DATABASE',   'bdfpdies_elperu');
 define('BD_USUARIO', 'bdfpdies_elperu');
 define('BD_CLAVE',   'huahuala05');
-
-/*define('SERVER_MYSQL', 'localhost');
-define('DATABASE',   'cisantia_productos');
-define('BD_USUARIO', 'cisantia');
-define('BD_CLAVE',   'huizaquispe01');*/
-
-// ---------- Inicio para  assetmanager
-//$_SESSION['RUTASERVIDOR']= '/home/geoenter/public_html/';
-//$_SESSION['RUTASERVIDOR']= 'D:/Alex/Web/xampp/htdocs/desarrollo.com/';
-$_SESSION['RUTASERVIDOR']= $_SERVER['DOCUMENT_ROOT']. "/";
 $_SESSION['selectpage']="12172812";
-// ---------- Fin  para  assetmanager
 
+/*
+define('SERVER_MYSQL', 'localhost');
+define('DATABASE',   'pedro_productos');
+define('BD_USUARIO', 'pedro_creaciones');
+define('BD_CLAVE',   'huizaquispe01');
+$_SESSION['selectpage']="12172810";
+*/
 $conexion = db_data(SERVER_MYSQL,BD_USUARIO,BD_CLAVE,DATABASE);
 
 function db_data($server = DB_SERVER, $user = USER_DB, $password = PASSWORD_DB, $database = DATABASE, $link = 'link_db'){

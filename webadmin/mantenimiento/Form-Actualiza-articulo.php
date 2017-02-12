@@ -54,7 +54,14 @@ while ($row_contenido = db_fetch_array($sql_contenido))
 		<div class="m">
         	<!--Inicio Formulario -->                        
             <form action="/webadmin/mantenimiento/Actualiza-Articulo.php" method="post" name="adminForm" id="adminForm" class="form-validate"
-             onSubmit="return validar_form(this)">
+              onSubmit="return validar_form(this)">
+            <input type="hidden" name="id" id="id" value="<?=$_GET['id']?>">
+            <input type="hidden" name="selectmodulo" id="selectmodulo" value="<?=$modulo?>" />
+            <input type="hidden" name="cBuscaporidSeccion" id="cBuscaporidSeccion" value="<?=$_GET['cBuscaporidSeccion']?>">
+            <input type="hidden" name="cfiltro" id="cfiltro" value="<?=$_GET['cfiltro']?>">
+            <input type="hidden" id="edi_contenido" name="edi_contenido" />
+            <input type="hidden" id="edi_resumen" name="edi_resumen" />            
+            
 			<div class="width-60 fltlft">
                <fieldset class="adminform">
 				<legend>Detalles</legend>
@@ -182,7 +189,15 @@ while ($row_contenido = db_fetch_array($sql_contenido))
                 
                 <!-------------------------------------------------->
 		<!--Inicio grupo1 --> 
-        	<?php include_once $_SERVER['DOCUMENT_ROOT']. "/webadmin/mantenimiento/opciones-publi-actualiza.php" ?>                          	
+	        <label id="jform_published-lbl" for="jform_published" class="hasTip" title="" aria-invalid="false">Seleccione Seccion :</label>	
+			<div style="border:1px #666666 solid; padding:5px; width:98%; height:auto; overflow:auto;background-color:#FFF;">          		    
+                   <?php  include_once $_SERVER['DOCUMENT_ROOT']. "/webadmin/mantenimiento/jq_selectseccion.php" ?>
+	        </div>
+                           
+        	<?php 
+			include_once $_SERVER['DOCUMENT_ROOT']. "/webadmin/mantenimiento/opciones-publi-actualiza.php"
+			//include_once $_SERVER['DOCUMENT_ROOT']. "/webadmin/mantenimiento/jq_selectseccion.php" 
+			?>                          	
         <!--Fin grupo1 -->            
                 <!-------------------------------------------------->
        <div class="panel"><h3 id="bobcontent2-title" class="handcursor">Opciones de Imágenes</h3> 
@@ -298,13 +313,7 @@ while ($row_contenido = db_fetch_array($sql_contenido))
     </div></div>
                      <!----------------Fin Curso---------------------------------->  
                 </div><!--fin content-sliders--->
-           </div><!--fin width-40 fltrt--->
-             <input type="hidden" name="selectmodulo" id="selectmodulo" value="<?=$modulo?>" />
-            <input type="hidden" name="id" id="id" value="<?=$_GET['id']?>">
-            <input type="hidden" name="cBuscaporidSeccion" id="cBuscaporidSeccion" value="<?=$_GET['cBuscaporidSeccion']?>">
-            <input type="hidden" name="cfiltro" id="cfiltro" value="<?=$_GET['cfiltro']?>">
-            <input type="hidden" id="edi_contenido" name="edi_contenido" />
-            <input type="hidden" id="edi_resumen" name="edi_resumen" />            
+           </div><!--fin width-40 fltrt--->           
             <input type="hidden" name="enviar" value="Enviar" />
             </form>
            	<!--FIN Formulario -->
@@ -347,6 +356,9 @@ while ($row_contenido = db_fetch_array($sql_contenido))
 	bobexample.collapsePrevious(true) //Only one content open at any given time
 	bobexample.init()
 </script>
+
+
+
 
 <!--TinyMCE FileBrowserCallBack implementation
 http://geekswithblogs.net/narent/archive/2006/07/14/85195.aspx

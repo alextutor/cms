@@ -1,0 +1,20 @@
+#menuseccion ul {
+	padding-left:20px;
+}
+#menuseccion li {
+	list-style:none;
+}
+#menuseccion ul.hide {
+	display:none;
+}
+#menuseccion span {
+	color:#210505;
+	font-family:"Courier New", Courier, monospace;
+	cursor:default;
+	font-size:20px;
+	font-weight:bold;
+	padding:5px 10px;
+}
+#menuseccion span.expanded, #example span.collapsed {
+	cursor:pointer;
+}

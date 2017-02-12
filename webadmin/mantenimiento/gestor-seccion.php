@@ -11,9 +11,9 @@
 	//$sql="SELECT * FROM productos ".$criterio; 	
 	
 	  // Inicio si el usuario no es administrador esconde los registros borrados	
-	if($_SESSION['nivel']=='ADMINISTRADOR'){$cfiltronivel="";}
-	else{$cfiltronivel=" s.estado<>-2 and ";}	
-	
+	//if($_SESSION['nivel']=='ADMINISTRADOR'){$cfiltronivel="";}
+	//else{$cfiltronivel=" s.estado<>-2 and ";}	
+	$cfiltronivel=" s.estado<>-2 and ";
 	//echo $cfiltronivel;exit;
 	/*$sql = "SELECT s.*,m.cnommodulo FROM  seccion s, webmodulos m where s.ccodpage='". $selectpage ."' and  s.ccodmodulo=m.ccodmodulo and s.cnivseccion='1' and s.estado!='-2' order by s.cnomseccion";
 	*/
@@ -42,7 +42,7 @@ if ($cfiltro=="" and $cBuscaporidSeccion=="") {
     LEFT JOIN pagemenu 
         ON (seccionmenu.ccodmenu = pagemenu.ccodmenu)
 WHERE ".$cfiltronivel ." (s.cnivseccion =1 AND (seccionmenu.ccodmenu=1 OR seccionmenu.ccodmenu IS NULL)) 
-  order by pagemenu.cnommenu,s.cordcontenido asc ";	 
+  order by s.cordcontenido,pagemenu.cnommenu asc ";	 
 }	
 //echo  $sql."";exit;
 	//seccionmenu.ccodmenu <> 3 cambiado alex por el de abajo 
@@ -50,7 +50,7 @@ WHERE ".$cfiltronivel ." (s.cnivseccion =1 AND (seccionmenu.ccodmenu=1 OR seccio
 	// (no muestra pie=3 y otro menu creado ejemplo menu lateral Servicios=10)
 	//echo $sql; exit;//muestra el menu nivel 1
 	$res=mysql_query($sql); 
-	$numeroRegistros=mysql_num_rows($res); 
+	$NroRegistrosNivel1=mysql_num_rows($res); 
 
   if(!isset($orden)) 
     { 
@@ -75,7 +75,7 @@ WHERE ".$cfiltronivel ." (s.cnivseccion =1 AND (seccionmenu.ccodmenu=1 OR seccio
 	
 	 include($_SERVER['DOCUMENT_ROOT'].'/webadmin/galeria-productos/paginator.class.php');  
                             $pages = new Paginator;
-                            $pages->items_total = $numeroRegistros; //cuantos registros se mostraran
+                            $pages->items_total = $NroRegistrosNivel1; //cuantos registros se mostraran
                             // Configuramos el total de links a mostrar. Por ejemplo el valor por defecto es 7 . Si estamos en la pág 50 mostraria : 47 47 49 50 51 52 53 
                             $pages->mid_range = 15; 
 							//$pages->items_per_page=15; //cuantos registros se mostraran
@@ -228,40 +228,67 @@ WHERE ".$cfiltronivel ." (s.cnivseccion =1 AND (seccionmenu.ccodmenu=1 OR seccio
                 <tbody>               
                 
 <?php 
+	$nGrupo1=0;
+	$nSub_group=0;
+	$nSub_Sub_group=0;
+	$espacio_1=20;
+	$espacio_2_1=30; // con el signo +  para desplegar
+	$espacio_2_2=40; // sin signo +  para desplegar
+	$espacio_3_1=50; // con el signo +  para desplegar
+	$espacio_3_2=65; // sin signo +  para desplegar
+	$espacio_4_1=80;
+
 	while($registro=mysql_fetch_array($res)) {  ///////  Inicio While 1  Menu Nivel 1
 		//echo $registro['ccodseccion']."hola";exit;
+		$nGrupo1++;
 		$codsec= substr($registro['ccodseccion'],0,12);  // Utilizado en while 2 para Menu Nivel2
 		if ($registro['cnivseccion']=='1') $espacio="";
 		if ($registro['cnivseccion']=='2') $espacio="&nbsp;&nbsp;&nbsp;";
 		if ($registro['cnivseccion']=='3') $espacio="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-		if ($registro['cnivseccion']=='4') $espacio="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp";				
+		if ($registro['cnivseccion']=='4') $espacio="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp";	
+		
+       $sql2_query = "SELECT s.cnivseccion,s.cnomseccion,s.ctipseccion,s.cordcontenido,s.ccodmodulo,s.ccodseccion,s.estado,
+		m.cnommodulo FROM  seccion s, webmodulos m where ".$cfiltronivel ."  s.ccodmodulo=m.ccodmodulo and ccodseccion like '" . $codsec . "%' and s.cnivseccion='2' order by 			         s.cordcontenido asc ";	  				
+		//echo $sql2_query;exit;		
+		$rs_sql2 = db_query($sql2_query);
+		$NroRegistrosNivel2=mysql_num_rows($rs_sql2); 			
+			
  ?> 
-	<tr class="row0">	
+	<tr class="row0">	<!----------------- 1er TR--------------->
         <td class="center">
         <!--no te olvide de poner el & porque en procesar-accion.php hago esto y al no encontrar decuelve cadena vacia 
         $codigoid = strstr($id[0], '&', true) -->
-         <input type="checkbox" id="cb0" name="cid[]" value="<?=$registro['ccodseccion'];?>&" onclick="Joomla.isChecked(this.checked);" title="Casilla de selección para la fila 1">										
-        </td>                 
-		<td width="<?=$nAncho[$x]?>"><?=$espacio?>
+         								
+        </td>                         
+        
+        <!-----------Inicio Menu 1Nivel (Nombre Seccion)--------->
+        <?php //echo $NroRegistrosNivel1;exit;			
+		  if ($NroRegistrosNivel2==0){ ?>
+			<td width="<?=$nAncho[$x]?>" class="espacio_1">   				
+         <?php }else {  ?>   
+         	<td width="<?=$nAncho[$x]?>"  class="group<?=$nGrupo1?>">   				
+         <?php } ?>   
+        <input type="checkbox" id="cb0" name="cid[]" value="<?=$registro['ccodseccion'];?>&" onclick="Joomla.isChecked(this.checked);" title="Casilla de selección para la fila 1">	
         <a href='/webadmin/mantenimiento/Form-Actualiza-Seccion.php?id=<?=$registro['ccodseccion']?>'>
         	<?php  if ($registro['estado']==-2){  //Eliminado
 		           echo "<strike style='color:red'><span class='art_borrado_1er_nivel'>".$registro['cnomseccion']."</span></strike>";
-		  		}else {
-		 			echo "<span class='color_seccion_1er_nivel'>".$registro['cnomseccion'] ."</span>" ;  
-                 }
-         	?>                 
+		  		}else {			
+            	echo "<span class='color_seccion_1er_nivel'>".$registro['cnomseccion']."</span>" ;  
+				}	
+			?>				 		
         </a>
-        </td>       
-        <!--Inicio cruz -->
-        <td width="<?=$nAncho[$x]?>">
+        </td> 
+        
+        <!-----------Menu 1Nivel (CRUZ) ------------------------>      
+        <td width="<?=$nAncho[$x]?>">											
         	<img src="/imagen/p_boton_mas.png" alt="" width="18" height="17" id="BTN_100" 
 	        style="padding-bottom:11px;cursor:pointer" onClick="MUEVE('100')" />
         </td>
-        <!--Fin cruz --> 
         
-       	<td width="<?=$nAncho[$x]?>"><span class="<?=$registro['cnommenu']?>"><?= $registro['cnommodulo']?></span></td>
+        <!-----------Menu 1Nivel (cnommodulo) ------------------------>
+       	<td width="<?=$nAncho[$x]?>"><span class="<?=$registro['cnommenu']?>"><?= $registro['cnommodulo']?></span></td> 
         
-        <!-----------------   Publicado ---------------------------> 
+       <!-----------Menu 1Nivel (Publicado) ------------------------>
         <td width="<?=$nAncho[$x]?>"> <!--Estado Publicado o no Orden 3-->
          <?php //Estado
 		 switch ($registro['estado']) {
@@ -280,9 +307,11 @@ WHERE ".$cfiltronivel ." (s.cnivseccion =1 AND (seccionmenu.ccodmenu=1 OR seccio
 			}		 
 		 ?> 
         </td>
-        <!-----------------   Publicado ---------------------------> 
         
+       <!-----------Menu 1Nivel (cnommenu) ------------------------>        
        	<td width="<?=$nAncho[$x]?>"><span class="<?=$registro['cnommenu']?>"><?=$registro['cnommenu']?></span></td> 
+        
+       <!-----------Menu 1Nivel (ctipseccion) ----------------------> 
        	<td width="<?=$nAncho[$x]?>"><span class="color_seccion_1er_nivel">
 		<?php switch ($registro['ctipseccion']) {
             case 1:    //Publicado
@@ -297,39 +326,49 @@ WHERE ".$cfiltronivel ." (s.cnivseccion =1 AND (seccionmenu.ccodmenu=1 OR seccio
             }
         ?>						
 		</span>
-        </td>        
+        </td> 
+         <!-----------Menu 1Nivel (cordcontenido) ------------------------>            
          <td width="<?=$nAncho[$x]?>"><span class="<?=$registro['cnommenu']?>"><?=$registro['cordcontenido']?></span></td>
      </tr> 
-      
+
+        <!-----------Inicio Menu 2Nivel  ------------------------>
         <?php		
-        $sql2_query = "SELECT s.cnivseccion,s.cnomseccion,s.ctipseccion,s.cordcontenido,s.ccodmodulo,s.ccodseccion,s.estado,
-		m.cnommodulo FROM  seccion s, webmodulos m where ".$cfiltronivel ."  s.ccodmodulo=m.ccodmodulo and ccodseccion like '" . $codsec . "%' and s.cnivseccion='2' order by s.cordcontenido asc ";	  				
-		//echo $sql2_query;exit;
-		$sql2 = db_query($sql2_query);	
-		while($row2 = db_fetch_array($sql2)) ////// Inicio while 2  Menu Nivel 2 Subseciones
+		while($row2 = db_fetch_array($rs_sql2)) ////// Inicio while 2  Menu Nivel 2 Subseciones
 			{
 			$codsec2= substr($row2['ccodseccion'],0,16);  // Utilizado en while 3 para Menu Nivel3	
 			$linea = $linea + 1;			
 			if ($row2['cnivseccion']=='1') $espacio2="";
-			if ($row2['cnivseccion']=='2') $espacio2="&nbsp;&nbsp;&nbsp;";
-			if ($row2['cnivseccion']=='3') $espacio2="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-			if ($row2['cnivseccion']=='4') $espacio2=		
-			"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp";
-		?>	 
-        
-        <tr class="row0">	
+			if ($row2['cnivseccion']=='2') $espacio2="";
+			if ($row2['cnivseccion']=='3') $espacio2="";
+			if ($row2['cnivseccion']=='4') $espacio2="";
+			$nSub_group++;	
+			
+			 $sql3_query = "SELECT s.cnivseccion,s.cnomseccion,s.ctipseccion,s.cordcontenido,s.ccodmodulo,s.ccodseccion,s.estado,m.cnommodulo FROM  seccion s, webmodulos m where ".$cfiltronivel ." s.ccodmodulo=m.ccodmodulo and ccodseccion like '" . $codsec2 . "%' and s.cnivseccion='3' order by s.cordcontenido asc ";	  				
+		//echo $sql3_query;exit;
+		$rs_sql3 = db_query($sql3_query);	
+		$NroRegistrosNivel3=mysql_num_rows($rs_sql3); 	
+			
+		?>	          
+        <tr class="row0 group<?=$nGrupo1?>">	 <!----------------- 2do TR--------------->
             <td class="center">
              <!--no te olvide de poner el & porque en procesar-accion.php hago esto y al no encontrar decuelve cadena vacia 
-        $codigoid = strstr($id[0], '&', true) -->
-             <input type="checkbox" id="cb0" name="cid[]" value="<?php echo $row2['ccodseccion'];?>&" onclick="Joomla.isChecked(this.checked);" title="Casilla de selección para la fila 1">										
-             </td>   
-
-            <td width="<?=$nAncho[$x]?>"><?=$espacio2?>
-            <a href='mantenimiento/Form-Actualiza-SubSeccion.php?id=<?=$row2['ccodseccion']?>'>            
-                <?php  if ($row2['estado']==-2){  //Eliminado
+        $codigoid = strstr($id[0], '&', true) -->             
+             </td>   	                    		
+            <!-----------Menu 2Nivel (cnomseccion) ------------------------>
+			  <?php 
+              if ($NroRegistrosNivel3==0){ ?>
+                <td width="<?=$nAncho[$x]?>" class="" style="padding-left:<?=$espacio_2_2?>px" >  				
+             <?php }else {  ?>   
+	               <td width="<?=$nAncho[$x]?>" class="sub_group<?=$nSub_group?>" style="padding-left:<?=$espacio_2_1?>px">  
+             <?php }  ?>   
+         
+           <input type="checkbox" id="cb0" name="cid[]" value="<?php echo $row2['ccodseccion'];?>&" onclick="Joomla.isChecked(this.checked);" title="Casilla de selección para la fila 1">		
+            <a href='/webadmin/mantenimiento/Form-Actualiza-Seccion.php?id=<?=$row2['ccodseccion']?>'>            								
+				<?php  				
+				if ($row2['estado']==-2){  //Eliminado
                    echo "<strike style='color:red'><span class='art_borrado_2do_nivel'>".$row2['cnomseccion']."</span></strike>";
-                }else {
-                    echo "<span class='color_seccion_2do_nivel'>".$row2['cnomseccion'] ."</span>" ;  
+                }else {					
+                    echo "<span class='color_seccion_2do_nivel'>".$row2['cnomseccion']."</span>" ;  
                  }
                 ?>             
             </a>            
@@ -377,33 +416,40 @@ WHERE ".$cfiltronivel ." (s.cnivseccion =1 AND (seccionmenu.ccodmenu=1 OR seccio
 	        ?>			
             </span></td> 
             <td width="<?=$nAncho[$x]?>"><span class="color_seccion_2do_nivel"><?=$row2['cordcontenido']?></span></td>
-        </tr>        
-         <?php	
-		 // -------------  Aqui empieza Menu Nivel3 --------------------	
-        $sql3_query = "SELECT s.cnivseccion,s.cnomseccion,s.ctipseccion,s.cordcontenido,s.ccodmodulo,s.ccodseccion,s.estado,m.cnommodulo FROM  seccion s, webmodulos m where ".$cfiltronivel ." s.ccodmodulo=m.ccodmodulo and ccodseccion like '" . $codsec2 . "%' and s.cnivseccion='3' order by s.cordcontenido asc ";	  				
-		//echo $sql3_query;exit;
-		$sql3 = db_query($sql3_query);	
-		while($row3 = db_fetch_array($sql3)) ////// Inicio while 2  Menu Nivel 2 Subseciones
+        </tr>   
+                 <!-----------Inicio Menu 3er Nivel  ------------------------>     
+         <?php	       	
+		while($row3 = db_fetch_array($rs_sql3)) ////// Inicio while 2  Menu Nivel 2 Subseciones
 			{
 			$codsec3= substr($row3['ccodseccion'],0,20);  // Utilizado en while 4 para Menu Nivel4	
 			$linea = $linea + 1;			
 			if ($row3['cnivseccion']=='1') $espacio3="";
-			if ($row3['cnivseccion']=='2') $espacio3="&nbsp;&nbsp;&nbsp;";
-			if ($row3['cnivseccion']=='3') $espacio3="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-			if ($row3['cnivseccion']=='4') $espacio3=		
-			"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp";
-		?>	
-        <tr class="row0">	
-            <td class="center">
-             <input type="checkbox" id="cb0" name="cid[]" value="<?php echo $row3['ccodseccion'];?>&" onclick="Joomla.isChecked(this.checked);" title="Casilla de selección para la fila 1">										
-             </td>   
-            <td width="<?=$nAncho[$x]?>"><?=$espacio3?>
+			if ($row3['cnivseccion']=='2') $espacio3="";
+			if ($row3['cnivseccion']=='3') $espacio3="";
+			if ($row3['cnivseccion']=='4') $espacio3="";
+			$nSub_Sub_group++;
 			
+		  $sql4_query = "SELECT s.cnivseccion,s.cnomseccion,s.ctipseccion,s.cordcontenido,s.ccodmodulo,s.ccodseccion,s.estado,m.cnommodulo FROM  seccion s, webmodulos m where  ".$cfiltronivel ." s.ccodmodulo=m.ccodmodulo and ccodseccion like '" . $codsec3 . "%' and s.cnivseccion='4' order by s.cordcontenido asc ";	  				
+		//echo $sql4_query;exit;
+		 $rs_sql4 = db_query($sql4_query);	
+		 $NroRegistrosNivel4=mysql_num_rows($rs_sql4);
+		 
+		?>	                  
+        <tr class="row0 group<?=$nGrupo1?> sub_group<?=$nSub_group?>">  <!----------------- 3er TR--------------->	
+            <td class="center">       									
+             </td>                
+          <?php 	
+		  if ($NroRegistrosNivel4==0){ ?>
+			   <td width="<?=$nAncho[$x]?>" class="" style="padding-left:<?=$espacio_3_2?>px" >
+         <?php }else {  ?>   
+			  <td width="<?=$nAncho[$x]?>" class="sub_sub_group<?=$nSub_Sub_group?>" style="padding-left:<?=$espacio_3_1?>px">
+         <?php } ?>         
+               <input type="checkbox" id="cb0" name="cid[]" value="<?php echo $row3['ccodseccion'];?>&" onclick="Joomla.isChecked(this.checked);" title="Casilla de selección para la fila 1">	
              <a href='mantenimiento/Form-Actualiza-SubSeccion.php?id=<?=$row3['ccodseccion']?>'>            
             	<?php  if ($row3['estado']==-2){  //Eliminado
 		           echo "<strike style='color:red'><span class='art_borrado_3er_nivel'>".$row3['cnomseccion']."</span></strike>";
 		  		}else {
-		 			echo "<span class='color_seccion_3er_nivel'>".$row3['cnomseccion'] ."</span>" ;  
+		 			echo "<span class='color_seccion_3er_nivel'>".$row3['cnomseccion']."</span>" ;  
                  }
 	         	?>             
             </a>             
@@ -457,24 +503,22 @@ WHERE ".$cfiltronivel ." (s.cnivseccion =1 AND (seccionmenu.ccodmenu=1 OR seccio
         	
             <?php	
 		 // -------------  Aqui empieza Menu Nivel 4 --------------------	
-        $sql4_query = "SELECT s.cnivseccion,s.cnomseccion,s.ctipseccion,s.cordcontenido,s.ccodmodulo,s.ccodseccion,s.estado,m.cnommodulo FROM  seccion s, webmodulos m where  ".$cfiltronivel ." s.ccodmodulo=m.ccodmodulo and ccodseccion like '" . $codsec3 . "%' and s.cnivseccion='4' order by s.cordcontenido asc ";	  				
-		//echo $sql4_query;exit;
-		$sql4 = db_query($sql4_query);	
-		while($row4 = db_fetch_array($sql4)) ////// Inicio while 4  Menu Nivel 4 Subseciones
+		while($row4 = db_fetch_array($rs_sql4)) ////// Inicio while 4  Menu Nivel 4 Subseciones
 			{
 			$codsec5= substr($row4['ccodseccion'],0,24);  // Utilizado en while 5 para Menu Nivel5	
 			$linea = $linea + 1;			
 			if ($row4['cnivseccion']=='1') $espacio4="";
-			if ($row4['cnivseccion']=='2') $espacio4="&nbsp;&nbsp;&nbsp;";
-			if ($row4['cnivseccion']=='3') $espacio4="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-			if ($row4['cnivseccion']=='4') $espacio4=		
-			"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp";
+			if ($row4['cnivseccion']=='2') $espacio4="";
+			if ($row4['cnivseccion']=='3') $espacio4="";
+			if ($row4['cnivseccion']=='4') $espacio4="";
 		?>	
-        <tr class="row0">	
-            <td class="center">
-             <input type="checkbox" id="cb0" name="cid[]" value="<?php echo $row4['ccodseccion'];?>&" onclick="Joomla.isChecked(this.checked);" title="Casilla de selección para la fila 1">										
+        
+        <!-----------Inicio Menu 4to Nivel  ------------------------>
+        <tr class="row0 group<?=$nGrupo1?> sub_group<?=$nSub_group?> sub_sub_group<?=$nSub_Sub_group?>">	
+            <td class="center">            									
              </td>   
-            <td width="<?=$nAncho[$x]?>"><?=$espacio4?>			
+            <td width="<?=$nAncho[$x]?>" style="padding-left:<?=$espacio_4_1?>px" >			
+             <input type="checkbox" id="cb0" name="cid[]" value="<?php echo $row4['ccodseccion'];?>&" onclick="Joomla.isChecked(this.checked);" title="Casilla de selección para la fila 1">	
              <a href='mantenimiento/Form-Actualiza-SubSeccion.php?id=<?=$row4['ccodseccion']?>'>            
             	<?php  if ($row4['estado']==-2){  //Eliminado
 		           echo "<strike style='color:red'><span class='art_borrado_4to_nivel'>".$row4['cnomseccion']."</span></strike>";
@@ -570,12 +614,16 @@ http://www.blogdephp.com/foro/topic/eliminacion-multiple-de-registros-en-un-list
 -->
 <style type="text/css">	
 	.art_borrado_1er_nivel{font-weight:bold;color:#000000;}	
-	.art_borrado_2do_nivel{font-weight:bold;color:#449902; margin-left: 10px;}
+	.art_borrado_2do_nivel{font-weight:bold;color:#449902;}
 	
-	.art_borrado_3er_nivel{font-weight:bold;color:#1389D1;padding-left: 30px;}
+	.art_borrado_3er_nivel{font-weight:bold;color:#1389D1;}
 	
-	.art_borrado_4to_nivel{font-weight:bold;color:#FF7D5D;padding-left: 40px; width:100%}
-	.color_4to_nivel{color:#FF7D5D;font-weight:bold;padding-left: 40px;}
+	.art_borrado_4to_nivel{font-weight:bold;color:#FF7D5D; width:100%}
+	.color_4to_nivel{color:#FF7D5D;font-weight:bold;}
+	
+	.color_seccion_1er_nivel{color:#000000;font-weight:bold;}
+	.color_seccion_2do_nivel{color:#449902;font-weight:bold;margin-left: 0px;}
+	.color_seccion_3er_nivel{color:#1389D1;font-weight:bold;padding-left: 0px;}
 	
 	/*ver tabla pagemenu deve ser igual al campo cnommenu*/
 	.Cabecera{color:#0b98e3; font-weight:bold;}
@@ -585,8 +633,29 @@ http://www.blogdephp.com/foro/topic/eliminacion-multiple-de-registros-en-un-list
 	.filter-search{ display: flex;justify-content: flex-start; width: 100%; padding: 10px;}
 	.filtrarxcontenido{ display: flex;justify-content: space-between; width: 35	;margin-left:20px;}
 	.filtrarxcategoria { display: flex;justify-content: space-between; width: 40%; margin-left:20px; height:20px}
-	.filtrarxcategoria .titulo{ font-size:12px; font-weight: bold; color:#E70C10;text-align: right; line-height:20px }
+	.filtrarxcategoria .titulo{ font-size:12px; font-weight: bold; color:#E70C10;text-align: right; line-height:20px }	
+	
 </style>
+
+<style>
+table, tr, td, th
+{
+    border: 1px solid black;
+    border-collapse:collapse;
+}
+img.button_open{
+  content:url('http://code.stephenmorley.org/javascript/collapsible-lists/button-open.png');
+  cursor:pointer;
+}
+img.button_closed{
+  content: url('http://code.stephenmorley.org/javascript/collapsible-lists/button-closed.png');
+  cursor:pointer;
+}
+</style>
+
  <script type="text/javascript">
     function MUEVE(a){if(Desplegables[a]==null){Desplegables[a]=1;$("#BTN_"+a).attr("src","/imagen/p_boton_menos.png");$("#DESC_"+a).animate({height:"toggle"},{duration:300})}else{Desplegables[a]=null;$("#BTN_"+a).attr("src","/imagen/p_boton_mas.png");$("#DESC_"+a).animate({height:"toggle"},{duration:300})}}var NoticiasBlog=new Array();
-   </script>  
+ </script>  
+ <!--
+El javascrip se encuentra en index.php  en Inicio Gestor de Seccion: Seccion 
+  -->

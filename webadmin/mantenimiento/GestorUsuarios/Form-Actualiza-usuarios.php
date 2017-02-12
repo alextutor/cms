@@ -59,6 +59,7 @@ include_once ( $INC_DIR . '/webadmin/header.php');
           <label id="jform_title-lbl" for="jform_title" class="hasTip" title="">Nivel<span class="star">&nbsp;*</span></label>
           <select id="nivel" name="nivel" class="inputbox" size="1" aria-invalid="false">
              <option value="ADMINISTRADOR" <?php if( $rsUsuarios['nivel']=="ADMINISTRADOR") echo " selected='selected'"  ?>>ADMINISTRADOR</option>
+             <option value="ADMIN_CONDOMINIO" <?php if( $rsUsuarios['nivel']=="ADMIN_CONDOMINIO") echo " selected='selected'"  ?>>ADMIN_CONDOMINIO</option>
              <option value="USUARIO" <?php if( $rsUsuarios['nivel']=="USUARIO") echo " selected='selected'"  ?>>USUARIO</option>
           </select>                                                   
           </li>        

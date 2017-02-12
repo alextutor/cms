@@ -19,6 +19,7 @@ $totalpantalla="Portada";
 $domain       = $_SERVER['HTTP_HOST']; /*www.juvame.com*/
 $domain_parts = explode('.',$domain);
 $nropartes = count($domain_parts);
+$rutamodulo= "modulos/";
 //$codpage="prueba";
 //echo $_GET["idsec2"]."dsdsa";exit;
 /* al entrar como www.juvame.com se tiene 3 partes */
@@ -180,19 +181,33 @@ while ($row_website = db_fetch_array($res_website))
 	$galeria_imagen=$row_website['galeria_imagen'];	//que tipo de libreria se usara para presentar la galeria de imagenes
 	//echo $galeria_imagen."-sadasd";exit;
 	$menuestilomenu=$row_website['menuestilomenu'];
-	
+	//$mostrarurlcatebase=$row_website['mostrarurlcatebase']; // sustituido x  $_SESSION['mostrarurlcatebase']
+	$_SESSION['mostrarurlcatebase']=$row_website['mostrarurlcatebase'];  // para que tenga mayor alcanze tanbien en funciones_web.php , eliminar 
+	$_SESSION['menu_1Nivel_Mayuscula_Minuscula']=$row_website['menu_1Nivel_Mayuscula_Minuscula'];  //Muestra el Menu 1 Nivel mayuscula/minuscula
+	//echo $_SESSION['mostrarurlcatebase'];exit;
 }
 include $_SERVER['DOCUMENT_ROOT']. "/include/funciones_web.php";  //NO LO Muevas de aqui alex porque las variables definidas si lo pones arrriba se pierden
 //**********************************************************************************************//
 // cuando no se visualiza pagina principal aqui entra contactos
 //echo $_GET["idsec"];exit;
-if (!empty($_GET['idsec']) and $_GET['idsec']<>'usuario' ){ 	// Inicio Si 1	//que sea diferente de usuario		  
-  $sql1="SELECT s.*, es.cincsecestilo FROM  seccion s, estiloseccion es WHERE s.ccodsecestilo = es.ccodsecestilo and s.ccodpage='".$codpage."' and s.camiseccion ='".$_GET["idsec"]."' and s.cnivseccion ='1' and s.estado=1 ";
-		$sqlseccion = db_query($sql1);
-		$nrosec     = db_num_rows($sqlseccion);		
+if (!empty($_GET['idsec']) and $_GET['idsec']<>'usuario' ){ 	// Inicio Si 1	//que sea diferente de usuario		    	
+	// vea CMS-Funcionamiento.docx  Mostrar Url padre
+	if ($_SESSION['mostrarurlcatebase']=='NO' ){ 	
+		 $sql1="SELECT s.*, es.cincsecestilo FROM  seccion s, estiloseccion es WHERE s.ccodsecestilo = es.ccodsecestilo and s.ccodpage='".$codpage."' and s.camiseccion ='".$_GET["idsec"]."' and s.estado=1 ";
+		 
+	}else{
+		 $sql1="SELECT s.*, es.cincsecestilo FROM  seccion s, estiloseccion es WHERE s.ccodsecestilo = es.ccodsecestilo and s.ccodpage='".$codpage."' and s.camiseccion ='".$_GET["idsec"]."' and s.cnivseccion ='1' and s.estado=1 ";
+	}
+	// vea CMS-Funcionamiento.docx  Mostrar Url padre	 
+		//echo $sql1;exit;
+		
+	$rsSeccion = db_query($sql1);
+	$nrosec     = db_num_rows($rsSeccion);		
+	if ($nrosec>0){ $nseccionexiste="SI"; }
+	//echo $nrosec     ;exit;
 		//$nrosec=1 cuando repuestos/por-marca-de-motor; //$pagsecc 
 		//echo $sql1;exit;					  
-	$rowseccion     = db_fetch_array($sqlseccion);
+	$rowseccion     = db_fetch_array($rsSeccion);
 	//echo $nrosec."|";exit;
   if ( $nrosec >0 and $rowseccion['ctipseccion']<>3) // Inicio Si 2  //ctipseccion = 3 es una seccion contenido 
   {
@@ -212,7 +227,9 @@ if (!empty($_GET['idsec']) and $_GET['idsec']<>'usuario' ){ 	// Inicio Si 1	//qu
 	$rutasec   = "/".$_GET['idsec'];
 	$cat       = substr($codsecc,0,12); 
 	$pagina    = 1;
-	$contenidoinc = "modulos/".$estilo; 	
+	//$contenidoinc = "modulos/".$estilo; 
+	$contenidoinc = $rutamodulo.$estilo; 
+	
 	//echo $contenidoinc;exit;
 	//echo $totalpantalla;exit;	
   	
@@ -225,7 +242,8 @@ if (!empty($_GET['idsec']) and $_GET['idsec']<>'usuario' ){ 	// Inicio Si 1	//qu
 		 // echo $_GET['idsec2']."sdsdasd";exit;
 		  /** Seccion con paginacion **/
 		  $pagina       = $_GET['idsec2'];
-		  $contenidoinc = "modulos/".$estilo;
+		  //$contenidoinc = "modulos/".$estilo;
+		  $contenidoinc = $rutamodulo.$estilo; 
 	      //echo $_GET['idsec2'];exit;		   
 	  }else{    // entra cuando !empty($_GET['idsec2']
 	  	 	
@@ -254,7 +272,8 @@ if (!empty($_GET['idsec']) and $_GET['idsec']<>'usuario' ){ 	// Inicio Si 1	//qu
 		  $rutasec    = "/".$_GET['idsec']."/".$_GET['idsec2'];
 		  $cat        = substr($codsecc,0,16); 
 		  $pagina     = 1;
-		  $contenidoinc = "modulos/".$estilo; 		  
+		  //$contenidoinc = "modulos/".$estilo; 		  
+		  $contenidoinc = $rutamodulo.$estilo; 
 		 // echo $contenidoinc."pepe";exit;
 		 
 	 	//**************************** Inicio Para idsec3 **************************
@@ -266,7 +285,8 @@ if (!empty($_GET['idsec']) and $_GET['idsec']<>'usuario' ){ 	// Inicio Si 1	//qu
 			{
 				/** Seccion  2 con paginacion  **/
 				$pagina       = $_GET['idsec3'];
-				$contenidoinc = "modulos/".$estilo; 
+				//$contenidoinc = "modulos/".$estilo; 
+				$contenidoinc = $rutamodulo.$estilo; 
 			}
 			else // else 7
 			{				
@@ -297,7 +317,8 @@ if (!empty($_GET['idsec']) and $_GET['idsec']<>'usuario' ){ 	// Inicio Si 1	//qu
 				  $rutasec    = $_GET['idsec']."/".$_GET['idsec2']."/".$_GET['idsec3'];
 				  $cat        = substr($codsecc,0,20); 
 				  $pagina     = 1;
-				  $contenidoinc = "modulos/".$estilo;
+				  //$contenidoinc = "modulos/".$estilo;
+				  $contenidoinc = $rutamodulo.$estilo; 
 				  
 				  //**************************** Inicio Para idsec4 **************************
 				  
@@ -308,7 +329,8 @@ if (!empty($_GET['idsec']) and $_GET['idsec']<>'usuario' ){ 	// Inicio Si 1	//qu
                     {
                       /** Seccion  3 con paginacion  **/
                       $pagina       = $_GET['idsec4'];
-                      $contenidoinc = "modulos/".$estilo;
+                      //$contenidoinc = "modulos/".$estilo;
+					  $contenidoinc = $rutamodulo.$estilo; 
                     }
                     else  // else 10
                     {
@@ -340,15 +362,18 @@ if (!empty($_GET['idsec']) and $_GET['idsec']<>'usuario' ){ 	// Inicio Si 1	//qu
 								  $rutasec    = $_GET['idsec']."/".$_GET['idsec2']."/".$_GET['idsec3']."/".$_GET['idsec4'];
 								  $cat        = substr($codsecc,0,24); 							
 								  $pagina = 1;						
-								  $contenidoinc = "modulos/".$estilo;
+								  //$contenidoinc = "modulos/".$estilo;
+								  $contenidoinc = $rutamodulo.$estilo; 
 								 //echo $contenidoinc;exit;
 							if (!empty($_GET['idsec5'])) {  //Inicio Si 12               
 								if ($_GET['idsec5']=="alex") //Inicio Si 13 original $_GET['idsec5']>0
 								{
 								/** Seccion  4 con paginacion  **/
 									$pagina       = $_GET['idsec5'];
-									$contenidoinc = "modulos/".$estilo; 
+									//$contenidoinc = "modulos/".$estilo; 
+									$contenidoinc = $rutamodulo.$estilo; 
 								} else  { // else 13	
+									//echo "sql4";exit;
 									$sql4="SELECT c.ccodcontenido,c.ccodestcontenido,c.cimgcontenido,c.cnomcontenido,c.crescontenido,c.ctagcontenido,ec.cincestcontenido FROM contenido c, estilocontenido ec WHERE c.ccodestcontenido=ec.ccodestcontenido and c.camicontenido ='".$_GET["idsec5"]."'";
 									//echo $sql4;exit;
 									$sqlproducto4 = db_query($sql4);
@@ -364,7 +389,9 @@ if (!empty($_GET['idsec']) and $_GET['idsec']<>'usuario' ){ 	// Inicio Si 1	//qu
 										$cimgcontenido = $rowproducto4['cimgcontenido'];	
 										$estilo = $rowproducto4['cincestcontenido'];
 									//$ccodclase = $rowproducto4['ccodclase'];	//nuevo alex 
-										$contenidoinc = "modulos/".$estilo;
+										//$contenidoinc = "modulos/".$estilo;
+										$contenidoinc = $rutamodulo.$estilo; 
+										
 										db_query("UPDATE contenido SET   nviscontenido = nviscontenido + 1  WHERE ccodcontenido = '" . $codcont . "'");
 									}else { // else 14 									
 										tep_redirect('/404.php');
@@ -375,6 +402,7 @@ if (!empty($_GET['idsec']) and $_GET['idsec']<>'usuario' ){ 	// Inicio Si 1	//qu
                    else  //else 11 - Inicio Seccion 4  si no hay subsecciones en seccion 4 ahora comprueba	
 				   		 //	si se ha ingresado un articulo en esa subseccion				  
                     {
+						//echo "hola";exit;	
 						$sql3="SELECT c.ccodcontenido,c.ccodestcontenido,c.cimgcontenido,c.cnomcontenido,c.crescontenido,c.estado,c.ctagcontenido,ec.cincestcontenido FROM contenido c, estilocontenido ec WHERE c.estado=1 and c.ccodestcontenido=ec.ccodestcontenido and c.camicontenido ='".$_GET["idsec4"]."'";
 						//echo $sql3;exit;
                         $sqlproducto3 = db_query($sql3);
@@ -390,11 +418,15 @@ if (!empty($_GET['idsec']) and $_GET['idsec']<>'usuario' ){ 	// Inicio Si 1	//qu
 						  $webtags = $rowproducto3['ctagcontenido'];
 						  $cimgcontenido = $rowproducto3['cimgcontenido'];  //lo uso para facebok
 						  $estilo = $rowproducto3['cincestcontenido'];
-						  $contenidoinc = "modulos/".$estilo;
+						  //$contenidoinc = "modulos/".$estilo;
+						  $contenidoinc = $rutamodulo.$estilo; 
+						  
 						  db_query("UPDATE contenido SET   nviscontenido = nviscontenido + 1  WHERE ccodcontenido = '" . $codcont . "'");
                         } else { //else 15								
-						    if ($rowseccion4['ctipseccion']=='3') { //es una seccion tipo contenido lo he implementado
-								 $contenidoinc = "modulos/articulo_contenido_vacio.php";
+						    if ($rowseccion4['ctipseccion']=='3') { //es una seccion tipo contenido lo he implementado								 
+								 //$contenidoinc = "modulos/articulo_contenido_vacio.php";
+								 $contenidoinc = $rutamodulo."articulo_contenido_vacio.php"; 
+								 
 							}else { 
 								tep_redirect('/404.php');
 						    }							
@@ -406,8 +438,10 @@ if (!empty($_GET['idsec']) and $_GET['idsec']<>'usuario' ){ 	// Inicio Si 1	//qu
                 }   //Fin Si 10
                   }//Fin Si 9
 				  }
-				else { // else 8				
+				else { // else 8		
+					//Inicio Seccion 3 si no hay subsecciones en seccion 3 ahora comprueba	si se ha ingresado un articulo en esa subseccion			
 					/** Contenido 2 ***/
+					//echo "hola";exit;	
 					$sqlprodu2="SELECT         c.ccodcontenido,c.ccodestcontenido,c.cimgcontenido,c.cnomcontenido,c.crescontenido,c.ctagcontenido,ec.cincestcontenido 
 					FROM contenido c, estilocontenido ec WHERE c.ccodestcontenido=ec.ccodestcontenido and c.camicontenido ='".$_GET["idsec3"]."'";
 					//echo $sqlprodu2;exit;
@@ -423,7 +457,8 @@ if (!empty($_GET['idsec']) and $_GET['idsec']<>'usuario' ){ 	// Inicio Si 1	//qu
 					  $webtags = $rowproducto2['ctagcontenido'];												
 				      $cimgcontenido = $rowproducto2['cimgcontenido'];		
 					  $estilo = $rowproducto2['cincestcontenido'];
-					  $contenidoinc = "modulos/".$estilo;						
+					 // $contenidoinc = "modulos/".$estilo;						
+					 $contenidoinc = $rutamodulo.$estilo; 
 					  db_query("UPDATE contenido SET   nviscontenido = nviscontenido + 1  WHERE ccodcontenido = '" . $codcont . "'");
 					}
 					else //else 16
@@ -440,10 +475,12 @@ if (!empty($_GET['idsec']) and $_GET['idsec']<>'usuario' ){ 	// Inicio Si 1	//qu
 			  /** Contenido 1 ***/
 			  if ($_GET['idsec']=="panel")
 			  {
-				  $contenidoinc = "modulos/user_login.php";
+				  //$contenidoinc = "modulos/";
+				  $contenidoinc = $rutamodulo."user_login.php"; 
 			  }
 			  else
 			  {
+				//Inicio Seccion 2 si no hay subsecciones en seccion 2 ahora comprueba	si se ha ingresado un articulo en esa subseccion
 				 //echo $_GET['idsec2'];	exit;
 				//echo "hola";exit;	
 			  $sql4 ="SELECT c.ccodcontenido,c.ccodestcontenido,c.cimgcontenido,c.cnomcontenido,c.crescontenido,c.ccodmodulo,c.ctagcontenido,ec.cincestcontenido FROM contenido c, estilocontenido ec WHERE c.ccodestcontenido=ec.ccodestcontenido and c.camicontenido ='".$_GET["idsec2"]."'";	
@@ -466,7 +503,8 @@ if (!empty($_GET['idsec']) and $_GET['idsec']<>'usuario' ){ 	// Inicio Si 1	//qu
   				  
 				  if ($rowproducto['ccodmodulo']=="1400"){ $totalpantalla="ambos"; }
 				  
-				  $contenidoinc = "modulos/".$estilo;
+				 // $contenidoinc = "modulos/".$estilo;
+				 $contenidoinc = $rutamodulo.$estilo; 
 				  
 				  db_query("UPDATE contenido SET   nviscontenido = nviscontenido + 1  WHERE ccodcontenido = '" . $codcont . "'");
 			  }
@@ -482,7 +520,63 @@ if (!empty($_GET['idsec']) and $_GET['idsec']<>'usuario' ){ 	// Inicio Si 1	//qu
   }  // Fin Si 3
   } else    //  Si 2
   {	
-	  tep_redirect('/404.php');
+	//Inicio Seccion 1 si no hay subsecciones en seccion 1 ahora comprueba	si se ha ingresado un articulo en esa subseccion es decir es del tipo  ctipseccion = 3 es una seccion contenido	 
+	  $sql1 ="SELECT c.ccodcontenido,c.ccodestcontenido,c.cimgcontenido,c.cnomcontenido,c.crescontenido,c.ccodmodulo,c.ctagcontenido,ec.cincestcontenido FROM contenido c, estilocontenido ec WHERE c.ccodestcontenido=ec.ccodestcontenido and c.camicontenido ='".$_GET["idsec"]."'";	
+			 //echo $sql1;exit;	  
+			  $rsproducto1= db_query($sql1);			
+			  $nropro1      = db_num_rows($rsproducto1);
+			  $rutasec    = $_GET['idsec']."/".$_GET['idsec2'];						
+			  if ( $nropro1 >0 )
+			  {
+				  $rowproducto = db_fetch_array($rsproducto1);
+				  $codcont = $rowproducto['ccodcontenido'];
+  
+				  $webtitu = $rowproducto['cnomcontenido'];
+				  $webdesc = $rowproducto['crescontenido'];
+				  $webtags = $rowproducto['ctagcontenido'];
+				  //lo uso para facebok
+				  $cimgcontenido = $rowproducto['cimgcontenido'];														
+				  
+				  $estilo = $rowproducto['cincestcontenido'];
+  				  
+				  if ($rowproducto['ccodmodulo']=="1400"){ $totalpantalla="ambos"; }
+				  
+				 // $contenidoinc = "modulos/".$estilo;
+				 $contenidoinc = $rutamodulo.$estilo; 
+				  
+				  db_query("UPDATE contenido SET   nviscontenido = nviscontenido + 1  WHERE ccodcontenido = '" . $codcont . "'");
+			  }
+			  else
+			  {
+				  //echo "carajo";exit;
+				  /***** Error Url idsec2 ********/
+				  //echo "hola";exit;
+				  if ($nseccionexiste="SI" and $rowseccion['ctipseccion']==3){
+					   $webplan   = $rowseccion['ccodplantilla'];
+						$webtitu   = $rowseccion['ctitseccion'];
+						$webdesc   = $rowseccion['cdesseccion'];
+						$webtags   = $rowseccion['ctagseccion'];
+						$codsecc   = $rowseccion['ccodseccion'];
+						$nivsecc   = $rowseccion['cnivseccion'];
+						$nomsecc   = $rowseccion['cnomseccion'];
+						$imgsecc   = $rowseccion['cimgseccion'];
+						$modsecc   = $rowseccion['ccodmodulo'];
+						$estilo = $rowseccion['cincsecestilo']; 
+						$ccodclase = $rowseccion['ccodclase'];	//nuevo alex 
+						$pagsecc   = $rowseccion['cpagseccion'];
+						$totalpantalla   = $rowseccion['totalpantalla'];			
+						$rutasec   = "/".$_GET['idsec'];
+						$cat       = substr($codsecc,0,12); 
+						$pagina    = 1;
+						//$contenidoinc = "modulos/".$estilo; 
+						$contenidoinc = $rutamodulo.$estilo; 
+				   }
+			  	  else
+			     {				  
+				  tep_redirect('/404.php');
+				 }
+			}	 
+
   }      // Fin Si 2
 }  
 else // else 1   cuando se visualiza PORTADA  pasa primero por aqui*/
@@ -493,7 +587,8 @@ else // else 1   cuando se visualiza PORTADA  pasa primero por aqui*/
 	/*------- Inicio Mostrar Usuario----------------*/
 	if (!empty($_GET['idsec'])){ 
 		if ($_GET['idsec']=='usuario'){ 
-			$contenidoinc = "modulos/form-perfil-usuario.php";			
+			//$contenidoinc = "modulos/form-perfil-usuario.php";			
+			$contenidoinc = $rutamodulo."form-perfil-usuario.php"; 
 		}
 	}
 	/*------- Fin Mostrar Usuario----------------*/
@@ -502,16 +597,21 @@ else // else 1   cuando se visualiza PORTADA  pasa primero por aqui*/
 	
 	//usado en inccabecera.php,pie-abajo.php
 		//echo $ctelefonosec;exit;
+		
 	  $ccontacto=($ctelefonosec<>"")?"&nbsp;&nbsp;/&nbsp;&nbsp;".$ctelefonosec:"";	
 	  $ccontacto .=($tmovil<>"")?"&nbsp;&nbsp;".$tmovil:"";
 	  $ccontacto .=($rpm<>"")?"&nbsp;/&nbsp;<span style='color:#3f8bd8'>RPM : </span>".$rpm:"";							
 	  $ccontacto=$ctelefonopri.$ccontacto;
-	  //echo $ccontacto;exit; 
 	  
+	  $ccontactocabecera .=($ctelefonopri<>"")?"".$ctelefonopri."":"";
+	  $ccontactocabecera .=($ctelefonosec<>"")?"".$ctelefonosec:"";	
+	  $ccontactocabecera .=($tmovil1<>"")?""."</br>"."&nbsp;&nbsp".$tmovil1:"";
+	  $ccontactocabecera .=($tmovil2<>"")?""."&nbsp;&nbsp/&nbsp;&nbsp;".$tmovil2:"";								  						
+	 
 	  $ccontactopie .=($ctelefonopri<>"")?"".$ctelefonopri."":"";
 	  $ccontactopie .=($ctelefonosec<>"")?"".$ctelefonosec:"";	
-	  $ccontactopie .=($tmovil1<>"")?"".$tmovil1:"";
-	  $ccontactopie .=($tmovil2<>"")?"".$tmovil2:"";								  						
+	  $ccontactopie .=($tmovil1<>"")?""."&nbsp;&nbsp".$tmovil1:"";
+	  $ccontactopie .=($tmovil2<>"")?""."&nbsp;&nbsp/&nbsp;&nbsp;".$tmovil2:"";								  						
 	  $ccontactopie=$ccontactopie;	  
 	  
 	  $ccdirecempresa .=($cdirecempresa<>"")?"".$cdirecempresa."":"";
@@ -529,7 +629,7 @@ else // else 1   cuando se visualiza PORTADA  pasa primero por aqui*/
 	 //echo $codpage;exit;
 	 //echo $cRutaWeb;exit; 
 	 //echo $cimgcontenido."dasdas";exit;
-	 //echo $contenidoinc;exit;
+	// echo $contenidoinc;exit;
  	 //echo $codsecc."hola-";exit;	
 	 //echo $cRutaWeb;exit; 
 	  //echo $cRutaWeb. "config_style.php";exit;	  
@@ -868,12 +968,10 @@ $(document).ready(function(){
 <?php		 
 	 case "3": // Menu Duramenu 
 ?>	 
-	<!-- BOOTSTRAP 3.3.6 -->
-    <link href="/menus/menu_duramenu/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-       <!-- DURA MENU V1.0 -->
-    <link href="/menus/menu_duramenu/css/dura-main.css" rel="stylesheet" type="text/css">
-    <link href="/menus/menu_duramenu/css/dura-responsive.css" rel="stylesheet" type="text/css">
-       <!-- FONT AWESOME -->
+	<!-- Alex los demas css estan en menu_duramenu.php -->
+    <!-- BOOTSTRAP 3.3.6 -->
+    
+    <!-- FONT AWESOME -->
     <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
       <!-- FONTS -->
     <link href="css/font-arimo.css" rel="stylesheet" type="text/css">

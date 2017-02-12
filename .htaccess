@@ -37,6 +37,8 @@ RewriteRule ^([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)$   
  </FilesMatch>
 </ifmodule>
 
+
+
 # solicitar a Apache que envíe comprimidos los archivos de extensiones js
 <Files *.js>
 SetOutputFilter DEFLATE

@@ -4,7 +4,17 @@
 /* AUTHOR: ISMAIL ONUR ON BEHALF OF BRIENLABS.COM								 */
 /* ADDITIONAL INFORMATION: THIS ITEM IS EXCLUSIVELY SOLD @ CODECANYON.NET		 */
 /* ############################################################################# */
-
+/* ---Todo esto se aplica en style0001.css   */
+/* 11) alex aqui se pone el borde inferior del 3er Nivel*/
+/* 11.1) controla la separacion de los submenus  h3*/
+/* 12) Menu te sigue con el scroll position: fixed;*/
+/* 13) Duramenu-Categorias el Ancho del 2doNivel y el top entre 2do y 1erNivel  */
+/* Menu menu-duramenu (dura-main.css) */																
+/* 6) Duramenu-Categorias color Texto 3erNivel */
+/* 7) Duramenu-Categorias color Fondo 3erNivel pasar mouse */
+/* 8) Duramenu-Categorias color Texto 3erNivel pasar mouse */
+/* 9) Duramenu-Categorias el contenedor del 3erNivel  (ancho)*/
+/* 10) Duramenu-Categorias el ancho contenedor del 2doNivel (utilizado x menu 1nivel Repuestos por Marca de Motor)*/		
 .dura-wrapper {
 	/* main wrapper for everything */
 	position: absolute;
@@ -18,7 +28,7 @@
 .dura-container {
 	/* override Bootstrap ".container" class properties */
 	width: 100%;
-	max-width: 980px;
+	/*max-width: 980px;*/ /*alex lo desabilite porque no alcanzaba a 980*/
 	background: #fff;
 }
 
@@ -74,7 +84,7 @@
 
 .nav-container-fixed {
 	/* Fix main navigation container on scroll */
-	position: fixed;
+	position: static; /* 12) Menu te sigue con el scroll position: fixed; */
 	top: 0;
 	left: 0;
 	right: 0;
@@ -290,10 +300,10 @@ div.nav-container .navbar.navbar-inverse ul.nav > li.active-shopping.open > a:fo
 
 
 /* NAVIGATION - 2ND LEVEL */
-div.nav-container .navbar ul.nav > li > ul.dropdown-menu {
+div.nav-container .navbar ul.nav > li > ul.dropdown-menu {  /* 13) Duramenu-Categorias el Ancho del 2doNivel y el top entre 2do y 1erNivel  */
 	/* dropdown position */
-	top: 50px;
-	width: 220px;
+	top: 65px;
+	width: var(--duramenu-categorias-conte-ancho-2doNivel);
 	padding: 5px 0;
 }
 
@@ -308,7 +318,7 @@ div.nav-container .navbar ul.nav > li > ul.dropdown-menu > li {
 div.nav-container .navbar ul.nav > li > ul.dropdown-menu > li > a {
 	/* dropdown properties */
 	padding: 5px 0;
-	margin: 0px 15px;
+	margin: 0px 5px;
 	border-bottom: 1px dashed #efefef;
 }
 
@@ -353,7 +363,8 @@ div.nav-container .navbar ul.nav > li > ul > li > div.dropdown-menu-shopping {
 	position: absolute;
 	left: 100%;
 	top: -1px;
-	width: 730px;
+	width: var(--duramenu-categorias-conte-ancho-3erNivel);  /* 9) Duramenu-Categorias el ancho del contenedor del 3erNivel 
+																(utilizado x menu 1nivel Repuestos por Marca de Vehiculo  */
 	height: auto;
 	background: #f7f7f7;
 	border: 1px solid #ccc;
@@ -367,23 +378,42 @@ div.nav-container .navbar ul.nav > li > ul > li > div.dropdown-menu-shopping.dro
 }
 
 div.nav-container .navbar ul.nav > li > ul > li > div.dropdown-menu-shopping.dropdown-menu-2col {
-	width: 487px;
+	width: var(--duramenu-categorias-conte-ancho-3erNivel-2);       /* 9.1) Duramenu-Categorias el ancho contenedor del 3erNivel 
+																(utilizado x menu 1nivel Repuestos por Marca de Motor)*/		
 }
 
 div.nav-container .navbar ul.nav > li > ul > li > div.dropdown-menu-shopping h3 {
-	font-size: 14px;
+	font-size: 11px !important;
 	font-weight: bold;
-	margin: 10px 0px;
+	margin: 2px 0px;	
+	background-color:var(--duramenu-categorias-color-fondo-3erNivel); /* 5) Duramenu-Categorias color fondo 3erNivel */
+	color:var(--duramenu-categorias-color-texto-3erNivel);			  /* 6) Duramenu-Categorias color Texto 3erNivel */
+	height:40px;
+	padding-top:2px;
+	padding:10px 10px;
+	text-align:center;
 }
+div.nav-container .navbar ul.nav > li > ul > li > div.dropdown-menu-shopping  h3:hover {
+background-color: var(--duramenu-categorias-color-fondo-3erNivel-OnmouseOver);/* 7) Duramenu-Categorias color Fondo 3erNivel pasar mouse */
+color: var(--duramenu-categorias-color-texto-3erNivel-OnmouseOver);		     /* 8) Duramenu-Categorias color Texto 3erNivel pasar mouse */
+}  
+	
+/* alex esto lo agregue 
+col-md-3 col-sm-3 col-xs-6*/
+div.nav-container .navbar ul.nav > li > ul > li > div.dropdown-menu-shopping h3 a:link {color:#FFF;}	
+div.nav-container .navbar ul.nav > li > ul > li > div.dropdown-menu-shopping h3 a:visited {color:#FFF;}	
+div.col-lg-3 {padding-right: 2px;padding-left: 2px;}	/*  11.1) controla la separacion de los submenus*/
+/* alex esto lo agregue */
 
+/* 11) alex aqui se pone el borde inferior del 3er Nivel*/
 div.nav-container .navbar ul.nav > li > ul > li > div.dropdown-menu-shopping h3:before {
 	content: "";
     position: absolute;
     width: 30px;
     height: 1px;
     left: auto;
-    border-bottom: 5px solid #ccc;
-	margin-top: 25px;
+   /* border-bottom: 2px solid #ccc;*/
+	margin-top: 25px;	
 }
 
 div.nav-container .navbar ul.nav > li > ul > li > div.dropdown-menu-shopping h3:after {
@@ -391,9 +421,9 @@ div.nav-container .navbar ul.nav > li > ul > li > div.dropdown-menu-shopping h3:
     position: absolute;
     width: 80%;
     height: 1px;
-    left: 30px;
-    border-bottom: 1px solid #ccc;
-	margin-top: 27px;
+    left: 10px;
+	/*border-bottom: 1px solid #ccc;
+	margin-top: 27px;	*/
 }
 
 div.nav-container .navbar ul.nav > li > ul > li > div.dropdown-menu-shopping p {

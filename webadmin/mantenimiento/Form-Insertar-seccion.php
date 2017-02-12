@@ -155,10 +155,10 @@ $(document).ready(function(){
                         <div style=" display:flex; clear:both ">
                        <label id="jform_published-lbl" for="jform_published" class="hasTip" title="" 
                        aria-invalid="false">Estilo Submenu</label>                                                       
-                        
+                        <?php //echo $menu_estilo ."cojudo"?>
                        <select name="multidrop" id="multidrop" style="width:190px" class="box">
 						<?php  
-						 $sqltipoenlace="select * from webparametros where ccodparametro='0021' and ctipparametro=".$menu_estilo;			 
+						 $sqltipoenlace="select * from webparametros where ccodparametro='0021' and ctipparametro=".$menuestilomenu;			 
 						$rstipo_enlace = db_query($sqltipoenlace);
                             while ($row_enlace = db_fetch_array($rstipo_enlace)) 
                             {	

@@ -94,9 +94,9 @@ form, button{border:0; margin:0; padding:0;}
 <?php
 //echo $_SESSION['pagina_retorno']."WW";exit;
 if ($_SESSION['id_usu_web']==""){ 
-	header ("Location: /aviso-no-logueado");
+	//header ("Location: /aviso-no-logueado");
 	//echo "location.href =/include/control-usuario/aviso_logueado.php ";
-	exit;
+	//exit;
 } 
 
 //echo $_SESSION['id_usu_web'];exit;
@@ -196,4 +196,6 @@ while ($row_usu = db_fetch_array($rs))
  <div style="clear:both"></div>
 </div>
 <div style="clear:both"></div>
-<!--Recuerda cuando llamas a actualizar foto esta en config_style.php -- $("a.actualizarpadre").fancybox({ -->
+<!--Recuerda cuando llamas a actualizar foto esta en config_style.php -- $("a.actualizarpadre").fancybox({ 
+o en index.php que se en encuentra en root
+-->

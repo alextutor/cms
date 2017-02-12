@@ -62,10 +62,17 @@ include($_SERVER['DOCUMENT_ROOT']. '/config.php');
 					   echo '<option value="'.$rowesweb['cvalparametro'].'" '. $selected .' >'.$rowesweb['cnomparametro'].'</option>';		 
                         }//fin while						
                      ?>                                 
-                    </select>                  
-                                     
-                  <!-- Fin menu-----------------------------------></li>
-                         
+                    </select>                                      
+                  <!-- Fin menu----------------------------------->
+                  </li>
+                  
+                 <li>
+                    <label id="jform_published-lbl" for="jform_published" class="hasTip" title="" aria-invalid="false">Mostrar en Portada</label>
+                     <select id="mostrarportada" name="mostrarportada" class="inputbox" size="1" aria-invalid="false">                     
+        <option value="SI" <?php if( $rsCategoria['mostrarportada']=="SI") echo " selected='selected'"  ?>>SI</option>
+        <option value="NO" <?php if( $rsCategoria['mostrarportada']=="NO") echo " selected='selected'"  ?>>NO</option>                       </select>
+                          <strong>(Solo para Ubicacion: Columna Derecha y Izquierda)</strong>
+                 </li>                        
                     </ul> 
                 </fieldset>       
              </div>

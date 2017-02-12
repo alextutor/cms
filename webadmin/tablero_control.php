@@ -27,8 +27,12 @@ if($tipocontenido == '1') //--------------------------Imagen
     <tr>
         <td width='150' class='colgrishome' align="right">Ancho</td>
         <td class="colblancoend">
-        <input type='text' name='anchoimagen' id='anchoimagen' class="box100"> px
-        </td>
+            <input type='text' name='anchoimagen' id='anchoimagen' class="box100"> 
+            <select name="cuni_medi_nancho_img" id="cuni_medi_nancho_img">
+                   <option value="%">%</option>
+                   <option value="px">px</option>                            
+             </select>
+         </td>
     </tr>
     <tr>
         <td width='150' class='colgrishome' align="right">Alto</td>
@@ -57,7 +61,11 @@ if($tipocontenido == '2'){ //--------------------------------Animaciones Flash
     <tr>
         <td width='150' class='colgrishome' align="right">Ancho</td>
         <td class="colblancoend">
-        <input type='text' name='anchoflash' id='anchoflash' > px
+        <input type='text' name='anchoflash' id='anchoflash' > 
+          <select name="cuni_medi_nancho_flash" id="cuni_medi_nancho">
+               <option value="%">%</option>
+               <option value="px">px</option>                            
+            </select>
         </td>
     </tr>
     <tr>
@@ -160,7 +168,7 @@ if($tipocontenido == '4'){ //Contenido Dinamico
     <tr>
         <td width='150' class='colgrishome' align="right">Nro. Items</td>
         <td class="colblancoend">
-        <input type='text' name='nroitems' id='nroitems' value="1">
+        <input type='text' name='nroitems' id='nroitems' value="20">
         </td>
     </tr>
     

@@ -10,6 +10,7 @@ $rowstylo  = db_fetch_array($rsstylo);
 ?>
 <?php
 //$nromenucab = db_num_rows($hometabla);echo $nromenucab;exit;	
+//echo $rowads['ccodestilo'];exit;
 if 	($rowads['ccodestilo']=='1805') // Inicio Si 1 
 	{
 	while($rowhome  = db_fetch_array($hometabla))

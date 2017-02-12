@@ -34,7 +34,12 @@ if($row_contenido['ctiphome'] == '1'){ //--------------------------Imagen
     <tr>
         <td width='150' class='colgrishome' align="right">Ancho</td>
         <td class="colblancoend">
-	 <input type='text' name='anchoimagen' id='anchoimagen' value="<?=$row_contenido['nancho']?>" > px
+	 <input type='text' name='anchoimagen' id='anchoimagen' value="<?=$row_contenido['nancho']?>" > 
+       <select name="cuni_medi_nancho_img" id="cuni_medi_nancho_img">
+               <option value="%" <?php if( $row_contenido['cuni_medi_nancho']=="%") echo " selected='selected'"  ?>>%</option>
+               <option value="px" <?php if( $row_contenido['cuni_medi_nancho']=="px") echo " selected='selected'"  ?>>px</option>                            
+            </select>
+            
         </td>
     </tr>
     <tr>
@@ -64,8 +69,12 @@ if($row_contenido['ctiphome'] == '1'){ //--------------------------Imagen
     <tr>
         <td width='150' class='colgrishome' align="right">Ancho</td>
         <td class="colblancoend">
-        <input type='text' name='anchoflash' id='anchoflash' value="<?=$row_contenido['nancho']?>" > px
-        </td>
+            <input type='text' name='anchoflash' id='anchoflash' value="<?=$row_contenido['nancho']?>" > 
+            <select name="cuni_medi_nancho_flash" id="cuni_medi_nancho_flash">
+               <option value="%" <?php if( $row_contenido['cuni_medi_nancho']=="%") echo " selected='selected'"  ?>>%</option>
+               <option value="px" <?php if( $row_contenido['cuni_medi_nancho']=="px") echo " selected='selected'"  ?>>px</option>                            
+            </select>
+       </td>
     </tr>
     <tr>
         <td width='150' class='colgrishome' align="right">Alto</td>
@@ -73,7 +82,8 @@ if($row_contenido['ctiphome'] == '1'){ //--------------------------Imagen
 		<input type='text' name='altoflash' id='altoflash' value="<?=$row_contenido['nalto']?>" > px
         </td>
     </tr>
-    </table>
+    </table><br />
+
 	<?php
 }
 if($row_contenido['ctiphome'] == '3'){ //--------------------------------Codigo HTML

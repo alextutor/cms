@@ -507,6 +507,101 @@ a.phone .nrocelular{ margin-left:30px;}
 
 /* --------------------------------- 6) Fin Clase Presentacion  -----------------*/
 
+
+/* --- 6.1) Inicio Gestor de Presentación Estilo Sección Para Gestor de Presentación (Tabla estiloseccion  ccodmodulo=1800) ---*/
+
+/*---------Tipo Contenido Codigo Html ---------*/
+/*- Clase Saludos-*/
+#saludos {width: 99%;margin: 0 auto;margin-bottom: 15px;}
+#saludos .saludos_titulo{clear: both;height: 20px;margin-bottom: 10px;padding-bottom: 15px;text-align:center;color:#5096c6;}
+#saludos .saludos_detalle {width:100%; margin-top:30px;}
+/*---------(9)---------*/
+#portada-laterales {width: 96%;border: 2px solid #e5794c;background-color: #F6FAFA;box-shadow: #aaa 0 0 10px;
+border-radius: 11px;margin: 0 auto;padding:10px 2px;margin-top: 15px;margin-bottom: 15px;border-top: 30px solid #e5794c;
+border-bottom:1px solid #e5794c;box-sizing  : border-box; display:flex;Justify-content:Space-between;Align-items:center;    Flex-wrap: wrap; flex:0 1 auto;}
+#portada-laterales .portada-laterales_titulo{height: 20px;color:#FFF;width: 100%;text-align: center;}
+#portada-laterales .portada-laterales_detalle {width:100%;margin-top:-15px;text-align: center;}
+#portada-laterales h2{color:#FFF;margin-top: -33px;font-size: 18px !important;}
+
+/*---------Tipo Contenido Codigo Html ---------*/
+
+
+/*---------Tipo Contenido Dinamico ---------*/
+
+/*---------Lstdo Hori Pro IMG(1805) stilo-lis-hori-img-01.php---------*/
+/*Usado x Lstdo Hori Pro IMG(1805)*/
+/*modulo/stilo-lis-hori-img-01.php
+modulo/foto_lstado_hori_categoria_superiror.php*/
+
+/*si tienes 4 item y le quieres dar una separacion de 10px entre item(10x3=30)
+width: calc((100% - 30px))/4 
+si tienes 3 item y le quieres dar una separacion de 10px entre item(10x2=20)
+width: calc((100% - 20px))/3 
+Nota= la separacion siempre es una menos que la cantidad de item
+*/
+#fondocate {width: 100%;display: flex;justify-content: space-around;Flex-wrap: wrap;}
+
+#fondocate .detalle{	width: calc((100% - 10px)/2);
+             flex: none;display: flex;justify-content: center;  flex-wrap: wrap;
+			 box-shadow: 0 0 0 1px #fff, 0 0 0 2px #ccc;  box-sizing: border-box;
+    margin-bottom: 10px; padding-bottom:10px;border-radius: 15px;background-color: #515754;}
+	
+#fondocate .titulo {width:100%; text-align:center; background-color: #F1F1F1;
+    border-radius: 15px 15px 0 0; height:30px; line-height:30px;}
+#fondocate  h4 {}
+#fondocate img {border: 2px solid #ffffff;} /*le da un borde a las imagenes*/
+#fondocate .imagen{width:100%; max-width:100%; margin:0 auto;margin-top:10px;text-align: center;}	
+
+
+/*---------Lstdo Hori Pro IMG(1805) stilo-lis-hori-img-01.php---------*/
+/*Usado x Lstdo Hori Pro IMG(1805)*/
+/*modulo/stilo-lis-hori-img-01.php
+modulo/foto_lstado_hori_categoria_superiror.php*/
+
+/*si tienes 4 item y le quieres dar una separacion de 10px entre item(10x3=30)
+width: calc((100% - 30px))/4 
+si tienes 3 item y le quieres dar una separacion de 10px entre item(10x2=20)
+width: calc((100% - 20px))/3 
+Nota= la separacion siempre es una menos que la cantidad de item
+*/
+#ctn_conte_dinamico_cuadrado_titulo {width: 100%; display: flex;justify-content: space-around;Flex-wrap: wrap;}
+#ctn_conte_dinamico_cuadrado_titulo .detalle{	width: calc((100% - 10px)/2); flex: none;box-shadow: 0 0 0 1px #fff, 0 0 0 2px #ccc;  
+box-sizing: border-box;margin-bottom: 10px; display: flex;justify-content: center;  flex-wrap: wrap;padding-bottom:10px;}
+#ctn_conte_dinamico_cuadrado_titulo .titulo {width:100%; text-align:center; background-color:#A14829; color:#FFF ;height: 30px; line-height: 30px;}
+#ctn_conte_dinamico_cuadrado_titulo h4 {}
+#ctn_conte_dinamico_cuadrado_titulo img {border: 2px solid #ffffff;} /*le da un borde a las imagenes*/
+#ctn_conte_dinamico_cuadrado_titulo .imagen{width:100%; max-width:100%; margin:0 auto;margin-top:10px;text-align: center;}	
+
+/*---------Lstdo Hori 2nivel (1804) stilo-lis-hori-01.php---------*/
+#ctn_conte_dinamico_stylo_col_4{ display:flex;}
+#stylo_col_4 {padding: 15px;font-weight: bold;font-size: 12px;word-spacing: normal;text-align: center;margin-left: 10px;
+	height: 35px; border: 1px solid #cddced;background: #f7f7f7;border-radius: 10px;display: flex;align-items: center;}
+#stylo_col_4:hover {border:2px solid #2caad0;color:#e32b2b;}
+
+
+/*--------- 16) portada_Resumen (1815) portada_resumen_01.php ---------*/
+#ctn_conte_dinamico_portada_Resumen {width: 100%;display: flex;justify-content: Space-between;Flex-wrap: wrap;}
+#ctn_conte_dinamico_portada_Resumen h2{width: 100%;display: flex;padding: 10px;border-radius: 5px;
+    background-color: #005fbf;color: #ffffff; margin-bottom: 5px;font-size: 16px;}
+.ctn_portada_item{}
+.portada_item{ width: 100%;border-bottom: #999 dashed 1px;padding-top: 5px;padding-bottom: 5px;
+				display: flex;flex-direction:row; border: #e6e6e6 1px solid;  margin-bottom: 10px;}	
+/*- .portada_item:last-child {border-bottom: none;}	-*/
+ .portada_item_imagen  {flex: 0 1 15%; margin-left:5px	}	
+  .portada_item_contenido {display:flex;flex: 0 1 85%;box-sizing:border-box ; flex-wrap:wrap;margin-left: 10px;padding-right: 5px; }	
+  .portada_item_contenido_titulo { width:100%; font-weight:bold;}	
+  portada_item_contenido_detalle { width:100%;}	
+  /*Para mostrar subitem de la seccion*/
+  .portada_item_subItem { width:100%; display: flex;justify-content:flex-start;Flex-wrap: wrap;}	
+  .portada_item_subItem a{  border: 1px solid #369; padding:2px 2px; margin-top:5px; color:#000000 ; text-decoration:none; margin-left:10px; }	
+  .portada_item_subItem a:hover{background:#5CA4EC; color:#FFFFFF;text-decoration:none; }	
+/*--------- 16) Fin portada_Resumen ---------*/  
+
+/* --- 6.1) Fin Gestor de Presentación Estilo Sección Para Gestor de Presentación (Tabla estiloseccion  ccodmodulo=1800) ---*/
+
+
+
+
 /* -------- 7) Inicio Botones css------------ */
 
 #boton_css {

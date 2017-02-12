@@ -33,6 +33,7 @@
 							  ccodclase ='".$selectclase."',							  
 							  cimgpubli   ='".$imagen."',
 							  nancho      ='".$anchoimagen."', 
+							  cuni_medi_nancho='".$cuni_medi_nancho_img."',
 							  nalto       ='".$altoimagen."',
 							  curlpubli   ='".$urlimagen."',
 							  dfecinicio   ='".fechaymd($fechaini)."',
@@ -56,16 +57,18 @@
 								cesthome    ='".$cesthome."', 
 				  				ccodpage     ='".$selectpage."', 
 								cnomhome     ='".$titulo."',
-  							  cordpublica ='".$cordpublica."',1
+  							  cordpublica ='".$cordpublica."',
 						  	  ccodclase ='".$selectclase."',	
 								cimgpubli    ='".$flash."',
 								nancho       ='".$anchoflash."',
+								cuni_medi_nancho='".$cuni_medi_nancho_flash."',
 								nalto        ='".$altoflash."',
 								dfecinicio   ='".fechaymd($fechaini)."',
 								dfecfinal    ='".fechaymd($fechafin)."',
 								cubidestino  ='".$selectubicacion."' 
 								where ccodinicio ='".$idpro."' ";
 				  
+				 // echo $update;exit;
 				  db_query($update);
 		   }
 	   }
@@ -245,6 +248,32 @@
 		   }
 	   }	   
 	   /*------------Fin Formulario Buscar -----------------*/
+	   
+	   //-----  Inicio Formulario Marca Motor=12  y Marca Vehiculo=13  Table: webparametros=0014--------------
+	    elseif($seltipo=='12'  or $seltipo=='13')  
+	   {
+		   if($titulo=="") $juvame_error = " * Debe Ingresar el Nombre ";		   
+					   //--------------********
+		   else{
+			   //echo $seccionpage[0];exit;
+			   //echo $mostrar_titulo;exit;
+				 $update	= "update pagehome set 
+							  mostrar_titulo ='".$mostrar_titulo."', 
+ 							   estado    ='".$cesthome."',  
+							  cesthome    ='".$cesthome."', 
+				  				ccodpage     ='".$selectpage."',
+								cnomhome     ='".$titulo."',
+								cordpublica ='".$cordpublica."',
+							  ccodclase ='".$selectclase."',									
+								dfecinicio   ='".fechaymd($fechaini)."',
+								dfecfinal    ='".fechaymd($fechafin)."',
+								cubidestino  ='".$selectubicacion."' 
+								where ccodinicio='".$idpro."' ";				  
+				  db_query($update);				  
+		   }
+	   }	   
+	     //-----  Fin Formulario Marca Motor--------------
+	   
 	   
 	   elseif($seltipo=='6') //************ Ventana Popup
 	   {
