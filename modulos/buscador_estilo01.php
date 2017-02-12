@@ -1,4 +1,5 @@
-<?php //echo "dadasdsfsdfsdfsdf";exit;
+<?php //echo "holasss";exit;
+//echo "dadasdsfsdfsdfsdf";exit;
 //Verificar si esta cambiado tabla estiloseccion 12-03-2016  8802  Buscador      
 //buscador_estilo01.php cambiado por  buscador_01.php                           8800
 /*************************** Buscador de articulos ************************/

@@ -1,4 +1,4 @@
- <?php
+ <?php 
 	if (empty($_GET['idsec']))
 	{
 		$seccionactiva ="inicio";
@@ -7,15 +7,19 @@
 	{
 		$seccionactiva = $_GET['idsec'];
 	}
-
     $i=0;
+	//echo $mostrarurlcatebase;exit;
 	
 	//$sqlmenucab = "SELECT s.ccodseccion,s.cnomseccion,s.camiseccion,s.curlseccion,s.ctipseccion,mostrarurlcatebase FROM  seccion s, seccionmenu  su, pagemenu pm WHERE s.ccodseccion=su.ccodseccion and su.ccodmenu = pm.ccodmenu and pm.cubimenu='1' and s.ccodpage='".$codpage."' and s.cnivseccion=1 and  s.estado='1'  ORDER BY s.cordcontenido";
 	
-		$sqlmenucab = "SELECT 
+	//Muestra el Menu 1 Nivel mayuscula/minuscula
+	if ($_SESSION['menu_1Nivel_Mayuscula_Minuscula']=='Mayuscula')	{ $cnombreMayMinu=" UPPER(s.cnomseccion) AS cnomseccion ";	}
+	else {	$cnombreMayMinu=" (s.cnomseccion) AS cnomseccion ";}
+	
+	$sqlmenucab = "SELECT 
 	s.ccodsecestilo , 
-	s.ccodseccion , 
-	s.cnomseccion , 
+	s.ccodseccion ,". 
+	$cnombreMayMinu .", 
 	s.camiseccion, 
 	s.curlseccion , 
 	s.ctipseccion , 
@@ -29,7 +33,7 @@
 	ON (sm.ccodmenu = pm.ccodmenu) WHERE (pm.cubimenu =1 AND s.ccodpage=".$codpage."  
 	 AND s.cnivseccion ='1' AND s.estado ='1' AND sem.menuestilomenu ='".$menuestilomenu."')
 	  ORDER BY s.cordcontenido ASC";
-	  
+	  //echo $sqlmenucab;exit;
 	$resmenucab = db_query($sqlmenucab);
 	$nromenucab = db_num_rows($resmenucab);
 	//------------------------1 nivel----------------------	
@@ -67,9 +71,15 @@
 				case 1:
 					$enlacecab2 = "/".$rowmenucab['camiseccion']."/".$rowmenucab2['camiseccion'];							
 					//indica si mostara url de la categoria padre
-					if ($rowmenucab['mostrarurlcatebase']=="NO"){
+					//if ($rowmenucab['mostrarurlcatebase']=="NO"){
+						//$enlacecab2 = "/".$rowmenucab2['camiseccion'];							
+					//}   
+					
+					//antes era a nivel de seccion ahora es a nivel de web en tabla estilopagina	
+					//if ($mostrarurlcatebase=="NO"){
+					if ($_SESSION['mostrarurlcatebase']	=="NO"){						
 						$enlacecab2 = "/".$rowmenucab2['camiseccion'];							
-					}   					
+					}   										
 					break;
 				case 2:
 					$enlacecab2 = $rowmenucab2['curlseccion'];
@@ -91,6 +101,15 @@
 					{
 					case 1:
 						$enlacecab3 = "/".$rowmenucab['camiseccion']."/".$rowmenucab2['camiseccion']."/".$rowmenucab3['camiseccion'];
+						//antes era a nivel de seccion ahora es a nivel de web en tabla estilopagina	
+						if ($mostrarurlcatebase=="NO"){
+							$enlacecab3 = "/".$rowmenucab3['camiseccion'];							
+						}  
+					//antes era a nivel de seccion ahora es a nivel de web en tabla estilopagina	
+					//if ($mostrarurlcatebase=="NO"){
+					if ($_SESSION['mostrarurlcatebase']	=="NO"){						
+						$enlacecab3 = "/".$rowmenucab3['camiseccion'];							
+					}   										 	
 						break;
 					case 2:
 						$enlacecab3 = $rowmenucab3['curlseccion'];
@@ -108,6 +127,10 @@
 						{
 						case 1:
 							$enlacecab4 = "/".$rowmenucab['camiseccion']."/".$rowmenucab2['camiseccion']."/".$rowmenucab3['camiseccion']."/".$rowmenucab4['camiseccion'];
+							//antes era a nivel de seccion ahora es a nivel de web en tabla estilopagina	
+							if ($mostrarurlcatebase=="NO"){
+								$enlacecab4 = "/".$rowmenucab4['camiseccion'];							
+							}   	
 							break;
 						case 2:
 							$enlacecab4 = $rowmenucab4['curlseccion'];

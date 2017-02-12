@@ -1,10 +1,14 @@
 <div class="ctn_buscador">
 	<div class="select_seccion">
     	<h2>Filtrar por Seccion</h2>
+        <?php 
+			//ctipseccion= 1) Es una Seccion  2) Es un enlace o Link 
+			$sqlfiltraseccionnivel1="SELECT ccodseccion, cnomseccion, cnivseccion FROM seccion WHERE ccodpage= '".$_SESSION['page']."' and ccodmodulo='".$modulo."' and cnivseccion='1' and (ctipseccion='1' or ctipseccion='2') and estado=1 order by cordcontenido";
+			//echo $sqlfiltraseccionnivel1;exit;		
+		?>
     	<select name='selectseccion' id='selectseccion' style='font-size:12px;width:240px;' size='25' class="box" >";
             <option value='todas_secciones' selected>Todos las secciones</option>
-            <?php
-			$sqlfiltraseccionnivel1="SELECT ccodseccion, cnomseccion, cnivseccion FROM seccion WHERE ccodpage= '".$_SESSION['page']."' and ccodmodulo='".$modulo."' and cnivseccion='1' and ctipseccion='1' and estado=1 order by cordcontenido";
+            <?php			
             $sqlsec1 = db_query($sqlfiltraseccionnivel1);
             while($row1 = db_fetch_array($sqlsec1)) 
                     {
@@ -12,7 +16,9 @@
 						?>
                         <option value="<?=$cod1?>" class="color_seccion_1er_nivel"><?=$row1['cnomseccion']?></option>
                         <?php
+						//------------- 2Nivel -----------------------
 						$sqlfiltraseccionnivel2="SELECT ccodseccion, cnomseccion, cnivseccion FROM seccion WHERE ccodseccion like '".$cod1."%' and ccodmodulo='".$modulo."' and cnivseccion='2'  and ctipseccion='1'  and estado=1 order by cordcontenido";
+						//echo $sqlfiltraseccionnivel2;exit;	
                         $sqlsec2 = db_query($sqlfiltraseccionnivel2);
                         while($row2 = db_fetch_array($sqlsec2)) 
                         {
@@ -22,8 +28,8 @@
 							<?php echo "&nbsp;-".$row2['cnomseccion']?>
                         </option>
                         <?php    
-							
-                            $sqlsec3 = db_query("SELECT ccodseccion, cnomseccion, cnivseccion FROM seccion WHERE ccodseccion like '".$cod2."%' and ccodmodulo='".$modulo."' and cnivseccion='3'  and ctipseccion='1'  order by cnomseccion");
+							//------------- 3Nivel -----------------------
+                            $sqlsec3 = db_query("SELECT ccodseccion, cnomseccion, cnivseccion FROM seccion WHERE ccodseccion like '".$cod2."%' and ccodmodulo='".$modulo."' and cnivseccion='3'  and ctipseccion='1' and estado=1   order by cordcontenido");
                             while($row3 = db_fetch_array($sqlsec3)) 
                             {
   								$cod3 = substr($row3['ccodseccion'],0,20);
@@ -32,10 +38,10 @@
 							  	<?php echo "&nbsp;&nbsp;&nbsp;&nbsp;- ".$row3['cnomseccion'] ?> 
                               </option>;
                         <?php        
-						  $sqlsec4 = db_query("SELECT ccodseccion, cnomseccion, cnivseccion FROM seccion WHERE ccodseccion like '".$cod3."%' and ccodmodulo='".$modulo."' and cnivseccion='4'  and ctipseccion='1'  order by cnomseccion");
+						  $sqlsec4 = db_query("SELECT ccodseccion, cnomseccion, cnivseccion FROM seccion WHERE ccodseccion like '".$cod3."%' and ccodmodulo='".$modulo."' and cnivseccion='4'  and ctipseccion='1' and estado=1   order by cordcontenido");
                                 while($row4 = db_fetch_array($sqlsec4)) 
                                 {
-                                    echo '<option value="' . $row4['ccodseccion'] . '">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-' . $row4['cnomseccion'] . '</option>';
+                                  //  echo '<option value="' . $row4['ccodseccion'] . '">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-' . $row4['cnomseccion'] . '</option>';
                                 }
                             }
                     }

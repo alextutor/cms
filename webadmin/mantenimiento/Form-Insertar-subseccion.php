@@ -136,7 +136,7 @@ $(document).ready(function(){
                   	 	<li><label id="jform_title-lbl" for="jform_title" class="hasTip required" title="">Seccion Principal </label>/<?=crearurl_articulo($row['ccodseccion']) ?></li>
                         	
                     	<li><label id="jform_title-lbl" for="jform_title" class="hasTip required" title="">Título <span class="star">&nbsp;*</span></label>
-                        <input type="text" name="titulo" id="titulo" value="" class="inputbox required" size="40" aria-required="true" required></li>              
+                        <input type="text" name="titulo" id="titulo" value="" class="inputbox required" size="70" aria-required="true" required></li>              
                         
                         <li><label id="jform_published-lbl" for="jform_published" class="hasTip" title="" aria-invalid="false">Tipo</label>	
                         <select id="selectenlace" name="selectenlace" class="inputbox" size="1" aria-invalid="false">
@@ -224,10 +224,10 @@ $(document).ready(function(){
                 <fieldset class="panelform">
                     <ul class="adminformlist">                       
                           <li><label id="jform_title-lbl" for="jform_title" class="hasTip required" title="">Titulo</label>
-                        <input type="text" name="txttitulo" id="txttitulo" value="" class="inputbox required" size="40" aria-required="true" required></li>
+                        <input type="text" name="txttitulo" id="txttitulo" value="" class="inputbox required" size="70" aria-required="true" required></li>
 
                           <li><label id="jform_title-lbl" for="jform_title" class="hasTip required" title="">Titulo Amigable</label>
-                        <input type="text" name="amigable" id="amigable" value="" class="inputbox required" size="40" aria-required="true" required></li>                                                  
+                        <input type="text" name="amigable" id="amigable" value="" class="inputbox required" size="70" aria-required="true" required></li>                                                  
                         
                          <li><label id="jform_title-lbl" for="jform_title" class="hasTip required" title="">Tags</label>
                         <textarea id="txttags" name="txttags" rows="4" cols="55"></textarea> </li>   

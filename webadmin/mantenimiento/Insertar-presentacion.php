@@ -37,6 +37,7 @@
 				ctiphome,
 				cimgpubli,
 				nancho,
+				cuni_medi_nancho,
 				nalto,
 				curlpubli,
 				cubidestino,
@@ -54,6 +55,7 @@
 						'".$seltipo."',
 						'".$imagen."',
 						'".$anchoimagen."',
+						'".$cuni_medi_nancho_img."'
 						'".$altoimagen."',
 						'".$urlimagen."',
 						'".$selectubicacion."',
@@ -91,6 +93,7 @@
 				ctiphome,
 				cimgpubli,
 				nancho,
+				cuni_medi_nancho,
 				nalto,
 				cubidestino,
 				dfecinicio,
@@ -106,11 +109,14 @@
 				'".$seltipo."',
 				'".$flash."',				
 				'".$anchoflash."',
+				'".$cuni_medi_nancho_flash."'
 				'".$altoflash."',
 				'".$selectubicacion."',
 				'".fechaymd($fechaini). "',
 				'".fechaymd($fechafin). "',
 				'".date('Y-m-d')."')";
+				
+				//echo $insertar;exit;
 				
 				db_query($insertar);
 				if(!empty($seccionpage[0])){
@@ -466,6 +472,56 @@
 		   }
 	   }
 	   /*------------Fin Formulario Buscar------------*/
+	   
+	   //-----  Inicio Formulario Marca Motor=12  y Marca Vehiculo=13 Table: webparametros=0014 --------------
+	    elseif($seltipo=='12' or $seltipo=='13' )  
+	   {
+		   if($titulo=="") $juvame_error = " * Debe Ingresar el Codigo HTML";		   
+					   //--------------********
+		   else{
+			  
+			   //echo $seccionpage[0];exit;
+				$insertar = "insert into pagehome(
+				mostrar_titulo,
+				ccodpage,
+				cnomhome,
+				cordpublica,
+				ccodclase,
+				cesthome,
+				estado,
+				ctiphome,			
+				cubidestino,
+				dfecinicio,
+				dfecfinal,
+				dfechome)
+				values(
+				'".$mostrar_titulo."',
+				'".$selectpage."',
+				'".$titulo."',
+				'".$cordpublica."',
+				'".$selectclase."',
+				'1',
+				'1',
+				'".$seltipo."',				
+				'".$selectubicacion."',
+				'".fechaymd($fechaini). "',
+				'".fechaymd($fechafin). "',
+				'".date('Y-m-d')."')";										
+																				
+				//db_query($insertar);				
+				$sqlcontenido =mysql_query($insertar,$conexion) or die ("problema con Insertar Formulario Buscar");			   			
+							   
+				if(!empty($seccionpage[0])){
+					$selcodigo = db_query("select max(ccodinicio) as codigo from pagehome where ccodpage='".$selectpage."'");
+					$cod = db_fetch_array($selcodigo);
+					while (list ($key, $val) = each ($seccionpage) ){
+						db_query("insert into pagehomedet(ccodinicio,ccoddestino) values('".$cod['codigo']."','".$val."')");
+					}
+				} 
+		   }
+	   }
+	    //-----  Fin Formulario Marca Motor--------------
+	   
 	   
 	   elseif($seltipo=='6') //************ Ventana Popup
 	   {

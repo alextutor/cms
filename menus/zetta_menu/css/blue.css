@@ -11,21 +11,23 @@
 /*
 
 ====================== MAIN ====================== 
-1) 1er Nivel fondo alex
-2) 1er Nivel color texto alex 
-3) 1er Nivel fondo color OnmouseOver alex 
+  1) Zetta Menu  1er Nivel fondo 
+  2) Zetta Menu  1er Nivel color texto
+2.1) Zetta Menu  1er Nivel color texto pasar mouse
+  3) Zetta Menu  1er Nivel fondo color OnmouseOver
 
-4) Color textos 2do Nivel Normal sin pasar mouse
-5) Fondo 2do Nivel clase zm-multi-column 
-6) Fondo 2do Nivel OnmouseOver clase zm-multi-column 
+  4) Zetta Menu  2do Nivel Color textos  Normal sin pasar mouse
+4.1) Zetta Menu  2do Nivel Color texto  OnmouseOver
+  5) Zetta Menu  2do Nivel Fondo clase zm-multi-column
+  6) Zetta Menu  2do Nivel Fondo  OnmouseOver clase zm-multi-column  
 
 1A)  Espacio 2do Nivel entre submenus 
 8A) pone border al lado derecho 1er Nivel 
 
 */
 .zetta-menu {
-  background-color: #c93428;   /* 1) 1er Nivel fondo alex */
-  padding: 10px;
+  background-color: var(--zetta-menu-1erNivel-fondo);   /* 1) 1er Nivel fondo alex */
+  padding: 0px;
   margin: 0;
   display: inline-block;
   position: relative;
@@ -65,7 +67,7 @@
 }
 .zetta-menu.zm-full-width {
   display: flex;     /* alex estaba block */
-  Justify-content:Space-between;   
+  Justify-content:space-around;   
 }
 .zetta-menu.zm-fixed {
   position: fixed;
@@ -94,8 +96,7 @@
 .zetta-menu,
 .zetta-menu a,
 .zetta-menu a:visited {    /* 2) 1er Nivel color texto alex */
-  color: #fff;
-}
+  color:  var(--zetta-menu-1erNivel-color-texto);}
 .zetta-menu > li {
   display: block;
   vertical-align: top;
@@ -109,31 +110,30 @@
   margin-right: 0;
   float: right;
 }
-.zetta-menu > li > a {
-  font-weight: bold;
+.zetta-menu > li > a { 
   text-align:left;
   padding: 0 6px;   /* elex estaba  padding: 0 14px;*/
   line-height: 39px;
    /* border-left: 1px solid #e4513e;*/
-    border-right: 1px solid #b71e17;         /*8A) pone border al lado derecho 1er Nivel  */   
+    /* border-right: 1px solid #4EC1C6;         /*8A) pone border al lado derecho 1er Nivel  */   
 }
 
 
 .zetta-menu > li:hover,
 .zetta-menu > li.zm-active {
-  background-color: #b6221a;  /* 3) 1er Nivel fondo color pasar mouse alex */
-  background-image:-moz-linear-gradient(top,#bd251c,#ac1e17);
+  background-color:  var(--zetta-menu-1erNivel-fondo-color-OnmouseOver);  /* 3) 1er Nivel fondo color pasar mouse alex */
+  /* background-image:-moz-linear-gradient(top,#bd251c,#ac1e17);
 	background-image:-webkit-gradient(linear,0 0,0 100%,from(#bd251c),to(#ac1e17));
 	background-image:-webkit-linear-gradient(top,#bd251c,#ac1e17);
 	background-image:-o-linear-gradient(top,#bd251c,#ac1e17);
-	background-image:linear-gradient(to bottom,#bd251c,#ac1e17);
+	background-image:linear-gradient(to bottom,#bd251c,#ac1e17);*/
 	background-repeat:repeat-x;
 }
 .zetta-menu > li:hover > a,
 .zetta-menu > li.zm-active > a,
 .zetta-menu > li:hover > a:visited,
 .zetta-menu > li.zm-active > a:visited {
-  color: #ffffff;
+  color: var(--zetta-menu-1erNivel-color-texto-OnmouseOver); /* 2.1) Zetta Menu  1er Nivel color texto pasar mouse*/
 }
 .zetta-menu li {
   position: relative;
@@ -217,18 +217,17 @@
 .zetta-menu ul > li {
   min-height: 39px;
 }
-.zetta-menu ul > li a {
-  padding: 0 7px;
-  line-height: 39px;
-}
+.zetta-menu ul > li a {padding: 10 0px; line-height: 19px;  
+    border-bottom: 1px solid #C00; height: 50px; }
+ 
 .zetta-menu > li > ul,
 .zetta-menu > li > ul ul,
 .zetta-menu .zm-multi-column,
 .zetta-menu .zm-multi-column > ul ul {
   /*background-color: #5b5b5b;*/
   
-  background-color: #5b5b5b;    /* 5) Fondo 2do Nivel clase zm-multi-column */
-  background-image: linear-gradient(#626262, rgb(80, 80, 80));	
+  background-color: var(--zetta-menu-2doNivel-fondo-zm-multi-column);    /* 5) Fondo 2do Nivel clase zm-multi-column */
+ /* background-image: linear-gradient(#626262, rgb(80, 80, 80));*/	
   
   color: #555555;  
   -webkit-box-shadow: inset 0px 0px 0px 1px #eeeeee;
@@ -251,15 +250,17 @@
 .zetta-menu > li > ul ul li > a:visited,
 .zetta-menu .zm-multi-column li > a:visited,
 .zetta-menu .zm-multi-column > ul ul li > a:visited {
-  color:#FFF ;                                      /* 4) Color textos 2do Nivel Normal sin pasar mouse*/
+  color:var(--zetta-menu-2doNivel-color-texto) ;                                      /* 4) Color textos 2do Nivel Normal sin pasar mouse*/
 }
+.menu ul li:hover li a:hover, .menu ul li:hover li:hover a, .menu ul li.iehover li a:hover, .menu ul li.iehover li.iehover a {
+  color: var(--zetta-menu-2doNivel-color-texto-OnmouseOver);}   							/* 4.1) Color textos 2do Nivel OnmouseOver */		
+  												 
 .zetta-menu > li > ul li:hover,
 .zetta-menu > li > ul ul li:hover,
 .zetta-menu .zm-multi-column li:hover,
 .zetta-menu .zm-multi-column > ul ul li:hover {
-  background-color: #b6221a;     /*  Fondo 2do Nivel OnmouseOver clase zm-multi-column */
-  font-weight:bold;
-}
+  background-color: var(--zetta-menu-2doNivel-fondo-OnmouseOver-zm-multi-column);     /* 6) Fondo 2do Nivel OnmouseOver clase zm-multi-column */
+  font-weight:bold;}
 .zetta-menu > li > ul,
 .zetta-menu > li > div.zm-multi-column {
   top: 100%;
@@ -393,8 +394,7 @@
 }
 .zetta-menu > li.zm-content > div ul li:hover,
 .zetta-menu > li.zm-content-full > div ul li:hover {
-  background-color: transparent;
-}
+  background-color: transparent; }
 .zetta-menu > li.zm-content > div ul li:hover a,
 .zetta-menu > li.zm-content-full > div ul li:hover a,
 .zetta-menu > li.zm-content > div ul li:hover a:visited,

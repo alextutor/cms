@@ -8,14 +8,13 @@
 	$INC_DIR = $_SERVER ["DOCUMENT_ROOT"];		
 	 include($_SERVER['DOCUMENT_ROOT']. '/config.php');		
 	 $selectpage  = $_SESSION['selectpage'];
-	 
-	//---------------	
-	 $cCodigoPadre  = "121728122014002800000000";     //  (Padre (CHINOS)) Ingrear el Codigo de la seccion padre donde se moveran las secciones . 
-	 
-	 $CodigoaMover  = "121728122014000800000000";   // (Origen) Ingrese el codigo de la seccion a Mover. DFAC.
-	 //$secci = $selectroot;   // ccodseccion del padre
-	 
- 	 $nivel ="2" ;  // $selectnivel  -  cnivseccion del padre	 	 
+	  
+	//------Datos a Ingresar 1)$cCodigoPadre  2)$CodigoaMover 3) $nivel= Nivel del padre   ---------	
+	
+	 $cCodigoPadre  = "121728120001000000000000";     //  (Padre (CHINOS)) Ingrear el Codigo de la seccion padre donde se moveran las secciones . 	 
+	 $CodigoaMover  = "121728122005000000000000";   // (Origen) Ingrese el codigo de la seccion a Mover. DFAC.
+	 //$secci = $selectroot;   // ccodseccion del padre	 
+ 	 $nivel ="1" ;  // $selectnivel  -  cnivseccion del padre - Poner el Nivel del Padre	 	 
 	 //Conclusion  la seccion DFAC se Movera en la seccion CHINOS.mas abajo programar para que las subsecciones de DFAC tambien cambien el codigo.
 	 
 	 //121728122014002300010000 es el codigo de la subseccion DFA6920KB que se Encuentra dentro de la seccion DFAC 

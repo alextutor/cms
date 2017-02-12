@@ -1,5 +1,5 @@
 <!-- Table: webparametros  filtrar por campo ccodparametro=0004 Cabecera TOP-4 valor cvalparametro=9
- Posicion = debajo del menu  en la tabla  pagehome   se graba con cubidestino =9 --> 
+ Posicion = debajo del Slider y si este no existe se pone debajo del menu  en la tabla  pagehome   se graba con cubidestino =9 --> 
 <div id="cabecera_posicion4">
     <?php
 	$webubica="9";

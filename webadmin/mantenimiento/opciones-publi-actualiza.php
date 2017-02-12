@@ -70,13 +70,15 @@
                         <input name="articulosrelacionados" type = "checkbox" id="articulosrelacionados" value="1"  
                         <?php if ($row_contenido['articulosrelacionados'] == 1) echo 'checked'; ?>/>
                         Habilitar Articulos Relacionados                      
-                        </li>   
+                        </li> 
+                        <!--  
                          <br /> <br />
                       <li><label id="jform_published-lbl" for="jform_published" class="hasTip" title="" aria-invalid="false">Seleccione Seccion :</label>	  
                            <div style="border:1px #666666 solid; padding:5px; width:100%; height:400px; overflow:auto;background-color:#FFF;">          		    
-                              <?php  include_once $_SERVER['DOCUMENT_ROOT']. "/webadmin/mantenimiento/jq_selectseccion.php" ?>
+                              <?php // include_once $_SERVER['DOCUMENT_ROOT']. "/webadmin/mantenimiento/jq_selectseccion.php" ?>
 	                       </div> 
-                       </li>                                                       
+                       </li>
+                        -->                                                       
                         <li><label id="jform_published-lbl" for="jform_published" class="hasTip" title="" aria-invalid="false">Seo Palabras de Busqueda :</label>	                        
                         <textarea name="tags" style="width:100%;" rows="3"><?=$row_contenido['ctagcontenido']?></textarea>
                         </li>

@@ -1,3 +1,14 @@
+<!-- Alex los css y el javascrip para que funcione este menu estan una parte en index.php  no puse todos los css porque al cargar la pagina
+se veia feo cuando se formaba el menu 
+ case "3": // Menu Duramenu 
+ -->
+<link href="/menus/menu_duramenu/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<!-- DURA MENU V1.0 -->
+<link href="/menus/menu_duramenu/css/dura-main.css" rel="stylesheet" type="text/css">
+<link href="/menus/menu_duramenu/css/dura-responsive.css" rel="stylesheet" type="text/css">   
+    
+    
+<!--https://openclassrooms.com/courses/descubre-bootstrap/una-rejilla -->
 <div class="container dura-container nav-container">
           <div class="row header-bottom-row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
@@ -48,7 +59,7 @@
 	$nromenucab = db_num_rows($resmenucab);
 	//------------------------1 nivel----------------------
 	
-	while ($rowmenucab = db_fetch_array($resmenucab)) //Inicio while 1	
+while ($rowmenucab = db_fetch_array($resmenucab)) //Inicio while 1	Contenedor
 	{
 	  $i= $i+1;
 	  if ($i==1) { //si 1 
@@ -69,23 +80,23 @@
               } //fin switch 2
           $estactiva="";
           if ($rowmenucab['camiseccion']==$seccionactiva){ $estactiva= " id='active'"; } //aqui termina si
+		 // echo $rowmenucab['cnomseccion'];
           ?>        
        <!-- Aqui Inicio Insertar Los hijos   -->
        
        <!---------------- Inicio Estilo Menu multidrop  ---------------------->
   <?php 
-  //echo $rowmenucab['multidrop'];
-  switch ($rowmenucab['multidrop']) {
-	  case "4" &&  "1": // Duramenu-Categorias
-	  	 ?>
+  //echo $rowmenucab['multidrop']."--------------------------";
+  switch ($rowmenucab['multidrop']) {     // Inicio switch 1 case ($rowmenucab['multidrop'])
+	  case   "D1": // Duramenu-Categorias (Table: webparametros (ccodparametro=0021))
+	  	 ?>   
           <!-- 1 Nivel multidrop -->
           <li class="dropdown">
-              <a href="<?=$enlacecab?>"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <a href="<?=$enlacecab?>" class="class1Nivelenlace">
               <i class="fa fa-bars" aria-hidden="true"></i>
                     <?=$rowmenucab['cnomseccion']?> <span class="caret"></span>
-              </a>	             
-                        
-               <!---------------- Inicio 2  Menu ---------------------->			
+              </a>	                 
+               <!---------------- Inicio 2  Menu multidrop ---------------------->			
                 <?php				
 				$i2=0;
               $sqlmenucab2 = "SELECT ccodseccion,cnomseccion,camiseccion,curlseccion,ctipseccion FROM seccion  WHERE  ccodseccion like '".$s1."%'  and cnivseccion=2 and  estado='1' ORDER BY  cordcontenido ASC";
@@ -95,7 +106,7 @@
 			  ?>
              <ul class="dropdown-menu">
               <?php  
-			while ($rowmenucab2 = db_fetch_array($resmenucab2)) //Inicio while 2
+			while ($rowmenucab2 = db_fetch_array($resmenucab2)) //Inicio while 2 Menu 2Nivel
 			{
 				$s2 = substr($rowmenucab2['ccodseccion'],0,16);
 				$tipo2 = $rowmenucab2['ctipseccion'];
@@ -104,9 +115,15 @@
 				case 1:
 					$enlacecab2 = "/".$rowmenucab['camiseccion']."/".$rowmenucab2['camiseccion'];							
 					//indica si mostara url de la categoria padre
-					if ($rowmenucab['mostrarurlcatebase']=="NO"){
+					//if ($rowmenucab['mostrarurlcatebase']=="NO"){
+						//$enlacecab2 = "/".$rowmenucab2['camiseccion'];							
+					//}   					
+					
+					//antes era a nivel de seccion ahora es a nivel de web en tabla estilopagina	
+					//if ($mostrarurlcatebase=="NO"){
+					if ($_SESSION['mostrarurlcatebase']	=="NO"){		
 						$enlacecab2 = "/".$rowmenucab2['camiseccion'];							
-					}   					
+					}   										
 					break;
 				case 2:
 					$enlacecab2 = $rowmenucab2['curlseccion'];
@@ -115,79 +132,35 @@
 				if ($i2==5 or $i2==10 or $i2==15) {					
 				?>	                
                 <?php } ?>
-		  		<li><a href="<?=$enlacecab2 ?>"><i class="fa fa-home" aria-hidden="true"></i><?=$rowmenucab2['cnomseccion']?> </a>
-                
-              
-                <!---------------- Inicio 3  Menu drop_right ----------------------> 
-                 <div class="container-fluid dropdown-menu-shopping"> <!-- Inicio Contenedor 3Nivel -->
-                  
-                <?php   
-			    $i3_2=0;           
-               	$sqlmenucab3_2 = "SELECT ccodseccion,cnomseccion,camiseccion,curlseccion,ctipseccion FROM seccion  WHERE  ccodseccion like '".$s2."%'  and cnivseccion=3 and  estado='1' ORDER BY cordcontenido ASC   ";				
-				$resmenucab3_2 = db_query($sqlmenucab3_2);
-				$nromenucab3_2 = db_num_rows($resmenucab3_2);
-				//echo $sqlmenucab3_2 ."<br/> Nro registros: ". $nromenucab3_2 ; exit;
-				?>
-				<?php if ($nromenucab3_2>0){?> <div class="row">	  <?php } ?>  <!-- Fin SI -->     
-                <?php					
-				while ($rowmenucab3_2 = db_fetch_array($resmenucab3_2)) 
-				{
-					$i3_2= $i3_2+1;
-					$s3 = substr($rowmenucab3_2['ccodseccion'],0,20);
-					$tipo3_2 = $rowmenucab3_2['ctipseccion'];
-					switch($tipo3_2)
-					{
-					case 1:
-						$enlacecab3_2 = "/".$rowmenucab['camiseccion']."/".$rowmenucab2['camiseccion']."/".$rowmenucab3_2['camiseccion'];
-						break;
-					case 2:
-						$enlacecab3_2 = $rowmenucab3_2['curlseccion'];
-						break;
-					}
-					//echo "<li><a href='".$enlacecab3."'>".$rowmenucab3[cnomseccion]."</a>";
-				 ?> 
-                 	 <!--
-					<h3><a href='<?=$enlacecab3_2?>'><?=$rowmenucab3_2['cnomseccion']?></a></h3>  -->
-                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                      <h3><a href='<?=$enlacecab3_2?>'><?=$rowmenucab3_2['cnomseccion']?></a></h3>
-                      <!--
-                      <ul>
-                        <li><a href="#">Caps</a></li>
-                        <li><a href="#">Socks</a></li>
-                        <li><a href="#">Underwear</a></li>
-                        <li><a href="#">Suits &amp; Blazer</a></li>
-                        <li><a href="#">Sweaters</a></li>
-                      </ul>
-                       -->
-                    </div>
-                                    
-				<?php
-				} //Fin  while  3er  Menu drop_right               
-			   ?>
-               <?php if ($nromenucab3_2>0){ ?> </div> <?php } ?>            
-                  
-            </div> <!-- Fin Contenedor 3Nivel -->
-              <!---------------- Fin 3  Menu drop_right ---------------------->               
-              
-              
+		  		<li><a href="<?=$enlacecab2 ?>"><i class="fa fa-home" aria-hidden="true"></i><?=$rowmenucab2['cnomseccion']?> </a>                         
+                    <!---------------- Inicio Menu 3Nivel drop_right Por Marca de Vehiculo ----------------------> 
+                    <?php include $_SERVER['DOCUMENT_ROOT']."/menus/menu_duramenu/marca_vehiculo_3nivel-Categorias.php";	?> 
+                    <!---------------- Fin    Menu 3Nivel drop_right Por Marca de Vehiculo---------------------->  
+                        
+                   <!---------------- Inicio Menu 3Nivel drop_right Por Marca de Motor ----------------------> 
+                    <?php include $_SERVER['DOCUMENT_ROOT']."/menus/menu_duramenu/marca_motor_3nivel-Categorias.php";	?> 
+                   <!---------------- Fin Menu 3Nivel drop_right Por Marca de Motor ---------------------->            
                             
           		</li> <!-- Fin Li 2Nivel -->
               <?php
- 				} // Fin while 2 Menu Nivel2
+ 			} // Fin while 2 Menu Nivel2
  				?>      
              </ul>   <!-- Fin UL 2Nivel Multidrop -->            
-            <!---------------- Fin 2  Menu ---------------------->                                 
-            
-            
-             
+            <!---------------- Fin 2  Menu multidrop---------------------->               
 		  </li>	 <!-- Fin Li 1Nivel Multidrop -->
-	
+		</a>
    <?php
-     } // Fin switch 
+   	break;	
+   	case   "D2": // Duramenu-Classic Dropdown (Table: webparametros (ccodparametro=0021))
+	?>  
+     <!---------------- INICIO BOOTSTRAP CLASSIC DROPDOWN ----------------------> 
+     <?php include $_SERVER['DOCUMENT_ROOT']."/menus/menu_duramenu/Duramenu-Classic-Dropdown-1Nivel.php";	?> 
+     <!---------------- FIN BOOTSTRAP CLASSIC DROPDOWN ---------------------->   
+    <?php 
+		break;    	
+     } // Fin switch 1 case ($rowmenucab['multidrop'])
     ?>   
-
-            <!-- Aqui Termina Insertar Los hijos   -->       
-              
+     <!-- Aqui Termina Insertar Los hijos   -->                     
  <?php
  } // Fin while 1 Contenedor
  ?>           

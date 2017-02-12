@@ -5,8 +5,13 @@ $getNews_sql = "SELECT * FROM  contenido c, seccioncontenido s WHERE c.ccodconte
 //echo $getNews_sql;exit;
 //echo $rowads['ccodseccion'];exit;
 $getNews = mysql_query($getNews_sql);
+
+$sqlstylo   = "Select * FROM estiloclases  where ccodclase='".$rowads['ccodclase']."'";	
+$rsstylo = db_query($sqlstylo);
+$rowstylo  = db_fetch_array($rsstylo);
+
 ?>
-<div class="portada_contenido">
+<div id="<?=$rowstylo['cdesclase']?>">
   <?php while ($row = mysql_fetch_array($getNews)) {
     	$sqlxsex  = db_query("Select cnomseccion,camiseccion FROM seccion where ccodseccion='".$rowads['ccodseccion']."' ");
 		$rowxsex  = db_fetch_array($sqlxsex); 

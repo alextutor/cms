@@ -1,3 +1,52 @@
+/* -- 0.1) Inicio Variables rysdistribuciones */ 
+:root {
+/* Menu */
+/* ---Todo esto se aplica en dura-main.css  */
+ --color-fondo-1er-nivel: #3896B3;--color-fondo-1er-nivel-pasar-mouse: #39B4E1;
+/* 5) Inicio Miga */
+--webcontenido_h1:#F96A1B;
+/* 9) Inicio Contactenos */
+--der-container-h2:#39B4E1;
+/* 5) Inicio Miga */
+--breadcrumb:#FFFFFF;
+--a_breadCrumb :#F96A1B;
+--a_breadCrumb_visited:#F96A1B;
+/* 12) inicio Menu lateral */
+--menu-lateral-menuizqtitulo:#4EC1C6; 					/*Fondo Titulo */
+--menu-lateral-fondo-secciones-nivel2:#9BDCDF; 			/*Fondo Secciones 2Nivel*/
+--menu-lateral-borde-secciones-nivel2:#3896B3; 			/*Borde Secciones 2Nivel*/
+--menu-lateral-color-fondo-2nivel-pasar-mouse:#39B4E1;	/* Color de fondo 2Nivel al pasar el mouse */
+--menu-lateral-color-texto-2nivel:#020608;				/* Color del texto 2Nivel */
+--menu-lateral-color-texto-2Nivel-pasar-mouse:#FFFFFF;	/* Color del texto 2Nivel al pasar el mouse */
+/* Menu zetta_menu blue.css */
+--zetta-menu-1erNivel-fondo:#4EC1C6;						/* 1) Zetta Menu  1er Nivel fondo */
+--zetta-menu-1erNivel-color-texto:#fff;						/* 2) Zetta Menu  1er Nivel color texto */
+--zetta-menu-1erNivel-fondo-color-OnmouseOver:#9BDCDF;		/* 3) 1er Nivel fondo color OnmouseOver alex */
+--zetta-menu-fondo-2doNivel-zm-multi-column	:#4EC1C6;		/* 5) Zetta Menu   Fondo 2do Nivel clase zm-multi-column */
+--zetta-menu-fondo-2doNivel-OnmouseOver-zm-multi-column	:#F19909;	/* 6) Fondo 2do Nivel OnmouseOver clase zm-multi-column */
+
+/* Inicio Menu menu-duramenu (dura-main.css) */																
+--duramenu-categorias-color-fondo-3erNivel:#fff;  				 /* 5) Duramenu-Categorias color fondo 3erNivel */
+--duramenu-categorias-color-texto-3erNivel:#000000;  			 /* 6) Duramenu-Categorias color Texto 3erNivel */
+--duramenu-categorias-color-fondo-3erNivel-OnmouseOver:#fb244f;  /* 7) Duramenu-Categorias color Fondo 3erNivel pasar mouse */
+--duramenu-categorias-color-texto-3erNivel-OnmouseOver:#fff;     /* 8) Duramenu-Categorias color Texto 3erNivel pasar mouse */
+--duramenu-categorias-conte-ancho-3erNivel:500px;     			 /* 9) Duramenu-Categorias el ancho del contenedor del 3erNivel 
+																(utilizado x menu 1nivel Repuestos por Marca de Vehiculo)*/
+--duramenu-categorias-conte-ancho-3erNivel-2:400px;     		/* 9.1) Duramenu-Categorias el ancho contenedor del 3erNivel 
+																(utilizado x menu 1nivel Repuestos por Marca de Motor)*/		
+--duramenu-categorias-conte-ancho-2doNivel:270px;				/* 13) Duramenu-Categorias el Ancho del 2doNivel y el top entre 2do y 1erNivel  
+																(utilizado x menu 1nivel Repuestos por Marca de Motor) */
+
+/* ver dura-main.css
+/* 11) alex aqui se pone el borde inferior del 3er Nivel*/
+/* 11.1) controla la separacion de los submenus  h3*/
+/* 12) Menu te sigue con el scroll position: fixed;*/
+/* ----------------------  Fin  Menu menu-duramenu (dura-main.css) */																
+}  						
+/* --modo uso  .menu ul { background-color: var(--duramenu-categorias-color-fondo-3erNivel);}*/
+/* -- 0.1) Fin  Variables rysdistribuciones */ 
+
+
 /* --------------------------------- 1) Inicio General -----------------*/
 @charset "utf-8";
 @import url(http://fonts.googleapis.com/css?family=Roboto);
@@ -10,15 +59,12 @@ p {line-height: 1.7;margin-bottom: 10px;  }
 
 /* -------- 8 Inicio inicializando Propiedades  ------------ */
 * { margin: 0; padding: 0;}
-h1 { font-size: 1.8em; color: #e64c0f; }
-h2 { font-size: 1.5em !important;   }
-h3 { font-size: 1.2em; }
-
-hr { width: 100%;border: 1px solid #71a73e; margin-bottom: 10px;}
-
+h1 { font-size: 1.3em !important; color: #e64c0f; }
+h2 { font-size: 1em !important; }
+h3 { font-size: 1em !important;}
+hr { width: 100%;border: 1px solid #66B47B !important; margin-bottom: 10px;}
 /* -------- Fin inicializando Propiedades------------ */
 /* --------------------------------- 1) Fin General -----------------*/
-
 
 /* ---------------- 1.1) Inicio Extructura  ------------------------------- */
 
@@ -26,7 +72,7 @@ body
 {  font-family: 'Roboto', sans-serif;
     font-size: 13px;line-height: 18px;text-align: justify;margin:0 auto;
 	
-	background-color: #cdd3c5;		
+	background-color: #cdd3c5;
     background-image: url("/imagen/12172812/bg-top.jpg");
     background-repeat: no-repeat;
     background-position: center top;
@@ -49,7 +95,7 @@ body
 /* Fin background */
 
 #warp{
-	width:90%;max-width:1024px;margin:0px auto;background-color:#fff;margin-bottom:10px;margin-top:20px;			
+	width:90%;max-width:1024px;margin:0px auto;background-color:#fff;margin-bottom:10px;margin-top:-10px;			
 	border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;box-shadow: 0 0 24px rgba(0,0,0,.8); 	
 	display:flex;flex-wrap:wrap;flex-direction:row;	border-radius: 10px;} 
 #cuerpo {overflow: hidden;margin: 0px auto 0px auto;padding:0px;background-color: #fff;padding-top:5px;
@@ -60,24 +106,24 @@ body
 
 #ladocentro_soloizqui { /*cuando se muestra solo el lado izquierdo y el centro*/
 	padding-right: 5px;margin-bottom:10px;display:flex;
-	flex:0 1 75%;	/*propiedad flex tiene tres parametros(flex grow,flex-shrink,flex-basic)*/
+	flex:1;	/*propiedad flex tiene tres parametros(flex grow,flex-shrink,flex-basic)*/
 	/*flex:1 ; /*cuando se quiere mantener eltamaño del otro lado como columna derecha ancho 200px*/
 	flex-direction:column;  /* si no se pone esto el contenido se pone como filas  y las migas se ven mal*/
     margin-left: 5px;order: 2;}
 
 #ladocentro_solodere { /* LADO CENTRO cuando se muestra solo el lado derecho y el centro*/
 	padding-right: 5px;margin-bottom:10px;display:flex;
-	flex:0 1 75%;	/*propiedad flex tiene tres parametros(flex grow,flex-shrink,flex-basic)*/
+	flex:1;	/*propiedad flex tiene tres parametros(flex grow,flex-shrink,flex-basic)*/
 	/*flex:1 ; /*cuando se quiere mantener eltamaño del otro lado como columna derecha ancho 200px*/
 	flex-direction:column;  /* si no se pone esto el contenido se pone como filas  y las migas se ven mal*/
     margin-left: 5px;}
 
 /* columnaizquierda =flex: 1 ; columnaderecha = flex: 1 ; ladocentro= flex: 3 (3 veces más espacio) .*/
 #columnaizquierda{padding:0px;text-align: left; box-sizing:border-box ;margin-bottom:10px;	
-	 display:flex;flex: 1;order:1;flex-wrap:wrap;justify-content:flex-start;  flex-direction:column; }
+	 display:flex;flex:0 0 200px;order:1;flex-wrap:wrap;justify-content:flex-start;  flex-direction:column;margin-left:5px }
 #columnaderecha { /* LADO DERECHA */
 	padding:0px;text-align: left;margin-bottom:10px; box-sizing:border-box ;  
-	display:flex;flex: 1;order:3; flex-wrap:wrap;justify-content:flex-start;  flex-direction:column;		
+	display:flex;flex:0 0 200px;order:3; flex-wrap:wrap;justify-content:flex-start;  flex-direction:column;		
 }
 #ladocentro {padding-right: 5px; margin-bottom: 10px;box-sizing:border-box ; 
 			display: flex;flex: 2;order:2;flex-direction: column;}
@@ -100,11 +146,12 @@ body
 /* ---------------- 2) Inicio Menu Configuracion General ----------------*/
   /* -- ****** Estilos Generales del Menu ********* --- */ 
 	.ctn-menu{ width:100%; z-index:800;}
-	.menu{ width:100%;}
 	.ctn-menu label{font-size: 30px;cursor: pointer;display: none;}
 	.ctn-menu label:hover{cursor:pointer;background: rgba(0,0,0,0.3);}
 	
 	#btn-menu 	{ display: none;}
+	
+	.menu{ width:100%;}
 @media all and (max-width: 768px){
 	.ctn-menu label{width: 97%;padding: 10px 10px;display: flex;justify-content: flex-start;}
 	.ctn-menu .titulomenu	{ margin-left:10px;line-height: 30px; color:#FFF; font-size:20px;}	
@@ -125,11 +172,9 @@ body
 
 /* ---------------- 2.1) Fin Menu Pie ----------------*/
 
-
 /* ---------------- 3) Inicio pie-abajo.php  ---------------- */
 
-	#piecontenido{overflow: hidden;margin: 0px auto 0px auto;padding:0px;width:980px;} 
-
+	#piecontenido{ width: 90%; display: flex;justify-content: center;} 	
 	/* Contenedor general */
 	footer#PiePrincipal{width: 90%;max-width:1024px;display:flex;flex-wrap:wrap;Justify-content:Space-between;   
 	box-sizing  : border-box;padding: 5px 0px;margin:0 auto;background-color:#D8D6D7;margin-bottom: 10px;border-radius: 10px;}
@@ -138,46 +183,45 @@ body
 	.cont_pie_gest {width:100%;margin:0 auto;display: flex;flex-wrap:wrap;Justify-content: space-between;}	
 	
 	.cont_pie_gest a:hover {color: rgba(3, 8, 10, 0.91);font-weight:bold;font-size:12px;}
-	.cont_pie_gest a:visited {text-decoration: none;color: #66290F;}	
-	.cont_pie_gest a {text-decoration: none;color: #66290F;}
+	.cont_pie_gest a:visited {text-decoration: none;color: #6B6664;}	
+	.cont_pie_gest a {text-decoration: none;color: #6B6664;}
 	/* Lado izquierda*/
 	
 	.cont_pie_gest .conizq {display:flex;flex:0 0 30%;box-sizing:border-box;padding:5px;
-	text-align:center;color: #fff;align-items: center;font-size: 22px;}
+	text-align:center;color: #66290F;align-items: center;font-size: 22px;}
 	
 	.cont_pie_gest .conizq p {line-height:30px;}
 	.cont_pie_gest .conizq .titupie{font-style: italic; font-weight: bold;
-	 font-family: 'Times New Roman';}
+	 font-family: 'Times New Roman';text-shadow:2px 1px 6px rgba(0,0,0,0.3);}
 
 	/* Lado Derecha*/	
-	.cont_pie_gest .condere {display:flex;flex:0 0 70%;box-sizing:border-box;padding:5px;color:#fff; flex-direction: column;}		
+	.cont_pie_gest .condere {display:flex;flex:0 0 70%;box-sizing:border-box;padding:5px;color:#66290F; flex-direction: column;}		
 	
 	.cont_pie_gest .menuabajo {width:100%;margin:0 auto;margin-top:5px;margin-bottom:10px;margin-left: 30px;}
-	.cont_pie_gest  .direccion {width:100%;margin:0 auto; margin:10px 0px;text-align:center;}
+	.cont_pie_gest  .direccion {width:100%;margin:0 auto; margin:10px 0px;text-align:center;text-shadow: 2px 4px 3px rgba(0,0,0,0.3);}
 	.cont_pie_gest  .contacto {width:100%;margin:0 auto; margin:10px 0px;text-align:center;letter-spacing:1px;}
 
 	.cont_contycopry{font-family: 'Lato', sans-serif;font-size:13px;width:100%;float: right;margin:0 auto;margin-bottom:10px;}	
 	
-	.Copyright{	/*float:left;*/	text-align:center;}
-	.contador{text-align:center;margin-left:10px;color: #66290F;text-align:center;margin-top: -3px;margin-bottom:5px;
+	.Copyright{	/*float:left;*/	text-align:center; color:#6B6664}
+	.contador{text-align:center;margin-left:10px;color: #6B6664;text-align:center;margin-top: -3px;margin-bottom:5px;
 		font-size:13px;width:100%;}
 	.visihoyconta { float:left; width:40%;text-align: right;}
 	.VisiTotalconta { float:left; width:50%; margin-left:10px;text-align: left;}
 /* ---------------- 3) Fin Pie  ------------------------------- */
 
 /* ---------------- 4) Inicio cabecera-slider.php  ---------------- */
-
 header, footer, aside, nav, article, section, form { display: block; }
-header#cabecera{padding-top:0px;text-align: center;display:flex;flex-wrap:wrap;width: 100%;
-width: 90%; max-width: 1024px;  margin: 0px auto;}
+header#cabecera{padding-top:0px;text-align: center;display:flex;flex-wrap:wrap;width: 90%;max-width: 1024px;margin: 0px auto 0px auto;}
 header#cabecera .ctnlogo{width:100%;display: flex;justify-content: space-between; 
 flex-direction: row; padding:5px 5px; box-sizing:border-box  }
 header#cabecera .izqlogo{width:40%;display: flex;align-items: center; margin-left:10px;}
-header#cabecera .derelogo{width:60%;display: flex;align-items: center;}
-header#cabecera .derelogo .atencioncli{width: 50%;display: flex;justify-content: flex-end;align-items: center;
-    font-weight: bold;font-size: 18px;}
+header#cabecera .derelogo_100{width:100%;display: flex;align-items: center;flex-wrap: wrap;}
+header#cabecera .derelogo{width: 60%;display: flex;align-items: center; justify-content: flex-end;}
+header#cabecera .derelogo .atencioncli{width: 60%;display: flex;font-weight: bold; font-size: 16px;
+text-shadow: 2px 4px 3px rgba(0,0,0,0.3);font-size: 18px;font-weight: bold;font-family: 'Arial Black';}
 header#cabecera .derelogo .atencioncli img{ margin-right:10px;}
-header#cabecera .derelogo .redes{ width: 50%;display: flex;justify-content: center;}
+header#cabecera .derelogo .redes{ width: 30%;display: flex;}
 header#cabecera .derelogo .redes img{ float:right;}
 header#cabecera .derelogo .redes .textoredes{ float: left;width: 80%;text-align: right;padding-top: 5px;}
 
@@ -192,60 +236,34 @@ justify-content: space-between;}
 
 /* ---------------- 4) Fin cabecera-slider.php  ---------------- */
 
-
 /* ---------------- 5) Inicio Miga  --------------------------- */
 #webencabezado {margin-right:20px;margin-left:20px;margin-top:10px;text-align:left;display:flex;margin-bottom:20px;}
-#webencabezado .miga {width: 100%;border-bottom: #000000 dashed 1px; }
+#webencabezado .miga {width: 100%;border-bottom: #000000 dashed 1px;    padding-bottom: 15px; }
 
 /* inicio breadcrumbs */
-a.breadCrumb {color: #048EC7;font-weight: bold;font-size: 14px;}
-a.breadCrumb:visited {text-decoration: none;color: #A33641;}
+.breadcrumb {background-color: var(--breadcrumb) !important;}
+a.breadCrumb {color: var(--a_breadCrumb);font-weight: bold;font-size: 14px;}
+a.breadCrumb:visited {text-decoration: none;color: var(--a_breadCrumb_visited);}	
 img.breadCrumbIMG {margin-left: 5px;margin-right: 5px;width: 11px;height: 9px;}
-	
 /* fin breadcrumbs */
 
 /* ---------------- Inicio Contenido Cuerpo ---------------- */
-#webcontenido {margin-left:5px;margin-right:5px;margin-top:15px;}
-#webcontenido h1 {text-align:center; line-height:20px; padding:20px 0px; color: red; font-weight:bold;}
+#webcontenido {margin-left:5px;margin-right:5px;margin-top:5px;}
+#webcontenido h1 {text-align:center; line-height:10px; padding:0px 0px; color: color:var(--webcontenido_h1); font-weight:bold;margin-top:5px !important; }
 /* ---------------- Fin Contenido Cuerpo ------------------- */
 
 /* ---------------- Inicio Redes utilizado en columnacentro.php---------------- */
 .comentarios-facebook{ margin:0  auto 120px auto; width:90%}
 
-
 /* ---------------- 5) Fin  Miga  ----------------------------- */
 
-
-/* --- 6) Inicio Clase Presentacion y Categorias Utilizan la mismos estilos Tabla estiloclases---*/
+/* -------------------------- 6) Inicio Clase seccion -----------------------*/
 
 /*---------(1)---------*/
-#art_listado_01 {
-	width:calc((100% - 10px)/2);
-	flex:none;
-	box-shadow: 0 0 0 1px #fff,
-	            0 0 0 2px #ccc;
-	box-sizing  : border-box ; 			
-	margin-bottom:10px;
-	display:flex;
-	justify-content:center;
-	flex-wrap:wrap;
-	padding:1em 0;
-}
-		
-#art_listado_01 .titulo {	
-	/*background-color: #f5f5f5;*/
-	margin-bottom:10px;
-	width:100%;
-}
-#art_listado_01 h4 {
-  color: #333333;
-  font-size: 14px;
-  font-weight: bold; 
-  margin: 0;
-  text-align: center;
-  text-shadow: 0 1px 0 #FFFFFF;
-}
-
+#art_listado_01 {width:calc((100% - 10px)/2);flex:none;box-shadow: 0 0 0 1px #fff,0 0 0 2px #ccc;
+	box-sizing  : border-box ;margin-bottom:10px;display:flex;justify-content:center;flex-wrap:wrap;padding:1em 0;}		
+#art_listado_01 .titulo {/*background-color: #f5f5f5;*/	margin-bottom:10px;	width:100%;}
+#art_listado_01 h4 {color: #333333;font-size:14px;font-weight:bold;margin: 0;text-align: center;text-shadow: 0 1px 0 #FFFFFF;}
 /*---------(2)---------*/
 #contenido {width: 100%;	background-color: #ffffff;border: 1px solid #D5D5D5;padding: 5px 5px;
 	margin: 0 auto;margin-bottom:20px; box-sizing:border-box;}
@@ -270,44 +288,10 @@ margin-left: 5px;}
 #enlaces_pie .enlaces_pie_titulo {width:120px; float:left; background-color:#333;}
 #enlaces_pie .enlaces_pie_detalle { float:left; margin-left:10px;margin-top: 7px;}
 
-/*---------(4)---------*/
-
-/*modulo/stilo-lis-hori-img-01.php
-modulo/foto_lstado_hori_categoria_superiror.php*/
-
-/*si tienes 4 item y le quieres dar una separacion de 10px entre item(10x3=30)
-width: calc((100% - 30px))/4 
-si tienes 3 item y le quieres dar una separacion de 10px entre item(10x2=20)
-width: calc((100% - 20px))/3 
-Nota= la separacion siempre es una menos que la cantidad de item
-*/
-#fondocate {width: 100%;display: flex;justify-content: space-around;Flex-wrap: wrap;}
-
-#fondocate .detalle{	width: calc((100% - 10px)/2);
-             flex: none;display: flex;justify-content: center;  flex-wrap: wrap;
-			 box-shadow: 0 0 0 1px #fff, 0 0 0 2px #ccc;  box-sizing: border-box;
-    margin-bottom: 10px; padding-bottom:10px;border-radius: 15px;background-color: #515754;}
-	
-#fondocate .titulo {width:100%; text-align:center; background-color: #F1F1F1;
-    border-radius: 15px 15px 0 0; height:30px; line-height:30px;}
-#fondocate  h4 {}
-#fondocate img {border: 2px solid #ffffff;} /*le da un borde a las imagenes*/
-#fondocate .imagen{width:100%; max-width:100%; margin:0 auto;margin-top:10px;text-align: center;}	
-
 /*---------(5)---------*/
 #inicio{loat: left;	margin: 0px;padding: 0px;width: 100%;margin-top: 7px;}
-#inicio .inicio_titulo{
-	background-color: #a7d34b;
-	color: #000;
-	margin-bottom: 5px;
-	padding: 5px;
-	height: 22px;
-	border: #a7d34b 1px solid;
-	text-align:center;
-	font-weight:bold;	
-	-webkit-border-radius: 11px;
-	/* border-radius: 11px; */
-}
+#inicio .inicio_titulo{background-color: #a7d34b;color: #000;margin-bottom: 5px;padding: 5px;height: 22px;
+	border: #a7d34b 1px solid;text-align:center;font-weight:bold;-webkit-border-radius: 11px;/* border-radius: 11px; */}
 #inicio .inicio_detalle{}
 /*---------(6)---------*/
 ul.lista_hori_1 { display: inline-block;list-style: none outside none;margin: 0;padding: 0;}
@@ -320,119 +304,19 @@ ul.lista_hori_1 .info-image {padding: 10px;}
 #lista_hori_1_titulo .titulo {padding: 10px;}
 
 /*---------(8)---------*/
-#portada {
-width: 99%;
-border-radius: 11px;
--moz-border-radius: 11px;
--webkit-border-radius: 11px;
-margin: 0 auto;
-padding:10px 5px;
-margin-bottom: 15px;
-margin-top: 7px;
-clear:both;
-}
-#portada .portada_titulo{
-background-color: #93b5bd;
-color: #000;
-margin-bottom: 5px;
-padding: 5px;
-height: 22px;
-border: #93b5bd 1px solid;
-text-align: center;
-font-weight: bold;
--webkit-border-radius: 11px;
-border-radius: 11px;
-}
-/*---------(9)---------*/
-#portada-laterales {
-width: 96%;
-border: 2px solid #e5794c;
-background-color: #F6FAFA;
-box-shadow: #aaa 0 0 10px;
-
-border-radius: 11px;
-margin: 0 auto;
-padding:10px 2px;
-margin-top: 15px;
-margin-bottom: 15px;
-border-top: 30px solid #e5794c;
-border-bottom:1px solid #e5794c;
-box-sizing  : border-box;
- display:flex;Justify-content:Space-between;Align-items:center;    Flex-wrap: wrap; flex:0 1 auto;    
-   
-}
-#portada-laterales .portada-laterales_titulo{height: 20px;color:#FFF;width: 100%;text-align: center;}
-#portada-laterales .portada-laterales_detalle {width:100%;margin-top:-15px;text-align: center;}
-#portada-laterales h2{color:#FFF;margin-top: -33px;}
-/*---------(10)---------*/
-#saludos {
-width: 99%;
-margin: 0 auto;
-margin-bottom: 15px;
-}
-#saludos .saludos_titulo{
-clear: both;
-height: 20px;
-margin-bottom: 10px;
-padding-bottom: 15px;
-text-align:center;
-color:#5096c6;	
-}
-#saludos .saludos_detalle {width:100%; margin-top:30px;}
-/*---------(11)---------*/
-#ctn_conte_dinamico_stylo_col_4{ display:flex;}
-#stylo_col_4 {
-    padding: 15px;
-    font-weight: bold;
-    font-size: 12px;
-    word-spacing: normal;
-    text-align: center;
-    margin-left: 10px;
-    height: 35px;
-    border: 1px solid #cddced;
-    background: #f7f7f7;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-}
-#stylo_col_4:hover {border:2px solid #2caad0;color:#e32b2b;}
-/*---------(12 titulo_portada)---------*/
-
+#portada {width: 99%;border-radius: 11px;-moz-border-radius: 11px;-webkit-border-radius: 11px;margin: 0 auto;padding:10px 5px;
+margin-bottom: 15px;margin-top: 7px;clear:both;}
+#portada .portada_titulo{background-color: #93b5bd;color: #000;margin-bottom: 5px;padding: 5px;height: 22px;border: #93b5bd 1px solid;
+text-align: center;font-weight: bold;-webkit-border-radius: 11px;border-radius: 11px;}
 /*---------(13 Vacio)---------*/
 #vacio{width: 99%;margin: 0 auto;margin-bottom: 5px;}
 #vacio .vacio_detalle{}
 #vacio p{margin: 0;padding: 0;}
 #vacio h1{ text-align:center; font-weight:bold; color:#0033FF;}
-#cong_lista {width:80%;margin:0 auto; text-align: center;display:flex;
-  justify-content:space-around;flex-wrap:wrap;}
-
-/*---------(14)---------*/
-/*modulo/stilo-lis-hori-img-01.php
-modulo/foto_lstado_hori_categoria_superiror.php*/
-
-/*si tienes 4 item y le quieres dar una separacion de 10px entre item(10x3=30)
-width: calc((100% - 30px))/4 
-si tienes 3 item y le quieres dar una separacion de 10px entre item(10x2=20)
-width: calc((100% - 20px))/3 
-Nota= la separacion siempre es una menos que la cantidad de item
-*/
-#cuadrado_titulo {width: 100%; display: flex;
-    justify-content: space-around;Flex-wrap: wrap;}
-
-#cuadrado_titulo .detalle{	width: calc((100% - 10px)/2);
-             flex: none;  	box-shadow: 0 0 0 1px #fff, 0 0 0 2px #ccc;  box-sizing: border-box;
-    margin-bottom: 10px; display: flex;justify-content: center;  flex-wrap: wrap;
-	padding-bottom:10px;}
-	
-#cuadrado_titulo .titulo {width:100%; text-align:center; background-color:#A14829; color:#FFF ;
- height: 30px; line-height: 30px;}
-#cuadrado_titulo h4 {}
-#cuadrado_titulo img {border: 2px solid #ffffff;} /*le da un borde a las imagenes*/
-#cuadrado_titulo .imagen{width:100%; max-width:100%; margin:0 auto;margin-top:10px;text-align: center;}	
+#cong_lista {width:80%;margin:0 auto; text-align: center;display:flex;justify-content:space-around;flex-wrap:wrap;}
 
 /*--------- 15) contenedor_derecha)---------*/
 #contenedor_derecha { display:flex;width: 100%; justify-content: flex-end; padding-right:10px; box-sizing:border-box;}
-
 
 /*------- Inicio  CONTACTENOS Portada --------------- */	
 #m_cont_late {width: 100%;margin-top: -40px;background: transparent url(/imagen/para-todos/rec_contacto.gif) no-repeat 100% 0%;}
@@ -457,21 +341,6 @@ a.phone .nrocelular{ margin-left:30px;}
 </div>
 /*------- Fin  CONTACTENOS Portada --------------- */	
 
-/*--------- 16) portada_Resumen ---------*/
-.portada_Resumen {width: 100%;display: flex;justify-content: Space-between;Flex-wrap: wrap;}
-.portada_Resumen_titulo {width: 100%;display: flex;padding: 10px;border-radius: 5px;
-    background-color: #005fbf;color: #ffffff; margin-bottom: 5px;}
-.portada_contenido{padding: 5px;margin: 0px auto 0px auto; border: #e6e6e6 1px solid;  margin-bottom: 10px;
-    width: 100%; display:flex;Flex-wrap: wrap; }
-.portada_item{ width: 100%;border-bottom: #999 dashed 1px;padding-top: 5px;padding-bottom: 5px;
-				display: flex;flex-direction:row; flex-wrap:wrap;}	
-.portada_item:last-child {border-bottom: none;}	
-
- .portada_item_imagen  {flex: 0 1 15%;	}	
-  .portada_item_contenido {display:flex;flex: 0 1 85%;box-sizing:border-box ; flex-wrap:wrap; }	
-  .portada_item_contenido_titulo { width:100%; font-weight:bold;}	
-  portada_item_contenido_detalle { width:100%;}	
-/*--------- 16) Fin portada_Resumen ---------*/  
 
 /*--------- 17) Inicio Fotos_circulos)---------*/
 	/*https://www.pyme.pe/dry_house*/
@@ -487,6 +356,11 @@ a.phone .nrocelular{ margin-left:30px;}
 .fotos_circulos .imagen{width:100%; max-width:100%; margin:0 auto;margin-top:10px;text-align: center;}	
 /*--------- 17) Fin Fotos_circulos)---------*/
 
+/*--------- 18) saludos_2 ---------*/
+#saludos_2 {width: 99%;margin: 0 auto;margin-bottom: 15px;}
+#saludos_2 .saludos_titulo{clear: both;height: 20px;margin-bottom: 10px;padding-bottom: 15px;text-align:center;color:#5096c6;}
+#saludos_2 .saludos_detalle {width: 100%; margin-top: 5px;}
+/*--------- 18) Fin saludos_2 ---------*/
 
 /* contenedor utilizado en inccontenido.php Si la presentación no es de contenido dinamico */
 #ctn_conte_dinamico_cuadrado_multicolor{display: flex;justify-content: space-between;text-align: center;}
@@ -502,8 +376,98 @@ a.phone .nrocelular{ margin-left:30px;}
 .multicolor_3 { background-color:#FCBB6C !important}
 .multicolor_4 { background-color:#FCD86C !important}
 
-/* --------------------------------- 6) Fin Clase Presentacion  -----------------*/
+/* --------------------------------- 6) Fin Clase Seccion --------------------------*/
 
+/* --- 6.1) Inicio Gestor de Presentación Estilo Sección Para Gestor de Presentación (Tabla estiloseccion  ccodmodulo=1800) ---*/
+
+/*---------Tipo Contenido Codigo Html ---------*/
+/*- Clase Saludos-*/
+#saludos {width: 99%;margin: 0 auto;margin-bottom: 0px;}
+#saludos .saludos_titulo{clear: both;height: 20px;margin-bottom: 10px;padding-bottom: 15px;text-align:center;color:#5096c6;}
+#saludos .saludos_detalle {width:100%; margin-top:5px;}
+/*---------(9)---------*/
+#portada-laterales {width: 96%;border: 2px solid #4D6C94;background-color: #F6FAFA;box-shadow: #aaa 0 0 10px;
+border-radius: 11px;margin: 0 auto;padding:10px 2px;margin-top: 15px;margin-bottom: 15px;border-top: 30px solid #4D6C94;
+border-bottom:1px solid #4D6C94;box-sizing  : border-box; display:flex;Justify-content:Space-between;Align-items:center;    Flex-wrap: wrap; flex:0 1 auto;}
+#portada-laterales .portada-laterales_titulo{height: 20px;color:#FFF;width: 100%;text-align: center;}
+#portada-laterales .portada-laterales_detalle {width:100%;margin-top:-15px;text-align: center;}
+#portada-laterales h2{color:#FFF;margin-top: -33px;font-size: 18px !important;}
+
+/*---------Tipo Contenido Codigo Html ---------*/
+
+
+/*---------Tipo Contenido Dinamico ---------*/
+
+/*---------Lstdo Hori Pro IMG(1805) stilo-lis-hori-img-01.php---------*/
+/*Usado x Lstdo Hori Pro IMG(1805)*/
+/*modulo/stilo-lis-hori-img-01.php
+modulo/foto_lstado_hori_categoria_superiror.php*/
+
+/*si tienes 4 item y le quieres dar una separacion de 10px entre item(10x3=30)
+width: calc((100% - 30px))/4 
+si tienes 3 item y le quieres dar una separacion de 10px entre item(10x2=20)
+width: calc((100% - 20px))/3 
+Nota= la separacion siempre es una menos que la cantidad de item
+*/
+#fondocate {width: 100%;display: flex;justify-content: space-around;Flex-wrap: wrap;}
+
+#fondocate .detalle{	width: calc((100% - 10px)/2);
+             flex: none;display: flex;justify-content: center;  flex-wrap: wrap;
+			 box-shadow: 0 0 0 1px #fff, 0 0 0 2px #ccc;  box-sizing: border-box;
+    margin-bottom: 10px; padding-bottom:10px;border-radius: 15px;background-color: #515754;}
+	
+#fondocate .titulo {width:100%; text-align:center; background-color: #F1F1F1;
+    border-radius: 15px 15px 0 0; height:30px; line-height:30px;}
+#fondocate  h4 {}
+#fondocate img {border: 2px solid #ffffff;} /*le da un borde a las imagenes*/
+#fondocate .imagen{width:100%; max-width:100%; margin:0 auto;margin-top:10px;text-align: center;}	
+
+
+/*---------Lstdo Hori Pro IMG(1805) stilo-lis-hori-img-01.php---------*/
+/*Usado x Lstdo Hori Pro IMG(1805)*/
+/*modulo/stilo-lis-hori-img-01.php
+modulo/foto_lstado_hori_categoria_superiror.php*/
+
+/*si tienes 4 item y le quieres dar una separacion de 10px entre item(10x3=30)
+width: calc((100% - 30px))/4 
+si tienes 3 item y le quieres dar una separacion de 10px entre item(10x2=20)
+width: calc((100% - 20px))/3 
+Nota= la separacion siempre es una menos que la cantidad de item
+*/
+#ctn_conte_dinamico_cuadrado_titulo {width: 100%; display: flex;justify-content: space-around;Flex-wrap: wrap;}
+#ctn_conte_dinamico_cuadrado_titulo .detalle{	width: calc((100% - 10px)/2); flex: none;box-shadow: 0 0 0 1px #fff, 0 0 0 2px #ccc;  
+box-sizing: border-box;margin-bottom: 10px; display: flex;justify-content: center;  flex-wrap: wrap;padding-bottom:10px;}
+#ctn_conte_dinamico_cuadrado_titulo .titulo {width:100%; text-align:center; background-color:#A14829; color:#FFF ;height: 30px; line-height: 30px;}
+#ctn_conte_dinamico_cuadrado_titulo h4 {}
+#ctn_conte_dinamico_cuadrado_titulo img {border: 2px solid #ffffff;} /*le da un borde a las imagenes*/
+#ctn_conte_dinamico_cuadrado_titulo .imagen{width:100%; max-width:100%; margin:0 auto;margin-top:10px;text-align: center;}	
+
+/*---------Lstdo Hori 2nivel (1804) stilo-lis-hori-01.php---------*/
+#ctn_conte_dinamico_stylo_col_4{ display:flex;}
+#stylo_col_4 {padding: 15px;font-weight: bold;font-size: 12px;word-spacing: normal;text-align: center;margin-left: 10px;
+	height: 35px; border: 1px solid #cddced;background: #f7f7f7;border-radius: 10px;display: flex;align-items: center;}
+#stylo_col_4:hover {border:2px solid #2caad0;color:#e32b2b;}
+
+
+/*--------- 16) portada_Resumen (1815) portada_resumen_01.php ---------*/
+#ctn_conte_dinamico_portada_Resumen {width: 100%;display: flex;justify-content: Space-between;Flex-wrap: wrap;}
+#ctn_conte_dinamico_portada_Resumen h2{width: 100%;display: flex;padding: 10px;border-radius: 5px;
+    background-color: #005fbf;color: #ffffff; margin-bottom: 5px; margin-top:0px !important;font-size: 16px;}
+.ctn_portada_item{}
+.portada_item{ width: 100%;border-bottom: #999 dashed 1px;padding-top: 5px;padding-bottom: 5px;
+				display: flex;flex-direction:row; border: #e6e6e6 1px solid;  margin-bottom: 10px;}	
+/*- .portada_item:last-child {border-bottom: none;}	-*/
+ .portada_item_imagen  {flex: 0 1 15%; margin-left:5px	}	
+  .portada_item_contenido {display:flex;flex: 0 1 85%;box-sizing:border-box ; flex-wrap:wrap;margin-left: 10px;padding-right: 5px; }	
+  .portada_item_contenido_titulo { width:100%; font-weight:bold;}	
+  .portada_item_contenido_detalle { width:100%;}	
+    /*Para mostrar subitem de la seccion*/
+  .portada_item_subItem { width:100%; display: flex;justify-content:flex-start;Flex-wrap: wrap;}	
+  .portada_item_subItem a{  padding:2px 2px; margin-top:2px; color: #395F8E ; text-decoration:underline; margin-left:10px; }	
+  .portada_item_subItem a:hover{background:#5CA4EC; color:#FFFFFF;text-decoration:none; }	
+/*--------- 16) Fin portada_Resumen ---------*/  
+
+/* --- 6.1) Fin Gestor de Presentación Estilo Sección Para Gestor de Presentación (Tabla estiloseccion  ccodmodulo=1800) ---*/
 
 /* -------- 7) Inicio Botones css------------ */
 
@@ -552,7 +516,6 @@ a.phone .nrocelular{ margin-left:30px;}
 
 /* -------- 7) Fin Botones css------------ */
 
-
 /* --------------------------------- 9) Inicio Contactenos -----------------*/
 
 .ctn_contactos { width:100%; margin: 0 auto; color:#333;
@@ -560,7 +523,7 @@ a.phone .nrocelular{ margin-left:30px;}
 .ctn_contactos .iz_contac_container {display:flex;flex:1 1 65%;}
 .ctn_contactos .der-container { flex:1 1 30%;border: 1px solid #DDD;background: #fff;}	
 .ctn_contactos .der-container h2{padding: 8px 10px;color: #ffffff;text-shadow: 1px 1px 1px black;
-	letter-spacing: 1px;border-bottom: 1px solid #DDD;background-color:#68A7CE ;text-transform: uppercase;
+	letter-spacing: 1px;border-bottom: 1px solid #DDD;background-color:var(--der-container-h2);text-transform: uppercase;
 	margin:0 auto;font-size:14px;text-align:center;}	
 .ctn_contactos .der-container .contenido{padding: 10px;}
 
@@ -607,37 +570,11 @@ a.phone .nrocelular{ margin-left:30px;}
 
 /*articulocentro.php(imagen centro)  , articuloderecha.php (imagen derecha) ,
  articuloizquierda.php (imagen izquierda) , articulopagina.php (no muestra imagen ni derecha ni izquierda ni centro solo abajo) */
-#articulo {		
-	text-align: justify;
-	margin-bottom:20px;
-	display: flex;
-    justify-content: center;
-	flex-wrap:wrap;
-}
-#articulo ul {
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0.3em;
-	margin-left: 0em;
-	padding: 0px;
-}
-#articulo li {
-	list-style: none;
-	background-image: url(/imagen/flechita-2.gif);
-	background-repeat: no-repeat;
-	background-position: 0.4em 0.3em;
-	padding-right: 0;
-	padding-bottom: 0.3em;
-	padding-left: 1.6em;
-	padding-top: 0em;
-	margin: 0em;
-	}
-#articulo .cnt_img_sola{
-	margin: 15px auto;
-	text-align: center;
-	clear: both;
-}
-
+#articulo {text-align: justify;margin-bottom:20px;display: flex; justify-content: center;flex-wrap:wrap;}
+#articulo ul {margin-top: 0px;margin-right: 0px;margin-bottom: 0.3em;margin-left: 0em;padding: 0px;}
+#articulo li {	list-style: none;	background-image: url(/imagen/flechita-2.gif);	background-repeat: no-repeat;
+	background-position: 0.4em 0.3em;	padding-right: 0;	padding-bottom: 0.3em;	padding-left: 1.6em;	padding-top: 0em;margin: 0em;}
+#articulo .cnt_img_sola{margin: 15px auto;text-align: center;clear: both;}
 #articulo .cont_cabecera{ display:flex;justify-content: space-between;width:100%;margin:0 auto;padding:5px 0px;}
 /* articuloizquierda.php  la imagen a la izquierda y texto derecha*/
 #articulo .img_izq{flex:1 1 29%;order:1;margin-left:2px;border: 1px solid #e9e9e9; padding:5px;}
@@ -660,21 +597,9 @@ a.phone .nrocelular{ margin-left:30px;}
 #articulo .cont_cabecera .lblprecio{ font-weight:bold; color:#6ca336; margin-right:10px;}
 #articulo .cont_cabecera .resumen{ text-align:justify; clear:both;}
 #articulo .cont_cabecera .ctn_boton_comprar{ float:right; clear:both;margin-bottom: 20px;}
-#articulo .cont_cabecera .boton_comprar{
-	font-size: 11px;
-	font-weight: bold;
-	color: #fff;
-	background-image: url(/modulos/imagen/carrito.png);
-	background-position: 0px 0px;
-	cursor: pointer;	
-	height: 18px;
-	padding-left: 15px;
-	width: 70px;
-	line-height: 15px;
-	text-align:center;
-	margin-left:250px;
-	margin-right:5px;
-}
+#articulo .cont_cabecera .boton_comprar{font-size: 11px;font-weight: bold;color: #fff;background-image: url(/modulos/imagen/carrito.png);
+	background-position: 0px 0px;cursor: pointer;height: 18px;padding-left: 15px;width: 70px;line-height: 15px;	text-align:center;
+	margin-left:250px;margin-right:5px;}
  /* articulo_estilo02.php  
  	cuando se escoge en gestor de articulos - Estilo Sección - opcion Resumen*/
 	.arti_resumen{display:flex;flex-direction: column;border-bottom: #999 dashed 1px; margin-bottom:15px; }
@@ -682,87 +607,25 @@ a.phone .nrocelular{ margin-left:30px;}
 	.arti_resumen a{ margin-top:5px;}
 	.arti_resumen p{ width:100%; margin:auto;}	
 	
-
 /* -------------------Inicio MISIÓN - VISIÓN - FILOSOFÍA  ---------------------------------- */
 /* presenta 3 columnas ordenadas */
-.ctn_estilo_col_1 {
-    word-spacing: -1px;
-    font-size: 1px;
-    letter-spacing: -1px;
-    width: 100%;/*o lo necesario*/
-}
-
-.estilo_col_1 {
-    display: inline-block;
-    word-spacing: normal;
-    font-size: 12px;/*u otra unidad para IE8 y -*/
-    letter-spacing: normal;
-    white-space: normal;
-    width: 30%;/*El valor necesario*/
-	padding: 5px 5px;
-	margin-left: 10px;
-	border: 1px solid #DDD;
-	height:150px;	
-}
-
-.estilo_col_1 .titulo {
-padding: 8px 10px;
-color: #555;
-text-shadow: 1px 1px 1px white;
-letter-spacing: 1px;
-border-bottom: 1px solid #DDD;
-background-color: #fae3b6;
-text-transform: uppercase;
-margin: 0;
-text-align: center;
-font-weight: bold;
-}
-.estilo_col_1  .detalle {
-font-size: 13px;
-color: #20211c;
-text-align: justify;
-margin-top: 15px;
-}
+.ctn_estilo_col_1 {width: 100%;display: flex; flex-direction: row;flex-wrap: wrap;justify-content: space-between;}
+.estilo_col_1 {font-size: 12px;width: 30%;padding: 5px 5px;margin-left: 10px;border: 1px solid #DDD;}
+.estilo_col_1 .titulo { padding: 8px 10px;color: #555;text-shadow: 1px 1px 1px white;letter-spacing: 1px;border-bottom: 1px solid #DDD;
+background-color: #fae3b6;text-transform: uppercase;margin: 0;text-align: center;font-weight: bold;}
+.estilo_col_1  .detalle {font-size: 13px;color: #20211c;text-align: justify;margin-top: 15px;}
 /* -------------------Fin MISIÓN - VISIÓN - FILOSOFÍA  ---------------------------------- */
 
 /*------------Inicio Utilizado en articulo_estilo09.php--------------------------*/
-.listado_numeral{
-	width: 100%;
-	padding: 10px 2px;
-	font-weight:bold;
-}
-.listado_numeral .izq {
-	float: left;
-	width: 45%;
-	margin-left:5%;
-}
-.listado_numeral .dere {
-	float: right;
-	width: 45%;
-}
-
-.listado_numeral ol {
-	color: #ccc;
-	list-style-type: none;
-}
-.listado_numeral ol li {
-	position: relative;
-	font: bold italic 20px/14px Helvetica, Verdana, sans-serif;
-	margin-bottom: 20px;
-}
-.listado_numeral span {
-position: absolute;
-}
-
-.listado_numeral li p {
-	font: 14px Helvetica, sans-serif;
-	padding-left: 55px;
-	color: #555;
-}
+.listado_numeral{width: 100%;padding: 10px 2px;font-weight:bold;}
+.listado_numeral .izq {	float: left;width: 45%;	margin-left:5%;}
+.listado_numeral .dere {float: right;width: 45%;}
+.listado_numeral ol {color: #ccc;list-style-type: none;}
+.listado_numeral ol li {position: relative;font: bold italic 20px/14px Helvetica, Verdana, sans-serif;margin-bottom: 20px;}
+.listado_numeral span {position: absolute;}
+.listado_numeral li p {font: 14px Helvetica, sans-serif;padding-left: 55px;color: #555;}
 
 /*------- 10) Fin Gestor de Articulos  Estilo de Presentación del Contenido ---*/
-
-
 
 /* ----------------  11) Inicio Abrevituras ---------------- */
 .clear_both {clear:both;}  
@@ -1004,93 +867,50 @@ position: absolute;
 /* ---------------- 11) Fin Abrevituras ---------------- */
 
 /* ---------------- 12) inicio Menu lateral ----------------*/
-#menuvertical {
-	text-align: left;
-	font-family : Verdana, Helvetica, sans-serif; 
-	font-size : 12px; 
-	width:100%;
-	height:250px;
-	margin:0 auto;
-	margin-bottom:25px;
-}
-#menuvertical li#menuizqtitulo{height:40px;width:98%;background-color:#964147;}
-#menuvertical li#menuizqtitulo p
-{
-	color:#ffffff;
-	margin-top:10px;
-	font-family:Tahoma, Geneva, sans-serif;
-	font-weight:bold;
-	font-size: 1.1em;
-	text-align:center;
-	padding:10px 0px;	
-	text-shadow: 1px 1px 1px black;
-	letter-spacing: 2px;
-}
-
+#menuvertical {text-align: left;font-family : Verdana, Helvetica, sans-serif;font-size : 12px; 
+	width:100%;height: auto;margin:0 auto;margin-bottom:25px;}
+#menuvertical li#menuizqtitulo{height:40px;width:98%;background-color: var(--menu-lateral-menuizqtitulo);}
+#menuvertical li#menuizqtitulo p {color:#ffffff;margin-top:10px;font-family:Tahoma, Geneva, sans-serif;font-weight:bold;
+	font-size: 1.1em;text-align:center;	padding:10px 0px;text-shadow: 1px 1px 1px black;letter-spacing: 2px;}
 #menuvertical ul { list-style-type: none; padding:0;width: 98%; margin-right:10px; }
-#menuvertical ul li.nivel1 {
-width: 150px; /* Ancho de las pestañas */
-}
-#menuvertical ul li.primera {
-border-top: solid 1px #FFF; /* Borde superior de la primera pestaña */
-}
+#menuvertical ul li.nivel1 {width: 150px; /* Ancho de las pestañas */}
+#menuvertical ul li.primera {border-top: solid 1px #FFF; /* Borde superior de la primera pestaña */}
 #menuvertical ul li {padding:0;}
-#menuvertical ul li a {
-display: block;
-text-decoration: none;
-color: #fff; /* Color del texto */
-background-color: #e5794c; /* Color de fondo */
-border: solid 1px #a14829; /* Borde de las pestañas */
-border-top: none;
-padding: 8px;
-position: relative;
-}
-#menuvertical ul li:hover {
-position: relative;
-color: #000000; /* Color del texto al pasar el mouse */
-}
+#menuvertical ul li a {display: block;text-decoration: none;color:var(--menu-lateral-color-texto-2nivel); /* Color del texto 2Nivel*/
+background-color: var(--menu-lateral-fondo-secciones-nivel2); /* Color de fondo 2Nivel*/
+border: solid 1px var(--menu-lateral-borde-secciones-nivel2); /* Borde de las pestañas 2Nivel */
+border-top: none;padding: 8px;position: relative;}
+#menuvertical ul li:hover {position: relative;color: #000000; }
 #menuvertical ul li a:hover, #menuvertical ul li:hover a.nivel1 {
-background-color:#c8c6c6; /* Color de fondo al pasar el mouse */
-color: #000;
-position: relative;
-}
-#menuvertical ul li a.nivel1 {
-display: block!important;
-display: none;
-position: relative;
-}
-#menuvertical ul li ul {
-display: none;
-}
-#menuvertical ul li a:hover ul, #menuvertical ul li:hover ul {
-display: block;
-position: absolute;
-right: 150px;	/* Aqui se define si se abre lado derecha =right  o izquierda= left*/
-top:-1px!important;
-top:-31px;
-}
-#menuvertical ul li ul li a {
-width: 120px;
-background-color: #ee2f2c; /* Color de fondo subpestañas */
-color: #fff; /* Color del texto subpestañas */
-}
-#menuvertical ul li ul li a:hover {
-position: relative;
-background-color: #c8c6c6; /* Color de fondo al pasar el mouse subpestañas */
-color: #000; /* Color del texto al pasar el mouse subpestañas */
-/*font-weight: bold;*/
-}
-.handcursor {cursor:hand;
-cursor:pointer;
-}
-.handcursor1 {cursor:hand;
-cursor:pointer;
-}
+background-color: var(--menu-lateral-color-fondo-2nivel-pasar-mouse); /* Color de fondo 2nivel al pasar el mouse */
+color: var(--menu-lateral-color-texto-2Nivel-pasar-mouse)					/* Color del texto 2Nivel al pasar el mouse */
+;position: relative;text-shadow: 2px 4px 3px rgba(0,0,0,0.3);}
+#menuvertical ul li a.nivel1 {display: block!important;display: none;position: relative;}
+#menuvertical ul li ul {display: none;}
+#menuvertical ul li a:hover ul, #menuvertical ul li:hover ul {display: block;position: absolute;
+right: 150px;	/* Aqui se define si se abre lado derecha =right  o izquierda= left*/top:-1px!important;top:-31px;}
+#menuvertical ul li ul li a {width: 120px;background-color: #ee2f2c; /* Color de fondo subpestañas */color: #fff; /* Color del texto subpestañas */}
+#menuvertical ul li ul li a:hover {position: relative;background-color: #c8c6c6; /* Color de fondo al pasar el mouse subpestañas */
+color: #000; /* Color del texto al pasar el mouse subpestañas *//*font-weight: bold;*/}
+.handcursor {cursor:hand;cursor:pointer;}
+.handcursor1 {cursor:hand;cursor:pointer;}
 /* ---------------- 12) Fin Menu lateral ----------------*/
 
 
-/* ---------------- 15) inicio Media Querys ----------------*/
 
+
+
+/*----------------------------- 16)INICIO Modulo CSS----------------------------------*/
+/*-----form_marca_motor.php---------*/
+.titulo_filtro_categoria{ margin: 0 0 10px;background-color: #CC0033 !important;text-align: center;cursor: pointer;}
+.titulo_filtro_categoria strong { display: block; padding: 12px 15px;font: normal 14px 'eurostile'; color: #fff;text-transform: uppercase;}
+.select_filtro_categoria{padding:5px;border:1px solid #bbb;border-radius:5px;margin:5px 0;display:block;box-shadow:0 0 10px #ddd;
+min-width: 220px; font-size:13px !important;font-weight:bold !important;}
+/*----------------------------- 16)FIN Modulo CSS----------------------------------*/
+
+
+
+/* ---------------- 15) inicio Media Querys ----------------*/
 /*------------http://responsivetest.net ----------*/
 /*--
 	https://analytics.google.com
@@ -1177,7 +997,7 @@ cursor:pointer;
 
 
 /* smartphones, iPhone, portrait 480x320 phones */
-@media (min-width:320px) {#cuadrado_titulo .detalle{width: calc((100% - 10px)/2);}}
+@media (min-width:320px) {#cuadrado_titulo .detalle{width: calc((100% - 10px)/2)};}
 /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 @media (min-width:481px) { }
 /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
@@ -1189,4 +1009,4 @@ cursor:pointer;
 
 /* ---------------- 15) Fin  Media Querys ----------------*/>
 
-
+/* --------------- Individual de rysdistribuciones --------------------- */

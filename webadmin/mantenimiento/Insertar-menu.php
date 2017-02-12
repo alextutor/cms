@@ -3,8 +3,8 @@
 	 include($_SERVER['DOCUMENT_ROOT']. '/config.php');	
 	 $selectpage  = $_SESSION['selectpage'];
 	
-	 $ssql ="INSERT INTO pagemenu (ccodpage,cnommenu,cubimenu,cclamenu,cestmenu)  
-	   VALUES ('$selectpage','$nomb_menu','$ubi_menu','','1')";
+	 $ssql ="INSERT INTO pagemenu (ccodpage,cnommenu,cubimenu,cclamenu,cestmenu,mostrarportada)  
+	   VALUES ('$selectpage','$nomb_menu','$ubi_menu','','1','$mostrarportada')";
 	   
 	  $sqlInsertCat =mysql_query($ssql,$conexion) or die ("problema con query");					
 ?>

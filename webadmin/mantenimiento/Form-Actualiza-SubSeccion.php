@@ -154,7 +154,7 @@ while($row  =db_fetch_array($sql))
                   	 	<li><label id="jform_title-lbl" for="jform_title" class="hasTip required" title="">Seccion Principal </label>/<?=crearurl_articulo($row['ccodseccion']) ?></li>
                         	
                     	<li><label id="jform_title-lbl" for="jform_title" class="hasTip required" title="">Título <span class="star">&nbsp;*</span></label>
-                        <input name="titulo" type="text" required class="inputbox required" id="titulo" value="<?=$row['cnomseccion']?>" size="40" aria-required="true"></li>              
+                        <input name="titulo" type="text" required class="inputbox required" id="titulo" value="<?=$row['cnomseccion']?>" size="70" aria-required="true"></li>              
                         
                         <li><label id="jform_published-lbl" for="jform_published" class="hasTip" title="" aria-invalid="false">Tipo</label>	
                         	<select name="selectenlace" id="selectenlace" style="width:190px" class="box">
@@ -250,10 +250,10 @@ while($row  =db_fetch_array($sql))
                 <fieldset class="panelform">
                     <ul class="adminformlist">                       
                           <li><label id="jform_title-lbl" for="jform_title" class="hasTip required" title="">Titulo</label>
-                        <input name="txttitulo" type="text" required class="inputbox required" id="txttitulo" value="<?=$row['ctitseccion']?>" size="40" aria-required="true"></li>
+                        <input name="txttitulo" type="text" required class="inputbox required" id="txttitulo" value="<?=$row['ctitseccion']?>" size="70" aria-required="true"></li>
 
                           <li><label id="jform_title-lbl" for="jform_title" class="hasTip required" title="">Titulo Amigable</label>
-                        <input type="text" name="amigable" id="amigable" value="<?=$row['camiseccion']?>" class="inputbox required" size="40" aria-required="true" required></li>                                                  
+                        <input type="text" name="amigable" id="amigable" value="<?=$row['camiseccion']?>" class="inputbox required" size="70" aria-required="true" required></li>                                                  
                         
                          <li><label id="jform_title-lbl" for="jform_title" class="hasTip required" title="">Tags</label>
                         <textarea name="txttags" cols="68" rows="4" class="area600"><?=$row['ctagseccion']?></textarea>

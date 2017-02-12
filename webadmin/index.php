@@ -228,18 +228,91 @@
 				 break;	
 			 case "com_fotos_album_editar": 
 			 	include_once ( $INC_DIR . '/webadmin/mantenimiento/Form-Actualiza-fotos-album.php'); 
-				 break;		 	 
+				 break;	
+				 
+				 
+			/********************************* Inicio GALOP Condominio **********************************************/	 				 
+			case "com_gestor_condominio": 
+			 	include_once ( $INC_DIR . '/webadmin/mantenimiento/control_condominios/gestor_condominio.php'); 
+				 break;	
+			case "com_condominio_new": 
+			 	include_once ( $INC_DIR . '/webadmin/mantenimiento/control_condominios/Form-Insertar-condominio.php'); 
+				 break;		 
+			case "com_gestor_propietarios": 
+			 	include_once ( $INC_DIR . '/webadmin/mantenimiento/control_condominios/gestor_propietarios.php'); 
+				 break;	
+			case "com_propietario_new": 
+			 	include_once ( $INC_DIR . '/webadmin/mantenimiento/control_condominios/Form-Insertar-propietario.php'); 
+				 break;	
+			case "com_gestor_secciones_condominio": 
+			 	include_once ( $INC_DIR . '/webadmin/mantenimiento/control_condominios/gestor_secciones_condominio.php'); 
+				 break;	
+			case "com_seccion_condominio_editar": 
+			 	include_once ( $INC_DIR . '/webadmin/mantenimiento/control_condominios/Form-Actualiza-seccion-condominio.php'); 
+				 break;	
+			case "com_seccion_condominio_new": 
+			 	include_once ( $INC_DIR . '/webadmin/mantenimiento/control_condominios/Form-Insertar-seccion-condominio.php'); 
+				 break;	
+				 	 
+			case "com_gestor_departamentos": 
+			 	include_once ( $INC_DIR . '/webadmin/mantenimiento/control_condominios/gestor_departamentos.php'); 
+				 break;	
+			case "com_departamento_new": 
+			 	include_once ( $INC_DIR . '/webadmin/mantenimiento/control_condominios/Form-Insertar-condominio-departamento.php'); 
+				 break;		 	 	 	 				 		 	 	 
+   		  /*******************************************************************************/	 	 
+		  
 			 }	 			 			 			 	  		  	
 		  }		 
 ?><?php if ($_GET["option"]!="com_seccion_new" and $_GET['option']!="com_sub_seccion_new" ){	?>
     	 <div class="clr"></div>
 	  </div> <!--fin content-box -->
-<?php } ?>		             
+<?php } ?>		 
+<?php include_once ($INC_DIR . '/footer.php');  ?>
+
+            
   <script type="text/javascript">
             try{document.getElementById('mod-login-username').focus();}catch(e){}
    </script>
    <script src="/include/js/jquery-1.9.1.js"></script> 
-   <script src="/webadmin/js/jquery.checkboxtree.js"></script> 
+   <!--    <script src="/webadmin/js/jquery.checkboxtree.js"></script> -->
+   
+   <!-----------------------Inicio Expandir / Colapsar secciones ----------------------->
+   <!--Usado en Gestor de artículos: Añadir un nuevo artículo -------------------------->
+   
+      <!--<script src="/include/js/jquery-1.9.1.js"></script>  -->
+	<script type="text/javascript" src="/include/js/Collapsible-Checkbox-Tree-jQuery-Plugin/jquery.collapsibleCheckboxTree.js"></script>
+	<link rel="stylesheet" type="text/css" href="/include/js/Collapsible-Checkbox-Tree-jQuery-Plugin/jquery.collapsibleCheckboxTree.css"/>
+	<script type="text/javascript">
+	jQuery(document).ready(function(){
+			$('ul#menuseccion').collapsibleCheckboxTree({
+						checkParents : true,
+						checkChildren : false,
+						shiftClickEffectChildren : true,
+						uncheckChildren : true,
+						includeButtons : true,  // incluye boton expandir or collapse 
+						initialState : 'collapse',
+			});
+
+	});
+	/*
+	jQuery(document).ready(function(){
+			$('ul#example').collapsibleCheckboxTree({
+			checkParents : true, // When checking a box, all parents are checked (Default: true)
+			checkChildren : false, // When checking a box, all children are checked (Default: false)
+			shiftClickEffectChildren : true, // When shift-clicking a box, all children are checked or unchecked (Default: true)
+			uncheckChildren : true, // When unchecking a box, all children are unchecked (Default: true)
+			includeButtons : true, // Include buttons to expand or collapse all above list (Default: true)
+			initialState : 'default' // Options - 'expand' (fully expanded), 'collapse' (fully collapsed) or default
+													});
+	});
+	*/
+	</script>
+    
+    <!--https://cybmeta.com/comprobar-sin-un-checkbox-esta-seleccionado-con-jquery     -->
+    <!--Usado en Gestor de artículos: Añadir un nuevo artículo -->
+   <!-----------------------Fin Expandir / Colapsar secciones ------------------------------------------------->
+   
         
    <!-- <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>   -->
   <script type="text/javascript" src="js/jsweb.js"></script>
@@ -396,6 +469,86 @@ $(document).ready(function() {
 	});	
 }); 
 </script>
-<?php } ?>		             
+<?php } ?>		    
+<script>
 
-<?php include_once ($INC_DIR . '/footer.php');  ?>
+<!--------------- Inicio Gestor de Seccion: Seccion ------------>
+/*
+viene de gestor-seccion.php
+Para que en seccion la seccion que esta contenida en una tabla se contralla y expanda
+http://stackoverflow.com/questions/16926752/expand-collapse-table-rows-with-jquery
+https://jsfiddle.net/y4Mdy/1372/
+*/
+
+function CreateGroup(group_name)
+{
+    // Create Button(Image)
+    $('td.' + group_name).prepend("<img class='" + group_name + " button_closed'> ");
+    // Add Padding to Data
+    $('tr.' + group_name).each(function () {
+        var first_td = $(this).children('td').first();
+        var padding_left = parseInt($(first_td).css('padding-left'));
+        $(first_td).css('padding-left', String(padding_left +0) + 'px'); // estaba en 25 alex
+    });
+    RestoreGroup(group_name);
+
+    // Tie toggle function to the button
+    $('img.' + group_name).click(function(){
+        ToggleGroup(group_name);
+    });
+}
+
+function ToggleGroup(group_name)
+{
+    ToggleButton($('img.' + group_name));
+    RestoreGroup(group_name);
+}
+
+function RestoreGroup(group_name)
+{
+    if ($('img.' + group_name).hasClass('button_open'))
+    {
+        // Open everything
+        $('tr.' + group_name).show();
+
+        // Close subgroups that been closed
+        $('tr.' + group_name).find('img.button_closed').each(function () {
+            sub_group_name = $(this).attr('class').split(/\s+/)[0];
+            //console.log(sub_group_name);
+            RestoreGroup(sub_group_name);
+        });
+    }
+
+    if ($('img.' + group_name).hasClass('button_closed'))
+    {
+        // Close everything
+        $('tr.' + group_name).hide();
+    }
+}
+
+function ToggleButton(button)
+{
+    $(button).toggleClass('button_open');
+    $(button).toggleClass('button_closed');
+}
+
+
+
+//CreateGroup('group1');
+//CreateGroup('sub_group1');
+//CreateGroup('sub_group2');
+//CreateGroup('sub_sub_group1');
+// Alex mejor le he puesto en un ford para que cree los grupos y subgrupos
+
+for (ngroup = 1; ngroup <= 30; ngroup++) {    
+	CreateGroup('group'+[ngroup]);
+}
+for (nsub = 1; nsub <= 50; nsub++) {    
+	CreateGroup('sub_group'+[nsub]);
+}
+for (nsub_sub_group = 1; nsub_sub_group <= 150; nsub_sub_group++) {    
+	CreateGroup('sub_sub_group'+[nsub_sub_group]);
+}
+</script>
+<!--Para que en seccion la seccion que esta contenida en una tabla se contralla y expanda -->
+<!--------------- Fin Gestor de Seccion: Seccion ------------>

@@ -140,7 +140,7 @@ while($row  =db_fetch_array($sql)) //----Inicio While 1
 					 ?>
                      </li>
                     	<li><label id="jform_title-lbl" for="jform_title" class="hasTip required" title="">Título <span class="star">&nbsp;*</span></label>
-                        <input type="text" name="titulo" id="titulo" value="<?=$row['cnomseccion']?>" class="inputbox required" size="40" aria-required="true" required>
+                        <input type="text" name="titulo" id="titulo" value="<?=$row['cnomseccion']?>" class="inputbox required" size="70" aria-required="true" required>
                         </li>						
 						<li>
                         <div id="mostrarmenu"style=" display:flex; clear:both ">
@@ -201,13 +201,13 @@ while($row  =db_fetch_array($sql)) //----Inicio While 1
                         </select>
                         </li>
                         <li><label id="jform_title-lbl" for="jform_title" class="hasTip required" title="">URL</label>                      <input type="text" name="rutaenlace" id="rutaenlace" size="60" value="<?=$row['curlseccion']?>" class="box400" />             </li>
-                       <li><label id="jform_title-lbl" for="jform_title" class="hasTip required" title="">Mostrar Url padre</label>					
+                       <li><label id="jform_title-lbl" for="jform_title" class="hasTip required" title="">Mostrar Url padre</label>					                       
                         <select id="mostrarurlcatebase" name="mostrarurlcatebase" class="inputbox" size="1" aria-invalid="false">
                             <option value="SI"<?php if( $row['mostrarurlcatebase']=="SI") echo " selected='selected'"  ?>>SI</option>                           
                             <option value="NO"  <?php if( $row['mostrarurlcatebase']=="NO") echo " selected='selected'"  ?>>NO</option>                           
-                          </select>                          	                      
+                          </select>                                      	                      
                         </li>
-                         
+                        <li>  Mostrar Url padre (Ya lo pase a Gestor de Estilos Web: Actualiza Estilos web)   </li>          
                         <li><label id="jform_published-lbl" for="jform_published" class="hasTip" title="" aria-invalid="false">Modulo</label>	
                        <select name="selectmodulo" style="width:190px" onChange="xajax_procesar_estilos(xajax.getFormValues('form'))" class="box">
                         <?php	$querysec = db_query("select * from webmodulos where cestmodulo='1'");

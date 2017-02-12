@@ -1,4 +1,5 @@
  <?php 
+ // alex el $webestilo lo toma de  Gestor de Estilos Web: Empresa 
  //echo "totalpantalla==".$totalpantalla."----webestilo =". $webestilo ."--contenidoinc=". $contenidoinc;exit;
  //echo $contenidoinc."-----".$webestilo;exit; 
  //echo $codcont;exit;
@@ -177,8 +178,8 @@ $rowcolcentro = mysql_fetch_array($rs_colcentro) ;
       </div>        
  <?php } ?>
 
- 
-<?php if ($totalpantalla=="totalpantalla" and ($webestilo==2 or $webestilo==3)){ ;?> 
+ <!-- Alex Agregre $webestilo==1 para gesterritorial -->
+<?php if ($totalpantalla=="totalpantalla" and ($webestilo==1 or $webestilo==2 or $webestilo==3)){ ;?> 
 	<div id="ctn_gral_columnacentro" > 
     	 <?php if (!empty($_GET['idsec'])) {    ?>        		
                 <div id="webencabezado">

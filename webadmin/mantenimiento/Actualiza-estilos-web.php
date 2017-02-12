@@ -13,11 +13,13 @@ $INC_DIR = $_SERVER ["DOCUMENT_ROOT"];
  $paginacion=$_POST['paginacion']; 
   extract($_POST); 
   $Update_contenido= "UPDATE estilopagina SET 
+							mostrarurlcatebase= '" .$mostrarurlcatebase. "',
+							menu_1Nivel_Mayuscula_Minuscula= '" .$menu_1Nivel_Mayuscula_Minuscula. "',  
   							webestilo= '" .$webestilo. "',
   							menuestilomenu= '" .$menuestilomenu. "',							
 							sBaseVirtual0= '" .$sBaseVirtual0. "',
 							sBase0= '" .$sBase0. "',
-							galeria_imagen= '" .$galeria_imagen. "',
+							galeria_imagen= '" .$galeria_imagen. "',							
 							sName0= '" .$sName0. "' 							
 							where ccodpage ='".$_POST['id']."'	";
 			//echo $Update_contenido;exit;																		

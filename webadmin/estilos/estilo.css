@@ -1,7 +1,3 @@
-/* alex para pintar color de las secciones*/
-.color_seccion_1er_nivel{color:#000000;font-weight:bold;}
-.color_seccion_2do_nivel{color:#449902;font-weight:bold;margin-left: 5px;}
-.color_seccion_3er_nivel{color:#1389D1;font-weight:bold;padding-left: 10px;}
 
 input {font:8pt tahoma,arial,sans-serif; float:none}
 select {font:8pt tahoma,arial,sans-serif}

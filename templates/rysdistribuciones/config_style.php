@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="<?=$webidio?>">
 <head>   
-	  <?php  include_once($_SERVER['DOCUMENT_ROOT'].'/head-general.php');	?>    
+	  <?php  include_once($_SERVER['DOCUMENT_ROOT'].'/head-general.php');	?>         
 </head>
 <body>
 <?php
@@ -22,10 +22,18 @@
 //}
 ?>
  <header id="cabecera">   
-	    <?php  include_once($cRutaWeb.'/inccabecera-top-1.php');	?>
-    	<div class="ctnlogo">
+ 		 <?php  /* inccabecera-top-1.php Posicion= encima del logo es el primero de la cabecera*/ 
+		include_once($cRutaWeb.'/inccabecera-top-1.php');	?>         
+        <div class="ctnlogo">
         	  <?php  include_once($cRutaWeb.'/inccabecera.php');	?>         
-        </div>        
+        </div>          
+         <div style="width: 100%;background-color: #222222; color: #fff;height: 20px;
+        font-size: 14px;margin-bottom: 0px;vertical-align: middle;">
+               <marquee direction="left">¿No encuentra su repuesto? LLámenos. Tenemos un enorme stock disponible:   (011)    511-452-0378 </marquee>     
+               </div>
+            </div> 
+         <?php /* inccabecera-top-2.php Posicion = entre el logo y el menu*/ 
+		 //include_once($cRutaWeb.'/inccabecera-top-2.php');	?>      
         <div class="ctn-menu">        
           <!--
             <input type="checkbox" id="btn-menu">
@@ -35,15 +43,17 @@
             </label>
              -->
             <nav class="menu">
-              <?php  include_once($cRutaWeb.'/inccabeceramenu.php');?>
-           </nav>
-        </div>        
+              <?php  include_once($cRutaWeb.'/inccabeceramenu.php');?>                          	     
+           </nav>             
+        <?php  /* inccabecera-top-3.php Posicion = entre el menu  y el slider */ 
+		//include_once($cRutaWeb.'/inccabecera-top-3.php');	?>          
         <div id="ctn_slider">   		     
-            <div class="slider">
-                <?php include_once($cRutaWeb .'/inccabeceracontenido.php'); ?> 
+            <div class="slider">            
+                <?php // include_once($cRutaWeb .'/inccabeceracontenido.php'); ?> 
             </div> 
    		</div>
-         <?php  include_once($cRutaWeb.'/inccabecera-top-4.php');	?>           
+         <?php  /*inccabecera-top-4.php  Posicion = debajo del Slider y si este no existe se pone debajo del menu */ 
+		 //include_once($cRutaWeb.'/inccabecera-top-4.php'); ?>           
   </header>     
   
 <div id="warp" class="redondeado-10px" >           

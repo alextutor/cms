@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<querybuilder version="8.3">
+<source>
+<database charset="latin1" collation="latin1_swedish_ci">alextuto_controlcondominios</database>
+</source>
+<canvas>
+<table tablename="condominio_propietarios_vivienda" alias="" left="10" top="33" width="270" height="233" />
+<table tablename="condominio_propietarios" alias="" left="331" top="32" width="222" height="263" />
+<table tablename="condominio_departamentos" alias="" left="221" top="294" width="328" height="218" />
+<table tablename="condominio" alias="" left="841" top="51" width="150" height="113" />
+<table tablename="condominio_secciones" alias="" left="731" top="307" width="150" height="188" />
+<join type = "Inner Join">
+<from tablename = "condominio_propietarios" alias = "">codpropietario</from>
+<to tablename = "condominio_propietarios_vivienda" alias = "">codpropietario</to>
+</join>
+<join type = "Inner Join">
+<from tablename = "condominio_departamentos" alias = "">iddepartamento</from>
+<to tablename = "condominio_propietarios_vivienda" alias = "">iddepartamento</to>
+</join>
+<join type = "Inner Join">
+<from tablename = "condominio" alias = "">idcondominio</from>
+<to tablename = "condominio_departamentos" alias = "">idcondominio</to>
+</join>
+<join type = "Inner Join">
+<from tablename = "condominio_secciones" alias = "">idseccion</from>
+<to tablename = "condominio_departamentos" alias = "">idseccion</to>
+</join>
+</canvas>
+<grid>
+<column id="1">
+<table tablename="condominio_propietarios"></table>
+<field>CONCAT(nombre,' ',apellidopaterno,' ',apellidomaterno)</field>
+<alias>nombre</alias>
+<show>true</show>
+<sortorder></sortorder>
+<sort></sort>
+<groupby>false</groupby>
+<aggfunct></aggfunct>
+<criteria></criteria>
+<or1></or1>
+<or2></or2>
+<or3></or3>
+<or4></or4>
+</column>
+<column id="2">
+<table tablename="condominio"></table>
+<field>nombrecondominio</field>
+<alias></alias>
+<show>true</show>
+<sortorder></sortorder>
+<sort></sort>
+<groupby>false</groupby>
+<aggfunct></aggfunct>
+<criteria></criteria>
+<or1></or1>
+<or2></or2>
+<or3></or3>
+<or4></or4>
+</column>
+<column id="3">
+<table tablename="condominio_propietarios"></table>
+<field>telefono1</field>
+<alias></alias>
+<show>true</show>
+<sortorder></sortorder>
+<sort></sort>
+<groupby>false</groupby>
+<aggfunct></aggfunct>
+<criteria></criteria>
+<or1></or1>
+<or2></or2>
+<or3></or3>
+<or4></or4>
+</column>
+<column id="4">
+<table tablename="condominio_propietarios"></table>
+<field>telefono2</field>
+<alias></alias>
+<show>true</show>
+<sortorder></sortorder>
+<sort></sort>
+<groupby>false</groupby>
+<aggfunct></aggfunct>
+<criteria></criteria>
+<or1></or1>
+<or2></or2>
+<or3></or3>
+<or4></or4>
+</column>
+<column id="5">
+<table tablename="condominio_departamentos"></table>
+<field>nombredepartamento</field>
+<alias></alias>
+<show>true</show>
+<sortorder></sortorder>
+<sort></sort>
+<groupby>false</groupby>
+<aggfunct></aggfunct>
+<criteria></criteria>
+<or1></or1>
+<or2></or2>
+<or3></or3>
+<or4></or4>
+</column>
+<column id="6">
+<table tablename="condominio_propietarios_vivienda"></table>
+<field>estado</field>
+<alias></alias>
+<show>true</show>
+<sortorder></sortorder>
+<sort></sort>
+<groupby>false</groupby>
+<aggfunct></aggfunct>
+<criteria></criteria>
+<or1></or1>
+<or2></or2>
+<or3></or3>
+<or4></or4>
+</column>
+<column id="7">
+<table tablename="condominio_secciones"></table>
+<field>nombreseccion</field>
+<alias></alias>
+<show>true</show>
+<sortorder></sortorder>
+<sort></sort>
+<groupby>false</groupby>
+<aggfunct></aggfunct>
+<criteria></criteria>
+<or1></or1>
+<or2></or2>
+<or3></or3>
+<or4></or4>
+</column>
+<column id="8">
+<table tablename="condominio_propietarios_vivienda"></table>
+<field>idmaestro</field>
+<alias></alias>
+<show>true</show>
+<sortorder></sortorder>
+<sort></sort>
+<groupby>false</groupby>
+<aggfunct></aggfunct>
+<criteria></criteria>
+<or1></or1>
+<or2></or2>
+<or3></or3>
+<or4></or4>
+</column>
+</grid>
+</querybuilder>

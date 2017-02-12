@@ -399,5 +399,12 @@
 		opacity: 1;
 		display: block;
 	}
-	
 }
+/*-------------------------Inicio Agregado Alex -------------------------------------*/
+/*alex lo agregue para que quepa todos los menus 1nivel los medias  estan en bootstrap.min.css*/
+@media(min-width:768px){
+	.navbar-nav {display: flex;justify-content: space-between;width: 100%;}
+}
+.class1Nivelenlace	{ font-size:12px }
+/*-------------------------Fin Agregado Alex -------------------------------------*/
+	

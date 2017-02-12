@@ -118,6 +118,25 @@ switch ($task){
       ROOT_PATH = "<?=$ROOT_PATH?>";
       location.href= ROOT_PATH+'/webadmin/index.php?option=com_agencia_editar&id='+id
   </script>         
+  
+  <?php
+  break;
+  case "com_seccion_condominio_editar":
+  ?>
+  <script language='JavaScript'> 
+      id= "<?=$codigoid?>"; 
+      ROOT_PATH = "<?=$ROOT_PATH?>";
+      location.href= ROOT_PATH+'/webadmin/index.php?option=com_seccion_condominio_editar&id='+id
+  </script>   
+    <?php
+  break;
+  case "com_agencia_editar":
+  ?>
+  <script language='JavaScript'> 
+      id= "<?=$codigoid?>"; 
+      ROOT_PATH = "<?=$ROOT_PATH?>";
+      location.href= ROOT_PATH+'/webadmin/index.php?option=com_agencia_editar&id='+id
+  </script>         
        
 <?php
 	break;

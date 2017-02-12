@@ -7,6 +7,8 @@
 $sql_query = "SELECT * FROM  seccion s where ccodseccion='".$codsecc."'";
 $rsSecc= db_query($sql_query);
 $rowSecc=db_fetch_array($rsSecc);
+$n_cnivseccion=$rowSecc['cnivseccion']+1 ;
+//echo $n_cnivseccion;exit;
 ?>
 <h1><?php echo $rowSecc['cnomseccion'] . $secdescripcion ?></h1>
 <div class="listado_numeral">    
@@ -14,6 +16,7 @@ $rowSecc=db_fetch_array($rsSecc);
 //121728061416000100060000 catrasto
 //121728061416000200050000 capacitacion
 $s1 = $codsecc;
+/*
 if (empty($_GET['idsec2'])){ //aqui entra cuando solo esta  idsec
 	//sacado de inccabeceramenu.php
 	$s1 = substr($codsecc,0,12);
@@ -24,7 +27,24 @@ if (!empty($_GET['idsec2'])){
 	$s1 = substr($codsecc,0,16);
 	$sqlmenucab2 = "SELECT ccodseccion,cnomseccion,camiseccion,curlseccion,ctipseccion FROM seccion s WHERE  ccodseccion like '".$s1."%'  and cnivseccion=3 and  cestseccion='1'  ORDER BY s.cordcontenido ASC  ";
 }
+*/
+switch ($rowSecc['cnivseccion']) {
+    case 1: //Nivel 1
+		$s1 = substr($codsecc,0,12);
+		$sqlmenucab2 = "SELECT ccodseccion,cnomseccion,camiseccion,curlseccion,ctipseccion FROM seccion  WHERE  ccodseccion like '".$s1."%'  and cnivseccion=".   $n_cnivseccion.  " and  cestseccion='1' ORDER BY  seccion.cordcontenido ";
+	//echo $sqlmenucab2 ;exit;	
+        break;
+    case 2: //Nivel 2
+		$s1 = substr($codsecc,0,16);
+		$sqlmenucab2 = "SELECT ccodseccion,cnomseccion,camiseccion,curlseccion,ctipseccion FROM seccion  WHERE  ccodseccion like '".$s1."%'  and cnivseccion=".   $n_cnivseccion.  " and  cestseccion='1' ORDER BY  seccion.cordcontenido ";
+        break;
+    case 3: //Nivel 3
+		$s1 = substr($codsecc,0,20);
+		$sqlmenucab2 = "SELECT ccodseccion,cnomseccion,camiseccion,curlseccion,ctipseccion FROM seccion  WHERE  ccodseccion like '".$s1."%'  and cnivseccion=".   $n_cnivseccion.  " and  cestseccion='1' ORDER BY  seccion.cordcontenido ";
+        break;
+}
 
+//echo $sqlmenucab2;exit;
 $numcolumnas = 2;
 $producto_query = db_query($sqlmenucab2);
 $número_filas = mysql_num_rows($producto_query);
@@ -36,8 +56,10 @@ if ($número_filas>0) { // si 1
 			
 			if($row['curlcontenido']=="")
 			{
+				//$nomurl        = crearurl_articulo('121728150001000700000000');
 				$nomurl        = crearurl_articulo($row['ccodseccion']);
 				//$enlaceurl     = "/".$nomurl."/".$row['camiseccion'];
+				//echo $nomurl ;exit;	
 				$enlaceurl     = "/".$nomurl;
 				$enlacedestino = "";
 			}
@@ -45,7 +67,8 @@ if ($número_filas>0) { // si 1
 			{
 				$enlaceurl     = $row['curlcontenido'];
 				$enlacedestino = "target='_blank'";
-			}	
+			}			
+		//echo $enlaceurl ;exit;	
 	   $resto = (round($número_filas /$numcolumnas)); 	  
 	   if ($resto>$i ) { //si 2
 	   		if($i==0){echo "<div class='izq'><ol>";}

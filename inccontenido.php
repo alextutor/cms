@@ -29,7 +29,7 @@ if (empty($_GET['idsec'])){	//aqui entra pagina principal
 	$sqlc= db_query($sql); 
  	
 }	
-
+//echo $sql;exit;
 while($rowc  = db_fetch_array($sqlc))
 {	
 	if ($rowc['ctiphome']=='4') //contenido dinamico aqui entra a repuestos,productos en home

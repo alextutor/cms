@@ -189,10 +189,17 @@ while ($row = db_fetch_array($rsesweb))
 					   echo '<option value="'.$row_menuEstilos['cvalparametro'].'" '. $selected .' >'.$row_menuEstilos['cnomparametro'].'</option>';		 
                       	}//fin while						
 					 ?>                                 
-                    </select>                                         
-                      
-                
-                      </li>         
+                    </select>              
+                      </li>  
+                     <li><label id="jform_title-lbl" for="jform_title" class="hasTip required" title=""><strong>Mostrar Url padre</strong></label>		                       
+                      <select id="mostrarurlcatebase" name="mostrarurlcatebase" class="inputbox" size="1" aria-invalid="false">
+                          <option value="SI"<?php if( $row['mostrarurlcatebase']=="SI") echo " selected='selected'"  ?>>SI</option>                           
+                          <option value="NO"  <?php if( $row['mostrarurlcatebase']=="NO") echo " selected='selected'"  ?>>NO</option>                           
+                        </select>                                      	                      
+                      </li>       
+                      <li><label id="jform_title-lbl" for="jform_title" class="hasTip required" title=""><strong>Mostrar Menu 1Nivel Mayuscula/Minuscula</strong></label>		                          <select id="menu_1Nivel_Mayuscula_Minuscula" name="menu_1Nivel_Mayuscula_Minuscula" class="inputbox" size="1" aria-invalid="false">
+                          <option value="Mayuscula"<?php if( $row['menu_1Nivel_Mayuscula_Minuscula']=="Mayuscula") echo " selected='selected'"  ?>>Mayuscula</option>                          <option value="Minuscula"  <?php if( $row['menu_1Nivel_Mayuscula_Minuscula']=="Minuscula") echo " selected='selected'"  ?>>Minuscula</option>                          </select>                                      	                      
+                      </li>   
                     </ul>
                </fieldset>	    
     </div></div>

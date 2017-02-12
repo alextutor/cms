@@ -25,29 +25,29 @@
 	$cfiltro="";
 	 // Inicio si el usuario no es administrador esconde los registros borrados	
 	if($_SESSION['nivel']<>'ADMINISTRADOR'){
-		$cfiltro .=	" c.estado<>-2 ";
+		$cfiltro .=	" c.estado<>-2 and ";
 	}	
 		
    	if($selectseccion   != '' && $selectseccion   != 'todas_secciones' ) 
 	{
 		if (strlen($selectseccion)==24)
-			$cfiltro .= " and s.ccodseccion = '".$selectseccion."'";
+			$cfiltro .= " s.ccodseccion = '".$selectseccion."' and ";
 		else
-			$cfiltro .= " and s.ccodseccion like '".$selectseccion."%'";	
+			$cfiltro .= " s.ccodseccion like '".$selectseccion."%' and ";	
 	}	
 	
 	if($nombre != '' ) 
 	{
-		$cfiltro .= " and c.cnomcontenido like '%".$nombre."%'";
+		$cfiltro .= " c.cnomcontenido like '%".$nombre."%' and ";
 	}
 	//alex aqui el codigo interno no hay no se ha definido en la empresa
 	if($codigo != '' ) 
 	{
-		$cfiltro .= " and c.ccodcontenido like '%".$codigo."%'";
+		$cfiltro .= "  c.ccodcontenido like '%".$codigo."%' and ";
 	}
 
 
-	$sql = "SELECT  c.ccodcontenido, c.ccodcategoria,c.dfeccontenido,c.cnomcontenido,c.camicontenido,c.cordcontenido, c.cestcontenido, c.nviscontenido,c.nnrocomentario,c.ctipcontenido,c.cimgcontenido,c.estado FROM contenido c  left join seccioncontenido  s on c.ccodcontenido=s.ccodcontenido WHERE ".$cfiltro ." and c.ccodpage= '".$pagew."' and (c.ccodmodulo='1100' or c.ccodmodulo='1200')  group by c.ccodcontenido desc  order by c.dfeccontenido desc";
+	$sql = "SELECT  c.ccodcontenido, c.ccodcategoria,c.dfeccontenido,c.cnomcontenido,c.camicontenido,c.cordcontenido, c.cestcontenido, c.nviscontenido,c.nnrocomentario,c.ctipcontenido,c.cimgcontenido,c.estado FROM contenido c  left join seccioncontenido  s on c.ccodcontenido=s.ccodcontenido WHERE ".$cfiltro ." c.ccodpage= '".$pagew."' and (c.ccodmodulo='1100' or c.ccodmodulo='1200') and estado=1  group by c.ccodcontenido desc  order by c.dfeccontenido desc";
 			
 	//echo $sql;
 	$res=mysql_query($sql); 
